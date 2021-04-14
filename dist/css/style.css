@@ -1,0 +1,9 @@
+/* Codice CSS Italia Storica */
+header {
+  height: 400px;
+  background-color: black;
+  color: white;
+}
+header img {
+  width: 50%;
+}

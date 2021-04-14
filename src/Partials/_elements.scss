@@ -1,0 +1,194 @@
+/*=============================================
+=            Section INPUT RADIO           =
+=============================================*/
+
+label {
+    margin: 0;
+    cursor: pointer;
+}
+
+// Fa sparire i vecchi input radio
+.radio_input {
+    visibility: hidden;
+}
+
+
+// Aspetto nuovo input esterno
+.radio_nuovo_input {
+    display: inline;
+    margin-top: 30px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: floralwhite;
+    background-clip: content-box;
+    
+    &:focus, &:hover {
+        border: 1px solid darkgray;
+    }
+}
+
+// Aspetto nuovo input interno
+.radio_nuovo_input::after {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 70%;
+    background: map-get($color-map, background_color);
+    margin: 2px;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.2s;
+}
+
+// Selezione radio input seguente a quello checked
+.radio_input:checked + .radio_nuovo_input::after {
+    transform: scale(1);
+}
+
+
+/*=====  End of Section INPUT  ======*/
+
+
+
+/*========================================
+=            Section BUTTON         =
+========================================*/
+
+.button {
+    display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	padding: 0.5em 2em 0.55em;
+	-webkit-border-radius: 0.5em; 
+	-moz-border-radius: 0.5em;
+	border-radius: 0.5em;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover, .button:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.button:active {
+    position: relative;
+	top: 1px;
+    background-color: white;
+    color: black;
+}
+
+.orange {
+	color: floralwhite;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+}
+
+.orange:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+}
+
+.orange:active {
+    color: black;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
+	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
+}
+
+
+/*=====  End of Section BUTTON ======*/
+
+
+
+/*=============================================
+    =            Section LISTS           =
+==============================================*/
+
+ul {
+    list-style: none;
+}
+
+
+/*=====  End of Section LISTS  ======*/
+
+
+
+/*=====================================
+=             Section LINKS          =
+======================================*/
+
+    
+a:hover {
+    color: black;
+}
+
+.my_links {
+    color: floralwhite;
+    &:hover {
+        text-decoration: none;
+        color: rgb(250, 153, 28) !important;
+    }
+
+}
+
+
+/*=====  End of Section LINKS  ======*/
+
+
+
+/*=============================================
+=               Section SCROLLBARS          =
+==============================================*/
+
+    
+* {
+    scrollbar-color: transparent black; /* thumb and track color */
+    scrollbar-width: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: black;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+/*=====  End of Section SCROLLBARS  ======*/  
+
+
+
+
+
+
+
+    
+   
+    
+    
+
+
+
+
+
+
+
+
+

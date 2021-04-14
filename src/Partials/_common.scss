@@ -1,0 +1,100 @@
+// Container
+
+.container_80 {
+//max-width: 1170px;
+width: 80%;
+margin: 150px auto 0 auto;
+}
+
+/* [class*="col-"] {
+padding: 0;
+margin: 0; 
+} */
+
+
+
+// Height & Width
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}
+
+
+
+// Sezioni
+@mixin sezioni {
+    border: 1px solid black;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    padding: 0 0 45px 0;
+}
+
+
+
+// Card 
+.card { 
+    border-radius: 0;
+}
+
+
+
+// Titoli principali
+.my_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem !important;
+    margin: 0 0 45px 0;
+    padding: 20px 0 0 0;
+}
+
+// Descrizioni
+@mixin descrizioni {
+    h4 {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    h4 ~ p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.9rem;
+        text-align: left;
+        line-height: 1.5;
+    }
+}
+
+
+
+// Flexbox  
+.d_flex {
+    display: flex;
+}
+
+.d_flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.d_flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+// Position
+
+.position_absolute{
+  position: absolute;
+}
+
+.position_relative{
+  position: relative;
+}
+
+
+

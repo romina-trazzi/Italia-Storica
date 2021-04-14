@@ -1,0 +1,304 @@
+/* Codice CSS Italia Storica */
+
+@import "./Partials/_variables.scss";
+@import "./Partials/_common.scss";
+@import "./Partials/_elements.scss";
+@import "./Partials/_carousel.scss";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+
+
+body {
+    background: map-get($color-map, background_color);
+    color: floralwhite;
+    font-family: 'Oswald', 'Open Sans', 'sans-serif';
+    overflow-x: hidden;
+    
+    header {
+        height: 350px;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        
+        div.row {
+            height: 100%;
+            
+            .main_title {
+                height: min-content;
+                
+                img {
+                    max-height: 350px !important;
+                    width: 100% !important;
+                    opacity: 20%;
+                    overflow: hidden;
+                }
+                
+                // Animation jumbotron //
+                .fadeIn {
+                    -webkit-animation-name: fadeIn;
+                    animation-name: fadeIn;
+                    -webkit-animation-duration: 5s;
+                    animation-duration: 5s;
+                    -webkit-animation-timing-function: ease-in;
+                    animation-timing-function: ease-in;
+                    -webkit-animation-fill-mode: both;
+                    animation-fill-mode: both;
+                    
+                    @-webkit-keyframes fadeIn {
+                        0% {opacity: 0;}
+                        50% {opacity: 1;}
+                        75% {opacity: 0.75;}
+                        100% {opacity: 0.2;}
+                    }
+                    @keyframes fadeIn {
+                        0% {opacity: 0;}
+                        50% {opacity: 1;}
+                        75% {opacity: 0.75;}
+                        100% {opacity: 0.2;}
+                    }
+                }
+                
+                img:hover {
+                    opacity: 50%;
+                } 
+                
+                h1 {
+                    font-size: 7rem;
+                    text-align: center;
+                    line-height: 1.2;
+                    transform: translateY(-119px);
+                    margin: 0;
+                    padding-bottom: 50px;
+                }
+                
+                div.steel_bar {
+                    align-items: center;
+                    width: 100%;
+                    transform: translateY(-300%);
+                    & p {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    main {      
+
+        .core {
+            @include sezioni;
+            background-color: map-get($color-map, primary_color);
+           
+            // Colonna carosello
+            div.col-lg-6:nth-child(1) {
+                background-color: map-get($color-map, primary_color);
+                // background-color: rgb(62, 84, 107);
+                // padding-bottom: 100px;
+                
+                /* Spazio carousel */
+                
+               @include descrizioni;
+            }
+
+            // Colonna contatti
+            div.col-lg-6:nth-child(2) {
+                background-color: map-get($color-map, primary_color);
+                // background-color: rgb(62, 84, 107);
+                // padding-bottom: 100px;
+                
+                #where {
+                    width: 100%;
+                    padding: 0 15px 0 15px !important;
+                    align-items: center;
+                    font-size: 1.5rem;
+                    line-height: 1.8; 
+                    
+                    i {
+                        margin-right: 10px;
+                        color: map-get($color-map, links_color);
+                    }
+                    
+                    span {
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 1.2rem;
+                    }
+                    
+                    h4 {
+                        margin-top: 79px;
+                        margin-bottom: 45px;
+                        font-family: "Oswald", sans-serif;
+                    }
+                    
+                    // Contatti + mappa 
+                    .icons-container {
+                        margin-top: -11px;
+                    }
+
+                    .map_responsive {
+                        overflow:hidden;
+                        justify-content: center;
+                        margin-top: 79px;
+                        position: relative;
+                    }
+
+                    .map-responsive iframe{
+                        height: 100%;
+                        width: 0%;
+                        position:absolute;
+                    }
+                    
+                    
+                    // Social
+                    .social-container {
+                        margin-left: -58px;
+                        font-family: "Open Sans", sans-serif;  
+                        
+                        .social-icons {
+                            i {
+                                margin-left: -131px;
+                            }
+                        }
+                    }
+
+                    
+                }
+            }
+  
+        }
+        
+        
+        .books {
+            @include sezioni;
+            background-color: map-get($color-map, secondary_color);
+            padding-bottom: 115px;
+            
+            .card-collector {
+                background-color: map-get($color-map, secondary_color);             
+                color: black;
+                    
+                .how-to {
+                    color: floralwhite;
+                }
+                
+                .card {
+                    border: 1px inset map-get($color-map, primary_color);
+                    background-color: floralwhite;
+                    color: map-get($color-map, links_color);
+                    // box-shadow: 0 20px 50px rgba(64, 85, 108, 0.9);
+                    //  transform: translateY(-100px);
+                    // -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                    // -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                    // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                    
+                    .card-header, .card-title {
+                        color: rgb(250, 153, 28);
+                        font-size: 1.4em;
+                    }
+
+                    p.card-text {
+                        background-color: map-get($color-map, primary_color);
+                        color: floralwhite;
+                        // margin-top: 50px;
+
+                    }
+                    
+                    .card-body {
+                        img {
+                            width: 50%;
+                            border-radius: 20%;
+                            padding-bottom: 30px;
+                        }
+                        
+                        p {
+                            margin-top: 10px;
+                        }
+
+                        .button {
+                            margin-top: 30px;
+                        }
+                    }
+                    
+                    .btn-primary {
+                        text-align: center;
+                    }
+                    
+                }
+                
+            }
+            
+            
+           
+            
+        }
+        
+        
+        .personal {
+            @include sezioni;
+            background-color: map-get($color-map, primary_color);
+            
+            .about {
+                padding: 0 50px 50px 50px;
+                
+                img {
+                    width: 20%;
+                    height: 20%;
+                    margin-right: 40px;
+                    border-radius: 50%;
+                }
+                
+                p {
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 0.9rem;
+                    text-align: left;
+                    line-height: 1.5;
+                }
+
+            }
+
+            .video {     
+                margin: 0;
+                width: 100%;
+
+                .carousel-wrapper {
+                    width: 80%;
+                    margin: 30px auto;
+                }
+
+                .book_description {
+                    @include descrizioni;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                   
+            }
+
+            
+        }
+        
+        
+        .form {
+            @include sezioni;
+            background-color: map-get($color-map, secondary_color);
+
+            i {
+                font-size: 5rem;
+                padding-bottom: 30px;
+            }
+
+            .form-container {
+                width: 100%;
+            }
+
+            input, textarea {
+                font-family: "Open Sans", sans-serif;
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+                
+        }
+
+    }
+
+}
+
