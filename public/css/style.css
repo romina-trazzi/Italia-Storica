@@ -83,7 +83,7 @@ label {
   display: block;
   width: 70%;
   height: 70%;
-  background: #191d27;
+  background: rgba(0, 0, 0, 0.9);
   margin: 2px;
   border-radius: 50%;
   transform: scale(0);
@@ -244,7 +244,7 @@ a:hover {
   margin-top: 30px;
   padding: 20px;
   border-radius: 999px;
-  background: #191d27;
+  background: rgba(0, 0, 0, 0.9);
   color: floralwhite;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -268,31 +268,37 @@ a:hover {
 }
 
 body {
-  background: #191d27;
+  background: rgba(0, 0, 0, 0.9);
   color: floralwhite;
   font-family: "Oswald", "Open Sans", "sans-serif";
   overflow-x: hidden;
 }
 body header {
-  height: 350px;
-  width: 100vw;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
-body header div.row {
-  height: 100%;
+body header .navbar {
+  min-height: 70px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
-body header div.row .main_title {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
+body header .navbar i {
+  margin: 0 5px 0 15px;
+  color: #fa991c;
 }
-body header div.row .main_title img {
+body header .navbar .icons, body header .navbar .social {
+  width: 50%;
+}
+body header .my_jumbotron {
+  height: 350px;
+}
+body header .my_jumbotron .main_title img {
   max-height: 350px !important;
   width: 100% !important;
-  opacity: 20%;
   overflow: hidden;
 }
-body header div.row .main_title .fadeIn {
+body header .my_jumbotron .main_title .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
   -webkit-animation-duration: 5s;
@@ -310,10 +316,10 @@ body header div.row .main_title .fadeIn {
     opacity: 1;
   }
   75% {
-    opacity: 0.75;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
 @keyframes fadeIn {
@@ -324,16 +330,13 @@ body header div.row .main_title .fadeIn {
     opacity: 1;
   }
   75% {
-    opacity: 0.75;
+    opacity: 0.8;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.3;
   }
 }
-body header div.row .main_title img:hover {
-  opacity: 50%;
-}
-body header div.row .main_title h1 {
+body header .my_jumbotron .main_title h1 {
   font-size: 7rem;
   text-align: center;
   line-height: 1.2;
@@ -341,111 +344,63 @@ body header div.row .main_title h1 {
   margin: 0;
   padding-bottom: 50px;
 }
-body header div.row .main_title div.steel_bar {
+body header .my_jumbotron .main_title div.steel_bar {
   align-items: center;
   width: 100%;
   transform: translateY(-300%);
 }
-body header div.row .main_title div.steel_bar p {
+body header .my_jumbotron .main_title div.steel_bar p {
   font-size: 1.5rem;
 }
 body main .core {
-  border: 1px solid black;
+  background-color: rgba(53, 94, 59, 0.555);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding: 0 0 45px 0;
-  background-color: #2c3e50;
 }
 body main .core div.col-lg-6:nth-child(1) {
-  background-color: #2c3e50;
   /* Spazio carousel */
 }
-body main .core div.col-lg-6:nth-child(1) .book_description > h4 {
+body main .core div.col-lg-6:nth-child(2) .book_description > h4 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-body main .core div.col-lg-6:nth-child(1) .book_details {
+body main .core div.col-lg-6:nth-child(2) .book_details {
   padding-left: 50px;
   padding-bottom: 50px;
 }
-body main .core div.col-lg-6:nth-child(1) .book_details > p {
+body main .core div.col-lg-6:nth-child(2) .book_details > p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-body main .core div.col-lg-6:nth-child(1) .book_details > p > span {
+body main .core div.col-lg-6:nth-child(2) .book_details > p > span {
   font-family: "Oswald", sans-serif;
   color: #fa991c;
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.2;
 }
-body main .core div.col-lg-6:nth-child(1) .book_details > .about {
+body main .core div.col-lg-6:nth-child(2) .book_details > .about {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   text-align: left;
   line-height: 1.5;
   margin: 30px 0 30px 0;
 }
-body main .core div.col-lg-6:nth-child(2) {
-  background-color: #2c3e50;
-}
-body main .core div.col-lg-6:nth-child(2) #where {
-  width: 100%;
-  padding: 0 15px 0 15px !important;
-  align-items: center;
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-body main .core div.col-lg-6:nth-child(2) #where i {
-  margin-right: 10px;
-  color: #fa991c;
-}
-body main .core div.col-lg-6:nth-child(2) #where span {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-}
-body main .core div.col-lg-6:nth-child(2) #where h4 {
-  margin-top: 79px;
-  margin-bottom: 45px;
-  font-family: "Oswald", sans-serif;
-}
-body main .core div.col-lg-6:nth-child(2) #where .icons-container {
-  margin-top: -11px;
-}
-body main .core div.col-lg-6:nth-child(2) #where .map_responsive {
-  overflow: hidden;
-  justify-content: center;
-  margin-top: 79px;
-  position: relative;
-}
-body main .core div.col-lg-6:nth-child(2) #where .map-responsive iframe {
-  height: 100%;
-  width: 0%;
-  position: absolute;
-}
-body main .core div.col-lg-6:nth-child(2) #where .social-container {
-  margin-left: -58px;
-  font-family: "Open Sans", sans-serif;
-}
-body main .core div.col-lg-6:nth-child(2) #where .social-container .social-icons i {
-  margin-left: -131px;
-}
 body main .books {
-  border: 1px solid black;
+  background-color: rgba(53, 94, 59, 0.555);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding: 0 0 45px 0;
-  background-color: #58828f;
   padding-bottom: 115px;
 }
 body main .books .card-collector {
-  background-color: #58828f;
   color: black;
 }
 body main .books .card-collector .how-to {
   color: floralwhite;
 }
 body main .books .card-collector .card {
-  border: 1px inset #2c3e50;
+  border: 1px inset rgba(53, 94, 59, 0.555);
   background-color: floralwhite;
   color: #fa991c;
 }
@@ -454,7 +409,7 @@ body main .books .card-collector .card .card-header, body main .books .card-coll
   font-size: 1.4em;
 }
 body main .books .card-collector .card p.card-text {
-  background-color: #2c3e50;
+  background-color: rgba(53, 94, 59, 0.555);
   color: floralwhite;
 }
 body main .books .card-collector .card .card-body img {
@@ -475,10 +430,10 @@ body main .books .card-collector .card:hover {
   border: 10px solid #fa991c;
 }
 body main .personal {
-  border: 1px solid black;
+  background-color: rgba(53, 94, 59, 0.555);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding: 0 0 45px 0;
-  background-color: #2c3e50;
+  background-color: rgba(53, 94, 59, 0.555);
 }
 body main .personal .about {
   padding: 0 50px 50px 50px;
@@ -535,10 +490,9 @@ body main .personal .video .book_description .book_details > .about {
   margin: 30px 0 30px 0;
 }
 body main .form {
-  border: 1px solid black;
+  background-color: rgba(53, 94, 59, 0.555);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   padding: 0 0 45px 0;
-  background-color: #58828f;
 }
 body main .form i {
   font-size: 5rem;

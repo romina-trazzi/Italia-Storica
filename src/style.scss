@@ -16,20 +16,35 @@ body {
     overflow-x: hidden;
     
     header {
-        height: 350px;
-        width: 100vw;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
+
+
+        .navbar {
+            min-height: 70px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            
+            i {
+                margin: 0 5px 0 15px;
+                color: map-get($color-map, links_color);
+            }
+
+            .icons, .social {
+                width: 50%;
+            }
+        }
+
         
-        div.row {
-            height: 100%;
+        .my_jumbotron {
+           height: 350px;
             
             .main_title {
-                height: min-content;
                 
                 img {
                     max-height: 350px !important;
                     width: 100% !important;
-                    opacity: 20%;
                     overflow: hidden;
                 }
                 
@@ -47,20 +62,17 @@ body {
                     @-webkit-keyframes fadeIn {
                         0% {opacity: 0;}
                         50% {opacity: 1;}
-                        75% {opacity: 0.75;}
-                        100% {opacity: 0.2;}
+                        75% {opacity: 0.8;}
+                        100% {opacity: 0.3;}
                     }
                     @keyframes fadeIn {
                         0% {opacity: 0;}
                         50% {opacity: 1;}
-                        75% {opacity: 0.75;}
-                        100% {opacity: 0.2;}
+                        75% {opacity: 0.8;}
+                        100% {opacity: 0.3;}
                     }
                 }
                 
-                img:hover {
-                    opacity: 50%;
-                } 
                 
                 h1 {
                     font-size: 7rem;
@@ -83,86 +95,26 @@ body {
         }
     }
     
+
     main {      
 
         .core {
             @include sezioni;
-            background-color: map-get($color-map, primary_color);
+           
            
             // Colonna carosello
             div.col-lg-6:nth-child(1) {
-                background-color: map-get($color-map, primary_color);
                 // background-color: rgb(62, 84, 107);
                 // padding-bottom: 100px;
                 
-                /* Spazio carousel */
-                
-               @include descrizioni;
+                /* Spazio carousel */ 
             }
-
-            // Colonna contatti
+            
+            // Colonna descrizioni
             div.col-lg-6:nth-child(2) {
-                background-color: map-get($color-map, primary_color);
-                // background-color: rgb(62, 84, 107);
-                // padding-bottom: 100px;
-                
-                #where {
-                    width: 100%;
-                    padding: 0 15px 0 15px !important;
-                    align-items: center;
-                    font-size: 1.5rem;
-                    line-height: 1.8; 
-                    
-                    i {
-                        margin-right: 10px;
-                        color: map-get($color-map, links_color);
-                    }
-                    
-                    span {
-                        font-family: "Open Sans", sans-serif;
-                        font-size: 1.2rem;
-                    }
-                    
-                    h4 {
-                        margin-top: 79px;
-                        margin-bottom: 45px;
-                        font-family: "Oswald", sans-serif;
-                    }
-                    
-                    // Contatti + mappa 
-                    .icons-container {
-                        margin-top: -11px;
-                    }
-
-                    .map_responsive {
-                        overflow:hidden;
-                        justify-content: center;
-                        margin-top: 79px;
-                        position: relative;
-                    }
-
-                    .map-responsive iframe{
-                        height: 100%;
-                        width: 0%;
-                        position:absolute;
-                    }
-                    
-                    
-                    // Social
-                    .social-container {
-                        margin-left: -58px;
-                        font-family: "Open Sans", sans-serif;  
-                        
-                        .social-icons {
-                            i {
-                                margin-left: -131px;
-                            }
-                        }
-                    }
-
-                    
-                }
+                @include descrizioni;
             }
+            
   
         }
         

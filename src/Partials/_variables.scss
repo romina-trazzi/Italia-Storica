@@ -3,9 +3,11 @@ $color-map: (
     
   // Background
   
-  "background_color": rgb(25, 29, 39), 
-  "primary_color": rgb(44, 62, 80), // sezioni dispari
-  "secondary_color": rgb(88, 130, 143), // sezioni pari
+  "background_color": /*rgb(25, 29, 39),*/ rgba(0, 0, 0, 0.9),
+  "primary_color": rgba(53, 94, 59, 0.555),
+ 
+  // "primary_color": rgb(44, 62, 80), // sezioni dispari
+  // "secondary_color": /* rgb(88, 130, 143), // sezioni pari */
 
   // Accent
   
