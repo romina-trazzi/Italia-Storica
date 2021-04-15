@@ -69,9 +69,6 @@ let app = new Vue ({
         ] 
     },
 
-
-
-
     methods: {
         nextImg() {
             this.counter++;

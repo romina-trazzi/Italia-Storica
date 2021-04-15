@@ -10,10 +10,6 @@ h1, h2, h3, h4, h5 {
   margin: 150px auto 0 auto;
 }
 
-/* [class*="col-"] {
-padding: 0;
-margin: 0; 
-} */
 .w100 {
   width: 100%;
 }
@@ -363,15 +359,32 @@ body main .core div.col-lg-6:nth-child(1) {
   background-color: #2c3e50;
   /* Spazio carousel */
 }
-body main .core div.col-lg-6:nth-child(1) h4 {
+body main .core div.col-lg-6:nth-child(1) .book_description > h4 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-body main .core div.col-lg-6:nth-child(1) h4 ~ p {
+body main .core div.col-lg-6:nth-child(1) .book_details {
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+body main .core div.col-lg-6:nth-child(1) .book_details > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+body main .core div.col-lg-6:nth-child(1) .book_details > p > span {
+  font-family: "Oswald", sans-serif;
+  color: #fa991c;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+body main .core div.col-lg-6:nth-child(1) .book_details > .about {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   text-align: left;
   line-height: 1.5;
+  margin: 30px 0 30px 0;
 }
 body main .core div.col-lg-6:nth-child(2) {
   background-color: #2c3e50;
@@ -458,6 +471,9 @@ body main .books .card-collector .card .card-body .button {
 body main .books .card-collector .card .btn-primary {
   text-align: center;
 }
+body main .books .card-collector .card:hover {
+  border: 10px solid #fa991c;
+}
 body main .personal {
   border: 1px solid black;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -491,15 +507,32 @@ body main .personal .video .book_description {
   margin-left: auto;
   margin-right: auto;
 }
-body main .personal .video .book_description h4 {
+body main .personal .video .book_description .book_description > h4 {
   margin-top: 40px;
   margin-bottom: 20px;
 }
-body main .personal .video .book_description h4 ~ p {
+body main .personal .video .book_description .book_details {
+  padding-left: 50px;
+  padding-bottom: 50px;
+}
+body main .personal .video .book_description .book_details > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+body main .personal .video .book_description .book_details > p > span {
+  font-family: "Oswald", sans-serif;
+  color: #fa991c;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+body main .personal .video .book_description .book_details > .about {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   text-align: left;
   line-height: 1.5;
+  margin: 30px 0 30px 0;
 }
 body main .form {
   border: 1px solid black;

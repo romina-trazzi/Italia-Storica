@@ -221,9 +221,13 @@ body {
                     .btn-primary {
                         text-align: center;
                     }
+
                     
                 }
                 
+                .card:hover {
+                    border: 10px solid map-get($color-map, links_color);
+                }
             }
             
             

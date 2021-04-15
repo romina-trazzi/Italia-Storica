@@ -1,17 +1,9 @@
 // Container
 
 .container_80 {
-//max-width: 1170px;
 width: 80%;
 margin: 150px auto 0 auto;
 }
-
-/* [class*="col-"] {
-padding: 0;
-margin: 0; 
-} */
-
-
 
 // Height & Width
 .w100 {
@@ -23,7 +15,6 @@ margin: 0;
 }
 
 
-
 // Sezioni
 @mixin sezioni {
     border: 1px solid black;
@@ -32,7 +23,6 @@ margin: 0;
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     padding: 0 0 45px 0;
 }
-
 
 
 // Card 
@@ -53,16 +43,36 @@ margin: 0;
 
 // Descrizioni
 @mixin descrizioni {
-    h4 {
+    .book_description > h4 {
         margin-top: 40px;
         margin-bottom: 20px;
     }
 
-    h4 ~ p {
+    .book_details {
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+
+    .book_details > p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .book_details > p > span {
+        font-family: "Oswald", sans-serif;
+        color: map-get($color-map, links_color);
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+    .book_details > .about {
         font-family: "Open Sans", sans-serif;
         font-size: 0.9rem;
         text-align: left;
         line-height: 1.5;
+        margin: 30px 0 30px 0;
     }
 }
 

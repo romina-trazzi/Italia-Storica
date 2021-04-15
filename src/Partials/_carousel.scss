@@ -66,7 +66,7 @@
 
 .nav > i.active:hover {
   border-radius: 999px;
-  color: #f47c20;
+  color: map-get($color-map, icons_color);
   color: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
 	color: -moz-linear-gradient(top,  #f88e11,  #f06015);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
