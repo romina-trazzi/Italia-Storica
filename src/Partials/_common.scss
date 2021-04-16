@@ -3,6 +3,7 @@
 .container_80 {
 width: 80%;
 margin: 150px auto 0 auto;
+
 }
 
 // Height & Width
@@ -18,9 +19,9 @@ margin: 150px auto 0 auto;
 // Sezioni
 @mixin sezioni {
     background-color: map-get($color-map, primary_color);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    // -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    // -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     padding: 0 0 45px 0;
 }
 

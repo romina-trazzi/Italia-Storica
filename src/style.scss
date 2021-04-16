@@ -38,7 +38,7 @@ body {
 
         
         .my_jumbotron {
-           height: 350px;
+           height: 480px;
             
             .main_title {
                 
@@ -72,8 +72,7 @@ body {
                         100% {opacity: 0.3;}
                     }
                 }
-                
-                
+
                 h1 {
                     font-size: 7rem;
                     text-align: center;
@@ -83,13 +82,17 @@ body {
                     padding-bottom: 50px;
                 }
                 
-                div.steel_bar {
-                    align-items: center;
-                    width: 100%;
-                    transform: translateY(-300%);
-                    & p {
-                        font-size: 1.5rem;
-                    }
+            }
+
+           .steel_bar {
+                align-items: center;
+                width: 100%;
+                transform: translateY(-300%);
+                background-color: black;
+                & p {
+                    font-size: 1.5rem;
+                    margin: 0;
+
                 }
             }
         }
@@ -103,7 +106,7 @@ body {
            
            
             // Colonna carosello
-            div.col-lg-6:nth-child(1) {
+            div.col-lg-6:nth-child(2) {
                 // background-color: rgb(62, 84, 107);
                 // padding-bottom: 100px;
                 
@@ -111,7 +114,7 @@ body {
             }
             
             // Colonna descrizioni
-            div.col-lg-6:nth-child(2) {
+            div.col-lg-6:nth-child(3) {
                 @include descrizioni;
             }
             
