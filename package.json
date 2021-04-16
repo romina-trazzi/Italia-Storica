@@ -23,6 +23,7 @@
     "vue-template-compiler": "^2.6.11"
   },
   "dependencies": {
+    "node-notifier": "^9.0.1",
     "vue": "^2.6.12"
   }
 }

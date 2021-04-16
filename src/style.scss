@@ -18,8 +18,7 @@ body {
     header {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
-
-
+        
         .navbar {
             min-height: 70px;
             width: 100%;
@@ -34,13 +33,22 @@ body {
             .icons, .social {
                 width: 50%;
             }
+
+            .icons {
+                padding-left: 2.9rem;
+            }
+
+            .social {
+                padding-right: 3.65rem;
+            }
         }
 
         
         .my_jumbotron {
-           height: 480px;
-            
-            .main_title {
+           height: 350px;
+           padding-bottom: 440px;
+          
+           .main_title {
                 
                 img {
                     max-height: 350px !important;
@@ -77,9 +85,11 @@ body {
                     font-size: 7rem;
                     text-align: center;
                     line-height: 1.2;
-                    transform: translateY(-119px);
+                    //transform: translateY(-119px);
+                    position: absolute;
+                    top: 65%;
                     margin: 0;
-                    padding-bottom: 50px;
+                    padding: 0;
                 }
                 
             }
@@ -87,11 +97,12 @@ body {
            .steel_bar {
                 align-items: center;
                 width: 100%;
-                transform: translateY(-300%);
-                background-color: black;
+                // transform: translateY(-300%);
+                background-color: rgba(0, 0, 0, 0.8);
                 & p {
                     font-size: 1.5rem;
                     margin: 0;
+                    padding-top: 40px;
 
                 }
             }
@@ -100,25 +111,26 @@ body {
     
 
     main {      
+        // background-image: url("https://us.123rf.com/450wm/turbo1019/turbo10191803/turbo1019180300028/96894564-digital-camouflage-background-seamless-pattern-vector-.jpg");
 
+
+        .container_80 {
+            margin-top: 50px;
+        }
+        
         .core {
             @include sezioni;
-           
-           
-            // Colonna carosello
-            div.col-lg-6:nth-child(2) {
-                // background-color: rgb(62, 84, 107);
-                // padding-bottom: 100px;
-                
-                /* Spazio carousel */ 
-            }
-            
+                     
             // Colonna descrizioni
-            div.col-lg-6:nth-child(3) {
+            .row-book-prova > div:nth-child(1) {
                 @include descrizioni;
+                // div.col-lg-6:nth-child(2)
             }
             
-  
+            .row-book-prova2 {
+                width: 100%;
+                margin-top: 30px;
+            }
         }
         
         
