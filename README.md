@@ -9,7 +9,6 @@ Tecnologie utilizzate:
 - Bootstrap 4
 - Sass 
 - Javascript ES6 
-- Bootstrap 4
 - Vue JS 2.6 
 - Glide JS
 
