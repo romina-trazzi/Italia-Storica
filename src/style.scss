@@ -3,7 +3,16 @@
 @import "./Partials/_variables.scss";
 @import "./Partials/_common.scss";
 @import "./Partials/_elements.scss";
-@import "./Partials/_carousel.scss";
+
+
+// Glide Js Required Core Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+// Glide Js Optional Theme Stylesheet
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+@import "./Partials/_glide.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -85,7 +94,6 @@ body {
                     font-size: 7rem;
                     text-align: center;
                     line-height: 1.2;
-                    //transform: translateY(-119px);
                     position: absolute;
                     top: 65%;
                     margin: 0;
@@ -97,7 +105,6 @@ body {
            .steel_bar {
                 align-items: center;
                 width: 100%;
-                // transform: translateY(-300%);
                 background-color: rgba(0, 0, 0, 0.8);
                 & p {
                     font-size: 1.5rem;
@@ -112,22 +119,26 @@ body {
 
     main {      
         // background-image: url("https://us.123rf.com/450wm/turbo1019/turbo10191803/turbo1019180300028/96894564-digital-camouflage-background-seamless-pattern-vector-.jpg");
-
-
-        .container_80 {
-            margin-top: 50px;
-        }
+     
         
         .core {
             @include sezioni;
+
+            .book-title {
+                img {
+                    width: 30px;
+                }
+            }
                      
             // Colonna descrizioni
-            .row-book-prova > div:nth-child(1) {
+            .book-main {
                 @include descrizioni;
-                // div.col-lg-6:nth-child(2)
+                margin: 0;
+                width: 100%;
+
             }
             
-            .row-book-prova2 {
+            .book-secondary {
                 width: 100%;
                 margin-top: 30px;
             }
@@ -138,6 +149,10 @@ body {
             @include sezioni;
             background-color: map-get($color-map, secondary_color);
             padding-bottom: 115px;
+
+           .order-title > img {
+                width: 30px;
+            }
             
             .card-collector {
                 background-color: map-get($color-map, secondary_color);             

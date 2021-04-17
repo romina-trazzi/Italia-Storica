@@ -20,6 +20,7 @@
     
     <!-- Css stylesheets -->
     <link rel="stylesheet" href="public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" type="text/css">
     <link rel="stylesheet" href="public/css/mediaquery.css" type="text/css">
     
     <!-- Google Fonts -->
@@ -85,19 +86,22 @@
        <main>
 
         <div class="container_80">
+
           <!-- Row core -->
           <div class = "row core">
 
             <!-- Titolo -->
-            <div class="col-lg-12">
+            <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center book-title">
               <h3 class="my_title text-center"> NOVITà EDITORIALI </h3>
+              <img src="public/img/shield knot.svg">
             </div>
             <!-- / Titolo -->
 
-            <div class="d-flex row-book-prova">
+            <div class="row d-flex book-main">
 
-              <div class="col-lg-6">
-                <div class="book_description d-flex flex-column align-items-center">
+              <!-- Descrizione -->
+              <div class="col-lg-6 d-flex">
+                <div class="book_description d-flex flex-column justify-content-center align-items-center">
                   <div class="book_details d-flex flex-column align-items-start">
                     <p> <span>Titolo:</span> {{ libri[counter].titolo }} </p>
                     <p> <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} </p>
@@ -106,43 +110,62 @@
                     <p> <span>Pagine:</span> {{ libri[counter].pagine }} </p>
                     <p> <span>Prezzo:</span> {{ libri[counter].prezzo }} </p>  
                   </div>
-                 
                 </div>
 
               </div>
+              <!-- / Descrizione -->
               
+              <!-- Carosello libri -->
               <div class="col-lg-6">
-             
-                <div class="d-flex flex-column align-items-center" id ="book_carousel">
-                  <div class="carousel-wrapper">
-                    <div class="d-flex justify-content-center carousel">
                 
-                      <!-- Pulsante sx -->
-                      <div class="prev" @click="prevImg">
-                        <i class="fas fa-angle-left"></i>
-                      </div>
-  
-                      <!-- Slides -->
-                      <div class="images">
-                        <img class="active" v-bind:src="images[counter]">
-                      </div>
-  
-                      <!-- Pulsante dx -->
-                      <div class="next" @click="nextImg">
-                          <i class="fas fa-angle-right"></i>
-                      </div>
-  
-                    </div>
-  
-                    
+                <div class="glide">
+                 
+                  <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                      <li class="glide__slide d-flex justify-content-center">
+                        <img src="public/img/carousel0.jpg">
+                      </li>
+                      <li class="glide__slide d-flex justify-content-center">
+                        <img src="public/img/carousel1.jpg">
+                      </li>
+                      <li class="glide__slide d-flex justify-content-center">
+                        <img src="public/img/carousel2.jpg">
+                      </li>
+                      <li class="glide__slide d-flex justify-content-center">
+                        <img src="public/img/carousel3.jpg">
+                      </li>
+                      <li class="glide__slide d-flex justify-content-center">
+                        <img src="public/img/carousel4.jpg">
+                      </li>
+                    </ul>
                   </div>
+
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<" @click="prevImg">
+                      <i class="fas fa-angle-left"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">" @click="nextImg">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </div>
+
+                  <div class="glide__bullets d-flex justify-content-center align-items-end" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                  </div>
+               
+                   
                 </div>
               
               </div>
+              <!-- / Carosello libri -->
             
             </div>
 
-            <div class="d-flex row-book-prova2">
+            <div class="row d-flex book-secondary">
               <div class="col-lg-6 d_flex_center">
                 <a v-bind:href="libri[counter].link_IBS" class="btn button orange"> Acquista su IBS.it</a>
               </div>
@@ -150,73 +173,13 @@
               <div class="col-lg-6">
                 <!-- Barra di navigazione-->
                 <div class="d-flex justify-content-center">
-                  <div class="nav">
-                    <i @click="" v-bind:class="(index === counter) ? 'active' : '' "class="fas fa-circle" v-for="(img, index) in images"></i>
-                    <!-- se il valore index === counter è true, allora inserisci la classe active, altrimenti non inserire nessuna classe-->
-                  </div>
+               
                 </div>
               
               </div>
             </div>
           
           </div>
-        
-            <!-- Descrizione
-            <div class="col-lg-6">
-              <div class="book_description d-flex flex-column align-items-center">
-
-                <div class="book_details d-flex flex-column align-items-start">
-                  <p> <span>Titolo:</span> {{ libri[counter].titolo }} </p>
-                  <p> <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} </p>
-                  <p> <span>Autore:</span> {{ libri[counter].autore }} </p> 
-                  <div class ="about"> {{ libri[counter].descrizione }} </div>
-                  <p> <span>Pagine:</span> {{ libri[counter].pagine }} </p>
-                  <p> <span>Prezzo:</span> {{ libri[counter].prezzo }} </p>  
-                </div>
-                <a v-bind:href="libri[counter].link_IBS" class="btn button orange"> Acquista su IBS.it</a>
-              </div>
-            </div> -->
-            
-            <!-- Carosello libri -->
-            <!-- <div class="col-lg-6">
-             
-              <div class="d-flex flex-column align-items-center" id ="book_carousel">
-                <div class="carousel-wrapper">
-                  <div class="d-flex justify-content-center carousel"> -->
-              
-                    <!-- Pulsante sx -->
-                    <!-- <div class="prev" @click="prevImg">
-                      <i class="fas fa-angle-left"></i>
-                    </div> -->
-
-                    <!-- Slides -->
-                    <!-- <div class="images">
-                      <img class="active" v-bind:src="images[counter]">
-                    </div> -->
-
-                    <!-- Pulsante dx -->
-                    <!-- <div class="next" @click="nextImg">
-                        <i class="fas fa-angle-right"></i>
-                    </div> -->
-
-                  <!-- </div> -->
-
-                  <!-- Barra di navigazione-->
-                  <!-- <div class="d-flex justify-content-center">
-                    <div class="nav">
-                      <i @click="" v-bind:class="(index === counter) ? 'active' : '' "class="fas fa-circle" v-for="(img, index) in images"></i> -->
-                      <!-- se il valore index === counter è true, allora inserisci la classe active, altrimenti non inserire nessuna classe-->
-                    <!-- </div>
-                  </div>
-                
-                </div>
-              </div>
-            </div> -->
-            <!-- / Carosello libri -->
-                  
-            
-                
-          <!-- </div> -->
           <!-- / Row core -->
 
 
@@ -226,7 +189,10 @@
             <div class="col-lg-12 d-flex flex-column align-items-center card-collector">
               
               <div class="col-lg-12 how-to d-flex flex-column justify-content-center ">
-                <h3 class ="my_title"> COME ORDINARE </h3>
+
+                <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center order-title">
+                  <h3 class ="my_title"> COME ORDINARE </h3>
+                </div>
 
                 <!-- Cards -->
                 <div class="col-lg-12 card-container d-flex">
@@ -447,6 +413,7 @@
   <!-- Javascript files -->
   <script src="https://kit.fontawesome.com/dc7f057ed2.js" crossorigin="anonymous" type="text/Javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script> 
+  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="src/main_vue.js" type="text/Javascript"> </script>
  
 </html>

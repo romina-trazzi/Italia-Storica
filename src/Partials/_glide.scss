@@ -1,0 +1,28 @@
+.glide img {
+    min-height: 600px;
+}
+
+.glide__slide {
+    margin: 0 !important;
+    filter: blur(3px);
+    opacity: 20%;
+    transition: 0.5s linear;
+}
+
+.glide__slide--active {
+    opacity: 1;
+    filter: none;
+}
+
+
+.glide__slides {
+    overflow: visible;
+    
+}
+
+
+.glide__bullets {
+    cursor: pointer;
+    padding-top: 100px;
+    bottom: -50px;
+}

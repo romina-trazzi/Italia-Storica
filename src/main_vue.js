@@ -45,8 +45,8 @@ let app = new Vue ({
             },
 
             {
-                "titolo": "Il calderone delle streghe",
-                "sottotitolo": "La battaglia della sacca di Cherkassy, gennaio-febbraio 1944",
+                "titolo": "Il vero volto del soldato tedesco",
+                "sottotitolo": "",
                 "autore": "Fritz Kempe",
                 "pagine": "102 p., ill. , Brossura",
                 "anno di pubblicazione": "2016",
@@ -85,11 +85,32 @@ let app = new Vue ({
             }
         }
     }
-
-
-
-
 });
 
 
+let glide = new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 1,
+    focusAt: 'center',
+    breakpoints: {
+        1200: {
+            perView: 2
+        },
+     
+        992: {
+        perView: 2
+      },
+        
+        480: {
+            perView: 1
+      }
+    }
+  })
+  
+  glide.mount()
+
+
+
+ 
 
