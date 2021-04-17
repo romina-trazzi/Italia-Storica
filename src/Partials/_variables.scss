@@ -4,18 +4,17 @@ $color-map: (
   // Background
   
   "background_color": rgb(41, 41, 41), 
-  "primary_color": rgb(48, 59, 47), 
+  "primary_color": rgb(48, 59, 47),
+  "bar_color": rgb(154, 125, 46), 
   
-  // "primary_color": rgba(53, 94, 59, 0.555),
-  // background_color: rgb(25, 29, 39),
-  // primary_color": rgb(44, 62, 80), // sezioni dispari
-  // "secondary_color": /* rgb(88, 130, 143), // sezioni pari */
+
 
   // Accent
   
   "links_color": rgb(250, 153, 28),
   "icons_color": rgb(244, 124, 32),
   "text_color": rgb(255, 250, 240),
+  "title_color": rgb(209,191,142)
 
 );
 

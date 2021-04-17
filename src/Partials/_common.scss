@@ -17,8 +17,8 @@ background-color: map-get($color-map, primary_color);
 
 // Sezioni
 @mixin sezioni {
-    padding: 0 0 45px 0;
     margin: 0;
+    padding: 0 0 45px 0;
 }
 
 // Titoli principali
@@ -28,9 +28,33 @@ background-color: map-get($color-map, primary_color);
     font-size: 4rem !important;
     margin: 0 0 45px 0;
     padding: 20px 0 0 0;
+    color: map-get($color-map, title_color);
 }
 
 // Valknot decoration
+@mixin valknot {
+    .valknot-wrap {
+        text-align: center;
+        margin-bottom: 75px
+    }
+    
+    .valknot-wrap::before, .valknot-wrap::after {
+        content: "";
+        display: inline-block;
+        width: 30rem;
+        height: 2px;
+        line-height: 4px;
+        vertical-align: middle;
+        background-color: rgb(209,191,142);
+    }
+
+    img {
+        width: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
 
 
 // Descrizioni

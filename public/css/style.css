@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5 {
   font-size: 4rem !important;
   margin: 0 0 45px 0;
   padding: 20px 0 0 0;
+  color: #d1bf8e;
 }
 
 .card {
@@ -468,11 +469,12 @@ body header .my_jumbotron .steel_bar p {
   padding-top: 40px;
 }
 body main .core {
-  padding: 0 0 45px 0;
   margin: 0;
+  padding: 0 0 45px 0;
 }
 body main .core .book-title .valknot-wrap {
   text-align: center;
+  margin-bottom: 75px;
 }
 body main .core .book-title .valknot-wrap::before, body main .core .book-title .valknot-wrap::after {
   content: "";
@@ -481,7 +483,7 @@ body main .core .book-title .valknot-wrap::before, body main .core .book-title .
   height: 2px;
   line-height: 4px;
   vertical-align: middle;
-  background-color: floralwhite;
+  background-color: #d1bf8e;
 }
 body main .core .book-title img {
   width: 30px;
@@ -522,14 +524,17 @@ body main .core .book-main .book_details > .about {
 body main .core .book-secondary {
   width: 100%;
   margin-top: 30px;
+  padding: 0 0 120px 0;
+}
+body main .core .book-bar {
+  width: 100%;
+  min-height: 50px;
+  background: #9a7d2e;
 }
 body main .books {
-  padding: 0 0 45px 0;
   margin: 0;
+  padding: 0 0 45px 0;
   padding-bottom: 115px;
-}
-body main .books .order-title > img {
-  width: 30px;
 }
 body main .books .card-collector {
   color: black;
@@ -568,9 +573,27 @@ body main .books .card-collector .card:hover {
   border: 10px solid #fa991c;
 }
 body main .personal {
-  padding: 0 0 45px 0;
   margin: 0;
+  padding: 0 0 45px 0;
   background-color: #303b2f;
+}
+body main .personal .publisher-title .valknot-wrap {
+  text-align: center;
+  margin-bottom: 75px;
+}
+body main .personal .publisher-title .valknot-wrap::before, body main .personal .publisher-title .valknot-wrap::after {
+  content: "";
+  display: inline-block;
+  width: 30rem;
+  height: 2px;
+  line-height: 4px;
+  vertical-align: middle;
+  background-color: #d1bf8e;
+}
+body main .personal .publisher-title img {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 body main .personal .about {
   padding: 0 50px 50px 50px;
@@ -627,8 +650,8 @@ body main .personal .video .book_description .book_details > .about {
   margin: 30px 0 30px 0;
 }
 body main .form {
-  padding: 0 0 45px 0;
   margin: 0;
+  padding: 0 0 45px 0;
 }
 body main .form i {
   font-size: 5rem;
