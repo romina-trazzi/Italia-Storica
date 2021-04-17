@@ -125,17 +125,14 @@ body {
     
 
     main {      
-        // background-image: url("https://us.123rf.com/450wm/turbo1019/turbo10191803/turbo1019180300028/96894564-digital-camouflage-background-seamless-pattern-vector-.jpg");
         
         .core {
             @include sezioni;
 
             .book-title {
-                @include valknot;
+                @include shieldknot;
             }
             
-                     
-            // Colonna descrizioni
             .book-main {
                 @include descrizioni;
                 margin: 0;
@@ -150,18 +147,22 @@ body {
             }
 
             .book-bar {
-                width: 100%;
-                min-height: 50px;
-                background: map-get($color-map, bar_color);
+                margin: 0;
+                padding: 0;
+                @include barra;
             }
 
         }
         
         
-        .books {
+        .order {
             @include sezioni;
             background-color: map-get($color-map, secondary_color);
             padding-bottom: 115px;
+
+            .order-title {
+                @include shieldknot;
+            }
             
             .card-collector {
                 background-color: map-get($color-map, secondary_color);             
@@ -187,7 +188,7 @@ body {
                     }
 
                     p.card-text {
-                        background-color: map-get($color-map, primary_color);
+                        background-color: map-get($color-map, background_color);
                         color: floralwhite;
                         // margin-top: 50px;
 
@@ -217,8 +218,14 @@ body {
                 }
                 
                 .card:hover {
-                    border: 10px solid map-get($color-map, links_color);
+                    border: 10px solid map-get($color-map, title_color);
                 }
+            }
+
+            .order-bar {
+                margin: 0;
+                padding: 0;
+                @include barra;
             }
             
             
@@ -232,7 +239,7 @@ body {
             background-color: map-get($color-map, primary_color);
 
             .publisher-title  {
-                @include valknot;
+                @include shieldknot;
             }
             
             .about {

@@ -31,14 +31,14 @@ background-color: map-get($color-map, primary_color);
     color: map-get($color-map, title_color);
 }
 
-// Valknot decoration
-@mixin valknot {
-    .valknot-wrap {
+// Shield decoration
+@mixin shieldknot {
+    .shield-wrap {
         text-align: center;
         margin-bottom: 75px
     }
     
-    .valknot-wrap::before, .valknot-wrap::after {
+    .shield-wrap::before, .shield-wrap::after {
         content: "";
         display: inline-block;
         width: 30rem;
@@ -89,6 +89,15 @@ background-color: map-get($color-map, primary_color);
         text-align: left;
         line-height: 1.5;
         margin: 30px 0 30px 0;
+    }
+}
+
+// Bar 
+@mixin barra {
+    .desert-bar {
+        width: 100%;
+        min-height: 35px;
+        background: map-get($color-map, bar_color);
     }
 }
 
