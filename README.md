@@ -1,7 +1,7 @@
 Data inizio progetto: 21 marzo 2021.
 
 Italia storica è una associazione culturale che si occupa principalmente della pubblicazione di testi inerenti la IIa guerra mondiale.
-Richiesta: pagina singola di contatto.
+Richiesta: pagina singola di contatto full-responsive e cross-browser.
 
 Tecnologie utilizzate:
 - HTML 5 
