@@ -7,7 +7,7 @@ h1, h2, h3, h4, h5 {
 
 .container_80 {
   width: 80%;
-  margin: 50px auto 0 auto;
+  margin: 100px auto 0 auto;
   background-color: #303b2f;
 }
 
@@ -19,16 +19,16 @@ h1, h2, h3, h4, h5 {
   height: 100%;
 }
 
-.card {
-  border-radius: 0;
-}
-
 .my_title {
   text-align: center;
   text-transform: uppercase;
   font-size: 4rem !important;
   margin: 0 0 45px 0;
   padding: 20px 0 0 0;
+}
+
+.card {
+  border-radius: 0;
 }
 
 .d_flex {
@@ -340,6 +340,7 @@ a:hover {
 
 .glide img {
   min-height: 600px;
+  filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
 .glide__slide {
@@ -397,6 +398,10 @@ body header .my_jumbotron {
   height: 350px;
   padding-bottom: 440px;
 }
+body header .my_jumbotron .row {
+  margin: 0;
+  padding: 0;
+}
 body header .my_jumbotron .main_title img {
   max-height: 350px !important;
   width: 100% !important;
@@ -453,18 +458,35 @@ body header .my_jumbotron .steel_bar {
   align-items: center;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 0;
 }
 body header .my_jumbotron .steel_bar p {
   font-size: 1.5rem;
   margin: 0;
+  padding: 0;
   padding-top: 40px;
 }
 body main .core {
   padding: 0 0 45px 0;
   margin: 0;
 }
+body main .core .book-title .valknot-wrap {
+  text-align: center;
+}
+body main .core .book-title .valknot-wrap::before, body main .core .book-title .valknot-wrap::after {
+  content: "";
+  display: inline-block;
+  width: 30rem;
+  height: 2px;
+  line-height: 4px;
+  vertical-align: middle;
+  background-color: floralwhite;
+}
 body main .core .book-title img {
   width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 body main .core .book-main {
   margin: 0;

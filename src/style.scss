@@ -1,18 +1,17 @@
 /* Codice CSS Italia Storica */
 
+// Basic Stykesheet
 @import "./Partials/_variables.scss";
 @import "./Partials/_common.scss";
 @import "./Partials/_elements.scss";
 
-
-// Glide Js Required Core Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-
-// Glide Js Optional Theme Stylesheet
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
-
+// Glide Js Required Stylesheet
+@import "./Partials/Glide-css/_variables.scss";
+@import "./Partials/Glide-css/glide.core.scss";
+@import "./Partials/Glide-css/glide.theme.scss";
 @import "./Partials/_glide.scss";
 
+// Special GoogleFont
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
@@ -56,6 +55,11 @@ body {
         .my_jumbotron {
            height: 350px;
            padding-bottom: 440px;
+
+           .row {
+               margin: 0;
+               padding: 0;
+           }
           
            .main_title {
                 
@@ -106,9 +110,12 @@ body {
                 align-items: center;
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0.8);
+                margin: 0;
+                padding: 0;
                 & p {
                     font-size: 1.5rem;
                     margin: 0;
+                    padding: 0;
                     padding-top: 40px;
 
                 }
@@ -119,16 +126,37 @@ body {
 
     main {      
         // background-image: url("https://us.123rf.com/450wm/turbo1019/turbo10191803/turbo1019180300028/96894564-digital-camouflage-background-seamless-pattern-vector-.jpg");
-     
         
         .core {
             @include sezioni;
 
             .book-title {
+
+                .valknot-wrap {
+                    text-align: center;
+                }
+                
+                .valknot-wrap::before, .valknot-wrap::after {
+                    content: "";
+                    display: inline-block;
+                    width: 30rem;
+                    height: 2px;
+                    line-height: 4px;
+                    vertical-align: middle;
+                    background-color: floralwhite;
+                }
+            
+            
+                
+                
                 img {
                     width: 30px;
+                    margin-left: 10px;
+                    margin-right: 10px;
                 }
+
             }
+            
                      
             // Colonna descrizioni
             .book-main {

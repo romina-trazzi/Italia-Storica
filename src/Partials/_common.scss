@@ -1,8 +1,7 @@
 // Container
-
 .container_80 {
 width: 80%;
-margin: 50px auto 0 auto;
+margin: 100px auto 0 auto;
 background-color: map-get($color-map, primary_color);
 }
 
@@ -18,21 +17,9 @@ background-color: map-get($color-map, primary_color);
 
 // Sezioni
 @mixin sezioni {
-    
-    // -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    // -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
     padding: 0 0 45px 0;
     margin: 0;
 }
-
-
-// Card 
-.card { 
-    border-radius: 0;
-}
-
-
 
 // Titoli principali
 .my_title {
@@ -42,6 +29,9 @@ background-color: map-get($color-map, primary_color);
     margin: 0 0 45px 0;
     padding: 20px 0 0 0;
 }
+
+// Valknot decoration
+
 
 // Descrizioni
 @mixin descrizioni {
@@ -78,7 +68,10 @@ background-color: map-get($color-map, primary_color);
     }
 }
 
-
+// Card 
+.card { 
+    border-radius: 0;
+}
 
 // Flexbox  
 .d_flex {
@@ -99,7 +92,6 @@ background-color: map-get($color-map, primary_color);
 
 
 // Position
-
 .position_absolute{
   position: absolute;
 }
