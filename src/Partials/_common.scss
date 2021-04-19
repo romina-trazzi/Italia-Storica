@@ -1,3 +1,25 @@
+// Color Map
+$color-map: (
+    
+  // Background
+  
+  "background_color": rgb(41, 41, 41), 
+  "primary_color": rgb(48, 59, 47),
+  "bar_color": rgb(154, 125, 46),
+  "bg_card_color":   rgba(209, 191, 150, 0.2),
+
+  
+
+  // Accent
+  
+  "links_color": rgb(250, 153, 28),
+  "icons_color": rgb(244, 124, 32),
+  "text_color": rgb(255, 250, 240),
+  "title_color": rgb(209,191,142),
+  "card_text_color": rgb(158, 157, 81),
+
+);
+
 // Container
 .container_80 {
 width: 80%;
@@ -41,10 +63,10 @@ background-color: map-get($color-map, primary_color);
     .shield-wrap::before, .shield-wrap::after {
         content: "";
         display: inline-block;
+        vertical-align: middle;
         width: 30rem;
         height: 2px;
         line-height: 4px;
-        vertical-align: middle;
         background-color: rgb(209,191,142);
     }
 

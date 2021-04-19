@@ -1,7 +1,6 @@
 /* Codice CSS Italia Storica */
 
 // Basic Stykesheet
-@import "./Partials/_variables.scss";
 @import "./Partials/_common.scss";
 @import "./Partials/_elements.scss";
 
@@ -142,14 +141,8 @@ body {
             
             .book-secondary {
                 width: 100%;
-                margin-top: 30px;
-                padding: 0 0 120px 0;
-            }
-
-            .book-bar {
-                margin: 0;
-                padding: 0;
-                @include barra;
+                margin: 30px 0 0 0;
+                padding: 0 0 50px 0;
             }
 
         }
@@ -157,54 +150,81 @@ body {
         
         .order {
             @include sezioni;
-            background-color: map-get($color-map, secondary_color);
-            padding-bottom: 115px;
+            
 
             .order-title {
-                @include shieldknot;
+                h3 {
+                    font-size: 3rem !important;
+                    padding: 0;
+                    margin-bottom: 75px;
+                }
             }
             
-            .card-collector {
-                background-color: map-get($color-map, secondary_color);             
-                color: black;
+            .card-collector {      
+                padding: 0;       
                     
-                .how-to {
-                    color: floralwhite;
+                .card-container, .how-to {
+                    padding: 0;
+                }
+
+                .card-container > .col-lg-3 {
+                    padding: 0;
                 }
                 
                 .card {
-                    border: 1px inset map-get($color-map, primary_color);
-                    background-color: floralwhite;
+                    background-color: map-get($color-map, bg_card_color);
+                    border: 1px solid map-get($color-map, background_color);
                     color: map-get($color-map, links_color);
-                    // box-shadow: 0 20px 50px rgba(64, 85, 108, 0.9);
-                    //  transform: translateY(-100px);
-                    // -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-                    // -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-                    // box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+                    margin-bottom: 200px;
+                    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                     
-                    .card-header, .card-title {
-                        color: rgb(250, 153, 28);
+                    .card-header {
+                        color: map-get($color-map, icons_color);
                         font-size: 1.4em;
                     }
-
-                    p.card-text {
-                        background-color: map-get($color-map, background_color);
-                        color: floralwhite;
-                        // margin-top: 50px;
-
+                    
+                    .card-title {
+                        color: map-get($color-map, title_color);
+                        font-size: 1.4em;
+                        
                     }
                     
+                    // p.card-text {
+                    //     background-color: map-get($color-map, title_color);
+                    //     color: floralwhite;
+                    //     // margin-top: 50px;
+
+                    // }
+                    
                     .card-body {
-                        img {
-                            width: 50%;
-                            border-radius: 20%;
+                        // img {
+                        //     width: 50%;
+                        //     border-radius: 20%;
+                        //     padding-bottom: 30px;
+                        // }
+
+                        i {
+                            width: 100%;
+                            padding-top: 30px;
                             padding-bottom: 30px;
+                            color: map-get($color-map, title_color);
+                            font-size: 5rem;
+                        }
+
+                        hr {
+                            width: 80%;
+                            border: 1px solid map-get($color-map, title_color);
+                            border-radius: 50%;
                         }
                         
                         p {
-                            margin-top: 10px;
+                            margin-top: 50px;
+                            color: map-get($color-map, title_color);
+                            font-size: 1.2em;
                         }
-
+                        
                         .button {
                             margin-top: 30px;
                         }
@@ -213,26 +233,42 @@ body {
                     .btn-primary {
                         text-align: center;
                     }
-
+                    
                     
                 }
                 
                 .card:hover {
-                    border: 10px solid map-get($color-map, title_color);
-                }
-            }
+                    // border: 10px solid map-get($color-map, card_text_color);
 
+                    i {
+                        color: map-get($color-map, links_color);
+                    }
+
+                    hr {
+                        border: 1px solid map-get($color-map, links_color);
+                    }
+                    
+                    p {
+                        color: floralwhite;
+                    }
+
+                    h5 {
+                        color: map-get($color-map, links_color);
+                    }
+                }
+
+               
+            }
+           
+            
+        
             .order-bar {
                 margin: 0;
                 padding: 0;
                 @include barra;
             }
-            
-            
-           
-            
+
         }
-        
         
         .personal {
             @include sezioni;

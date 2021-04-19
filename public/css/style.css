@@ -1,10 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap);
 /* Codice CSS Italia Storica */
-h1, h2, h3, h4, h5 {
-  line-height: 1.5;
-}
-
 .container_80 {
   width: 80%;
   margin: 100px auto 0 auto;
@@ -480,10 +476,10 @@ body main .core .book-title .shield-wrap {
 body main .core .book-title .shield-wrap::before, body main .core .book-title .shield-wrap::after {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 30rem;
   height: 2px;
   line-height: 4px;
-  vertical-align: middle;
   background-color: #d1bf8e;
 }
 body main .core .book-title img {
@@ -524,67 +520,58 @@ body main .core .book-main .book_details > .about {
 }
 body main .core .book-secondary {
   width: 100%;
-  margin-top: 30px;
-  padding: 0 0 120px 0;
-}
-body main .core .book-bar {
-  margin: 0;
-  padding: 0;
-}
-body main .core .book-bar .desert-bar {
-  width: 100%;
-  min-height: 35px;
-  background: #9a7d2e;
+  margin: 30px 0 0 0;
+  padding: 0 0 50px 0;
 }
 body main .order {
   margin: 0;
   padding: 0 0 45px 0;
-  padding-bottom: 115px;
 }
-body main .order .order-title .shield-wrap {
-  text-align: center;
+body main .order .order-title h3 {
+  font-size: 3rem !important;
+  padding: 0;
   margin-bottom: 75px;
 }
-body main .order .order-title .shield-wrap::before, body main .order .order-title .shield-wrap::after {
-  content: "";
-  display: inline-block;
-  width: 30rem;
-  height: 2px;
-  line-height: 4px;
-  vertical-align: middle;
-  background-color: #d1bf8e;
-}
-body main .order .order-title img {
-  width: 30px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
 body main .order .card-collector {
-  color: black;
+  padding: 0;
 }
-body main .order .card-collector .how-to {
-  color: floralwhite;
+body main .order .card-collector .card-container, body main .order .card-collector .how-to {
+  padding: 0;
+}
+body main .order .card-collector .card-container > .col-lg-3 {
+  padding: 0;
 }
 body main .order .card-collector .card {
-  border: 1px inset #303b2f;
-  background-color: floralwhite;
+  background-color: rgba(209, 191, 150, 0.2);
+  border: 1px solid #292929;
   color: #fa991c;
+  margin-bottom: 200px;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
-body main .order .card-collector .card .card-header, body main .order .card-collector .card .card-title {
-  color: #fa991c;
+body main .order .card-collector .card .card-header {
+  color: #f47c20;
   font-size: 1.4em;
 }
-body main .order .card-collector .card p.card-text {
-  background-color: #292929;
-  color: floralwhite;
+body main .order .card-collector .card .card-title {
+  color: #d1bf8e;
+  font-size: 1.4em;
 }
-body main .order .card-collector .card .card-body img {
-  width: 50%;
-  border-radius: 20%;
+body main .order .card-collector .card .card-body i {
+  width: 100%;
+  padding-top: 30px;
   padding-bottom: 30px;
+  color: #d1bf8e;
+  font-size: 5rem;
+}
+body main .order .card-collector .card .card-body hr {
+  width: 80%;
+  border: 1px solid #d1bf8e;
+  border-radius: 50%;
 }
 body main .order .card-collector .card .card-body p {
-  margin-top: 10px;
+  margin-top: 50px;
+  color: #d1bf8e;
+  font-size: 1.2em;
 }
 body main .order .card-collector .card .card-body .button {
   margin-top: 30px;
@@ -592,8 +579,17 @@ body main .order .card-collector .card .card-body .button {
 body main .order .card-collector .card .btn-primary {
   text-align: center;
 }
-body main .order .card-collector .card:hover {
-  border: 10px solid #d1bf8e;
+body main .order .card-collector .card:hover i {
+  color: #fa991c;
+}
+body main .order .card-collector .card:hover hr {
+  border: 1px solid #fa991c;
+}
+body main .order .card-collector .card:hover p {
+  color: floralwhite;
+}
+body main .order .card-collector .card:hover h5 {
+  color: #fa991c;
 }
 body main .order .order-bar {
   margin: 0;
@@ -616,10 +612,10 @@ body main .personal .publisher-title .shield-wrap {
 body main .personal .publisher-title .shield-wrap::before, body main .personal .publisher-title .shield-wrap::after {
   content: "";
   display: inline-block;
+  vertical-align: middle;
   width: 30rem;
   height: 2px;
   line-height: 4px;
-  vertical-align: middle;
   background-color: #d1bf8e;
 }
 body main .personal .publisher-title img {
