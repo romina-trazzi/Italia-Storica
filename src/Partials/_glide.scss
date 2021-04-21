@@ -3,25 +3,25 @@
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
-.glide__slide {
+.glide .glide__slide {
     margin: 0 !important;
     filter: blur(3px);
     opacity: 20%;
     transition: 0.5s linear;
 }
 
-.glide__slide--active {
+.glide .glide__slide--active {
     opacity: 1;
     filter: none;
 }
 
 
-.glide__slides {
+.glide .glide__slides {
     overflow: visible;
     
 }
 
-.glide__bullets {
+.glide .glide__bullets {
     cursor: pointer;
     padding-top: 100px;
     bottom: -50px;

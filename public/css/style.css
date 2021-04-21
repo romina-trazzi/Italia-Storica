@@ -24,6 +24,15 @@
   color: #d1bf8e;
 }
 
+.small_title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem !important;
+  margin: 0 0 75px 0;
+  padding: 0;
+  color: #d1bf8e;
+}
+
 .card {
   border-radius: 0;
 }
@@ -341,23 +350,23 @@ a:hover {
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
-.glide__slide {
+.glide .glide__slide {
   margin: 0 !important;
   filter: blur(3px);
   opacity: 20%;
   transition: 0.5s linear;
 }
 
-.glide__slide--active {
+.glide .glide__slide--active {
   opacity: 1;
   filter: none;
 }
 
-.glide__slides {
+.glide .glide__slides {
   overflow: visible;
 }
 
-.glide__bullets {
+.glide .glide__bullets {
   cursor: pointer;
   padding-top: 100px;
   bottom: -50px;
@@ -521,31 +530,21 @@ body main .core .book-main .book_details > .about {
 body main .core .book-secondary {
   width: 100%;
   margin: 30px 0 0 0;
-  padding: 0 0 50px 0;
+  padding: 0;
 }
 body main .order {
   margin: 0;
   padding: 0 0 45px 0;
-}
-body main .order .order-title h3 {
-  font-size: 3rem !important;
-  padding: 0;
-  margin-bottom: 75px;
+  padding-top: 85px;
 }
 body main .order .card-collector {
-  padding: 0;
-}
-body main .order .card-collector .card-container, body main .order .card-collector .how-to {
-  padding: 0;
-}
-body main .order .card-collector .card-container > .col-lg-3 {
   padding: 0;
 }
 body main .order .card-collector .card {
   background-color: rgba(209, 191, 150, 0.2);
   border: 1px solid #292929;
   color: #fa991c;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 body main .order .card-collector .card .card-header {
@@ -553,25 +552,20 @@ body main .order .card-collector .card .card-header {
   font-size: 1.4em;
 }
 body main .order .card-collector .card .card-title {
-  color: #d1bf8e;
+  color: #fa991c;
   font-size: 1.4em;
 }
 body main .order .card-collector .card .card-body i {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: #d1bf8e;
+  color: #9e9d51;
   font-size: 5rem;
 }
 body main .order .card-collector .card .card-body hr {
   width: 80%;
-  border: 1px solid #d1bf8e;
+  border: 1px solid #9e9d51;
   border-radius: 50%;
-}
-body main .order .card-collector .card .card-body p {
-  margin-top: 50px;
-  color: #d1bf8e;
-  font-size: 1.2em;
 }
 body main .order .card-collector .card .card-body .button {
   margin-top: 30px;
@@ -579,17 +573,14 @@ body main .order .card-collector .card .card-body .button {
 body main .order .card-collector .card .btn-primary {
   text-align: center;
 }
-body main .order .card-collector .card:hover i {
+body main .order .card-collector .card .orange:hover h5 {
   color: #fa991c;
 }
-body main .order .card-collector .card:hover hr {
+body main .order .card-collector .card .orange:hover i {
+  color: #fa991c;
+}
+body main .order .card-collector .card .orange:hover hr {
   border: 1px solid #fa991c;
-}
-body main .order .card-collector .card:hover p {
-  color: floralwhite;
-}
-body main .order .card-collector .card:hover h5 {
-  color: #fa991c;
 }
 body main .order .order-bar {
   margin: 0;
@@ -637,6 +628,7 @@ body main .personal .about p {
   font-size: 0.9rem;
   text-align: left;
   line-height: 1.5;
+  color: floralwhite;
 }
 body main .personal .video {
   margin: 0;
@@ -645,6 +637,9 @@ body main .personal .video {
 body main .personal .video .carousel-wrapper {
   width: 80%;
   margin: 30px auto;
+}
+body main .personal .video .carousel {
+  width: 100%;
 }
 body main .personal .video .book_description {
   margin-left: auto;

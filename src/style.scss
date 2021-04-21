@@ -5,9 +5,10 @@
 @import "./Partials/_elements.scss";
 
 // Glide Js Required Stylesheet
-@import "./Partials/Glide-css/_variables.scss";
-@import "./Partials/Glide-css/glide.core.scss";
-@import "./Partials/Glide-css/glide.theme.scss";
+@import "./Partials/ImageGlide-css/_variables.scss";
+@import "./Partials/ImageGlide-css/glide.core.scss";
+@import "./Partials/ImageGlide-css/glide.theme.scss";
+
 @import "./Partials/_glide.scss";
 
 // Special GoogleFont
@@ -142,7 +143,7 @@ body {
             .book-secondary {
                 width: 100%;
                 margin: 30px 0 0 0;
-                padding: 0 0 50px 0;
+                padding: 0;
             }
 
         }
@@ -150,32 +151,24 @@ body {
         
         .order {
             @include sezioni;
-            
+            padding-top: 85px;
 
-            .order-title {
-                h3 {
-                    font-size: 3rem !important;
-                    padding: 0;
-                    margin-bottom: 75px;
-                }
-            }
-            
             .card-collector {      
                 padding: 0;       
                     
-                .card-container, .how-to {
-                    padding: 0;
-                }
+                // .card-container {
+                //     padding: 0;
+                // }
 
-                .card-container > .col-lg-3 {
-                    padding: 0;
-                }
+                // .card-container > .col-lg-3 {
+                //     padding: 0;
+                // }
                 
                 .card {
                     background-color: map-get($color-map, bg_card_color);
                     border: 1px solid map-get($color-map, background_color);
                     color: map-get($color-map, links_color);
-                    margin-bottom: 200px;
+                    margin-bottom: 150px;
                     -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                     -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
@@ -186,7 +179,7 @@ body {
                     }
                     
                     .card-title {
-                        color: map-get($color-map, title_color);
+                        color: map-get($color-map, links_color);
                         font-size: 1.4em;
                         
                     }
@@ -209,21 +202,21 @@ body {
                             width: 100%;
                             padding-top: 30px;
                             padding-bottom: 30px;
-                            color: map-get($color-map, title_color);
+                            color: map-get($color-map, card_text_color);
                             font-size: 5rem;
                         }
 
                         hr {
                             width: 80%;
-                            border: 1px solid map-get($color-map, title_color);
+                            border: 1px solid map-get($color-map, card_text_color);
                             border-radius: 50%;
                         }
                         
-                        p {
-                            margin-top: 50px;
-                            color: map-get($color-map, title_color);
-                            font-size: 1.2em;
-                        }
+                        // p {
+                        //     margin-top: 50px;
+                        //     color: map-get($color-map, title_color);
+                        //     font-size: 1.2em;
+                        // }
                         
                         .button {
                             margin-top: 30px;
@@ -235,33 +228,26 @@ body {
                     }
                     
                     
+                    .orange:hover {
+                        // border: 10px solid map-get($color-map, card_text_color);
+    
+                        h5 {
+                            color: map-get($color-map, links_color);
+                        }
+    
+                        i {
+                            color: map-get($color-map, links_color);
+                        }
+    
+                        hr {
+                            border: 1px solid map-get($color-map, links_color);
+                        }
+                    }
                 }
                 
-                .card:hover {
-                    // border: 10px solid map-get($color-map, card_text_color);
 
-                    i {
-                        color: map-get($color-map, links_color);
-                    }
-
-                    hr {
-                        border: 1px solid map-get($color-map, links_color);
-                    }
-                    
-                    p {
-                        color: floralwhite;
-                    }
-
-                    h5 {
-                        color: map-get($color-map, links_color);
-                    }
-                }
-
-               
             }
            
-            
-        
             .order-bar {
                 margin: 0;
                 padding: 0;
@@ -277,7 +263,7 @@ body {
             .publisher-title  {
                 @include shieldknot;
             }
-            
+
             .about {
                 padding: 0 50px 50px 50px;
                 
@@ -293,6 +279,7 @@ body {
                     font-size: 0.9rem;
                     text-align: left;
                     line-height: 1.5;
+                    color: map-get($color-map, text_color);
                 }
 
             }
@@ -304,6 +291,10 @@ body {
                 .carousel-wrapper {
                     width: 80%;
                     margin: 30px auto;
+                }
+
+                .carousel {
+                    width: 100%;
                 }
 
                 .book_description {

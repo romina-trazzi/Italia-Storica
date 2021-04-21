@@ -53,6 +53,16 @@ background-color: map-get($color-map, primary_color);
     color: map-get($color-map, title_color);
 }
 
+// Titoli secondari
+.small_title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem !important;
+    margin: 0 0 75px 0;
+    padding: 0;
+    color: map-get($color-map, title_color);
+}
+
 // Shield decoration
 @mixin shieldknot {
     .shield-wrap {
