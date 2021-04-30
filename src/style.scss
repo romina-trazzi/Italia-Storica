@@ -155,94 +155,73 @@ body {
 
             .card-collector {      
                 padding: 0;       
-                    
-                // .card-container {
-                //     padding: 0;
-                // }
+                margin-bottom: 150px;
 
-                // .card-container > .col-lg-3 {
-                //     padding: 0;
-                // }
-                
-                .card {
-                    background-color: map-get($color-map, bg_card_color);
-                    border: 1px solid map-get($color-map, background_color);
-                    color: map-get($color-map, links_color);
-                    margin-bottom: 150px;
-                    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                .card-container {
+                    max-height: 397px;
                     
-                    .card-header {
-                        color: map-get($color-map, icons_color);
-                        font-size: 1.4em;
-                    }
-                    
-                    .card-title {
+                    .card {
+                        background-color: map-get($color-map, bg_card_color);
+                        border: 1px solid map-get($color-map, background_color);
                         color: map-get($color-map, links_color);
-                        font-size: 1.4em;
+                        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                         
-                    }
-                    
-                    // p.card-text {
-                    //     background-color: map-get($color-map, title_color);
-                    //     color: floralwhite;
-                    //     // margin-top: 50px;
-
-                    // }
-                    
-                    .card-body {
-                        // img {
-                        //     width: 50%;
-                        //     border-radius: 20%;
-                        //     padding-bottom: 30px;
-                        // }
-
-                        i {
-                            width: 100%;
-                            padding-top: 30px;
-                            padding-bottom: 30px;
-                            color: map-get($color-map, card_text_color);
-                            font-size: 5rem;
-                        }
-
-                        hr {
-                            width: 80%;
-                            border: 1px solid map-get($color-map, card_text_color);
-                            border-radius: 50%;
+                        .card-header {
+                            color: map-get($color-map, icons_color);
+                            font-size: 1.4em;
                         }
                         
-                        // p {
-                        //     margin-top: 50px;
-                        //     color: map-get($color-map, title_color);
-                        //     font-size: 1.2em;
-                        // }
-                        
-                        .button {
-                            margin-top: 30px;
-                        }
-                    }
-                    
-                    .btn-primary {
-                        text-align: center;
-                    }
-                    
-                    
-                    .orange:hover {
-                        // border: 10px solid map-get($color-map, card_text_color);
-    
-                        h5 {
+                        .card-title {
                             color: map-get($color-map, links_color);
+                            font-size: 1.4em;
                         }
+                        
+                        .card-body {
+                            i {
+                                width: 100%;
+                                padding-top: 30px;
+                                padding-bottom: 30px;
+                                color: map-get($color-map, card_text_color);
+                                font-size: 5rem;
+                            }
     
-                        i {
-                            color: map-get($color-map, links_color);
+                            hr {
+                                width: 80%;
+                                border: 1px solid map-get($color-map, card_text_color);
+                                border-radius: 50%;
+                            }
+                            
+                            .button {
+                                margin-top: 30px;
+                            }
                         }
-    
-                        hr {
-                            border: 1px solid map-get($color-map, links_color);
+                        
+                        .btn-primary {
+                            text-align: center;
                         }
+                        
                     }
+    
+                    .card:hover {
+                            -webkit-box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
+                            -moz-box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
+                            box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
+                            border: 5px solid map-get($color-map, links_color);
+        
+                            // h5 {
+                            //     color: map-get($color-map, links_color);
+                            // }
+        
+                            // i {
+                            //     color: map-get($color-map, links_color);
+                            // }
+        
+                            // hr {
+                            //     border: 1px solid map-get($color-map, links_color);
+                            // }
+                        }
                 }
                 
 
@@ -264,14 +243,18 @@ body {
                 @include shieldknot;
             }
 
+            // .photo {
+               
+            // }
+
             .about {
-                padding: 0 50px 50px 50px;
-                
+                padding: 0 50px 130px 50px;
+
                 img {
-                    width: 20%;
-                    height: 20%;
+                    width: 97%;
                     margin-right: 40px;
-                    border-radius: 50%;
+                    filter: grayscale(0%);
+                    transition: all 1s ease-in;
                 }
                 
                 p {
@@ -280,6 +263,14 @@ body {
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
+                }
+                
+                img:hover {
+                    filter: grayscale(40%);
+                    -webkit-filter: grayscale(40%); 
+                    -moz-filter: grayscale(40%);
+                    -ms-filter: grayscale(40%); 
+                    -o-filter: grayscale(40%);  
                 }
 
             }
@@ -331,6 +322,20 @@ body {
                 
         }
 
+    }
+
+    footer {
+
+        .supporters {
+            img {
+                width: 10%;
+            }
+            
+            .loghi { 
+                width: 70%;
+            }
+            
+        }
     }
 
 }

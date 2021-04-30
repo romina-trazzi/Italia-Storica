@@ -11,6 +11,7 @@ Tecnologie utilizzate:
 - Javascript ES6 
 - Vue JS 2.6 
 - Glide JS
+- Photoshop
 
 
 ~ ENG ~
@@ -29,3 +30,4 @@ Technologies used:
 - Javascript ES6 
 - Vue JS 2.6 
 - Glide JS
+- Photoshop

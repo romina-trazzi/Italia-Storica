@@ -1,8 +1,9 @@
 node_modules/
 package-lock.json
 cartella magazzino/
-src/Partials/Carosello/
+src/Carosello/
 avariables-ritagli.scss
+public/img/About me seppia/
 
 
 

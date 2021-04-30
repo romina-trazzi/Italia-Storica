@@ -539,48 +539,46 @@ body main .order {
 }
 body main .order .card-collector {
   padding: 0;
+  margin-bottom: 150px;
 }
-body main .order .card-collector .card {
+body main .order .card-collector .card-container {
+  max-height: 397px;
+}
+body main .order .card-collector .card-container .card {
   background-color: rgba(209, 191, 150, 0.2);
   border: 1px solid #292929;
   color: #fa991c;
-  margin-bottom: 150px;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
-body main .order .card-collector .card .card-header {
+body main .order .card-collector .card-container .card .card-header {
   color: #f47c20;
   font-size: 1.4em;
 }
-body main .order .card-collector .card .card-title {
+body main .order .card-collector .card-container .card .card-title {
   color: #fa991c;
   font-size: 1.4em;
 }
-body main .order .card-collector .card .card-body i {
+body main .order .card-collector .card-container .card .card-body i {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
   color: #9e9d51;
   font-size: 5rem;
 }
-body main .order .card-collector .card .card-body hr {
+body main .order .card-collector .card-container .card .card-body hr {
   width: 80%;
   border: 1px solid #9e9d51;
   border-radius: 50%;
 }
-body main .order .card-collector .card .card-body .button {
+body main .order .card-collector .card-container .card .card-body .button {
   margin-top: 30px;
 }
-body main .order .card-collector .card .btn-primary {
+body main .order .card-collector .card-container .card .btn-primary {
   text-align: center;
 }
-body main .order .card-collector .card .orange:hover h5 {
-  color: #fa991c;
-}
-body main .order .card-collector .card .orange:hover i {
-  color: #fa991c;
-}
-body main .order .card-collector .card .orange:hover hr {
-  border: 1px solid #fa991c;
+body main .order .card-collector .card-container .card:hover {
+  box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
+  border: 5px solid #fa991c;
 }
 body main .order .order-bar {
   margin: 0;
@@ -615,13 +613,13 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 50px 50px;
+  padding: 0 50px 130px 50px;
 }
 body main .personal .about img {
-  width: 20%;
-  height: 20%;
+  width: 97%;
   margin-right: 40px;
-  border-radius: 50%;
+  filter: grayscale(0%);
+  transition: all 1s ease-in;
 }
 body main .personal .about p {
   font-family: "Open Sans", sans-serif;
@@ -629,6 +627,13 @@ body main .personal .about p {
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
+}
+body main .personal .about img:hover {
+  filter: grayscale(40%);
+  -webkit-filter: grayscale(40%);
+  -moz-filter: grayscale(40%);
+  -ms-filter: grayscale(40%);
+  -o-filter: grayscale(40%);
 }
 body main .personal .video {
   margin: 0;
@@ -687,4 +692,10 @@ body main .form input, body main .form textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
+}
+body footer .supporters img {
+  width: 10%;
+}
+body footer .supporters .loghi {
+  width: 70%;
 }
