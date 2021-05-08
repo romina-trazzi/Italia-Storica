@@ -243,15 +243,11 @@ body {
                 @include shieldknot;
             }
 
-            // .photo {
-               
-            // }
-
             .about {
-                padding: 0 50px 130px 50px;
+                padding: 0 50px 150px 50px;
 
                 img {
-                    width: 97%;
+                    width: 60%;
                     margin-right: 40px;
                     filter: grayscale(0%);
                     transition: all 1s ease-in;
@@ -264,15 +260,36 @@ body {
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
                 }
-                
-                img:hover {
-                    filter: grayscale(40%);
-                    -webkit-filter: grayscale(40%); 
-                    -moz-filter: grayscale(40%);
-                    -ms-filter: grayscale(40%); 
-                    -o-filter: grayscale(40%);  
+
+            }
+
+            .supporters {
+                margin-bottom: 150px;
+
+                img {
+                    width: 15%;
+                    height: 60px;
+                    filter:grayscale(100%);
+                    transform:scale(1);
+                    transition: all 1s ease 0.2s;
                 }
 
+                img:nth-child(4) {
+                    height: 150px;
+                }
+
+                img:hover {
+                    -webkit-transform: scale(1.2);
+                    -o-transform: scale(1.2);
+                    -ms-transform: scale(1.2);
+                    transform:scale(1.2);
+                    transition: all 1s ease 0.2s;
+                }
+                
+                .loghi { 
+                    width: 70%;
+                }
+                
             }
 
             .video {     
@@ -281,7 +298,6 @@ body {
 
                 .carousel-wrapper {
                     width: 80%;
-                    margin: 30px auto;
                 }
 
                 .carousel {
@@ -292,6 +308,16 @@ body {
                     @include descrizioni;
                     margin-left: auto;
                     margin-right: auto;
+
+                    p {
+                        margin-bottom: 150px;
+                    }
+                }
+
+                .order-bar {
+                    margin: 0;
+                    padding: 0;
+                    @include barra;
                 }
                 
                    
@@ -304,6 +330,10 @@ body {
         .form {
             @include sezioni;
             background-color: map-get($color-map, secondary_color);
+
+            .form-title {
+                @include shieldknot;
+            }
 
             i {
                 font-size: 5rem;
@@ -326,16 +356,33 @@ body {
 
     footer {
 
-        .supporters {
-            img {
-                width: 10%;
-            }
+        .copyright {
+            margin:0;
+            padding: 0;
+            height: 30px;
+            background:map-get($color-map, bg_card_color);
             
-            .loghi { 
-                width: 70%;
+            p {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+                font-family: "Open Sans", sans-serif;         
+                font-size: 0.8rem;
+                font-weight: 400;
             }
-            
         }
+        
+
+        .camouflage {
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://pic.17qq.com/uploads/hdpgfphijz.jpeg");
+            filter:opacity(2%);
+            filter:brightness(30%);
+        }
+        
     }
 
 }

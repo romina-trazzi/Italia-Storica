@@ -33,6 +33,7 @@
   
   <body>
     <div id ="app">
+
       <!-- Header -->
       <header>
         
@@ -81,10 +82,10 @@
       </header>
       <!-- / Header -->
       
-       <!-- Main -->
-       <main>
+      <div class="container_80">
+        <!-- Main -->
+        <main>
 
-        <div class="container_80">
 
           <!-- Row core -->
           <div class = "row core">
@@ -184,7 +185,6 @@
           </div>
           <!-- / Row core -->
 
-
           <!-- Row order -->
           <div class ="row order">
             
@@ -271,8 +271,7 @@
               </div>             
             </div>
             <!-- / Titolo -->
-            <!-- <div class="col-lg-12 d-flex justify-content-center photo">
-            </div> -->
+
             <!-- About  -->
             <div class="col-lg-12">
               <div class="d-flex justify-space-between about">
@@ -282,10 +281,11 @@
                     Nato nel 1973, Andrea Lombardi ha lavorato presso la prima casa d’aste italiana specializzata in armi antiche, faleristica e militaria. <br>
                     Appassionato di storia e letteratura francese del 1900, colleziona antiquariato storico-militare e bibliofilo. <br> <br>
                     Dal 2011 è presidente dell’Associazione Culturale “ITALIA Storica”, ed è artefice del primo sito internet italiano sullo scrittore Louis-Ferdinand Céline. <br><br>
-                  
                     Ha collaborato e collabora con le riviste Satisfiction, The Fashionable Lampoon, il Primato Nazionale, Costume, Rivivere la storia, Storia del Novecento, Milites, SGM, Ritterkreuz, Steel Art, Storia Verità, Storia e Battaglie, Le Ali, Barbadillo.it, Pangea, Le Bulletin Célinien, Spécial Céline. <br> <br>
-                    Oltre alle sue numerose pubblicazioni specialistiche riguardanti il secondo conflitto mondiale, ricordiamo: <br><br>
-                    
+                  </p>
+
+                  <p> Oltre alle sue numerose pubblicazioni specialistiche riguardanti il secondo conflitto mondiale, ricordiamo: <br><br>
+                   
                     - <i> Louis-Ferdinand Céline, Contro Sarte. A l’agité du bocal (cur.), Effepi, Genova 2005 Louis-Ferdinand Céline in foto. Immagini, ricordi, interviste e saggi, Effepi, Genova 2009 </i><br>
                     - <i> Céline ci scrive. Le lettere di Louis-Ferdinand Céline alla stampa collaborazionista francese, 1940- 1944, Settimo Sigillo, Roma 2011 </i> <br>
                     - <i> La prima vita di Céline – Il corazziere a cavallo Louis Destouches nella prima guerra mondiale, ITALIA Storica, Genova 2012 </i> <br>
@@ -301,10 +301,15 @@
                     <b> Per collaborazioni scrivere a: </b> 
                     <a href="mailto:andrea.lombardi@hotmail.com" class="my_links">andrea.lombardi@hotmail.com</a> 
                   </p>
-              
+
                 </div>
-              
+
+               
               </div>  
+
+             
+
+
             </div>
             <!-- / About -->
 
@@ -314,6 +319,18 @@
             </div>
             <!-- / Titolo -->
 
+            <!-- Supporters -->
+            <div class="col-lg-12 d-flex justify-content-center align-items-center supporters">
+              <div class="d-flex justify-content-around align-items-center loghi">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Logo_de_%22Il_Primato_Nazionale%22.png">
+                <img src="https://www.mcarchitects.it/wp-content/uploads/2019/11/Il-Secolo-XIX.png">
+                <img src="https://radiobandieranera.org/wp-content/uploads/2016/03/RadioBandieraNera-RBN-Logo-300x118.jpg">
+                <img src="https://culturaidentita.it/wp-content/uploads/2020/02/logobottom-ret-300x213-1.jpg">
+              </div>
+            </div>
+             <!-- / Supporters -->
+    
+
             <!-- Carosello video -->
             <div class="d-flex flex-column video"> 
       
@@ -321,10 +338,7 @@
                 
                 <div class="carousel">  
  
-                  <!-- Pulsante sx -->
-                  <div class="prev">
-                    <i class="fas fa-angle-left"></i>
-                  </div>
+                 
   
                   <!-- Video Slides -->
                   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
@@ -405,6 +419,11 @@
                     allowfullscreen></iframe>
   
                   </div>  -->
+
+                   <!-- Pulsante sx -->
+                   <div class="prev">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
               
                   <!-- Pulsante dx -->
                   <div class="next">
@@ -421,67 +440,71 @@
               </div>
             </div>
             <!-- / Carosello video -->
-          
-          </div>
-          <!-- / Row personal-->  
+
             
-
-
-
-        
-
-          <!-- Row form-->
-          <div class="row form">
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex flex-column align-items-center">
-              <h3 class="my_title">CONTATTACI</h3>
-              <i class="fas fa-envelope-open-text"></i>
-
-              <div class="form-container d-flex justify-content-center">
-                
-                <form name="sendemail" action="/login" method="get" class="d-flex flex-column">
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
-                  <input type="email" placeholder="Email" id="email" required>
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
-                  <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
-
-                  <button type="submit" name="submit_button" class="button orange">Invia Email</button>
-                </form>
-              </div>
-
-            </div>
-
             <!-- Barra -->
             <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center order-bar">
               <div class="desert-bar"></div>
             </div>
             <!-- / Barra -->
+          
+          </div>
+          <!-- / Row personal-->  
+            
+          <!-- Row form-->
+          <div class="row form">
+
+            <!-- Titolo -->
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex flex-column align-items-center form-title">
+              <h3 class="my_title text-center-d-flex">CONTATTACI</h3>
+              <div class="shield-wrap">
+                <img src="public/img/shield knot.svg">
+              </div>
+              <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <!-- / Titolo -->
+
+             <!-- Form container -->
+            <div class="form-container d-flex justify-content-center">
+              <form name="sendemail" action="/login" method="get" class="d-flex flex-column">
+                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
+                <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
+
+                <button type="submit" name="submit_button" class="button orange">Invia Email</button>
+              </form>
+            </div>
+            <!-- Form container -->
+
             
           </div>
           <!-- / Row form-->
        
-       
-        </div>
-
-      </main>
-      <!-- / Main -->
+        </main>
+        <!-- / Main -->
       
     
 
                 
-
-      <footer>
-
-        <div class="col-lg-12 d-flex justify-content-center align-items-center supporters">
-          <div class="d-flex justify-content-around align-items-center loghi">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Logo_CulturaIdentit%C3%A0.jpg">
-            <img src="https://www.mcarchitects.it/wp-content/uploads/2019/11/Il-Secolo-XIX.png">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Logo_de_%22Il_Primato_Nazionale%22.png">
-            <img src="https://radiobandieranera.org/wp-content/uploads/2016/03/RadioBandieraNera-RBN-Logo-300x118.jpg">
+        <!-- Footer -->
+        <footer>
+          <div class="col-lg-12 copyright">
+            <p class="d-flex justify-content-center align-items-center"> © Copyright Italia Storica 2021 </p>
           </div>
-        </div>
 
-      </footer> 
+          <div class="col-lg-12 camouflage">
+
+          </div>
+
+        </footer> 
+        <!-- / Footer -->
+      
+      </div>
+    
+    
+
+
     </div>
     
     

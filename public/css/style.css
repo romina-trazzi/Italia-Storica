@@ -613,10 +613,10 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 130px 50px;
+  padding: 0 50px 150px 50px;
 }
 body main .personal .about img {
-  width: 97%;
+  width: 60%;
   margin-right: 40px;
   filter: grayscale(0%);
   transition: all 1s ease-in;
@@ -628,12 +628,25 @@ body main .personal .about p {
   line-height: 1.5;
   color: floralwhite;
 }
-body main .personal .about img:hover {
-  filter: grayscale(40%);
-  -webkit-filter: grayscale(40%);
-  -moz-filter: grayscale(40%);
-  -ms-filter: grayscale(40%);
-  -o-filter: grayscale(40%);
+body main .personal .supporters {
+  margin-bottom: 150px;
+}
+body main .personal .supporters img {
+  width: 15%;
+  height: 60px;
+  filter: grayscale(100%);
+  transform: scale(1);
+  transition: all 1s ease 0.2s;
+}
+body main .personal .supporters img:nth-child(4) {
+  height: 150px;
+}
+body main .personal .supporters img:hover {
+  transform: scale(1.2);
+  transition: all 1s ease 0.2s;
+}
+body main .personal .supporters .loghi {
+  width: 70%;
 }
 body main .personal .video {
   margin: 0;
@@ -641,7 +654,6 @@ body main .personal .video {
 }
 body main .personal .video .carousel-wrapper {
   width: 80%;
-  margin: 30px auto;
 }
 body main .personal .video .carousel {
   width: 100%;
@@ -677,9 +689,39 @@ body main .personal .video .book_description .book_details > .about {
   line-height: 1.5;
   margin: 30px 0 30px 0;
 }
+body main .personal .video .book_description p {
+  margin-bottom: 150px;
+}
+body main .personal .video .order-bar {
+  margin: 0;
+  padding: 0;
+}
+body main .personal .video .order-bar .desert-bar {
+  width: 100%;
+  min-height: 35px;
+  background: #9a7d2e;
+}
 body main .form {
   margin: 0;
   padding: 0 0 45px 0;
+}
+body main .form .form-title .shield-wrap {
+  text-align: center;
+  margin-bottom: 75px;
+}
+body main .form .form-title .shield-wrap::before, body main .form .form-title .shield-wrap::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 30rem;
+  height: 2px;
+  line-height: 4px;
+  background-color: #d1bf8e;
+}
+body main .form .form-title img {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 body main .form i {
   font-size: 5rem;
@@ -693,9 +735,26 @@ body main .form input, body main .form textarea {
   font-size: 0.9rem;
   padding: 8px;
 }
-body footer .supporters img {
-  width: 10%;
+body footer .copyright {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  background: rgba(209, 191, 150, 0.2);
 }
-body footer .supporters .loghi {
-  width: 70%;
+body footer .copyright p {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+body footer .camouflage {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://pic.17qq.com/uploads/hdpgfphijz.jpeg");
+  filter: opacity(2%);
+  filter: brightness(30%);
 }
