@@ -629,7 +629,8 @@ body main .personal .about p {
   color: floralwhite;
 }
 body main .personal .supporters {
-  margin-bottom: 150px;
+  margin: 0 0 80px 0;
+  padding: 0;
 }
 body main .personal .supporters img {
   width: 15%;
@@ -651,9 +652,6 @@ body main .personal .supporters .loghi {
 body main .personal .video {
   margin: 0;
   width: 100%;
-}
-body main .personal .video .carousel-wrapper {
-  width: 80%;
 }
 body main .personal .video .carousel {
   width: 100%;
@@ -692,11 +690,11 @@ body main .personal .video .book_description .book_details > .about {
 body main .personal .video .book_description p {
   margin-bottom: 150px;
 }
-body main .personal .video .order-bar {
+body main .personal .order-bar {
   margin: 0;
   padding: 0;
 }
-body main .personal .video .order-bar .desert-bar {
+body main .personal .order-bar .desert-bar {
   width: 100%;
   min-height: 35px;
   background: #9a7d2e;
