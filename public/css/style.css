@@ -702,6 +702,7 @@ body main .personal .order-bar .desert-bar {
 body main .form {
   margin: 0;
   padding: 0 0 45px 0;
+  padding-bottom: 250px;
 }
 body main .form .form-title .shield-wrap {
   text-align: center;
@@ -733,13 +734,18 @@ body main .form input, body main .form textarea {
   font-size: 0.9rem;
   padding: 8px;
 }
-body footer .copyright {
+body footer .camouflage {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/img/footer_prova.png");
+}
+body footer .camouflage .copyright {
   margin: 0;
   padding: 0;
   height: 30px;
-  background: rgba(209, 191, 150, 0.2);
 }
-body footer .copyright p {
+body footer .camouflage .copyright p {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -747,12 +753,4 @@ body footer .copyright p {
   font-family: "Open Sans", sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-}
-body footer .camouflage {
-  height: 30px;
-  margin: 0;
-  padding: 0;
-  background-image: url("https://pic.17qq.com/uploads/hdpgfphijz.jpeg");
-  filter: opacity(2%);
-  filter: brightness(30%);
 }

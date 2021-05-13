@@ -297,9 +297,6 @@ body {
                 margin: 0;
                 width: 100%;
 
-                .carousel-wrapper {
-                }
-
                 .carousel {
                     width: 100%;
                 }
@@ -329,6 +326,7 @@ body {
         .form {
             @include sezioni;
             background-color: map-get($color-map, secondary_color);
+            padding-bottom: 250px;
 
             .form-title {
                 @include shieldknot;
@@ -354,32 +352,33 @@ body {
     }
 
     footer {
-
-        .copyright {
-            margin:0;
-            padding: 0;
-            height: 30px;
-            background:map-get($color-map, bg_card_color);
-            
-            p {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-                width: 100%;
-                font-family: "Open Sans", sans-serif;         
-                font-size: 0.8rem;
-                font-weight: 400;
-            }
-        }
-        
-
         .camouflage {
             height: 30px;
             margin: 0;
             padding: 0;
-            background-image: url("https://pic.17qq.com/uploads/hdpgfphijz.jpeg");
-            filter:opacity(2%);
-            filter:brightness(30%);
+            background-image: url("../public/img/footer_prova.png");
+            // filter:opacity(2%);
+            // filter:brightness(30%);
+
+            .copyright {
+                margin:0;
+                padding: 0;
+                height: 30px;
+    
+                p {
+                    margin: 0;
+                    padding: 0;
+                    height: 100%;
+                    width: 100%;
+                    font-family: "Open Sans", sans-serif;         
+                    font-size: 0.8rem;
+                    font-weight: 400;
+        
+                }
+            }
+
+
+
         }
         
     }
