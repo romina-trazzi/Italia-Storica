@@ -264,22 +264,18 @@ body {
             }
 
             .supporters {
-                margin: 0 0 80px 0;
+                margin: 0 0 150px 0;
                 padding: 0;
 
                 img {
                     width: 15%;
-                    height: 60px;
                     filter:grayscale(100%);
                     transform:scale(1);
                     transition: all 1s ease 0.2s;
                 }
 
-                img:nth-child(4) {
-                    height: 150px;
-                }
-
                 img:hover {
+                    filter:grayscale(0%);
                     -webkit-transform: scale(1.2);
                     -o-transform: scale(1.2);
                     -ms-transform: scale(1.2);
@@ -289,33 +285,38 @@ body {
                 
                 .loghi { 
                     width: 70%;
+                    background-color: map-get($color-map, loghi_color);
+                    padding: 15px 0 15px 0;
                 }
                 
+                .secrow {
+                    padding-top: 50px;
+                }
             }
 
-            .video {     
-                margin: 0;
-                width: 100%;
+            // .video {     
+            //     margin: 0;
+            //     width: 100%;
 
-                .carousel {
-                    width: 100%;
+            //     .carousel {
+            //         width: 100%;
 
-                    .carousel-inner {
-                        width: 82%;
-                    }
-                }
+            //         .carousel-inner {
+            //             width: 82%;
+            //         }
+            //     }
 
-                .book_description {
-                    @include descrizioni;
-                    margin-left: auto;
-                    margin-right: auto;
+            //     .book_description {
+            //         @include descrizioni;
+            //         margin-left: auto;
+            //         margin-right: auto;
 
-                    p {
-                        margin-bottom: 150px;
-                    }
-                }
+            //         p {
+            //             margin-bottom: 150px;
+            //         }
+            //     }
                    
-            }
+            // }
 
             .order-bar {
                 margin: 0;
@@ -330,62 +331,101 @@ body {
         .form {
             @include sezioni;
             background-color: map-get($color-map, secondary_color);
-            padding-bottom: 250px;
+            padding-bottom: 200px;
 
             .form-title {
                 @include shieldknot;
             }
 
-            i {
-                font-size: 5rem;
-                padding-bottom: 30px;
-            }
+            .contatti_container {
+                padding: 0;           
 
-            .form-container {
-                width: 100%;
-            }
+                .form-container {
+                    width: 100%;
+                    padding: 0;
 
-            input, textarea {
-                font-family: "Open Sans", sans-serif;
-                font-size: 0.9rem;
-                padding: 8px;
-            }
+                    i {
+                        font-size: 5rem;
+                        padding-bottom: 30px;
+                    }
+
+                    input, textarea {
+                        font-family: "Open Sans", sans-serif;
+                        font-size: 0.9rem;
+                        padding: 8px;
+                    }
+            
+                }
+
+
+                .map-container {
+                    width: 100%;
+                    padding: 0;
+                    align-items: center;
+                    font-size: 1.2rem;
                 
+                    .map_responsive {
+                        overflow: hidden;
+                        justify-content: center;
+                        margin-top: 80px;
+                        position: relative;
+                        
+                        iframe {
+                            height: 100%;
+                            width: 0%;
+                            position: absolute;
+                        }
+                    }
+                    
+                    .icons-container {
+                        p {
+                            margin: 0;
+                            width: 100%;
+
+                            span {
+                                font-family: "Oswald", sans-serif;
+                                font-weight: 400;
+                                // font-size: 1.5rem;
+                                // line-height: 1.2;
+                                color: map-get($color-map, links_color);
+                            }
+                            
+                            i {
+                                font-size: 2rem;
+                                padding-right: 10px;
+                                color: map-get($color-map, links_color);
+                            }
+
+                            
+                        }
+                        
+                    }
+                }
+
+            }
+   
         }
 
     }
 
     footer {
-        .camouflage {
-            height: 30px;
-            margin: 0;
+        .copyright {
+            margin:0;
             padding: 0;
+            height: 30px;
             background-color: map-get($color-map, bar_color);
-           // background-image: url("../public/img/footer_prova.png");
-            // filter:opacity(2%);
-            // filter:brightness(30%);
 
-            .copyright {
-                margin:0;
+            p {
+                margin: 0;
                 padding: 0;
-                height: 30px;
+                height: 100%;
+                width: 100%;
+                font-family: "Open Sans", sans-serif;         
+                font-size: 0.8rem;
+                font-weight: 400;
     
-                p {
-                    margin: 0;
-                    padding: 0;
-                    height: 100%;
-                    width: 100%;
-                    font-family: "Open Sans", sans-serif;         
-                    font-size: 0.8rem;
-                    font-weight: 400;
-        
-                }
             }
-
-
-
         }
-        
     }
 
 }

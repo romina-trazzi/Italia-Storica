@@ -103,8 +103,8 @@
 
               <!-- Descrizione -->
               <div class="col-lg-6 d-flex">
-                <div class="book_description d-flex flex-column justify-content-center align-items-center">
-                  <div class="book_details d-flex flex-column align-items-start">
+                <div class="d-flex flex-column justify-content-center align-items-center book_description">
+                  <div class="d-flex flex-column align-items-start book_details">
                     <p> <span>Titolo:</span> {{ libri[counter].titolo }} </p>
                     <p> <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} </p>
                     <p> <span>Autore:</span> {{ libri[counter].autore }} </p> 
@@ -320,135 +320,23 @@
             <!-- / Titolo -->
 
             <!-- Supporters -->
-            <div class="col-lg-12 d-flex justify-content-center align-items-center supporters">
+            <div class="col-lg-12 d-flex flex-column align-items-center supporters">
               <div class="d-flex justify-content-around align-items-center loghi">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Logo_de_%22Il_Primato_Nazionale%22.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Il_Giornale_Logo.svg/320px-Il_Giornale_Logo.svg.png">
                 <img src="https://www.mcarchitects.it/wp-content/uploads/2019/11/Il-Secolo-XIX.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Logo_de_%22Il_Primato_Nazionale%22.png">
+                <img src="https://www.barbadillo.it/wp-content/uploads/2020/05/barbadillo-logo-centered-800.jpg">
+              </div>
+              
+              <div class="d-flex justify-content-around align-items-center loghi secrow">
+                <img src="https://www.skinbiblos.it/ver3/img_goodbook/goodbook/logo.png">
+                <img src="https://www.ligurianotizie.it/wp-content/uploads/2018/01/liguriaNotizie.png">
                 <img src="https://radiobandieranera.org/wp-content/uploads/2016/03/RadioBandieraNera-RBN-Logo-300x118.jpg">
                 <img src="https://culturaidentita.it/wp-content/uploads/2020/02/logobottom-ret-300x213-1.jpg">
+          
               </div>
             </div>
              <!-- / Supporters -->
-    
-
-            <!-- Carosello video -->
-            <div class="d-flex flex-column justify-content-center video"> 
-      
-              <div class="carousel-wrapper">
-                
-                <div class="carousel">  
- 
-                  <!-- Video Slides -->
-                  <div id="carouselExampleFade" class="carousel slide d-flex justify-content-center" data-ride="carousel">
-                    <div class="carousel-inner d-flex justify-content-center">
-
-                      <div class="carousel-item active">
-                        <iframe height="300" src="https://www.youtube.com/embed/jU51ax4j374" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-                      </div>
-
-                      <div class="carousel-item active">
-                        <iframe height="300" src="https://www.youtube.com/embed/HzsDDvaGyvY" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-                      </div>
-
-                      <div class="carousel-item active">
-                        <iframe height="300" src="https://www.youtube.com/embed/0BolQ3CqAxU" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-                      </div>
-
-                      <div class="carousel-item active">
-                        <iframe height="300" src="https://www.youtube.com/embed/HzsDDvaGyvY" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-                      </div>
-
-                      <div class="carousel-item active">
-                        <iframe height="300" src="https://www.youtube.com/embed/0BolQ3CqAxU" title="YouTube video player" 
-                        frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen></iframe>
-                      </div>
-                   
-                    </div>
-
-
-
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev" @click="prevVideo">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next" @click="nextVideo">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-
-                    </a>
-                  </div>
-
-
-                  <!-- <div class="d-flex w-100">
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/jU51ax4j374" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/HzsDDvaGyvY" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/0BolQ3CqAxU" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/Xa0HGauZEL4" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/3IqzJ7HGM9Y" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/rGSjyCbGy2w" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/Xa0HGauZEL4" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/3IqzJ7HGM9Y" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                    <iframe height="300" src="https://www.youtube.com/embed/rGSjyCbGy2w" title="YouTube video player" 
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen></iframe>
-  
-                  </div>  -->
-
-                  <!-- Pulsante sx -->
-                  <!-- <div class="prev">
-                    <i class="fas fa-angle-left"></i>
-                  </div> -->
-              
-                  <!-- Pulsante dx -->
-                  <!-- <div class="next">
-                    <i class="fas fa-angle-right"></i>
-                  </div> -->
-              
-                </div>
-  
-              </div>
- 
-              <div class="book_description d-flex flex-column align-items-center">
-                <h4> Descrizione</h4>
-                <p> <span> {{ video[counter].contenuto }} </span> </p> 
-                <p> <span> Data: </span> {{ video[counter].data }} </p> 
-              </div>
-            </div>
-            <!-- / Carosello video -->
-
             
             <!-- Barra -->
             <div class="col-lg-12 d-flex flex-column justify-content-center align-items-center order-bar">
@@ -468,22 +356,71 @@
               <div class="shield-wrap">
                 <img src="public/img/shield knot.svg">
               </div>
-              <i class="fas fa-envelope-open-text"></i>
             </div>
             <!-- / Titolo -->
 
-             <!-- Form container -->
-            <div class="form-container d-flex justify-content-center">
-              <form name="sendemail" action="/login" method="get" class="d-flex flex-column">
-                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
-                <input type="email" placeholder="Email" id="email" required>
-                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
-                <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
+            <!-- Contatti container-->
+            <div class="col-lg-12 d-flex contatti_container">
 
-                <button type="submit" name="submit_button" class="button orange">Invia Email</button>
-              </form>
+              <!-- Form container -->
+              <div class="col-lg-6 d-flex flex-column align-items-center form-container">
+
+                <div>
+                  <i class="fas fa-envelope-open-text"></i>
+                </div>
+
+                <form name="sendemail" action="/login" method="get" class="d-flex flex-column">
+                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
+                  <input type="email" placeholder="Email" id="email" required>
+                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
+                  <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
+                  <button type="submit" name="submit_button" class="button orange">Invia Email</button>
+                </form>
+
+              </div>
+              <!-- Form container -->
+
+              <!-- Map container -->
+              <div class="col-lg-6 d-flex map-container">
+
+                <!-- Contatti + mappa -->
+                <div class ="d-flex justify-content-center map_responsive">  
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.832976659466!2d8.96064571583628!3d44.41607297910251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d343849b542a17%3A0xcd14a8a2e6e3296b!2sVia%20Carmelo%20Onorato%2C%209%2F18%2C%2016144%20Genova%20GE!5e0!3m2!1sit!2sit!4v1616728120551!5m2!1sit!2sit" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>              
+                </div>
+              
+                <div class="icons-container">
+                  
+                  <div> 
+
+                    <p>
+                      <i class="icon fas fa-map-marker-alt"></i>
+                      <span>Indirizzo:</span> via Onorato 9/18, 16144 Genova 
+                    </p> 
+                    
+                    <br> 
+
+                    <p>
+                      <i class="icon far fa-envelope"></i> 
+                      <span>Email:</span> <a href="mailto:italiastorica@hotmail.com" class="my_links">italiastorica@hotmail.com</a> 
+                    </p>
+                    
+                    <br>
+
+                    <p>
+                      <i class="icon fa fa-phone"></i> 
+                      <span>Telefono: </span> 010 8983461 
+                    </p>
+
+                  </div>
+
+                </div> 
+                <!-- / Contatti + mappa -->
+
+              </div>
+              <!-- / Map container -->
+          
             </div>
-            <!-- Form container -->
+            <!-- / Contatti container -->
 
             
           </div>
@@ -498,12 +435,12 @@
         <!-- Footer -->
         <footer>
  
-          <div class="col-lg-12 camouflage">
+          
             
             <div class="col-lg-12 copyright">
               <p class="d-flex justify-content-center align-items-center"> © Copyright Italia Storica 2021 </p>
             </div>
-          </div>
+      
 
         </footer> 
         <!-- / Footer -->

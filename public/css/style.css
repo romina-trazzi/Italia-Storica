@@ -629,69 +629,27 @@ body main .personal .about p {
   color: floralwhite;
 }
 body main .personal .supporters {
-  margin: 0 0 80px 0;
+  margin: 0 0 150px 0;
   padding: 0;
 }
 body main .personal .supporters img {
   width: 15%;
-  height: 60px;
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 1s ease 0.2s;
 }
-body main .personal .supporters img:nth-child(4) {
-  height: 150px;
-}
 body main .personal .supporters img:hover {
+  filter: grayscale(0%);
   transform: scale(1.2);
   transition: all 1s ease 0.2s;
 }
 body main .personal .supporters .loghi {
   width: 70%;
+  background-color: rgba(209, 191, 141, 0.5);
+  padding: 15px 0 15px 0;
 }
-body main .personal .video {
-  margin: 0;
-  width: 100%;
-}
-body main .personal .video .carousel {
-  width: 100%;
-}
-body main .personal .video .carousel .carousel-inner {
-  width: 82%;
-}
-body main .personal .video .book_description {
-  margin-left: auto;
-  margin-right: auto;
-}
-body main .personal .video .book_description .book_description > h4 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-body main .personal .video .book_description .book_details {
-  padding-left: 50px;
-  padding-bottom: 50px;
-}
-body main .personal .video .book_description .book_details > p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-body main .personal .video .book_description .book_details > p > span {
-  font-family: "Oswald", sans-serif;
-  color: #fa991c;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 1.2;
-}
-body main .personal .video .book_description .book_details > .about {
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
-  text-align: left;
-  line-height: 1.5;
-  margin: 30px 0 30px 0;
-}
-body main .personal .video .book_description p {
-  margin-bottom: 150px;
+body main .personal .supporters .secrow {
+  padding-top: 50px;
 }
 body main .personal .order-bar {
   margin: 0;
@@ -705,7 +663,7 @@ body main .personal .order-bar .desert-bar {
 body main .form {
   margin: 0;
   padding: 0 0 45px 0;
-  padding-bottom: 250px;
+  padding-bottom: 200px;
 }
 body main .form .form-title .shield-wrap {
   text-align: center;
@@ -725,30 +683,60 @@ body main .form .form-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
-body main .form i {
+body main .form .contatti_container {
+  padding: 0;
+}
+body main .form .contatti_container .form-container {
+  width: 100%;
+  padding: 0;
+}
+body main .form .contatti_container .form-container i {
   font-size: 5rem;
   padding-bottom: 30px;
 }
-body main .form .form-container {
-  width: 100%;
-}
-body main .form input, body main .form textarea {
+body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
 }
-body footer .camouflage {
-  height: 30px;
+body main .form .contatti_container .map-container {
+  width: 100%;
+  padding: 0;
+  align-items: center;
+  font-size: 1.2rem;
+}
+body main .form .contatti_container .map-container .map_responsive {
+  overflow: hidden;
+  justify-content: center;
+  margin-top: 80px;
+  position: relative;
+}
+body main .form .contatti_container .map-container .map_responsive iframe {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+}
+body main .form .contatti_container .map-container .icons-container p {
+  margin: 0;
+  width: 100%;
+}
+body main .form .contatti_container .map-container .icons-container p span {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: #fa991c;
+}
+body main .form .contatti_container .map-container .icons-container p i {
+  font-size: 2rem;
+  padding-right: 10px;
+  color: #fa991c;
+}
+body footer .copyright {
   margin: 0;
   padding: 0;
+  height: 30px;
   background-color: #9a7d2e;
 }
-body footer .camouflage .copyright {
-  margin: 0;
-  padding: 0;
-  height: 30px;
-}
-body footer .camouflage .copyright p {
+body footer .copyright p {
   margin: 0;
   padding: 0;
   height: 100%;
