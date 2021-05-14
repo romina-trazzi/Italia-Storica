@@ -66,7 +66,51 @@ let app = new Vue ({
                 "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
             }
 
-        ] 
+        ], 
+
+        video: [
+            {
+                "contenuto": "Lorem ipsum dolor",
+                "data": "23 maggio 2021"
+
+            },
+
+            {
+                "contenuto": "Dolor dolor dolor",
+                "data": "15 settembre 2020"
+
+            },
+
+            {
+                "contenuto": "Doloremque",
+                "data": "2 agosto 2020"
+
+            },
+
+            {
+                "contenuto": "Blablabla",
+                "data": "15 giugno 2020"
+            },
+
+            {
+                "contenuto": "Quaranta gatti",
+                "data": "23 febbraio 2020"
+
+            },
+
+            {
+                "contenuto": "Prova prova",
+                "data": "8 gennaio 2020"
+
+            },
+
+            {
+                "contenuto": "Bruxelles",
+                "data": "19 dicembre 2019"
+
+            }
+        ]
+
     },
 
     methods: {
@@ -78,6 +122,21 @@ let app = new Vue ({
         },
 
         prevImg()  {
+            if(this.counter > 0) {
+                this.counter--;
+            } else {
+                this.counter = this.images.length -1;
+            }
+        },
+
+        nextVideo() {
+            this.counter++;
+            if(this.counter === this.images.length) {
+                this.counter = 0;
+            }
+        },
+
+        prevVideo()  {
             if(this.counter > 0) {
                 this.counter--;
             } else {

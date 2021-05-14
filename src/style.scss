@@ -5,9 +5,9 @@
 @import "./Partials/_elements.scss";
 
 // Glide Js Required Stylesheet
-@import "./Partials/ImageGlide-css/_variables.scss";
-@import "./Partials/ImageGlide-css/glide.core.scss";
-@import "./Partials/ImageGlide-css/glide.theme.scss";
+@import "./Partials/CaroselloGlide/_variables.scss";
+@import "./Partials/CaroselloGlide/glide.core.scss";
+@import "./Partials/CaroselloGlide/glide.theme.scss";
 
 @import "./Partials/_glide.scss";
 
@@ -299,6 +299,10 @@ body {
 
                 .carousel {
                     width: 100%;
+
+                    .carousel-inner {
+                        width: 82%;
+                    }
                 }
 
                 .book_description {
@@ -356,7 +360,8 @@ body {
             height: 30px;
             margin: 0;
             padding: 0;
-            background-image: url("../public/img/footer_prova.png");
+            background-color: map-get($color-map, bar_color);
+           // background-image: url("../public/img/footer_prova.png");
             // filter:opacity(2%);
             // filter:brightness(30%);
 

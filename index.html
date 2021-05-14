@@ -339,42 +339,50 @@
                 <div class="carousel">  
  
                   <!-- Video Slides -->
-                  <div id="carouselExampleFade" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
+                  <div id="carouselExampleFade" class="carousel slide d-flex justify-content-center" data-ride="carousel">
+                    <div class="carousel-inner d-flex justify-content-center">
 
-                      <div class="carousel-item w-100 active">
+                      <div class="carousel-item active">
                         <iframe height="300" src="https://www.youtube.com/embed/jU51ax4j374" title="YouTube video player" 
                         frameborder="0" allow="accelerometer;clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                       </div>
-                      <div class="carousel-item w-100">
+
+                      <div class="carousel-item active">
                         <iframe height="300" src="https://www.youtube.com/embed/HzsDDvaGyvY" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                       </div>
-                      <div class="carousel-item w-100">
+
+                      <div class="carousel-item active">
                         <iframe height="300" src="https://www.youtube.com/embed/0BolQ3CqAxU" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                       </div>
-                      <div class="carousel-item w-100">
+
+                      <div class="carousel-item active">
                         <iframe height="300" src="https://www.youtube.com/embed/HzsDDvaGyvY" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                       </div>
-                      <div class="carousel-item w-100">
+
+                      <div class="carousel-item active">
                         <iframe height="300" src="https://www.youtube.com/embed/0BolQ3CqAxU" title="YouTube video player" 
                         frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen></iframe>
                       </div>
+                   
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+
+
+
+                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev" @click="prevVideo">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
+
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next" @click="nextVideo">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
+
                     </a>
                   </div>
 
@@ -435,7 +443,8 @@
  
               <div class="book_description d-flex flex-column align-items-center">
                 <h4> Descrizione</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed esse minima doloribus qui enim ipsam fuga modi ipsa doloremque vero hic ab totam, repellat praesentium cupiditate corrupti quas ad nulla quod maiores iure cum. Sequi aliquid, magnam eum minus autem cum illo, consequatur unde eveniet recusandae ex accusantium quod velit iure impedit sint ipsum architecto molestias iusto dignissimos fugiat sapiente rem! Natus tenetur dicta aliquam ipsa, atque quis alias libero nihil nisi excepturi quam maxime officiis voluptates numquam eveniet consequatur, totam nesciunt soluta dolores eius laboriosam voluptatibus unde. Laboriosam ex architecto omnis impedit error cum quis sapiente nostrum est blanditiis eaque, mollitia, quidem non odit enim ut hic magni voluptate? In odit incidunt distinctio aut officiis, cupiditate error, impedit deserunt ipsum ut necessitatibus cum minus voluptatem voluptas. Consequuntur eligendi placeat ullam quibusdam quod, ad dolorem tempora fugit aliquam totam laborum expedita, consectetur necessitatibus deserunt impedit, laboriosam adipisci iste a fugiat odio quisquam facilis quo et fuga. Culpa recusandae impedit totam consectetur at. Animi nisi quod expedita molestias perferendis sed deleniti odio dignissimos omnis sequi ipsum deserunt consectetur at, voluptatem aut ipsa temporibus libero tempora! Quis molestiae, non harum dolorum reprehenderit explicabo sit? Ratione totam exercitationem iusto sint dignissimos velit commodi!</p>              
+                <p> <span> {{ video[counter].contenuto }} </span> </p> 
+                <p> <span> Data: </span> {{ video[counter].data }} </p> 
               </div>
             </div>
             <!-- / Carosello video -->

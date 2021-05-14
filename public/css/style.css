@@ -656,6 +656,9 @@ body main .personal .video {
 body main .personal .video .carousel {
   width: 100%;
 }
+body main .personal .video .carousel .carousel-inner {
+  width: 82%;
+}
 body main .personal .video .book_description {
   margin-left: auto;
   margin-right: auto;
@@ -738,7 +741,7 @@ body footer .camouflage {
   height: 30px;
   margin: 0;
   padding: 0;
-  background-image: url("../public/img/footer_prova.png");
+  background-color: #9a7d2e;
 }
 body footer .camouflage .copyright {
   margin: 0;

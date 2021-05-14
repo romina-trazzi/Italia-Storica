@@ -57,6 +57,28 @@ var app = new Vue({
       "descrizione": "Un classico della storia militare, coniugante l'accuratezza della documentata ricostruzione storica degli ultimi combattimenti per Berlino dell'aprile-maggio 1945, dallo sfondamento sovietico sull'Oder sino alla battaglia di Seelow e la difesa finale della capitale del III Reich, e l'avvincente narrazione delle vicende di un pugno di carristi della Panzer-Division 'Müncheberg' e volontari francesi dell'SS-Sturmbataillon 'Charlemagne', tra gli ultimi difensori di Berlino. Questa edizione presenta una traduzione rivista e annotata a cura del Wehrmacht Research Group, ed è integrata da nuove dettagliate mappe delle operazioni, drammatiche fotografie in azione dell'epoca, immagini attuali dei luoghi dei combattimenti e di illustrazioni a colori.",
       "prezzo": "23,75 euro",
       "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
+    }],
+    video: [{
+      "contenuto": "Lorem ipsum dolor",
+      "data": "23 maggio 2021"
+    }, {
+      "contenuto": "Dolor dolor dolor",
+      "data": "15 settembre 2020"
+    }, {
+      "contenuto": "Doloremque",
+      "data": "2 agosto 2020"
+    }, {
+      "contenuto": "Blablabla",
+      "data": "15 giugno 2020"
+    }, {
+      "contenuto": "Quaranta gatti",
+      "data": "23 febbraio 2020"
+    }, {
+      "contenuto": "Prova prova",
+      "data": "8 gennaio 2020"
+    }, {
+      "contenuto": "Bruxelles",
+      "data": "19 dicembre 2019"
     }]
   },
   methods: {
@@ -68,6 +90,20 @@ var app = new Vue({
       }
     },
     prevImg: function prevImg() {
+      if (this.counter > 0) {
+        this.counter--;
+      } else {
+        this.counter = this.images.length - 1;
+      }
+    },
+    nextVideo: function nextVideo() {
+      this.counter++;
+
+      if (this.counter === this.images.length) {
+        this.counter = 0;
+      }
+    },
+    prevVideo: function prevVideo() {
       if (this.counter > 0) {
         this.counter--;
       } else {
