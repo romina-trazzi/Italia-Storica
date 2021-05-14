@@ -551,7 +551,7 @@ body main .order .card-collector .card-container .card {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 body main .order .card-collector .card-container .card .card-header {
-  color: #f47c20;
+  color: black;
   font-size: 1.4em;
 }
 body main .order .card-collector .card-container .card .card-title {
@@ -562,8 +562,8 @@ body main .order .card-collector .card-container .card .card-body i {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: #9e9d51;
-  font-size: 5rem;
+  color: #fa991c;
+  font-size: 3rem;
 }
 body main .order .card-collector .card-container .card .card-body hr {
   width: 80%;
@@ -613,7 +613,7 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 150px 50px;
+  padding: 0 50px 130px 50px;
 }
 body main .personal .about img {
   width: 60%;
@@ -633,7 +633,7 @@ body main .personal .supporters {
   padding: 0;
 }
 body main .personal .supporters img {
-  width: 15%;
+  width: 12%;
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 1s ease 0.2s;
@@ -642,14 +642,15 @@ body main .personal .supporters img:hover {
   filter: grayscale(0%);
   transform: scale(1.2);
   transition: all 1s ease 0.2s;
+  cursor: pointer;
 }
 body main .personal .supporters .loghi {
   width: 70%;
-  background-color: rgba(209, 191, 141, 0.5);
   padding: 15px 0 15px 0;
 }
 body main .personal .supporters .secrow {
   padding-top: 50px;
+  padding-bottom: 0;
 }
 body main .personal .order-bar {
   margin: 0;
@@ -722,11 +723,11 @@ body main .form .contatti_container .map-container .icons-container p {
 }
 body main .form .contatti_container .map-container .icons-container p span {
   font-family: "Oswald", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: #fa991c;
 }
 body main .form .contatti_container .map-container .icons-container p i {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding-right: 10px;
   color: #fa991c;
 }

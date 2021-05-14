@@ -122,7 +122,6 @@ body {
             }
         }
     }
-    
 
     main {      
         
@@ -169,7 +168,8 @@ body {
                         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                         
                         .card-header {
-                            color: map-get($color-map, icons_color);
+                            //color: map-get($color-map, icons_color);
+                            color: black;
                             font-size: 1.4em;
                         }
                         
@@ -183,8 +183,8 @@ body {
                                 width: 100%;
                                 padding-top: 30px;
                                 padding-bottom: 30px;
-                                color: map-get($color-map, card_text_color);
-                                font-size: 5rem;
+                                color: map-get($color-map, links_color);
+                                font-size: 3rem;
                             }
     
                             hr {
@@ -244,7 +244,7 @@ body {
             }
 
             .about {
-                padding: 0 50px 150px 50px;
+                padding: 0 50px 130px 50px;
 
                 img {
                     width: 60%;
@@ -268,7 +268,7 @@ body {
                 padding: 0;
 
                 img {
-                    width: 15%;
+                    width: 12%;
                     filter:grayscale(100%);
                     transform:scale(1);
                     transition: all 1s ease 0.2s;
@@ -281,43 +281,21 @@ body {
                     -ms-transform: scale(1.2);
                     transform:scale(1.2);
                     transition: all 1s ease 0.2s;
+                    cursor: pointer;
                 }
                 
                 .loghi { 
                     width: 70%;
-                    background-color: map-get($color-map, loghi_color);
                     padding: 15px 0 15px 0;
                 }
                 
                 .secrow {
                     padding-top: 50px;
+                    padding-bottom: 0;
                 }
             }
 
-            // .video {     
-            //     margin: 0;
-            //     width: 100%;
-
-            //     .carousel {
-            //         width: 100%;
-
-            //         .carousel-inner {
-            //             width: 82%;
-            //         }
-            //     }
-
-            //     .book_description {
-            //         @include descrizioni;
-            //         margin-left: auto;
-            //         margin-right: auto;
-
-            //         p {
-            //             margin-bottom: 150px;
-            //         }
-            //     }
-                   
-            // }
-
+        
             .order-bar {
                 margin: 0;
                 padding: 0;
@@ -384,14 +362,14 @@ body {
 
                             span {
                                 font-family: "Oswald", sans-serif;
-                                font-weight: 400;
+                                font-weight: 300;
                                 // font-size: 1.5rem;
                                 // line-height: 1.2;
                                 color: map-get($color-map, links_color);
                             }
                             
                             i {
-                                font-size: 2rem;
+                                font-size: 1.5rem;
                                 padding-right: 10px;
                                 color: map-get($color-map, links_color);
                             }
