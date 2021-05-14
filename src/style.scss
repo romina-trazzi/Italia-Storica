@@ -157,7 +157,7 @@ body {
                 margin-bottom: 150px;
 
                 .card-container {
-                    max-height: 397px;
+                    max-height: 500px;
                     
                     .card {
                         background-color: map-get($color-map, bg_card_color);
@@ -167,11 +167,10 @@ body {
                         -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                         box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
                         
-                        .card-header {
-                            //color: map-get($color-map, icons_color);
-                            color: black;
-                            font-size: 1.4em;
-                        }
+                        // .card-header {
+                        //     color: map-get($color-map, icons_color);
+                        //     font-size: 1.4em;
+                        // }
                         
                         .card-title {
                             color: map-get($color-map, links_color);
@@ -179,20 +178,27 @@ body {
                         }
                         
                         .card-body {
+
+                            hr {
+                                width: 80%;
+                                border: 1px solid map-get($color-map, links_color);
+                                border-radius: 50%;
+                            }
+                           
                             i {
                                 width: 100%;
                                 padding-top: 30px;
                                 padding-bottom: 30px;
-                                color: map-get($color-map, links_color);
-                                font-size: 3rem;
+                                color: map-get($color-map, icons_color);
+                                font-size: 4rem;
+                            }
+
+                            p {
+                                color: map-get($color-map, text_color);
+                                font-size: 1.3rem;
+                                padding-top: 30px;
                             }
     
-                            hr {
-                                width: 80%;
-                                border: 1px solid map-get($color-map, card_text_color);
-                                border-radius: 50%;
-                            }
-                            
                             .button {
                                 margin-top: 30px;
                             }
@@ -321,6 +327,7 @@ body {
                 .form-container {
                     width: 100%;
                     padding: 0;
+                    margin-bottom: 150px;
 
                     i {
                         font-size: 5rem;
@@ -355,31 +362,33 @@ body {
                         }
                     }
                     
-                    .icons-container {
-                        p {
-                            margin: 0;
-                            width: 100%;
-
-                            span {
-                                font-family: "Oswald", sans-serif;
-                                font-weight: 300;
-                                // font-size: 1.5rem;
-                                // line-height: 1.2;
-                                color: map-get($color-map, links_color);
-                            }
-                            
-                            i {
-                                font-size: 1.5rem;
-                                padding-right: 10px;
-                                color: map-get($color-map, links_color);
-                            }
-
-                            
-                        }
-                        
-                    }
+                    
                 }
 
+            }
+
+            .icons-container {
+                p {
+                    margin: 0;
+                    width: 100%;
+
+                    span {
+                        font-family: "Oswald", sans-serif;
+                        font-weight: 300;
+                        font-size: 1.5rem;
+                        line-height: 1.2;
+                        color: map-get($color-map, links_color);
+                    }
+                    
+                    i {
+                        font-size: 1.5rem;
+                        padding-right: 10px;
+                        color: map-get($color-map, links_color);
+                    }
+
+                    
+                }
+                
             }
    
         }
