@@ -542,7 +542,7 @@ body main .order .card-collector {
   margin-bottom: 150px;
 }
 body main .order .card-collector .card-container {
-  max-height: 480px;
+  max-height: 500px;
 }
 body main .order .card-collector .card-container .card {
   background-color: rgba(209, 191, 150, 0.2);
@@ -554,20 +554,20 @@ body main .order .card-collector .card-container .card .card-title {
   color: #fa991c;
   font-size: 1.4em;
 }
-body main .order .card-collector .card-container .card .card-body hr {
-  width: 80%;
-  border: 1px solid #fa991c;
-  border-radius: 50%;
-}
 body main .order .card-collector .card-container .card .card-body i {
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
-  color: #f47c20;
+  color: #fa991c;
   font-size: 4rem;
 }
+body main .order .card-collector .card-container .card .card-body hr {
+  width: 80%;
+  border: 1px solid floralwhite;
+  border-radius: 50%;
+}
 body main .order .card-collector .card-container .card .card-body p {
-  color: floralwhite;
+  color: #d1bf8e;
   font-size: 1.2rem;
   padding-top: 30px;
 }
@@ -614,7 +614,7 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 50px 50px;
+  padding: 0 50px 80px 50px;
 }
 body main .personal .about img {
   width: 60%;
@@ -630,11 +630,10 @@ body main .personal .about p {
   color: floralwhite;
 }
 body main .personal .supporters {
-  margin: 0 0 150px 0;
   padding: 0;
 }
 body main .personal .supporters img {
-  width: 12%;
+  width: 10%;
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 1s ease 0.2s;
@@ -651,6 +650,7 @@ body main .personal .supporters .loghi {
 body main .personal .supporters .secrow {
   padding-top: 50px;
   padding-bottom: 0;
+  margin: 0 0 150px 0;
 }
 body main .personal .order-bar {
   margin: 0;
@@ -718,16 +718,12 @@ body main .form .contatti_container .map-container .map_responsive iframe {
   width: 0%;
   position: absolute;
 }
+body main .form .contatti_container .map-container .icons-container {
+  margin-top: 50px;
+}
 body main .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
-}
-body main .form .contatti_container .map-container .icons-container p span {
-  font-family: "Oswald", sans-serif;
-  font-weight: 300;
-  font-size: 1.3rem;
-  line-height: 1.2;
-  color: #fa991c;
 }
 body main .form .contatti_container .map-container .icons-container p i {
   font-size: 1.5rem;
