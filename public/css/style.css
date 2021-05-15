@@ -542,7 +542,7 @@ body main .order .card-collector {
   margin-bottom: 150px;
 }
 body main .order .card-collector .card-container {
-  max-height: 500px;
+  max-height: 480px;
 }
 body main .order .card-collector .card-container .card {
   background-color: rgba(209, 191, 150, 0.2);
@@ -568,7 +568,7 @@ body main .order .card-collector .card-container .card .card-body i {
 }
 body main .order .card-collector .card-container .card .card-body p {
   color: floralwhite;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-top: 30px;
 }
 body main .order .card-collector .card-container .card .card-body .button {
@@ -614,7 +614,7 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 130px 50px;
+  padding: 0 50px 50px 50px;
 }
 body main .personal .about img {
   width: 60%;
@@ -646,7 +646,6 @@ body main .personal .supporters img:hover {
   cursor: pointer;
 }
 body main .personal .supporters .loghi {
-  width: 70%;
   padding: 15px 0 15px 0;
 }
 body main .personal .supporters .secrow {
@@ -665,7 +664,7 @@ body main .personal .order-bar .desert-bar {
 body main .form {
   margin: 0;
   padding: 0 0 45px 0;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
 }
 body main .form .form-title .shield-wrap {
   text-align: center;
@@ -719,18 +718,18 @@ body main .form .contatti_container .map-container .map_responsive iframe {
   width: 0%;
   position: absolute;
 }
-body main .form .icons-container p {
+body main .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
 }
-body main .form .icons-container p span {
+body main .form .contatti_container .map-container .icons-container p span {
   font-family: "Oswald", sans-serif;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.2;
   color: #fa991c;
 }
-body main .form .icons-container p i {
+body main .form .contatti_container .map-container .icons-container p i {
   font-size: 1.5rem;
   padding-right: 10px;
   color: #fa991c;
