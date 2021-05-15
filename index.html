@@ -167,7 +167,7 @@
             
             </div>
 
-            <div class="row d-flex book-secondary">
+            <div class="row d-flex book-second_row">
               <div class="col-lg-6 d_flex_center">
                 <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
               </div>
@@ -363,65 +363,72 @@
             </div>
             <!-- / Titolo -->
 
+            <div class="col-lg-12 d-flex justify-content-center lorem">
+              <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quae modi quam odit quas vitae, esse necessitatibus eligendi officia reiciendis placeat ipsum dolores reprehenderit distinctio saepe id a architecto, aperiam illo temporibus! Quia atque esse fugit provident explicabo tempore eveniet. </p>
+            </div>
+
             <!-- Contatti container-->
-            <div class="col-lg-12 d-flex contatti_container">
+            <div class="col-lg-12 d-flex align-items-start contatti_container">
 
               <!-- Form container -->
-              <div class="col-lg-6 d-flex flex-column align-items-center form-container">
-
+              <div class="col-lg-8 d-flex flex-column align-items-center form-container">
+              
                 <div>
                   <i class="fas fa-envelope-open-text"></i>
                 </div>
-
-                <form name="sendemail" action="/login" method="get" class="d-flex flex-column">
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
-                  <input type="email" placeholder="Email" id="email" required>
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
-                  <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
-                  <button type="submit" name="submit_button" class="button orange">Invia Email</button>
-                </form>
+              
+              <form name="sendemail" action="/login" method="get" class="d-flex flex-column justify-content-center">
+                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
+                <input type="email" placeholder="Email" id="email" required>
+                <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
+                <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
+                <button type="submit" name="submit_button" class="button orange">Invia Email</button>
+              </form>
 
               </div>
               <!-- Form container -->
 
               <!-- Map container -->
-              <div class="col-lg-6 d-flex flex-column map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.832976659466!2d8.96064571583628!3d44.41607297910251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d343849b542a17%3A0xcd14a8a2e6e3296b!2sVia%20Carmelo%20Onorato%2C%209%2F18%2C%2016144%20Genova%20GE!5e0!3m2!1sit!2sit!4v1616728120551!5m2!1sit!2sit" width="400" height="440" style="border:0;" allowfullscreen="" loading="lazy"></iframe>             
+              <div class="col-lg-4 d-flex flex-column align-items-start map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2849.832976659466!2d8.96064571583628!3d44.41607297910251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d343849b542a17%3A0xcd14a8a2e6e3296b!2sVia%20Carmelo%20Onorato%2C%209%2F18%2C%2016144%20Genova%20GE!5e0!3m2!1sit!2sit!4v1616728120551!5m2!1sit!2sit" width="330" height="280" style="border:0;" allowfullscreen="" loading="lazy"></iframe>             
                 
-                <div class="align-self-center icons-container">
+                <!-- Icons container -->
+                <div class="icons-container">
               
-                  <div class="d-flex flex-column align-items-center"> 
-    
+                  <div class="d-flex flex-column"> 
+
                     <p>
                       <i class="icon fas fa-map-marker-alt"></i>
-                      <span> via Onorato 9/18, 16144 Genova </span>
+                      <span> via Carmelo Onorato 9/18, 16144 Genova </span>
                     </p> 
                     
                     <br> 
-    
+
                     <p>
                       <i class="icon far fa-envelope"></i> 
                       <span> <a href="mailto:italiastorica@hotmail.com" class="my_links">italiastorica@hotmail.com</a> </span>
                     </p>
                     
                     <br>
-    
+
                     <p>
                       <i class="icon fa fa-phone"></i> 
                       <span> 010 8983461 </span> 
                     </p>
-    
+
                   </div>
-                    
+                  
                 </div>  
+                <!-- / Icons container -->
               
               </div>
-
               <!-- / Map container -->
             
             </div>
             <!-- / Contatti container -->
             
+            
+
           </div>
           <!-- / Row form-->
        

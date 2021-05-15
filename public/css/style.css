@@ -519,15 +519,16 @@ body main .core .book-main .book_details > p > span {
   font-weight: 400;
   font-size: 1.5rem;
   line-height: 1.2;
+  text-transform: uppercase;
 }
 body main .core .book-main .book_details > .about {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.5;
   margin: 30px 0 30px 0;
 }
-body main .core .book-secondary {
+body main .core .book-second_row {
   width: 100%;
   margin: 30px 0 0 0;
   padding: 0;
@@ -567,7 +568,7 @@ body main .order .card-collector .card-container .card .card-body hr {
   border-radius: 50%;
 }
 body main .order .card-collector .card-container .card .card-body p {
-  color: #d1bf8e;
+  color: floralwhite;
   font-size: 1.2rem;
   padding-top: 30px;
 }
@@ -624,7 +625,7 @@ body main .personal .about img {
 }
 body main .personal .about p {
   font-family: "Open Sans", sans-serif;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -684,13 +685,27 @@ body main .form .form-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
+body main .form .lorem {
+  padding-bottom: 150px;
+}
+body main .form .lorem p {
+  width: 68%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+  color: floralwhite;
+}
 body main .form .contatti_container {
   padding: 0;
 }
 body main .form .contatti_container .form-container {
   width: 100%;
   padding: 0;
-  margin-bottom: 150px;
+}
+body main .form .contatti_container .form-container form {
+  width: 45%;
+  margin-left: 30px;
 }
 body main .form .contatti_container .form-container i {
   font-size: 5rem;
@@ -706,11 +721,11 @@ body main .form .contatti_container .map-container {
   padding: 0;
   align-items: center;
   font-size: 1.2rem;
+  margin-left: -120px;
 }
 body main .form .contatti_container .map-container .map_responsive {
   overflow: hidden;
   justify-content: center;
-  margin-top: 80px;
   position: relative;
 }
 body main .form .contatti_container .map-container .map_responsive iframe {
@@ -719,11 +734,22 @@ body main .form .contatti_container .map-container .map_responsive iframe {
   position: absolute;
 }
 body main .form .contatti_container .map-container .icons-container {
-  margin-top: 50px;
+  margin-top: 70px;
 }
 body main .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
+}
+body main .form .contatti_container .map-container .icons-container p span {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+  color: floralwhite;
 }
 body main .form .contatti_container .map-container .icons-container p i {
   font-size: 1.5rem;
