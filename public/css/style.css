@@ -520,6 +520,7 @@ body main .core .book-main .book_details > p > span {
   font-size: 1.5rem;
   line-height: 1.2;
   text-transform: uppercase;
+  text-shadow: 2px 2px black;
 }
 body main .core .book-main .book_details > .about {
   font-family: "Open Sans", sans-serif;
@@ -546,13 +547,13 @@ body main .order .card-collector .card-container {
   max-height: 500px;
 }
 body main .order .card-collector .card-container .card {
-  background-color: rgba(209, 191, 150, 0.2);
+  background-color: rgba(209, 191, 142, 0.2);
   border: 1px solid #292929;
-  color: #fa991c;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 body main .order .card-collector .card-container .card .card-title {
-  color: #fa991c;
+  color: #d1bf8e;
+  text-shadow: 2px 2px black;
   font-size: 1.4em;
 }
 body main .order .card-collector .card-container .card .card-body i {
@@ -564,7 +565,7 @@ body main .order .card-collector .card-container .card .card-body i {
 }
 body main .order .card-collector .card-container .card .card-body hr {
   width: 80%;
-  border: 1px solid floralwhite;
+  border: 1px solid #d1bf8e;
   border-radius: 50%;
 }
 body main .order .card-collector .card-container .card .card-body p {
@@ -574,13 +575,14 @@ body main .order .card-collector .card-container .card .card-body p {
 }
 body main .order .card-collector .card-container .card .card-body .button {
   margin-top: 30px;
+  margin-bottom: 15px;
 }
 body main .order .card-collector .card-container .card .btn-primary {
   text-align: center;
 }
 body main .order .card-collector .card-container .card:hover {
   box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
-  border: 5px solid #fa991c;
+  outline: 5px solid #fa991c;
 }
 body main .order .order-bar {
   margin: 0;
@@ -638,6 +640,10 @@ body main .personal .supporters img {
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 1s ease 0.2s;
+}
+body main .personal .supporters .secrow img:nth-child(4) {
+  position: relative;
+  bottom: 1.5rem;
 }
 body main .personal .supporters img:hover {
   filter: grayscale(0%);
