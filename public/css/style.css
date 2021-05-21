@@ -218,7 +218,6 @@ a:hover {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   transform-style: preserve-3d;
-  touch-action: pan-Y;
   overflow: hidden;
   padding: 0;
   white-space: nowrap;
@@ -226,7 +225,7 @@ a:hover {
   flex-wrap: nowrap;
   will-change: transform;
 }
-.glide__slides--dragging {
+.glide__slides__dragging {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -289,16 +288,17 @@ a:hover {
   line-height: 1;
 }
 .glide__arrow:focus {
-  outline: none;
+  color: floralwhite;
 }
 .glide__arrow:hover {
+  outline: none;
   border-color: white;
 }
 .glide__arrow--left {
-  left: 2em;
+  left: 10rem;
 }
 .glide__arrow--right {
-  right: 2em;
+  right: 10rem;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -320,7 +320,7 @@ a:hover {
   padding-left: 5px;
   border-radius: 50%;
   border: 2px solid transparent;
-  transition: all 300ms ease-in-out;
+  transition: all 200ms ease-in-out;
   cursor: pointer;
   line-height: 0;
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
@@ -328,8 +328,10 @@ a:hover {
 }
 .glide__bullet:focus {
   outline: none;
+  background-color: floralwhite;
 }
-.glide__bullet:hover, .glide__bullet:focus {
+.glide__bullet:hover {
+  outline: none;
   border: 2px solid floralwhite;
   background-color: rgba(255, 255, 240, 0.5);
 }
@@ -345,9 +347,17 @@ a:hover {
   cursor: -webkit-grabbing;
 }
 
+.glide {
+  position: initial;
+  display: flex;
+  height: 100%;
+}
+
 .glide img {
   min-height: 600px;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .glide .glide__slide {
@@ -364,6 +374,7 @@ a:hover {
 
 .glide .glide__slides {
   overflow: visible;
+  width: 100vw !important;
 }
 
 .glide .glide__bullets {
@@ -552,7 +563,7 @@ body main .order .card-collector .card-container .card {
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 body main .order .card-collector .card-container .card .card-title {
-  color: #d1bf8e;
+  color: floralwhite;
   text-shadow: 2px 2px black;
   font-size: 1.4em;
 }
@@ -565,12 +576,12 @@ body main .order .card-collector .card-container .card .card-body i {
 }
 body main .order .card-collector .card-container .card .card-body hr {
   width: 80%;
-  border: 1px solid #d1bf8e;
+  border: 1px solid floralwhite;
   border-radius: 50%;
 }
 body main .order .card-collector .card-container .card .card-body p {
   color: floralwhite;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding-top: 30px;
 }
 body main .order .card-collector .card-container .card .card-body .button {
@@ -617,7 +628,7 @@ body main .personal .publisher-title img {
   margin-right: 10px;
 }
 body main .personal .about {
-  padding: 0 50px 80px 50px;
+  padding: 0 50px 0 50px;
 }
 body main .personal .about img {
   width: 60%;
@@ -627,7 +638,7 @@ body main .personal .about img {
 }
 body main .personal .about p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -635,15 +646,19 @@ body main .personal .about p {
 body main .personal .supporters {
   padding: 0;
 }
+body main .personal .supporters .loghi {
+  margin-top: 150px;
+}
+body main .personal .supporters .secloghi {
+  padding-top: 80px;
+  padding-bottom: 0;
+  margin: 0 0 150px 0;
+}
 body main .personal .supporters img {
   width: 10%;
   filter: grayscale(100%);
   transform: scale(1);
   transition: all 1s ease 0.2s;
-}
-body main .personal .supporters .secrow img:nth-child(4) {
-  position: relative;
-  bottom: 1.5rem;
 }
 body main .personal .supporters img:hover {
   filter: grayscale(0%);
@@ -651,13 +666,9 @@ body main .personal .supporters img:hover {
   transition: all 1s ease 0.2s;
   cursor: pointer;
 }
-body main .personal .supporters .loghi {
-  padding: 15px 0 15px 0;
-}
-body main .personal .supporters .secrow {
-  padding-top: 50px;
-  padding-bottom: 0;
-  margin: 0 0 150px 0;
+body main .personal .supporters .secloghi > img:nth-child(4) {
+  position: relative;
+  bottom: 2rem;
 }
 body main .personal .order-bar {
   margin: 0;

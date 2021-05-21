@@ -57,28 +57,6 @@ var app = new Vue({
       "descrizione": "Un classico della storia militare, coniugante l'accuratezza della documentata ricostruzione storica degli ultimi combattimenti per Berlino dell'aprile-maggio 1945, dallo sfondamento sovietico sull'Oder sino alla battaglia di Seelow e la difesa finale della capitale del III Reich, e l'avvincente narrazione delle vicende di un pugno di carristi della Panzer-Division 'Müncheberg' e volontari francesi dell'SS-Sturmbataillon 'Charlemagne', tra gli ultimi difensori di Berlino. Questa edizione presenta una traduzione rivista e annotata a cura del Wehrmacht Research Group, ed è integrata da nuove dettagliate mappe delle operazioni, drammatiche fotografie in azione dell'epoca, immagini attuali dei luoghi dei combattimenti e di illustrazioni a colori.",
       "prezzo": "23,75 euro",
       "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
-    }],
-    video: [{
-      "contenuto": "Lorem ipsum dolor",
-      "data": "23 maggio 2021"
-    }, {
-      "contenuto": "Dolor dolor dolor",
-      "data": "15 settembre 2020"
-    }, {
-      "contenuto": "Doloremque",
-      "data": "2 agosto 2020"
-    }, {
-      "contenuto": "Blablabla",
-      "data": "15 giugno 2020"
-    }, {
-      "contenuto": "Quaranta gatti",
-      "data": "23 febbraio 2020"
-    }, {
-      "contenuto": "Prova prova",
-      "data": "8 gennaio 2020"
-    }, {
-      "contenuto": "Bruxelles",
-      "data": "19 dicembre 2019"
     }]
   },
   methods: {
@@ -96,19 +74,18 @@ var app = new Vue({
         this.counter = this.images.length - 1;
       }
     },
-    nextVideo: function nextVideo() {
-      this.counter++;
+    slideBullet: function slideBullet(i) {
+      var dot = document.querySelectorAll('.glide__bullet');
 
-      if (this.counter === this.images.length) {
-        this.counter = 0;
+      for (var _i = 0; _i < this.images.length; _i++) {
+        dot[_i].classList.remove('selected');
+
+        dot[_i].classList.add('selected');
+
+        this.counter == dot[_i];
       }
-    },
-    prevVideo: function prevVideo() {
-      if (this.counter > 0) {
-        this.counter--;
-      } else {
-        this.counter = this.images.length - 1;
-      }
+
+      ;
     }
   }
 });
@@ -117,19 +94,65 @@ var glide = new Glide('.glide', {
   startAt: 0,
   perView: 1,
   focusAt: 'center',
+  keyboard: false,
   breakpoints: {
     1200: {
-      perView: 2
+      perView: 1
     },
     992: {
-      perView: 2
+      perView: 1
     },
     480: {
       perView: 1
     }
   }
 });
-glide.mount();
+glide.mount(); // function dotNav () {
+//     if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+//     let dot = document.getElementsByClassName('dot').forEach( (element) => {
+//         element.addEventListeners('clic', function()' {
+//             var dprova = Array.prototype.slice.call(this.parentElement.children),
+//             dot_Index = dots.indexOF(element);
+//         }
+//     }
+//     ;
+//     for (let i = 0; i < this.images.lenght; i++) {
+//        dot[i].classList.remove('selected');
+//     }
+//     dot[counter].classList.add('selected');
+//     var slideIndex = 1;
+// showSlides(slideIndex);
+// // Next/previous controls
+// function plusSlides(n) {
+// showSlides(slideIndex += n);
+// }
+// // Thumbnail image controls
+// function currentSlide(n) {
+// showSlides(slideIndex = n);
+// }
+// function showSlides(n) {
+// var i;
+// var slides = document.getElementsByClassName("mySlides");
+// var dots = document.getElementsByClassName("dot");
+// for (i = 0; i < slides.length; i++) {
+// slides[i].style.display = "none";
+// }
+// for (i = 0; i < dots.length; i++) {
+// dots[i].className = dots[i].className.replace(" active", "");
+// }
+// slides[slideIndex-1].style.display = "block";
+// dots[slideIndex-1].className += " active";
+// }
+// function My () {
+//     var el = document.getElementsByClassName('selected');
+//     el.addEventListener('click', function() {
+//         if (document.getElementsByTagName('button').classList.contains('glide__bullet--active')) {
+//             alert('Eureka!');
+//         }
+//     });
+// }
+// My();
 
 /***/ }),
 

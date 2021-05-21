@@ -24,7 +24,6 @@
     list-style: none;
     backface-visibility: hidden;
     transform-style: preserve-3d;
-    touch-action: pan-Y;
     overflow: hidden;
     padding: 0;
     white-space: nowrap;
@@ -32,7 +31,7 @@
     flex-wrap: nowrap;
     will-change: transform;
 
-    &#{$glide-modifier-separator}dragging {
+    &#{$se}dragging {
       user-select: none;
     }
   }

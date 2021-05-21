@@ -68,49 +68,6 @@ let app = new Vue ({
 
         ], 
 
-        video: [
-            {
-                "contenuto": "Lorem ipsum dolor",
-                "data": "23 maggio 2021"
-
-            },
-
-            {
-                "contenuto": "Dolor dolor dolor",
-                "data": "15 settembre 2020"
-
-            },
-
-            {
-                "contenuto": "Doloremque",
-                "data": "2 agosto 2020"
-
-            },
-
-            {
-                "contenuto": "Blablabla",
-                "data": "15 giugno 2020"
-            },
-
-            {
-                "contenuto": "Quaranta gatti",
-                "data": "23 febbraio 2020"
-
-            },
-
-            {
-                "contenuto": "Prova prova",
-                "data": "8 gennaio 2020"
-
-            },
-
-            {
-                "contenuto": "Bruxelles",
-                "data": "19 dicembre 2019"
-
-            }
-        ]
-
     },
 
     methods: {
@@ -121,7 +78,7 @@ let app = new Vue ({
             }
         },
 
-        prevImg()  {
+        prevImg() {
             if(this.counter > 0) {
                 this.counter--;
             } else {
@@ -129,45 +86,92 @@ let app = new Vue ({
             }
         },
 
-        nextVideo() {
-            this.counter++;
-            if(this.counter === this.images.length) {
-                this.counter = 0;
-            }
-        },
+        slideBullet(i) {
 
-        prevVideo()  {
-            if(this.counter > 0) {
-                this.counter--;
-            } else {
-                this.counter = this.images.length -1;
-            }
+            let dot = document.querySelectorAll('.glide__bullet');
+            
+            for (let i = 0; i < this.images.length; i++) {
+                dot[i].classList.remove('selected');
+                dot[i].classList.add('selected');
+                this.counter = dot[i];
+            };
+            
         }
     }
-});
+    
+    
+})
 
 
-let glide = new Glide('.glide', {
+let glide = new Glide('.glide',  {
     type: 'carousel',
     startAt: 0,
     perView: 1,
     focusAt: 'center',
+    keyboard: false,
     breakpoints: {
         1200: {
-            perView: 2
+            perView: 1,
+            
         },
      
         992: {
-        perView: 2
+        perView: 1,
+     
       },
         
         480: {
-            perView: 1
+            perView: 1,
+     
       }
-    }
-  })
-  
-glide.mount()
+    },
+         
+})
+
+glide.mount();
+
+
+
+
+// function dotNav () {
+//     if (n > slides.length) {slideIndex = 1}
+//     if (n < 1) {slideIndex = slides.length}
+
+
+//     let dot = document.getElementsByClassName('dot').forEach( (element) => {
+//         element.addEventListeners('clic', function()' {
+//             var dprova = Array.prototype.slice.call(this.parentElement.children),
+//             dot_Index = dots.indexOF(element);
+//         }
+//     }
+    
+//     var slideIndex = 1;
+// showSlides(slideIndex);
+
+// // Next/previous controls
+// function plusSlides(n) {
+// showSlides(slideIndex += n);
+// }
+
+// // Thumbnail image controls
+// function currentSlide(n) {
+// showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+// var i;
+// var slides = document.getElementsByClassName("mySlides");
+// var dots = document.getElementsByClassName("dot");
+
+
+// for (i = 0; i < dots.length; i++) {
+// dots[i].className = dots[i].className.replace(" active", "");
+// }
+// slides[slideIndex-1].style.display = "block";
+// dots[slideIndex-1].className += " active";
+// }
+
+
 
 
 
