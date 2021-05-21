@@ -88,14 +88,11 @@
   }
 
   &#{$sm}swipeable {
-    cursor: grab;
-    cursor: -moz-grab;
-    cursor: -webkit-grab;
+    cursor: none !important;
+    
   }
 
   &#{$sm}dragging {
-    cursor: grabbing;
-    cursor: -moz-grabbing;
-    cursor: -webkit-grabbing;
+    cursor: none !important;
   }
 }

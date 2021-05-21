@@ -86,16 +86,14 @@ let app = new Vue ({
             }
         },
 
-        slideBullet(i) {
-
+        slideBullet(index) {
+            
             let dot = document.querySelectorAll('.glide__bullet');
             
-            for (let i = 0; i < this.images.length; i++) {
+            for (let i = 0; i < dot.length; i++) {
                 dot[i].classList.remove('selected');
-                dot[i].classList.add('selected');
-                this.counter = dot[i];
-            };
-            
+                dot.classList.add('selected'); 
+            }
         }
     }
     
@@ -109,6 +107,8 @@ let glide = new Glide('.glide',  {
     perView: 1,
     focusAt: 'center',
     keyboard: false,
+    swipeThresold: false,
+    dragThreshold: false,
     breakpoints: {
         1200: {
             perView: 1,
@@ -133,6 +133,9 @@ glide.mount();
 
 
 
+
+
+
 // function dotNav () {
 //     if (n > slides.length) {slideIndex = 1}
 //     if (n < 1) {slideIndex = slides.length}
@@ -145,6 +148,12 @@ glide.mount();
 //         }
 //     }
     
+    
+    
+//     ;
+
+
+
 //     var slideIndex = 1;
 // showSlides(slideIndex);
 
@@ -163,13 +172,42 @@ glide.mount();
 // var slides = document.getElementsByClassName("mySlides");
 // var dots = document.getElementsByClassName("dot");
 
-
+// for (i = 0; i < slides.length; i++) {
+// slides[i].style.display = "none";
+// }
 // for (i = 0; i < dots.length; i++) {
 // dots[i].className = dots[i].className.replace(" active", "");
 // }
 // slides[slideIndex-1].style.display = "block";
 // dots[slideIndex-1].className += " active";
 // }
+
+// function My () {
+//     var el = document.getElementsByClassName('selected');
+//     el.addEventListener('click', function() {
+//         if (document.getElementsByTagName('button').classList.contains('glide__bullet--active')) {
+//             alert('Eureka!');
+//         }
+
+//     });
+
+    
+// }
+
+// My();
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
