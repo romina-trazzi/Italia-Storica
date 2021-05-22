@@ -86,7 +86,7 @@ let app = new Vue ({
             }
         },
 
-        slideBullet(index) {
+        slideBullet() {
 
             // Selezioniamo dal Dom i dots
             let dots = document.querySelectorAll('.glide__bullet');
@@ -95,8 +95,7 @@ let app = new Vue ({
             let dotsArray = Array.from(dots);
             
             // Rimuoviamo la classe selected da tutti gli elementi
-            for (let i = 0; i < dots.length; i++) {
-                // dotsArray[i].classList.remove('glide__bullet--active');   
+            for (let i = 0; i < dots.length; i++) { 
                 dots[i].classList.remove('selected');   
             }
 
@@ -106,13 +105,15 @@ let app = new Vue ({
             dots.forEach(function (element, index) {
                 if (element === document.activeElement) {
                     currentIndex = index;
-                    
-                    // Aggiungiamo la classe selected all'elemento attivo
-                    dots[currentIndex].classList.add('selected');
-                    dotsArray[currentIndex].classList.add('selected');
                 }
             });
+
+            // Aggiungiamo la classe selected all'elemento attivo
+            dots[currentIndex].classList.add('selected');
+            dotsArray[currentIndex].classList.add('selected');    
             
+            // Aggiorniamo il counter
+            this.counter = currentIndex;
         }
     }
     
@@ -145,36 +146,4 @@ const glideConfig = {
 
 let glide = new Glide('.glide', glideConfig);  
     
-glide.on('build.after', function(event) {
- 
-});
-
 glide.mount();
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-            // let forward = document.querySelector('#api-go-forward');
-            // let backward = document.querySelector('#api-go-backward');
-
-            // forward.addEventListener('click', function () {
-            //     glide.go('>')
-            //   })
-
-            // backward.addEventListener('click', function () {
-            //     glide.go('<')
-            // })
-
-            // glide.go('=2')
