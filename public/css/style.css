@@ -18,19 +18,21 @@
 .my_title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 4rem !important;
   margin: 0 0 45px 0;
   padding: 20px 0 0 0;
   color: #d1bf8e;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem !important;
 }
 
 .small_title {
   text-align: center;
   text-transform: uppercase;
-  font-size: 3rem !important;
   margin: 0 0 75px 0;
   padding: 0;
   color: #d1bf8e;
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem !important;
 }
 
 .card {
@@ -102,6 +104,10 @@ label {
 }
 
 /*=====  End of Section INPUT  ======*/
+/*=============================================
+=               Section SOCIAL ICON         =
+==============================================*/
+/*=====  End of Section SOCIAL ICON  ======*/
 /*========================================
 =            Section BUTTON         =
 ========================================*/
@@ -339,12 +345,10 @@ a:hover {
   background-color: floralwhite;
 }
 .glide--swipeable {
-  cursor: grab;
-  cursor: -webkit-grab;
+  cursor: default !important;
 }
 .glide--dragging {
-  cursor: grabbing;
-  cursor: -webkit-grabbing;
+  cursor: default !important;
 }
 
 .glide {
@@ -354,7 +358,7 @@ a:hover {
 }
 
 .glide img {
-  min-height: 600px;
+  min-height: 700px;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
   -o-object-fit: cover;
      object-fit: cover;
@@ -378,7 +382,7 @@ a:hover {
 }
 
 .glide .glide__bullets {
-  cursor: pointer;
+  cursor: pointer !important;
   padding-top: 100px;
   bottom: -50px;
 }
@@ -386,18 +390,35 @@ a:hover {
 body {
   background: #292929;
   color: floralwhite;
-  font-family: "Oswald", "Open Sans", "sans-serif";
+  font-family: "Open Sans", "sans-serif";
   overflow-x: hidden;
 }
 body header {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.8);
 }
+body header .icon {
+  color: #fa991c;
+  margin-right: 10px;
+  font-size: 1.8rem !important;
+}
+body header .span {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: rem;
+  text-align: left;
+  line-height: 1.5;
+  color: floralwhite;
+}
 body header .navbar {
   min-height: 70px;
   width: 100%;
   padding: 0;
   margin: 0;
+  font-size: 1.1rem;
 }
 body header .navbar i {
   margin: 0 5px 0 15px;
@@ -413,6 +434,7 @@ body header .navbar .social {
   padding-right: 3.65rem;
 }
 body header .my_jumbotron {
+  font-family: "Oswald", "sans-serif";
   height: 350px;
   padding-bottom: 440px;
 }
@@ -480,7 +502,7 @@ body header .my_jumbotron .steel_bar {
   padding: 0;
 }
 body header .my_jumbotron .steel_bar p {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   margin: 0;
   padding: 0;
   padding-top: 40px;
@@ -535,7 +557,7 @@ body main .core .book-main .book_details > p > span {
 }
 body main .core .book-main .book_details > .about {
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: left;
   line-height: 1.5;
   margin: 30px 0 30px 0;
@@ -548,6 +570,7 @@ body main .core .book-second_row {
 body main .order {
   margin: 0;
   padding: 0 0 45px 0;
+  font-family: "Oswald", "sans-serif";
   padding-top: 85px;
 }
 body main .order .card-collector {
@@ -631,14 +654,14 @@ body main .personal .about {
   padding: 0 50px 0 50px;
 }
 body main .personal .about img {
-  width: 60%;
+  width: 70%;
   margin-right: 40px;
   filter: grayscale(0%);
   transition: all 1s ease-in;
 }
 body main .personal .about p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -684,6 +707,22 @@ body main .form {
   padding: 0 0 45px 0;
   padding-bottom: 150px;
 }
+body main .form .icon {
+  color: #fa991c;
+  margin-right: 10px;
+  font-size: 1.8rem !important;
+}
+body main .form .span {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: rem;
+  text-align: left;
+  line-height: 1.5;
+  color: floralwhite;
+}
 body main .form .form-title .shield-wrap {
   text-align: center;
   margin-bottom: 75px;
@@ -702,13 +741,13 @@ body main .form .form-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
-body main .form .lorem {
+body main .form .help {
   padding-bottom: 150px;
 }
-body main .form .lorem p {
+body main .form .help p {
   width: 68%;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 20px;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -722,11 +761,11 @@ body main .form .contatti_container .form-container {
 }
 body main .form .contatti_container .form-container form {
   width: 45%;
-  margin-left: 30px;
+  height: 100%;
 }
 body main .form .contatti_container .form-container i {
   font-size: 5rem;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
   font-family: "Open Sans", sans-serif;
@@ -757,22 +796,6 @@ body main .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
 }
-body main .form .contatti_container .map-container .icons-container p span {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.5;
-  color: floralwhite;
-}
-body main .form .contatti_container .map-container .icons-container p i {
-  font-size: 1.5rem;
-  padding-right: 10px;
-  color: #fa991c;
-}
 body footer .copyright {
   margin: 0;
   padding: 0;
@@ -785,6 +808,6 @@ body footer .copyright p {
   height: 100%;
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
 }

@@ -90,9 +90,6 @@ let app = new Vue ({
 
             // Selezioniamo dal Dom i dots
             let dots = document.querySelectorAll('.glide__bullet');
-
-            // Trasformiamo la nodeList in Array 
-            let dotsArray = Array.from(dots);
             
             // Rimuoviamo la classe selected da tutti gli elementi
             for (let i = 0; i < dots.length; i++) { 
@@ -110,8 +107,7 @@ let app = new Vue ({
 
             // Aggiungiamo la classe selected all'elemento attivo
             dots[currentIndex].classList.add('selected');
-            dotsArray[currentIndex].classList.add('selected');    
-            
+           
             // Aggiorniamo il counter
             this.counter = currentIndex;
         }

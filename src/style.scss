@@ -20,18 +20,21 @@
 body {
     background: map-get($color-map, background_color);
     color: floralwhite;
-    font-family: 'Oswald', 'Open Sans', 'sans-serif';
+    font-family: 'Open Sans', 'sans-serif';
+    ;
     overflow-x: hidden;
     
     header {
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
+        @include social_icons;
         
         .navbar {
             min-height: 70px;
             width: 100%;
             padding: 0;
             margin: 0;
+            font-size: 1.1rem;
             
             i {
                 margin: 0 5px 0 15px;
@@ -53,17 +56,16 @@ body {
 
         
         .my_jumbotron {
-           height: 350px;
-           padding-bottom: 440px;
+            font-family: 'Oswald', 'sans-serif';
+            height: 350px;
+            padding-bottom: 440px;
 
-           .row {
-               margin: 0;
-               padding: 0;
-           }
-          
-           .main_title {
-
-                
+            .row {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .main_title {
                 img {
                     max-height: 350px !important;
                     width: 100% !important;
@@ -104,7 +106,7 @@ body {
                     margin: 0;
                     padding: 0;
                 }
-                
+            
             }
 
            .steel_bar {
@@ -114,7 +116,7 @@ body {
                 margin: 0;
                 padding: 0;
                 & p {
-                    font-size: 1.5rem;
+                    font-size: 1.9rem;
                     margin: 0;
                     padding: 0;
                     padding-top: 40px;
@@ -148,9 +150,9 @@ body {
 
         }
         
-        
         .order {
             @include sezioni;
+            font-family: 'Oswald', 'sans-serif';
             padding-top: 85px;
 
             .card-collector {      
@@ -238,7 +240,7 @@ body {
                 padding: 0 50px 0 50px;
 
                 img {
-                    width: 60%;
+                    width: 70%;
                     margin-right: 40px;
                     filter: grayscale(0%);
                     transition: all 1s ease-in;
@@ -246,7 +248,7 @@ body {
                 
                 p {
                     font-family: "Open Sans", sans-serif;
-                    font-size: 1.1rem;
+                    font-size: 1.2rem;
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
@@ -305,22 +307,21 @@ body {
         
         .form {
             @include sezioni;
+            @include social_icons;
             background-color: map-get($color-map, secondary_color);
             padding-bottom: 150px;
-           
-
 
             .form-title {
                 @include shieldknot;
             }
 
-            .lorem {
+            .help {
                 padding-bottom: 150px;
 
                 p {
                     width: 68%;
                     font-family: "Open Sans", sans-serif;
-                    font-size: 1rem;
+                    font-size: 20px;
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
@@ -328,7 +329,6 @@ body {
                 } 
 
             }
-            
 
             .contatti_container {
                 padding: 0; 
@@ -339,12 +339,13 @@ body {
 
                     form {
                         width: 45%;
-                        margin-left: 30px;
+                        height: 100%;
                     }
 
+                    // Busta
                     i {
                         font-size: 5rem;
-                        padding-bottom: 30px; 
+                        padding-bottom: 40px; 
                     }
 
                     input, textarea {
@@ -381,25 +382,6 @@ body {
                         p {
                             margin: 0;
                             width: 100%;
-        
-                            span {
-                                margin: 0;
-                                padding: 0;
-                                height: 100%;
-                                width: 100%; 
-                                font-family: "Open Sans", sans-serif;
-                                font-size: 1rem;
-                                text-align: left;
-                                line-height: 1.5;
-                                color: map-get($color-map, text_color);  
-                            }
-                            
-                            i {
-                                font-size: 1.5rem;
-                                padding-right: 10px;
-                                color: map-get($color-map, links_color);
-                            }
-                            
                         }
                         
                     }
@@ -426,7 +408,7 @@ body {
                 height: 100%;
                 width: 100%;
                 font-family: "Open Sans", sans-serif;         
-                font-size: 0.8rem;
+                font-size: 1rem;
                 font-weight: 400;
             }
         }

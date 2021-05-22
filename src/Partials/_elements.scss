@@ -50,6 +50,35 @@ label {
 /*=====  End of Section INPUT  ======*/
 
 
+/*=============================================
+=               Section SOCIAL ICON         =
+==============================================*/
+
+@mixin social_icons {
+    .icon {
+        color:map-get($color-map, links_color);
+        margin-right: 10px;
+        font-size: 1.8rem !important;
+    }
+
+    .span {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%; 
+        font-family: "Open Sans", sans-serif;
+        font-size: rem;
+        text-align: left;
+        line-height: 1.5;
+        color: map-get($color-map, text_color);  
+    }
+}
+
+
+/*=====  End of Section SOCIAL ICON  ======*/
+
+
+
 
 /*========================================
 =            Section BUTTON         =

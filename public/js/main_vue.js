@@ -74,27 +74,36 @@ var app = new Vue({
         this.counter = this.images.length - 1;
       }
     },
-    slideBullet: function slideBullet(i) {
-      var dot = document.querySelectorAll('.glide__bullet');
+    slideBullet: function slideBullet() {
+      // Selezioniamo dal Dom i dots
+      var dots = document.querySelectorAll('.glide__bullet'); // Rimuoviamo la classe selected da tutti gli elementi
 
-      for (var _i = 0; _i < this.images.length; _i++) {
-        dot[_i].classList.remove('selected');
-
-        dot[_i].classList.add('selected');
-
-        this.counter == dot[_i];
+      for (var i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('selected');
       }
 
-      ;
+      var currentIndex = 0; // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+
+      dots.forEach(function (element, index) {
+        if (element === document.activeElement) {
+          currentIndex = index;
+        }
+      }); // Aggiungiamo la classe selected all'elemento attivo
+
+      dots[currentIndex].classList.add('selected'); // Aggiorniamo il counter
+
+      this.counter = currentIndex;
     }
   }
 });
-var glide = new Glide('.glide', {
+var glideConfig = {
   type: 'carousel',
   startAt: 0,
   perView: 1,
   focusAt: 'center',
   keyboard: false,
+  swipeThresold: false,
+  dragThreshold: false,
   breakpoints: {
     1200: {
       perView: 1
@@ -106,53 +115,9 @@ var glide = new Glide('.glide', {
       perView: 1
     }
   }
-});
-glide.mount(); // function dotNav () {
-//     if (n > slides.length) {slideIndex = 1}
-//     if (n < 1) {slideIndex = slides.length}
-//     let dot = document.getElementsByClassName('dot').forEach( (element) => {
-//         element.addEventListeners('clic', function()' {
-//             var dprova = Array.prototype.slice.call(this.parentElement.children),
-//             dot_Index = dots.indexOF(element);
-//         }
-//     }
-//     ;
-//     for (let i = 0; i < this.images.lenght; i++) {
-//        dot[i].classList.remove('selected');
-//     }
-//     dot[counter].classList.add('selected');
-//     var slideIndex = 1;
-// showSlides(slideIndex);
-// // Next/previous controls
-// function plusSlides(n) {
-// showSlides(slideIndex += n);
-// }
-// // Thumbnail image controls
-// function currentSlide(n) {
-// showSlides(slideIndex = n);
-// }
-// function showSlides(n) {
-// var i;
-// var slides = document.getElementsByClassName("mySlides");
-// var dots = document.getElementsByClassName("dot");
-// for (i = 0; i < slides.length; i++) {
-// slides[i].style.display = "none";
-// }
-// for (i = 0; i < dots.length; i++) {
-// dots[i].className = dots[i].className.replace(" active", "");
-// }
-// slides[slideIndex-1].style.display = "block";
-// dots[slideIndex-1].className += " active";
-// }
-// function My () {
-//     var el = document.getElementsByClassName('selected');
-//     el.addEventListener('click', function() {
-//         if (document.getElementsByTagName('button').classList.contains('glide__bullet--active')) {
-//             alert('Eureka!');
-//         }
-//     });
-// }
-// My();
+};
+var glide = new Glide('.glide', glideConfig);
+glide.mount();
 
 /***/ }),
 
