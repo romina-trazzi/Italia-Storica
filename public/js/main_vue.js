@@ -96,6 +96,7 @@ var app = new Vue({
     }
   }
 });
+var after = document.querySelector;
 var glideConfig = {
   type: 'carousel',
   startAt: 0,
@@ -116,8 +117,7 @@ var glideConfig = {
     }
   }
 };
-var glide = new Glide('.glide', glideConfig);
-glide.mount();
+var glide = new Glide('.glide', glideConfig).mount(); // transform: translate3d(-1714px, 0px, 0px);
 
 /***/ }),
 

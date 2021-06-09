@@ -21,7 +21,6 @@ body {
     background: map-get($color-map, background_color);
     color: floralwhite;
     font-family: 'Open Sans', 'sans-serif';
-    ;
     overflow-x: hidden;
     
     header {
@@ -213,10 +212,9 @@ body {
                         -webkit-box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
                         -moz-box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
                         box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
-                        outline: 5px solid map-get($color-map, links_color);
-        
-                          
+                        outline: 5px solid map-get($color-map, links_color);    
                     }
+               
                 }
             }
            
@@ -303,8 +301,7 @@ body {
 
             
         }
-        
-        
+    
         .form {
             @include sezioni;
             @include social_icons;
@@ -395,7 +392,6 @@ body {
     }
 
     footer {
-
         .copyright {
             margin:0;
             padding: 0;

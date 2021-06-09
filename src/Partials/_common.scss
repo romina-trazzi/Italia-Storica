@@ -7,11 +7,10 @@ $color-map: (
   "primary_color": rgb(48, 59, 47),
   "bar_color": rgb(154, 125, 46),
   "bg_card_color":   rgba(209, 191, 142, 0.2),
-//   "card_bar_color": rgb(158,157,81),
-//   "card_title_color": rgba(85, 255, 0, 0.7),
 
   // Accent
   
+  "hover_color": rgb(244, 124, 32),
   "links_color": rgb(250, 153, 28),
   "text_color": rgb(255, 250, 240),
   "title_color": rgb(209,191,142),
@@ -19,9 +18,9 @@ $color-map: (
 
 // Container
 .container_80 {
-width: 80%;
-margin: 100px auto 0 auto;
-background-color: map-get($color-map, primary_color);
+    width: 80%;
+    margin: 100px auto 0 auto;
+    background-color: map-get($color-map, primary_color);
 }
 
 // Height & Width

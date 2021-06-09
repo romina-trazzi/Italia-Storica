@@ -115,6 +115,9 @@ let app = new Vue ({
     
 });
 
+
+let after = document.querySelector;
+
 const glideConfig = {
     type: 'carousel',
     startAt: 0,
@@ -137,9 +140,16 @@ const glideConfig = {
         480: {
             perView: 1,
         }
-    }
-};
+    },
 
-let glide = new Glide('.glide', glideConfig);  
+
     
-glide.mount();
+}
+
+
+
+let glide = new Glide('.glide', glideConfig)
+.mount();
+
+
+// transform: translate3d(-1714px, 0px, 0px);

@@ -67,7 +67,6 @@ label {
         height: 100%;
         width: 100%; 
         font-family: "Open Sans", sans-serif;
-        font-size: rem;
         text-align: left;
         line-height: 1.5;
         color: map-get($color-map, text_color);  
@@ -123,6 +122,7 @@ label {
 	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
 	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
+
 }
 
 .orange:active {
@@ -131,6 +131,7 @@ label {
 	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
 }
+
 
 
 /*=====  End of Section BUTTON ======*/

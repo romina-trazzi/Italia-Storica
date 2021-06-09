@@ -7,12 +7,10 @@
 .glide img {
     min-height: 700px;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-    object-fit: cover;
-   
+
 }
 
 .glide .glide__slide {
-    margin: 0 !important;
     filter: blur(3px);
     opacity: 20%;
     transition: 0.5s linear;
@@ -21,21 +19,17 @@
 .glide .glide__slide--active {
     opacity: 1;
     filter: none;
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
 
 }
 
 .glide .glide__slides {
     overflow: visible;
-    width: 100vw !important;
-
-    //transform: translate3d(-932px, 0, 0) !important;
-    // transition: transform 400ms !important;
-
 }
 
 .glide .glide__bullets {
     cursor: pointer !important;
-    padding-top: 100px;
-    bottom: -50px;
+    bottom: -4.2rem;
 }
 
