@@ -124,55 +124,34 @@ var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo button
 
 var buttonsArray = Array.from(buttons); // Selezioniamo gli elementi da cambiare (nodeList)
 
-var iconFas = document.querySelectorAll('.card .fas');
-var card = document.querySelectorAll('.card');
+var iconsFas = document.querySelectorAll('.card .fas');
+var cards = document.querySelectorAll('.card'); // Creiamo i cicli con i Listener e le funzioni per cambiare i colori
+
+var _loop = function _loop(i) {
+  buttonsArray[i].addEventListener('mouseover', function () {
+    iconsFas[i].style.color = 'rgb(244, 124, 32)';
+    cards[i].style.outlineColor = 'rgb(244, 124, 32)';
+  });
+};
 
 for (var i = 0; i < buttonsArray.length; i++) {
-  buttonsArray[i].addEventListener('mouseover', function (e) {
-    iconFas.forEach(function (element) {
-      element.style.color = 'rgb(244, 124, 32)';
-      element.style.outline = '5px solid rgb((244, 124, 32)';
-    });
-  });
+  _loop(i);
 }
 
 ;
 
-for (var _i = 0; _i < buttonsArray.length; _i++) {
-  buttonsArray[_i].addEventListener('mouseleave', function (e) {
-    iconFas.forEach(function (element) {
-      element.style.color = 'rgb(250, 153, 28)';
-      element.style.outline = '5px solid rgb((250, 153, 28)';
-    });
+var _loop2 = function _loop2(_i) {
+  buttonsArray[_i].addEventListener('mouseleave', function () {
+    iconsFas[_i].style.color = 'rgb(250, 153, 28)';
+    cards[_i].style.outlineColor = 'rgb(250, 153, 28)';
   });
+};
+
+for (var _i = 0; _i < buttonsArray.length; _i++) {
+  _loop2(_i);
 }
 
-; // // Creiamo variabili vuote all'esterno
-// let el, myIndex;
-// let mouseOver = false;
-// for (let i = 0; i < buttonsArray.length; i++) {
-//     el = buttonsArray[i];
-// }
-// // Aggiungiamo l'evento mouseOver ai bottoni e le istruzioni su cosa fare all'evento
-// el.addEventListener('mouseover', function() {
-//     // Selezioniamo gli elementi da cambiare (nodeList)
-//     let iconFas = document.querySelectorAll('.card .fas');
-//     iconFas.forEach((element) => {
-//         element.style.color = 'rgb(244, 124, 32)';
-//     });
-// });
-//     // let card =  document.querySelectorAll('.card');
-//     // card.forEach((element) => {
-//     //     element.style.outline = '5px solid rgb((244, 124, 32)';
-//     // });
-// // Aggiungiamo l'evento mouseLeave ai bottoni e le istruzioni su cosa fare all'evento
-// el.addEventListener('mouseleave', function() {
-//     // Selezioniamo gli elementi da cambiare (nodeList)
-//     let iconFas = document.querySelectorAll('.card .fas');
-//     iconFas.forEach((element, index, iconFas) => {
-//         element.style.color = 'rgb(250, 153, 28)';
-//     });
-// })
+;
 
 /***/ }),
 
