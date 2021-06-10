@@ -130,6 +130,7 @@ body {
         .core {
             @include sezioni;
 
+
             .book-title {
                 @include shieldknot;
             }
@@ -138,6 +139,7 @@ body {
                 @include descrizioni;
                 margin: 0;
                 width: 100%;
+                min-height: 660px;
 
                 .book_description {
 
@@ -157,6 +159,7 @@ body {
                 width: 100%;
                 margin: 30px 0 0 0;
                 padding: 0;
+             
             }
 
 

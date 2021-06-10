@@ -64,31 +64,42 @@ var app = new Vue({
     nextImg: function nextImg() {
       if (this.click == false) {
         this.click = true;
+        this.counter++;
+
+        if (this.counter === this.images.length) {
+          this.counter = 0;
+        }
       } else {
         this.click = false;
+        this.counter++;
+
+        if (this.counter === this.images.length) {
+          this.counter = 0;
+        }
       }
 
       ;
-      this.counter++;
-
-      if (this.counter === this.images.length) {
-        this.counter = 0;
-      }
     },
     prevImg: function prevImg() {
       if (this.click == false) {
         this.click = true;
+
+        if (this.counter > 0) {
+          this.counter--;
+        } else {
+          this.counter = this.images.length - 1;
+        }
       } else {
         this.click = false;
+
+        if (this.counter > 0) {
+          this.counter--;
+        } else {
+          this.counter = this.images.length - 1;
+        }
       }
 
       ;
-
-      if (this.counter > 0) {
-        this.counter--;
-      } else {
-        this.counter = this.images.length - 1;
-      }
     },
     slideBullet: function slideBullet() {
       // Selezioniamo dal Dom i dots

@@ -269,7 +269,7 @@ a:hover {
 .glide__arrow {
   position: absolute;
   display: block;
-  top: 50%;
+  top: 40%;
   z-index: 2;
   color: floralwhite;
   text-transform: uppercase;
@@ -518,6 +518,7 @@ body main .core .book-title img {
 body main .core .book-main {
   margin: 0;
   width: 100%;
+  min-height: 660px;
 }
 body main .core .book-main .book_description > h4 {
   margin-top: 40px;
