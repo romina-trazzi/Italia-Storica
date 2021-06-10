@@ -110,25 +110,25 @@ label {
 
 .orange {
 	color: floralwhite;
-	border: solid 1px #da7c0c;
-	background: #f78d1d;
-	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
-	background: -moz-linear-gradient(top,  #faa51a,  #f47a20);
+	border: solid 1px rgb(218, 124, 12);
+	background: rgb(247, 141, 29);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(250, 165, 26)), to(rgb(244, 122, 32)));
+	background: -moz-linear-gradient(top,  rgb(250, 165, 26),  rgb(244, 122, 32));
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
 }
 
 .orange:hover {
 	background: #f47c20;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f88e11), to(#f06015));
-	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(248, 142, 17)), to(rgb(240, 96, 21)));
+	background: -moz-linear-gradient(top,  rgb(248, 142, 17),  rgb(240, 96, 21));
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f88e11', endColorstr='#f06015');
 
 }
 
 .orange:active {
     color: black;
-	background: -webkit-gradient(linear, left top, left bottom, from(#f47a20), to(#faa51a));
-	background: -moz-linear-gradient(top,  #f47a20,  #faa51a);
+	background: -webkit-gradient(linear, left top, left bottom, from(rgb(244, 122, 32)), to(rgb(250, 165, 26)));
+	background: -moz-linear-gradient(top,  rgb(244, 122, 32),  rgb(250, 165, 26));
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f47a20', endColorstr='#faa51a');
 }
 

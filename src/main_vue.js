@@ -115,9 +115,6 @@ let app = new Vue ({
     
 });
 
-
-let after = document.querySelector;
-
 const glideConfig = {
     type: 'carousel',
     startAt: 0,
@@ -128,8 +125,7 @@ const glideConfig = {
     dragThreshold: false,
     breakpoints: {
         1200: {
-            perView: 1,
-            
+            perView: 1, 
         },
      
         992: {
@@ -146,10 +142,99 @@ const glideConfig = {
     
 }
 
+let glide = new Glide('.glide', glideConfig).mount();
 
 
-let glide = new Glide('.glide', glideConfig)
-.mount();
+/* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
+
+// Selezioniamo i buttons delle card (nodeList)
+let buttons = document.querySelectorAll('.card .orange');
+
+// Trasformiamo buttons in Array
+let buttonsArray = Array.from(buttons);
+
+// Selezioniamo gli elementi da cambiare (nodeList)
+let iconFas = document.querySelectorAll('.card .fas');
+let card =  document.querySelectorAll('.card');
 
 
-// transform: translate3d(-1714px, 0px, 0px);
+for (let i = 0; i < buttonsArray.length; i++) {
+    buttonsArray[i].addEventListener('mouseover', function(e) {
+        iconFas.forEach((element) => {
+            element.style.color = 'rgb(244, 124, 32)';
+            element.style.outline = '5px solid rgb((244, 124, 32)';
+        });
+
+    });
+    
+};
+
+for (let i = 0; i < buttonsArray.length; i++) {
+    buttonsArray[i].addEventListener('mouseleave', function(e) {
+        iconFas.forEach((element) => {
+            element.style.color = 'rgb(250, 153, 28)';
+            element.style.outline = '5px solid rgb((250, 153, 28)';
+        });
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Creiamo variabili vuote all'esterno
+// let el, myIndex;
+// let mouseOver = false;
+
+
+// for (let i = 0; i < buttonsArray.length; i++) {
+//     el = buttonsArray[i];
+// }
+
+
+// // Aggiungiamo l'evento mouseOver ai bottoni e le istruzioni su cosa fare all'evento
+// el.addEventListener('mouseover', function() {
+    
+//     // Selezioniamo gli elementi da cambiare (nodeList)
+//     let iconFas = document.querySelectorAll('.card .fas');
+    
+//     iconFas.forEach((element) => {
+//         element.style.color = 'rgb(244, 124, 32)';
+//     });
+    
+// });
+
+//     // let card =  document.querySelectorAll('.card');
+//     // card.forEach((element) => {
+//     //     element.style.outline = '5px solid rgb((244, 124, 32)';
+//     // });
+
+
+// // Aggiungiamo l'evento mouseLeave ai bottoni e le istruzioni su cosa fare all'evento
+// el.addEventListener('mouseleave', function() {
+
+//     // Selezioniamo gli elementi da cambiare (nodeList)
+//     let iconFas = document.querySelectorAll('.card .fas');
+    
+//     iconFas.forEach((element, index, iconFas) => {
+//         element.style.color = 'rgb(250, 153, 28)';
+//     });
+// })
+
+
+
+
+
+
+
+
+

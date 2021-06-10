@@ -96,7 +96,6 @@ var app = new Vue({
     }
   }
 });
-var after = document.querySelector;
 var glideConfig = {
   type: 'carousel',
   startAt: 0,
@@ -117,7 +116,63 @@ var glideConfig = {
     }
   }
 };
-var glide = new Glide('.glide', glideConfig).mount(); // transform: translate3d(-1714px, 0px, 0px);
+var glide = new Glide('.glide', glideConfig).mount();
+/* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
+// Selezioniamo i buttons delle card (nodeList)
+
+var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array
+
+var buttonsArray = Array.from(buttons); // Selezioniamo gli elementi da cambiare (nodeList)
+
+var iconFas = document.querySelectorAll('.card .fas');
+var card = document.querySelectorAll('.card');
+
+for (var i = 0; i < buttonsArray.length; i++) {
+  buttonsArray[i].addEventListener('mouseover', function (e) {
+    iconFas.forEach(function (element) {
+      element.style.color = 'rgb(244, 124, 32)';
+      element.style.outline = '5px solid rgb((244, 124, 32)';
+    });
+  });
+}
+
+;
+
+for (var _i = 0; _i < buttonsArray.length; _i++) {
+  buttonsArray[_i].addEventListener('mouseleave', function (e) {
+    iconFas.forEach(function (element) {
+      element.style.color = 'rgb(250, 153, 28)';
+      element.style.outline = '5px solid rgb((250, 153, 28)';
+    });
+  });
+}
+
+; // // Creiamo variabili vuote all'esterno
+// let el, myIndex;
+// let mouseOver = false;
+// for (let i = 0; i < buttonsArray.length; i++) {
+//     el = buttonsArray[i];
+// }
+// // Aggiungiamo l'evento mouseOver ai bottoni e le istruzioni su cosa fare all'evento
+// el.addEventListener('mouseover', function() {
+//     // Selezioniamo gli elementi da cambiare (nodeList)
+//     let iconFas = document.querySelectorAll('.card .fas');
+//     iconFas.forEach((element) => {
+//         element.style.color = 'rgb(244, 124, 32)';
+//     });
+// });
+//     // let card =  document.querySelectorAll('.card');
+//     // card.forEach((element) => {
+//     //     element.style.outline = '5px solid rgb((244, 124, 32)';
+//     // });
+// // Aggiungiamo l'evento mouseLeave ai bottoni e le istruzioni su cosa fare all'evento
+// el.addEventListener('mouseleave', function() {
+//     // Selezioniamo gli elementi da cambiare (nodeList)
+//     let iconFas = document.querySelectorAll('.card .fas');
+//     iconFas.forEach((element, index, iconFas) => {
+//         element.style.color = 'rgb(250, 153, 28)';
+//     });
+// })
 
 /***/ }),
 
