@@ -16,20 +16,12 @@ $color-map: (
   "title_color": rgb(209,191,142),
 );
 
+
 // Container
 .container_80 {
     width: 80%;
     margin: 100px auto 0 auto;
     background-color: map-get($color-map, primary_color);
-}
-
-// Height & Width
-.w100 {
-    width: 100%;
-}
-
-.h100 {
-    height: 100%;
 }
 
 
@@ -38,6 +30,7 @@ $color-map: (
     margin: 0;
     padding: 0 0 45px 0;
 }
+
 
 // Titoli principali
 .my_title {
@@ -86,6 +79,15 @@ $color-map: (
 
 }
 
+// Bar 
+@mixin barra {
+    .desert-bar {
+        width: 100%;
+        min-height: 35px;
+        background: map-get($color-map, bar_color);
+    }
+}
+
 
 // Descrizioni
 @mixin descrizioni {
@@ -121,15 +123,6 @@ $color-map: (
         text-align: left;
         line-height: 1.6;
         margin: 20px 0 20px 0;
-    }
-}
-
-// Bar 
-@mixin barra {
-    .desert-bar {
-        width: 100%;
-        min-height: 35px;
-        background: map-get($color-map, bar_color);
     }
 }
 
@@ -184,6 +177,11 @@ $color-map: (
     }
 }
 
+
+
+/* CLASSI UTILITY */
+
+
 // Flexbox  
 .d_flex {
     display: flex;
@@ -201,7 +199,6 @@ $color-map: (
 }
 
 
-
 // Position
 .position_absolute{
   position: absolute;
@@ -212,3 +209,11 @@ $color-map: (
 }
 
 
+// Height & Width
+.w100 {
+    width: 100%;
+}
+
+.h100 {
+    height: 100%;
+}

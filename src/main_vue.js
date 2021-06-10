@@ -73,7 +73,15 @@ let app = new Vue ({
 
     methods: {
         nextImg() {
-            this.click = true;
+            if (this.click == false) {
+                this.click = true;
+            } else {
+                this.click = false;
+            };
+            
+            
+            
+            
             this.counter++;
             if(this.counter === this.images.length) {
                 this.counter = 0;
@@ -82,8 +90,17 @@ let app = new Vue ({
         },
 
         prevImg() {
-            this.click = true;
-            if(this.counter > 0) {
+            
+            if (this.click == false) {
+                this.click = true;
+            } else {
+                this.click = false;
+            };
+
+            
+            
+            
+            if (this.counter > 0) {
                 this.counter--;
             } else {
                 this.counter = this.images.length -1;

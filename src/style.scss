@@ -140,8 +140,9 @@ body {
                 width: 100%;
 
                 .book_description {
+
                     .fade-enter-active, .fade-leave-active {
-                        transition: opacity 2s ease-out;
+                        transition: opacity 0.8s ease-in-out;
                     }
                     
                     .fade-enter, .fade-leave-to {
@@ -152,7 +153,7 @@ body {
 
             }
             
-            .book-second_row{
+            .book-second_row {
                 width: 100%;
                 margin: 30px 0 0 0;
                 padding: 0;

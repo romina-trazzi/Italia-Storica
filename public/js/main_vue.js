@@ -62,7 +62,13 @@ var app = new Vue({
   },
   methods: {
     nextImg: function nextImg() {
-      this.click = true;
+      if (this.click == false) {
+        this.click = true;
+      } else {
+        this.click = false;
+      }
+
+      ;
       this.counter++;
 
       if (this.counter === this.images.length) {
@@ -70,7 +76,13 @@ var app = new Vue({
       }
     },
     prevImg: function prevImg() {
-      this.click = true;
+      if (this.click == false) {
+        this.click = true;
+      } else {
+        this.click = false;
+      }
+
+      ;
 
       if (this.counter > 0) {
         this.counter--;

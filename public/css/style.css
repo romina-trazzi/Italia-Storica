@@ -7,14 +7,6 @@
   background-color: #303b2f;
 }
 
-.w100 {
-  width: 100%;
-}
-
-.h100 {
-  height: 100%;
-}
-
 .my_title {
   text-align: center;
   text-transform: uppercase;
@@ -35,6 +27,7 @@
   font-size: 3rem !important;
 }
 
+/* CLASSI UTILITY */
 .d_flex {
   display: flex;
 }
@@ -56,6 +49,14 @@
 
 .position_relative {
   position: relative;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
 }
 
 /*=============================================
@@ -548,7 +549,7 @@ body main .core .book-main .book_details > .about {
   margin: 20px 0 20px 0;
 }
 body main .core .book-main .book_description .fade-enter-active, body main .core .book-main .book_description .fade-leave-active {
-  transition: opacity 2s ease-out;
+  transition: opacity 0.8s ease-in-out;
 }
 body main .core .book-main .book_description .fade-enter, body main .core .book-main .book_description .fade-leave-to {
   opacity: 0;
