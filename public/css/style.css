@@ -35,10 +35,6 @@
   font-size: 3rem !important;
 }
 
-.card {
-  border-radius: 0;
-}
-
 .d_flex {
   display: flex;
 }
@@ -295,10 +291,10 @@ a:hover {
   border-color: white;
 }
 .glide__arrow--left {
-  left: 9rem;
+  left: 6rem;
 }
 .glide__arrow--right {
-  right: 9rem;
+  right: 6rem;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -352,7 +348,7 @@ a:hover {
 }
 
 .glide img {
-  min-height: 700px;
+  min-height: 600px;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -390,7 +386,7 @@ body header {
 body header .icon {
   color: #fa991c;
   margin-right: 10px;
-  font-size: 1.8rem !important;
+  font-size: 1.2rem !important;
 }
 body header .span {
   margin: 0;
@@ -407,7 +403,7 @@ body header .navbar {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 body header .navbar i {
   margin: 0 5px 0 15px;
@@ -491,7 +487,7 @@ body header .my_jumbotron .steel_bar {
   padding: 0;
 }
 body header .my_jumbotron .steel_bar p {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   margin: 0;
   padding: 0;
   padding-top: 40px;
@@ -539,17 +535,23 @@ body main .core .book-main .book_details > p > span {
   font-family: "Oswald", sans-serif;
   color: #fa991c;
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.2;
   text-transform: uppercase;
   text-shadow: 2px 2px black;
 }
 body main .core .book-main .book_details > .about {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.04rem;
   text-align: left;
-  line-height: 1.5;
-  margin: 30px 0 30px 0;
+  line-height: 1.6;
+  margin: 20px 0 20px 0;
+}
+body main .core .book-main .book_description .fade-enter-active, body main .core .book-main .book_description .fade-leave-active {
+  transition: opacity 2s ease-out;
+}
+body main .core .book-main .book_description .fade-enter, body main .core .book-main .book_description .fade-leave-to {
+  opacity: 0;
 }
 body main .core .book-second_row {
   width: 100%;
@@ -572,6 +574,7 @@ body main .order .card-collector .card-container {
 body main .order .card-collector .card-container .card {
   background-color: rgba(209, 191, 142, 0.2);
   border: 1px solid #292929;
+  border-radius: 0;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
 }
 body main .order .card-collector .card-container .card .card-title {
@@ -650,7 +653,7 @@ body main .personal .about img {
 }
 body main .personal .about p {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.04rem;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -699,7 +702,7 @@ body main .form {
 body main .form .icon {
   color: #fa991c;
   margin-right: 10px;
-  font-size: 1.8rem !important;
+  font-size: 1.2rem !important;
 }
 body main .form .span {
   margin: 0;
@@ -735,7 +738,7 @@ body main .form .help {
 body main .form .help p {
   width: 68%;
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1.04rem;
   text-align: left;
   line-height: 1.5;
   color: floralwhite;
@@ -750,10 +753,12 @@ body main .form .contatti_container .form-container {
 body main .form .contatti_container .form-container form {
   width: 45%;
   height: 100%;
+  margin-left: -115px;
 }
 body main .form .contatti_container .form-container i {
   font-size: 5rem;
   padding-bottom: 40px;
+  margin-left: -100px;
 }
 body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
   font-family: "Open Sans", sans-serif;
@@ -764,8 +769,8 @@ body main .form .contatti_container .map-container {
   width: 100%;
   padding: 0;
   align-items: center;
-  font-size: 1.2rem;
-  margin-left: -120px;
+  font-size: 1.04rem;
+  margin-left: -170px;
 }
 body main .form .contatti_container .map-container .map_responsive {
   overflow: hidden;
@@ -796,6 +801,6 @@ body footer .copyright p {
   height: 100%;
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }

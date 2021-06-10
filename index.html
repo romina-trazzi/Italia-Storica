@@ -100,14 +100,16 @@
               <!-- Descrizione -->
               <div class="col-lg-6 d-flex">
                 <div class="d-flex flex-column justify-content-center align-items-center book_description">
-                  <div class="d-flex flex-column align-items-start book_details">
-                    <p> <span>Titolo:</span> {{ libri[counter].titolo }} </p>
-                    <p> <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} </p>
-                    <p> <span>Autore:</span> {{ libri[counter].autore }} </p> 
-                    <div class ="about"> {{ libri[counter].descrizione }} </div>
-                    <p> <span>Pagine:</span> {{ libri[counter].pagine }} </p>
-                    <p> <span>Prezzo:</span> {{ libri[counter].prezzo }} </p>  
-                  </div>
+                  <transition name="fade">
+                    <div class="d-flex flex-column align-items-start book_details" v-if="click">
+                      <p> <span>Titolo:</span> {{ libri[counter].titolo }} </p>
+                      <p> <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} </p>
+                      <p> <span>Autore:</span> {{ libri[counter].autore }} </p> 
+                      <p class ="about"> {{ libri[counter].descrizione }} </p>
+                      <p> <span>Pagine:</span> {{ libri[counter].pagine }} </p> 
+                      <p> <span>Prezzo:</span> {{ libri[counter].prezzo }} </p>  
+                    </div>
+                  </transition>
                 </div>
 
               </div>

@@ -11,6 +11,7 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
+    click: false,
     images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg"],
     libri: [{
       "titolo": "Il calderone delle streghe",
@@ -61,6 +62,7 @@ var app = new Vue({
   },
   methods: {
     nextImg: function nextImg() {
+      this.click = true;
       this.counter++;
 
       if (this.counter === this.images.length) {
@@ -68,6 +70,8 @@ var app = new Vue({
       }
     },
     prevImg: function prevImg() {
+      this.click = true;
+
       if (this.counter > 0) {
         this.counter--;
       } else {

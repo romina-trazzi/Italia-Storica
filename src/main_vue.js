@@ -2,6 +2,7 @@ let app = new Vue ({
     el: "#app",
     data: {
         counter: 0,
+        click: false,
         images: [
             "public/img/carousel0.jpg",
             "public/img/carousel1.jpg",
@@ -72,13 +73,16 @@ let app = new Vue ({
 
     methods: {
         nextImg() {
+            this.click = true;
             this.counter++;
             if(this.counter === this.images.length) {
                 this.counter = 0;
             }
+           
         },
 
         prevImg() {
+            this.click = true;
             if(this.counter > 0) {
                 this.counter--;
             } else {

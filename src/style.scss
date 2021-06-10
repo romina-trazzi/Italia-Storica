@@ -33,7 +33,7 @@ body {
             width: 100%;
             padding: 0;
             margin: 0;
-            font-size: 1.1rem;
+            font-size: 1rem;
             
             i {
                 margin: 0 5px 0 15px;
@@ -115,7 +115,7 @@ body {
                 margin: 0;
                 padding: 0;
                 & p {
-                    font-size: 1.9rem;
+                    font-size: 1.5rem;
                     margin: 0;
                     padding: 0;
                     padding-top: 40px;
@@ -139,6 +139,17 @@ body {
                 margin: 0;
                 width: 100%;
 
+                .book_description {
+                    .fade-enter-active, .fade-leave-active {
+                        transition: opacity 2s ease-out;
+                    }
+                    
+                    .fade-enter, .fade-leave-to {
+                        opacity: 0;
+                    }
+
+                }
+
             }
             
             .book-second_row{
@@ -146,6 +157,7 @@ body {
                 margin: 30px 0 0 0;
                 padding: 0;
             }
+
 
         }
         
@@ -160,53 +172,7 @@ body {
 
                 .card-container {
                     max-height: 500px;
-                    
-                    .card {
-                        background-color: map-get($color-map, bg_card_color);
-                        border: 1px solid map-get($color-map, background_color);
-                        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                        
-                        .card-title {
-                            color: map-get($color-map, text_color);
-                            text-shadow: 2px 2px black;
-                            font-size: 1.4em;
-                        }
-                        
-                        .card-body {
-
-                            i {
-                                width: 100%;
-                                padding-top: 30px;
-                                padding-bottom: 30px;
-                                color: map-get($color-map, links_color);
-                                font-size: 4rem;
-                            }
-
-                            hr {
-                                width: 80%;
-                                border: 1px solid map-get($color-map, text_color);
-                                border-radius: 50%;
-                            }
-                           
-                            p {
-                                color: map-get($color-map, text_color);
-                                font-size: 1.4rem;
-                                padding-top: 30px;
-                            }
-    
-                            .button {
-                                margin-top: 30px;
-                                margin-bottom: 15px;
-                            }
-                        }
-                        
-                        .btn-primary {
-                            text-align: center;
-                        }
-                        
-                    }
+                    @include card;
     
                     .card:hover {
                         -webkit-box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);
@@ -246,7 +212,7 @@ body {
                 
                 p {
                     font-family: "Open Sans", sans-serif;
-                    font-size: 1.2rem;
+                    font-size: 1.04rem;
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
@@ -317,7 +283,7 @@ body {
                 p {
                     width: 68%;
                     font-family: "Open Sans", sans-serif;
-                    font-size: 20px;
+                    font-size: 1.04rem;
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
@@ -336,12 +302,14 @@ body {
                     form {
                         width: 45%;
                         height: 100%;
+                        margin-left: -115px;
                     }
 
                     // Busta
                     i {
                         font-size: 5rem;
                         padding-bottom: 40px; 
+                        margin-left: -100px;
                     }
 
                     input, textarea {
@@ -356,8 +324,8 @@ body {
                     width: 100%;
                     padding: 0;
                     align-items: center;
-                    font-size: 1.2rem;
-                    margin-left: -120px;
+                    font-size: 1.04rem;
+                    margin-left: -170px;
                 
                     .map_responsive {
                         overflow: hidden;
@@ -403,7 +371,7 @@ body {
                 height: 100%;
                 width: 100%;
                 font-family: "Open Sans", sans-serif;         
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 400;
             }
         }

@@ -109,7 +109,7 @@ $color-map: (
         font-family: "Oswald", sans-serif;
         color: map-get($color-map, links_color);
         font-weight: 400;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         line-height: 1.2;
         text-transform: uppercase;
         text-shadow: 2px 2px black;
@@ -117,10 +117,10 @@ $color-map: (
 
     .book_details > .about {
         font-family: "Open Sans", sans-serif;
-        font-size: 1.2rem;
+        font-size: 1.04rem;
         text-align: left;
-        line-height: 1.5;
-        margin: 30px 0 30px 0;
+        line-height: 1.6;
+        margin: 20px 0 20px 0;
     }
 }
 
@@ -134,8 +134,54 @@ $color-map: (
 }
 
 // Card 
-.card { 
-    border-radius: 0;
+@mixin card {
+    .card {
+        background-color: map-get($color-map, bg_card_color);
+        border: 1px solid map-get($color-map, background_color);
+        border-radius: 0;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+        
+        .card-title {
+            color: map-get($color-map, text_color);
+            text-shadow: 2px 2px black;
+            font-size: 1.4em;
+        }
+        
+        .card-body {
+
+            i {
+                width: 100%;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                color: map-get($color-map, links_color);
+                font-size: 4rem;
+            }
+
+            hr {
+                width: 80%;
+                border: 1px solid map-get($color-map, text_color);
+                border-radius: 50%;
+            }
+           
+            p {
+                color: map-get($color-map, text_color);
+                font-size: 1.4rem;
+                padding-top: 30px;
+            }
+
+            .button {
+                margin-top: 30px;
+                margin-bottom: 15px;
+            }
+        }
+        
+        .btn-primary {
+            text-align: center;
+        }
+        
+    }
 }
 
 // Flexbox  
