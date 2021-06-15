@@ -101,13 +101,13 @@ $color-map: (
         padding-bottom: 50px;
     }
 
-    .book_details > p {
+    .book_details  p {
         font-family: "Open Sans", sans-serif;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }
     
-    .book_details > p > span {
+    .book_details  p > span {
         font-family: "Oswald", sans-serif;
         color: map-get($color-map, links_color);
         font-weight: 400;
@@ -117,12 +117,14 @@ $color-map: (
         text-shadow: 2px 2px black;
     }
 
-    .book_details > .about {
+    .book_details  p #about {
         font-family: "Open Sans", sans-serif;
-        font-size: 1.04rem;
-        text-align: left;
-        line-height: 1.6;
-        margin: 20px 0 20px 0;
+        color: map-get($color-map, text_color);
+        font-size: 1.04rem !important;
+        text-align: left !important;
+        line-height: 1.6 !important;
+        text-transform: none;
+        margin: 20px 0 20px 0 !important;
     }
 }
 

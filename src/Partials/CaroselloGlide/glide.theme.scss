@@ -9,7 +9,7 @@
   &#{$se}arrow {
     position: absolute;
     display: block;
-    top: 40%;
+    top: 45%;
     z-index: 2;
     color: floralwhite;
     text-transform: uppercase;
@@ -49,9 +49,10 @@
   &#{$se}bullets {
     position: absolute;
     z-index: 2;
-    bottom: 3em;
+    bottom: -2rem;
     left: 50%;
     display: inline-flex;
+    cursor: pointer;
     list-style: none;
     transform: translateX(-50%);
   }

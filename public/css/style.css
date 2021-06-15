@@ -269,7 +269,7 @@ a:hover {
 .glide__arrow {
   position: absolute;
   display: block;
-  top: 40%;
+  top: 45%;
   z-index: 2;
   color: floralwhite;
   text-transform: uppercase;
@@ -303,9 +303,10 @@ a:hover {
 .glide__bullets {
   position: absolute;
   z-index: 2;
-  bottom: 3em;
+  bottom: -2rem;
   left: 50%;
   display: inline-flex;
+  cursor: pointer;
   list-style: none;
   transform: translateX(-50%);
 }
@@ -367,11 +368,6 @@ a:hover {
 
 .glide .glide__slides {
   overflow: visible;
-}
-
-.glide .glide__bullets {
-  cursor: pointer !important;
-  bottom: -4.2rem;
 }
 
 body {
@@ -528,12 +524,12 @@ body main .core .book-main .book_details {
   padding-left: 50px;
   padding-bottom: 50px;
 }
-body main .core .book-main .book_details > p {
+body main .core .book-main .book_details p {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-body main .core .book-main .book_details > p > span {
+body main .core .book-main .book_details p > span {
   font-family: "Oswald", sans-serif;
   color: #fa991c;
   font-weight: 400;
@@ -542,23 +538,29 @@ body main .core .book-main .book_details > p > span {
   text-transform: uppercase;
   text-shadow: 2px 2px black;
 }
-body main .core .book-main .book_details > .about {
+body main .core .book-main .book_details p #about {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.04rem;
-  text-align: left;
-  line-height: 1.6;
-  margin: 20px 0 20px 0;
+  color: floralwhite;
+  font-size: 1.04rem !important;
+  text-align: left !important;
+  line-height: 1.6 !important;
+  text-transform: none;
+  margin: 20px 0 20px 0 !important;
 }
-body main .core .book-main .book_description .fade-enter-active, body main .core .book-main .book_description .fade-leave-active {
-  transition: opacity 0.8s ease-in-out;
-}
-body main .core .book-main .book_description .fade-enter, body main .core .book-main .book_description .fade-leave-to {
+body main .core .book-main .switch-enter-to, body main .core .book-main .switch-leave {
   opacity: 0;
+}
+body main .core .book-main .fade-enter, body main .core .book-main .fade-leave-to {
+  opacity: 0;
+}
+body main .core .book-main .fade-enter-active, body main .core .book-main .fade-leave-active {
+  transition: opacity 1s ease-in-out;
+}
+body main .core .book-main .fade-move {
+  transition: opacity 1s ease-in;
 }
 body main .core .book-second_row {
   width: 100%;
-  margin: 30px 0 0 0;
-  padding: 0;
 }
 body main .order {
   margin: 0;
@@ -696,17 +698,17 @@ body main .personal .order-bar .desert-bar {
   min-height: 35px;
   background: #9a7d2e;
 }
-body main .form {
+body main v .form {
   margin: 0;
   padding: 0 0 45px 0;
   padding-bottom: 150px;
 }
-body main .form .icon {
+body main v .form .icon {
   color: #fa991c;
   margin-right: 10px;
   font-size: 1.2rem !important;
 }
-body main .form .span {
+body main v .form .span {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -716,11 +718,11 @@ body main .form .span {
   line-height: 1.5;
   color: floralwhite;
 }
-body main .form .form-title .shield-wrap {
+body main v .form .form-title .shield-wrap {
   text-align: center;
   margin-bottom: 75px;
 }
-body main .form .form-title .shield-wrap::before, body main .form .form-title .shield-wrap::after {
+body main v .form .form-title .shield-wrap::before, body main v .form .form-title .shield-wrap::after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -729,15 +731,15 @@ body main .form .form-title .shield-wrap::before, body main .form .form-title .s
   line-height: 4px;
   background-color: #d1bf8e;
 }
-body main .form .form-title img {
+body main v .form .form-title img {
   width: 30px;
   margin-left: 10px;
   margin-right: 10px;
 }
-body main .form .help {
+body main v .form .help {
   padding-bottom: 150px;
 }
-body main .form .help p {
+body main v .form .help p {
   width: 68%;
   font-family: "Open Sans", sans-serif;
   font-size: 1.04rem;
@@ -745,49 +747,49 @@ body main .form .help p {
   line-height: 1.5;
   color: floralwhite;
 }
-body main .form .contatti_container {
+body main v .form .contatti_container {
   padding: 0;
 }
-body main .form .contatti_container .form-container {
+body main v .form .contatti_container .form-container {
   width: 100%;
   padding: 0;
 }
-body main .form .contatti_container .form-container form {
+body main v .form .contatti_container .form-container form {
   width: 45%;
   height: 100%;
   margin-left: -115px;
 }
-body main .form .contatti_container .form-container i {
+body main v .form .contatti_container .form-container i {
   font-size: 5rem;
   padding-bottom: 40px;
   margin-left: -100px;
 }
-body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
+body main v .form .contatti_container .form-container input, body main v .form .contatti_container .form-container textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
 }
-body main .form .contatti_container .map-container {
+body main v .form .contatti_container .map-container {
   width: 100%;
   padding: 0;
   align-items: center;
   font-size: 1.04rem;
   margin-left: -170px;
 }
-body main .form .contatti_container .map-container .map_responsive {
+body main v .form .contatti_container .map-container .map_responsive {
   overflow: hidden;
   justify-content: center;
   position: relative;
 }
-body main .form .contatti_container .map-container .map_responsive iframe {
+body main v .form .contatti_container .map-container .map_responsive iframe {
   height: 100%;
   width: 0%;
   position: absolute;
 }
-body main .form .contatti_container .map-container .icons-container {
+body main v .form .contatti_container .map-container .icons-container {
   margin-top: 70px;
 }
-body main .form .contatti_container .map-container .icons-container p {
+body main v .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
 }

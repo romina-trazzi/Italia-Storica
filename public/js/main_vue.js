@@ -11,7 +11,7 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    click: false,
+    visible: true,
     images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg"],
     libri: [{
       "titolo": "Il calderone delle streghe",
@@ -62,44 +62,18 @@ var app = new Vue({
   },
   methods: {
     nextImg: function nextImg() {
-      if (this.click == false) {
-        this.click = true;
-        this.counter++;
+      this.counter++;
 
-        if (this.counter === this.images.length) {
-          this.counter = 0;
-        }
-      } else {
-        this.click = false;
-        this.counter++;
-
-        if (this.counter === this.images.length) {
-          this.counter = 0;
-        }
+      if (this.counter === this.images.length) {
+        this.counter = 0;
       }
-
-      ;
     },
     prevImg: function prevImg() {
-      if (this.click == false) {
-        this.click = true;
-
-        if (this.counter > 0) {
-          this.counter--;
-        } else {
-          this.counter = this.images.length - 1;
-        }
+      if (this.counter > 0) {
+        this.counter--;
       } else {
-        this.click = false;
-
-        if (this.counter > 0) {
-          this.counter--;
-        } else {
-          this.counter = this.images.length - 1;
-        }
+        this.counter = this.images.length - 1;
       }
-
-      ;
     },
     slideBullet: function slideBullet() {
       // Selezioniamo dal Dom i dots

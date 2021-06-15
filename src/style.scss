@@ -129,8 +129,7 @@ body {
         
         .core {
             @include sezioni;
-
-
+            
             .book-title {
                 @include shieldknot;
             }
@@ -141,25 +140,28 @@ body {
                 width: 100%;
                 min-height: 660px;
 
-                .book_description {
+               
 
-                    .fade-enter-active, .fade-leave-active {
-                        transition: opacity 0.8s ease-in-out;
-                    }
-                    
-                    .fade-enter, .fade-leave-to {
-                        opacity: 0;
-                    }
+                .switch-enter-to, .switch-leave {
+                    opacity: 0;
+                }
 
+                .fade-enter, .fade-leave-to {
+                    opacity: 0;
+                }
+
+                .fade-enter-active, .fade-leave-active {
+                    transition: opacity 1s ease-in-out;
+                }
+
+                .fade-move {
+                   transition: opacity 1s ease-in;
                 }
 
             }
             
             .book-second_row {
-                width: 100%;
-                margin: 30px 0 0 0;
-                padding: 0;
-             
+                width: 100%;             
             }
 
 
@@ -269,7 +271,7 @@ body {
             }
 
             
-        }
+        }  v
     
         .form {
             @include sezioni;

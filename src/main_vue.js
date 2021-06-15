@@ -2,7 +2,7 @@ let app = new Vue ({
     el: "#app",
     data: {
         counter: 0,
-        click: false,
+        visible: true,
         images: [
             "public/img/carousel0.jpg",
             "public/img/carousel1.jpg",
@@ -73,42 +73,19 @@ let app = new Vue ({
 
     methods: {
         nextImg() {
-            if (this.click == false) {
-                this.click = true;
-                this.counter++;
-                if(this.counter === this.images.length) {
-                    this.counter = 0;
-                }
-
-            } else {
-                this.click = false;
-                this.counter++;
-                if(this.counter === this.images.length) {
-                    this.counter = 0;
-                }
-            };
+            this.counter++;
+            if(this.counter === this.images.length) {
+                this.counter = 0;
+            }
         },
 
         prevImg() {
-            
-            if (this.click == false) {
-                this.click = true;
-
-                if (this.counter > 0) {
-                    this.counter--;
-                } else {
-                    this.counter = this.images.length -1;
-                }
-
+            if (this.counter > 0) {
+                this.counter--;
             } else {
-                this.click = false;
+                this.counter = this.images.length -1;
+            }
 
-                if (this.counter > 0) {
-                    this.counter--;
-                } else {
-                    this.counter = this.images.length -1;
-                }
-            };
         },
 
         slideBullet() {
@@ -136,7 +113,7 @@ let app = new Vue ({
             // Aggiorniamo il counter
             this.counter = currentIndex;
         }
-    }
+    } 
     
 });
 
@@ -198,8 +175,6 @@ for (let i = 0; i < buttonsArray.length; i++) {
         cards[i].style.outlineColor = 'rgb(250, 153, 28)';
     });
 };
-
-
 
 
 
