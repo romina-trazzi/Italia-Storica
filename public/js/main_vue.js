@@ -11,7 +11,6 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    visible: true,
     images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg"],
     libri: [{
       "titolo": "Il calderone delle streghe",

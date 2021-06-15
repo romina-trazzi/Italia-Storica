@@ -52,7 +52,7 @@ body {
                 padding-right: 3.65rem;
             }
         }
-
+ 
         
         .my_jumbotron {
             font-family: 'Oswald', 'sans-serif';
@@ -140,11 +140,7 @@ body {
                 width: 100%;
                 min-height: 660px;
 
-               
-
-                .switch-enter-to, .switch-leave {
-                    opacity: 0;
-                }
+                // Classi di animazione carosello 
 
                 .fade-enter, .fade-leave-to {
                     opacity: 0;
@@ -155,14 +151,16 @@ body {
                 }
 
                 .fade-move {
-                   transition: opacity 1s ease-in;
+                   transition: opacity 2.1s ease-in-out
                 }
+
+                // End classi di animazione carosello
+
+                
 
             }
             
-            .book-second_row {
-                width: 100%;             
-            }
+           
 
 
         }
@@ -271,7 +269,7 @@ body {
             }
 
             
-        }  v
+        }  
     
         .form {
             @include sezioni;
@@ -293,7 +291,6 @@ body {
                     text-align: left;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
-                  
                 } 
 
             }

@@ -116,15 +116,15 @@ $color-map: (
         text-transform: uppercase;
         text-shadow: 2px 2px black;
     }
-
+    
     .book_details  p #about {
         font-family: "Open Sans", sans-serif;
         color: map-get($color-map, text_color);
-        font-size: 1.04rem !important;
-        text-align: left !important;
-        line-height: 1.6 !important;
+        font-size: 1.04rem;
+        text-align: left;
+        line-height: 1.6;
         text-transform: none;
-        margin: 20px 0 20px 0 !important;
+        margin: 20px 0 20px 0;
     }
 }
 

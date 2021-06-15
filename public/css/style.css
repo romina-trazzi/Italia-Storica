@@ -541,14 +541,11 @@ body main .core .book-main .book_details p > span {
 body main .core .book-main .book_details p #about {
   font-family: "Open Sans", sans-serif;
   color: floralwhite;
-  font-size: 1.04rem !important;
-  text-align: left !important;
-  line-height: 1.6 !important;
+  font-size: 1.04rem;
+  text-align: left;
+  line-height: 1.6;
   text-transform: none;
-  margin: 20px 0 20px 0 !important;
-}
-body main .core .book-main .switch-enter-to, body main .core .book-main .switch-leave {
-  opacity: 0;
+  margin: 20px 0 20px 0;
 }
 body main .core .book-main .fade-enter, body main .core .book-main .fade-leave-to {
   opacity: 0;
@@ -557,10 +554,7 @@ body main .core .book-main .fade-enter-active, body main .core .book-main .fade-
   transition: opacity 1s ease-in-out;
 }
 body main .core .book-main .fade-move {
-  transition: opacity 1s ease-in;
-}
-body main .core .book-second_row {
-  width: 100%;
+  transition: opacity 2.1s ease-in-out;
 }
 body main .order {
   margin: 0;
@@ -698,17 +692,17 @@ body main .personal .order-bar .desert-bar {
   min-height: 35px;
   background: #9a7d2e;
 }
-body main v .form {
+body main .form {
   margin: 0;
   padding: 0 0 45px 0;
   padding-bottom: 150px;
 }
-body main v .form .icon {
+body main .form .icon {
   color: #fa991c;
   margin-right: 10px;
   font-size: 1.2rem !important;
 }
-body main v .form .span {
+body main .form .span {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -718,11 +712,11 @@ body main v .form .span {
   line-height: 1.5;
   color: floralwhite;
 }
-body main v .form .form-title .shield-wrap {
+body main .form .form-title .shield-wrap {
   text-align: center;
   margin-bottom: 75px;
 }
-body main v .form .form-title .shield-wrap::before, body main v .form .form-title .shield-wrap::after {
+body main .form .form-title .shield-wrap::before, body main .form .form-title .shield-wrap::after {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -731,15 +725,15 @@ body main v .form .form-title .shield-wrap::before, body main v .form .form-titl
   line-height: 4px;
   background-color: #d1bf8e;
 }
-body main v .form .form-title img {
+body main .form .form-title img {
   width: 30px;
   margin-left: 10px;
   margin-right: 10px;
 }
-body main v .form .help {
+body main .form .help {
   padding-bottom: 150px;
 }
-body main v .form .help p {
+body main .form .help p {
   width: 68%;
   font-family: "Open Sans", sans-serif;
   font-size: 1.04rem;
@@ -747,49 +741,49 @@ body main v .form .help p {
   line-height: 1.5;
   color: floralwhite;
 }
-body main v .form .contatti_container {
+body main .form .contatti_container {
   padding: 0;
 }
-body main v .form .contatti_container .form-container {
+body main .form .contatti_container .form-container {
   width: 100%;
   padding: 0;
 }
-body main v .form .contatti_container .form-container form {
+body main .form .contatti_container .form-container form {
   width: 45%;
   height: 100%;
   margin-left: -115px;
 }
-body main v .form .contatti_container .form-container i {
+body main .form .contatti_container .form-container i {
   font-size: 5rem;
   padding-bottom: 40px;
   margin-left: -100px;
 }
-body main v .form .contatti_container .form-container input, body main v .form .contatti_container .form-container textarea {
+body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
 }
-body main v .form .contatti_container .map-container {
+body main .form .contatti_container .map-container {
   width: 100%;
   padding: 0;
   align-items: center;
   font-size: 1.04rem;
   margin-left: -170px;
 }
-body main v .form .contatti_container .map-container .map_responsive {
+body main .form .contatti_container .map-container .map_responsive {
   overflow: hidden;
   justify-content: center;
   position: relative;
 }
-body main v .form .contatti_container .map-container .map_responsive iframe {
+body main .form .contatti_container .map-container .map_responsive iframe {
   height: 100%;
   width: 0%;
   position: absolute;
 }
-body main v .form .contatti_container .map-container .icons-container {
+body main .form .contatti_container .map-container .icons-container {
   margin-top: 70px;
 }
-body main v .form .contatti_container .map-container .icons-container p {
+body main .form .contatti_container .map-container .icons-container p {
   margin: 0;
   width: 100%;
 }
