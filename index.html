@@ -95,6 +95,8 @@
             </div>
             <!-- / Titolo -->
 
+
+            <!-- Book main -->
             <div class="row d-flex book-main">
 
               <!-- Descrizione -->
@@ -114,9 +116,6 @@
                         <p id ="about"> {{ libri[counter].descrizione }} </p>
                         <span>Pagine:</span> {{ libri[counter].pagine }} <br>
                         <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
-                        <p id ="buy" class="d_flex_center">
-                          <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
-                        </p>
          
                       </div>
                     </transition>
@@ -131,6 +130,7 @@
               <!-- Carosello libri -->
               <div class="col-lg-6">
                 
+                <!-- Glide -->
                 <div class="glide">
                  
                   <div class="glide__track" data-glide-el="track">
@@ -169,13 +169,36 @@
                     <button class="glide__bullet" data-glide-dir="=3" @click="slideBullet()"></button>
                     <button class="glide__bullet" data-glide-dir="=4" @click="slideBullet()"></button> 
                   </div>
-                
+
                 </div>
-              
+                <!-- / Glide -->
+
               </div>
-              <!-- / Carosello libri -->
+              <!-- Carosello libri -->
             
             </div>
+            <!-- / Book main -->
+
+
+            <!-- Buy button-->
+            <div class="row d-flex book-second_row">
+              <div class="col-lg-6 d_flex_center">
+
+                <transition-group name="fade" mode="out-in" appear>
+                  <div v-bind:key="libri[counter]">
+
+                    <p id ="buy" class="d_flex_center">
+                      <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
+                    </p>
+
+                  </div>
+                </transition>
+
+              </div>
+            </div>
+            <!-- / Buy button-->
+
+              
 
           </div>
           <!-- / Row core -->

@@ -51,7 +51,7 @@ $color-map: (
     padding: 0;
     color: map-get($color-map, title_color);
     font-family: "Oswald", sans-serif;
-    font-size: 3rem !important;
+    font-size: 3.3rem !important;
 }
 
 // Shield decoration
@@ -91,7 +91,6 @@ $color-map: (
 
 // Descrizioni
 @mixin descrizioni {
-
     .book_details {
         padding-left: 50px;
         padding-bottom: 50px;
@@ -123,16 +122,6 @@ $color-map: (
         margin: 20px 0 20px 0;
     }
 
-    .book_details  div #buy {
-        font-family: "Open Sans", sans-serif;
-        color: map-get($color-map, text_color);
-        // font-size: 1.04rem;
-        // text-align: left;
-        // line-height: 1.6;
-        // text-transform: none;
-        margin-top: 5rem;
-
-    }
 }
 
 // Card 
