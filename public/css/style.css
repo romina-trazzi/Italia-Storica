@@ -664,6 +664,19 @@ body main .personal .about p {
 body main .personal .about .about-text > p:nth-child(3) {
   margin: 0;
 }
+body main .personal .news p {
+  color: floralwhite;
+  background-color: rgba(209, 191, 142, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.04rem;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 150px 0;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #292929;
+}
 body main .personal .sponsor-title {
   padding: 0;
   margin-top: 130px;
@@ -672,10 +685,13 @@ body main .personal .supporters {
   padding: 0;
 }
 body main .personal .supporters .loghi {
-  margin-top: 55px;
+  margin-top: 25px;
 }
 body main .personal .supporters .secloghi {
-  padding-top: 30px;
+  padding-top: 50px;
+}
+body main .personal .supporters .terloghi {
+  padding-top: 50px;
   padding-bottom: 130px;
 }
 body main .personal .supporters img {
@@ -690,20 +706,9 @@ body main .personal .supporters img:hover {
   transition: all 1s ease 0.2s;
   cursor: pointer;
 }
-body main .personal .supporters .secloghi > img:nth-child(4) {
+body main .personal .supporters .terloghi > img:nth-child(4) {
   position: relative;
   bottom: 2rem;
-}
-body main .personal .news p {
-  color: floralwhite;
-  background-color: rgba(209, 191, 142, 0.2);
-  padding: 30px;
-  border-radius: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.04rem;
-  text-align: left;
-  line-height: 1.5;
-  margin: 0 0 150px 0;
 }
 body main .personal .order-bar {
   margin: 0;

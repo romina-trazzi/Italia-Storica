@@ -234,21 +234,45 @@ body {
 
             }
 
+            .news {
+               
+
+                p {
+                    color: map-get($color-map, text_color);
+                    background-color: map-get($color-map, bg_card_color);
+                    padding: 30px;
+                    border-radius: 10px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 1.04rem;
+                    text-align: left;
+                    line-height: 1.5;
+                    margin: 0 0 150px 0;
+                    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    border: 1px solid map-get($color-map, background_color);
+                   
+                }
+            }
+
             .sponsor-title {
                 padding: 0;
                 margin-top: 130px;
             }
-
     
             .supporters {      
                 padding: 0;
 
                 .loghi {
-                    margin-top: 55px;
+                    margin-top: 25px;
+                }
+
+                .secloghi {
+                    padding-top: 50px;
                 }
                         
-                .secloghi {
-                    padding-top: 30px;
+                .terloghi {
+                    padding-top: 50px;
                     padding-bottom: 130px;
                 }
 
@@ -270,27 +294,12 @@ body {
                 }
 
                 // Logo Italia Storica
-                .secloghi > img:nth-child(4) {
+                .terloghi > img:nth-child(4) {
                     position: relative;
                     bottom: 2rem;
                 }
             }
 
-            .news {
-                
-                p {
-                    color: map-get($color-map, text_color);
-                    background-color: map-get($color-map, bg_card_color);
-                    padding: 30px;
-                    border-radius: 10px;
-                    font-family: "Open Sans", sans-serif;
-                    font-size: 1.04rem;
-                    text-align: left;
-                    line-height: 1.5;
-                    margin: 0 0 150px 0;
-                }
-            }
-        
             .order-bar {
                 margin: 0;
                 padding: 0;
