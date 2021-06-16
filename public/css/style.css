@@ -269,7 +269,7 @@ a:hover {
 .glide__arrow {
   position: absolute;
   display: block;
-  top: 45%;
+  top: 35%;
   z-index: 2;
   color: floralwhite;
   text-transform: uppercase;
@@ -303,7 +303,7 @@ a:hover {
 .glide__bullets {
   position: absolute;
   z-index: 2;
-  bottom: -2rem;
+  bottom: 8rem;
   left: 50%;
   display: inline-flex;
   cursor: pointer;
@@ -516,20 +516,16 @@ body main .core .book-main {
   width: 100%;
   min-height: 660px;
 }
-body main .core .book-main .book_description > h4 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
 body main .core .book-main .book_details {
   padding-left: 50px;
   padding-bottom: 50px;
 }
-body main .core .book-main .book_details p {
+body main .core .book-main .book_details div {
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
-body main .core .book-main .book_details p > span {
+body main .core .book-main .book_details div > span {
   font-family: "Oswald", sans-serif;
   color: #fa991c;
   font-weight: 400;
@@ -538,7 +534,7 @@ body main .core .book-main .book_details p > span {
   text-transform: uppercase;
   text-shadow: 2px 2px black;
 }
-body main .core .book-main .book_details p #about {
+body main .core .book-main .book_details div #about {
   font-family: "Open Sans", sans-serif;
   color: floralwhite;
   font-size: 1.04rem;
@@ -546,6 +542,11 @@ body main .core .book-main .book_details p #about {
   line-height: 1.6;
   text-transform: none;
   margin: 20px 0 20px 0;
+}
+body main .core .book-main .book_details div #buy {
+  font-family: "Open Sans", sans-serif;
+  color: floralwhite;
+  margin-top: 5rem;
 }
 body main .core .book-main .fade-enter, body main .core .book-main .fade-leave-to {
   opacity: 0;

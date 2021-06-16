@@ -91,23 +91,19 @@ $color-map: (
 
 // Descrizioni
 @mixin descrizioni {
-    .book_description > h4 {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
 
     .book_details {
         padding-left: 50px;
         padding-bottom: 50px;
     }
 
-    .book_details  p {
+    .book_details  div {
         font-family: "Open Sans", sans-serif;
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
     }
     
-    .book_details  p > span {
+    .book_details  div > span {
         font-family: "Oswald", sans-serif;
         color: map-get($color-map, links_color);
         font-weight: 400;
@@ -117,7 +113,7 @@ $color-map: (
         text-shadow: 2px 2px black;
     }
     
-    .book_details  p #about {
+    .book_details  div #about {
         font-family: "Open Sans", sans-serif;
         color: map-get($color-map, text_color);
         font-size: 1.04rem;
@@ -125,6 +121,17 @@ $color-map: (
         line-height: 1.6;
         text-transform: none;
         margin: 20px 0 20px 0;
+    }
+
+    .book_details  div #buy {
+        font-family: "Open Sans", sans-serif;
+        color: map-get($color-map, text_color);
+        // font-size: 1.04rem;
+        // text-align: left;
+        // line-height: 1.6;
+        // text-transform: none;
+        margin-top: 5rem;
+
     }
 }
 

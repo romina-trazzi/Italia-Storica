@@ -106,18 +106,19 @@
                   
                     <!-- Transition dei dettagli dei libri -->
                     <transition-group name="fade" mode="out-in" appear>
-                      <p v-bind:key="libri[counter]">
+                      <div v-bind:key="libri[counter]">
                         
                         <span>Titolo:</span> {{ libri[counter].titolo }} <br>
                         <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} <br>
                         <span>Autore:</span> {{ libri[counter].autore }} <br>
-                        <span id ="about"> {{ libri[counter].descrizione }} </span> <br>
+                        <p id ="about"> {{ libri[counter].descrizione }} </p>
                         <span>Pagine:</span> {{ libri[counter].pagine }} <br>
                         <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
-
-                        <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
-                                      
-                      </p>
+                        <p id ="buy" class="d_flex_center">
+                          <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
+                        </p>
+         
+                      </div>
                     </transition>
                     <!-- / Transition dei dettagli dei libri -->
                   </div>  
