@@ -1,0 +1,148 @@
+/* MediaQuery CSS Italia Storica */
+
+// Basic Stylesheet
+@import "./Partials/_common.scss";
+@import "./Partials/_elements.scss";
+
+
+  
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {  
+    .navbar {
+        font-size: 0.6rem !important;
+    }
+};
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {  
+    
+    
+    
+    .navbar {
+        font-size: 0.6rem !important;
+    }
+};
+
+
+
+@media (min-width: 992px) and (max-width: 1200px) { 
+    
+    header {
+        .navbar {
+            font-size: 0.6rem !important;
+        }
+
+        .steel_bar {
+            & p {
+                font-size: 0.8rem !important;
+            }
+        }
+    }
+}
+
+// Social icons
+@media (max-width: 992px) { 
+    header {
+        .navbar {
+            font-size: 0.7rem !important;
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
+            }
+            
+            .social span {
+                display: none;
+            }
+        }
+
+        .steel_bar {
+            & p {
+                font-size: 0.8rem !important;
+            }
+        }
+
+
+    }
+};
+// Social icons
+
+
+
+
+/* Extra large custom devices (over 1200px) */
+
+@media (min-width: 1200px) and (max-width: 1300px) { 
+   
+    header {
+        .navbar {
+            font-size: 0.7rem !important;
+        }
+
+        .steel_bar {
+            & p {
+                font-size: 1rem !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1450px) { 
+
+    .navbar {
+        font-size: 0.7rem !important;
+    }
+
+    header {
+        .steel_bar {
+            & p {
+                font-size: 1.1rem !important;
+            }
+        }
+    }
+}
+
+// Navbar
+@media (min-width: 1380px) { 
+    .navbar {
+        font-size: 1rem !important;
+    }
+}
+// Navbar
+
+@media (min-width: 1450px) and (max-width: 1550px) { 
+
+    header {
+        .steel_bar {
+            & p {
+                font-size: 1.2rem !important;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1550px) and (max-width: 1700px) { 
+    
+
+    header {
+        .steel_bar {
+            & p {
+                font-size: 1.3rem !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 1700px) and (max-width: 1800px) { 
+
+    header { 
+
+        .steel_bar {
+            & p {
+                font-size: 1.4rem !important;
+            }
+        }
+    };
+
+}
+
+

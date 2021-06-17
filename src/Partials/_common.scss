@@ -1,15 +1,22 @@
+// Breakpoint map
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+
 // Color Map
 $color-map: (
     
-  // Background
-  
+  // Background  
   "background_color": rgb(41, 41, 41), 
   "primary_color": rgb(48, 59, 47),
   "bar_color": rgb(154, 125, 46),
   "bg_card_color":   rgba(209, 191, 142, 0.2),
 
   // Accent
-  
   "hover_color": rgb(244, 124, 32),
   "links_color": rgb(250, 153, 28),
   "text_color": rgb(255, 250, 240),

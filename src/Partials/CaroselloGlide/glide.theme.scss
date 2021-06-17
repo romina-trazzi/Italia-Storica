@@ -34,11 +34,11 @@
     }
 
     &#{$sm}left {
-      left: 6rem;
+      left: 100px;
     }
 
     &#{$sm}right {
-      right: 6rem;
+      right: 100px;
     }
 
     &#{$sm}disabled {
@@ -95,4 +95,30 @@
   &#{$sm}dragging {
     cursor: default !important;
   }
+}
+
+
+
+
+
+
+@media (min-width: 1700px) and (max-width: 1800px) { 
+
+  .#{$glide-class} {
+    $this: &;
+  
+    $se: $glide-element-separator;
+    $sm: $glide-modifier-separator;
+
+    &#{$sm}left {
+      left: 15rem;
+    }
+
+    &#{$sm}right {
+      right: 15rem;
+    }
+
+
+  }
+
 }

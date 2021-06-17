@@ -1,1 +1,288 @@
+/* MediaQuery CSS Italia Storica */
+.container_80 {
+  width: 80%;
+  margin: 100px auto 0 auto;
+  background-color: #303b2f;
+}
 
+.my_title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 45px 0;
+  padding: 20px 0 0 0;
+  color: #d1bf8e;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem !important;
+}
+
+.small_title {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 75px 0;
+  padding: 0;
+  color: #d1bf8e;
+  font-family: "Oswald", sans-serif;
+  font-size: 3.3rem !important;
+}
+
+/* CLASSI UTILITY */
+.d_flex {
+  display: flex;
+}
+
+.d_flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.d_flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.position_absolute {
+  position: absolute;
+}
+
+.position_relative {
+  position: relative;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+/*=============================================
+=            Section INPUT RADIO           =
+=============================================*/
+label {
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio_input {
+  visibility: hidden;
+}
+
+.radio_nuovo_input {
+  display: inline;
+  margin-top: 30px;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: floralwhite;
+  background-clip: content-box;
+}
+.radio_nuovo_input:focus, .radio_nuovo_input:hover {
+  border: 1px solid darkgray;
+}
+
+.radio_nuovo_input::after {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 70%;
+  background: #292929;
+  margin: 2px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+.radio_input:checked + .radio_nuovo_input::after {
+  transform: scale(1);
+}
+
+/*=====  End of Section INPUT  ======*/
+/*=============================================
+=               Section SOCIAL ICON         =
+==============================================*/
+/*=====  End of Section SOCIAL ICON  ======*/
+/*========================================
+=            Section BUTTON         =
+========================================*/
+.button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5em 2em 0.55em;
+  border-radius: 0.5em;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.button:hover, .button:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.button:active {
+  position: relative;
+  top: 1px;
+  background-color: white;
+  color: black;
+}
+
+.orange {
+  color: floralwhite;
+  border: solid 1px #da7c0c;
+  background: #f78d1d;
+  background: -moz-linear-gradient(top, #faa51a, #f47a20);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#faa51a", endColorstr="#f47a20");
+}
+
+.orange:hover {
+  background: #f47c20;
+  background: -moz-linear-gradient(top, #f88e11, #f06015);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f88e11", endColorstr="#f06015");
+}
+
+.orange:active {
+  color: black;
+  background: -moz-linear-gradient(top, #f47a20, #faa51a);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f47a20", endColorstr="#faa51a");
+}
+
+/*=====  End of Section BUTTON ======*/
+/*=============================================
+    =            Section LISTS           =
+==============================================*/
+ul {
+  list-style: none;
+}
+
+/*=====  End of Section LISTS  ======*/
+/*=====================================
+=             Section LINKS          =
+======================================*/
+a:hover {
+  color: black;
+}
+
+.my_links {
+  color: floralwhite;
+}
+.my_links:hover {
+  text-decoration: none;
+  color: #fa991c !important;
+}
+
+/*=====  End of Section LINKS  ======*/
+/*=============================================
+=               Section SCROLLBARS          =
+==============================================*/
+/* Mozilla Firefox */
+* {
+  scrollbar-color: transparent black;
+  scrollbar-width: 0px;
+}
+
+/* Google, Safari, Edge, Opera */
+*::-webkit-scrollbar {
+  overflow: scroll;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  border: none;
+}
+
+/*===== Codice per frecce browser Webkit ======*/
+*::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(120deg, black 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, black 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, black 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: floralwhite;
+}
+
+*::-webkit-scrollbar-button:vertical:end:increment {
+  background: linear-gradient(300deg, black 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, black 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, black 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: floralwhite;
+}
+
+/*===== End Codice per frecce browser Webkit ======*/
+/* Explorer */
+* {
+  -ms-overflow-style: none;
+}
+
+/*=====  End of Section SCROLLBARS  ======*/
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .navbar {
+    font-size: 0.6rem !important;
+  }
+}
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .navbar {
+    font-size: 0.6rem !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .navbar {
+    font-size: 0.6rem !important;
+  }
+  header .steel_bar p {
+    font-size: 0.8rem !important;
+  }
+}
+@media (max-width: 992px) {
+  header .navbar {
+    font-size: 0.7rem !important;
+  }
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
+  }
+  header .steel_bar p {
+    font-size: 0.8rem !important;
+  }
+}
+/* Extra large custom devices (over 1200px) */
+@media (min-width: 1200px) and (max-width: 1300px) {
+  header .navbar {
+    font-size: 0.7rem !important;
+  }
+  header .steel_bar p {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1450px) {
+  .navbar {
+    font-size: 0.7rem !important;
+  }
+
+  header .steel_bar p {
+    font-size: 1.1rem !important;
+  }
+}
+@media (min-width: 1380px) {
+  .navbar {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 1450px) and (max-width: 1550px) {
+  header .steel_bar p {
+    font-size: 1.2rem !important;
+  }
+}
+@media (min-width: 1550px) and (max-width: 1700px) {
+  header .steel_bar p {
+    font-size: 1.3rem !important;
+  }
+}
+@media (min-width: 1700px) and (max-width: 1800px) {
+  header .steel_bar p {
+    font-size: 1.4rem !important;
+  }
+}

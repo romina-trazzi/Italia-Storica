@@ -305,10 +305,10 @@ a:hover {
   border-color: white;
 }
 .glide__arrow--left {
-  left: 6rem;
+  left: 100px;
 }
 .glide__arrow--right {
-  right: 6rem;
+  right: 100px;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -356,6 +356,14 @@ a:hover {
   cursor: default !important;
 }
 
+@media (min-width: 1700px) and (max-width: 1800px) {
+  .glide--left {
+    left: 15rem;
+  }
+  .glide--right {
+    right: 15rem;
+  }
+}
 .glide {
   position: initial;
   display: flex;
