@@ -214,27 +214,7 @@ a:hover {
 }
 
 /*=====  End of Section SCROLLBARS  ======*/
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
-  .navbar {
-    font-size: 0.6rem !important;
-  }
-}
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-  .navbar {
-    font-size: 0.6rem !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1200px) {
-  header .navbar {
-    font-size: 0.6rem !important;
-  }
-  header .steel_bar p {
-    font-size: 0.8rem !important;
-  }
-}
-@media (max-width: 992px) {
+@media (max-width: 659px) {
   header .navbar {
     font-size: 0.7rem !important;
   }
@@ -244,36 +224,59 @@ a:hover {
   header .navbar .social span {
     display: none;
   }
-  header .steel_bar p {
-    font-size: 0.8rem !important;
-  }
 }
-/* Extra large custom devices (over 1200px) */
-@media (min-width: 1200px) and (max-width: 1300px) {
+@media (min-width: 660px) and (max-width: 829px) {
   header .navbar {
     font-size: 0.7rem !important;
   }
-  header .steel_bar p {
-    font-size: 1rem !important;
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
   }
 }
-@media (min-width: 1300px) and (max-width: 1450px) {
-  .navbar {
-    font-size: 0.7rem !important;
+@media (min-width: 830px) and (max-width: 992px) {
+  header .navbar {
+    font-size: 1rem !important;
   }
-
-  header .steel_bar p {
-    font-size: 1.1rem !important;
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  header .navbar {
+    font-size: 1rem !important;
+  }
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1300px) {
+  header .navbar {
+    font-size: 0.8rem !important;
+  }
+}
+@media (min-width: 1301px) and (max-width: 1379px) {
+  .navbar {
+    font-size: 0.9rem !important;
   }
 }
 @media (min-width: 1380px) {
-  .navbar {
+  header .navbar {
     font-size: 1rem !important;
   }
 }
-@media (min-width: 1450px) and (max-width: 1550px) {
+@media (max-width: 1700px) {
   header .steel_bar p {
     font-size: 1.2rem !important;
+    text-align: center !important;
   }
 }
 @media (min-width: 1550px) and (max-width: 1700px) {

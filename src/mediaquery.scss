@@ -5,46 +5,56 @@
 @import "./Partials/_elements.scss";
 
 
-  
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {  
-    .navbar {
-        font-size: 0.6rem !important;
-    }
-};
- 
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {  
-    
-    
-    
-    .navbar {
-        font-size: 0.6rem !important;
-    }
-};
 
 
 
-@media (min-width: 992px) and (max-width: 1200px) { 
-    
+@media (max-width: 659px) {  
     header {
         .navbar {
-            font-size: 0.6rem !important;
-        }
-
-        .steel_bar {
-            & p {
-                font-size: 0.8rem !important;
+            font-size: 0.7rem !important;
+            
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
             }
+            
+            .social span {
+                display: none;
+            }
+            
         }
     }
 }
 
-// Social icons
-@media (max-width: 992px) { 
+
+
+@media (min-width: 660px) and (max-width: 829px) {  
     header {
         .navbar {
             font-size: 0.7rem !important;
+            
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
+            }
+            
+            .social span {
+                display: none;
+            }
+            
+        }
+    }
+
+
+
+};
+
+
+
+// Navbar
+@media (min-width: 830px) and (max-width: 992px) {
+    header {
+        .navbar {
+            font-size: 1rem !important;
+            
             .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
                 display: none;
             }
@@ -53,72 +63,66 @@
                 display: none;
             }
         }
+    }
+}
 
-        .steel_bar {
-            & p {
-                font-size: 0.8rem !important;
+@media (min-width: 992px) and (max-width: 1200px) { 
+    
+    header {
+        .navbar {
+            font-size: 1rem !important;
+            
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
+            }
+            
+            .social span {
+                display: none;
             }
         }
-
-
     }
-};
-// Social icons
-
-
-
-
-/* Extra large custom devices (over 1200px) */
+}
 
 @media (min-width: 1200px) and (max-width: 1300px) { 
    
     header {
         .navbar {
-            font-size: 0.7rem !important;
-        }
-
-        .steel_bar {
-            & p {
-                font-size: 1rem !important;
-            }
+            font-size: 0.8rem !important;
         }
     }
 }
 
-@media (min-width: 1300px) and (max-width: 1450px) { 
-
+@media (min-width: 1301px) and (max-width: 1379px) { 
     .navbar {
-        font-size: 0.7rem !important;
+        font-size: 0.9rem !important;
     }
+}
+
+@media (min-width: 1380px) { 
 
     header {
-        .steel_bar {
-            & p {
-                font-size: 1.1rem !important;
-            }
+       
+        .navbar {
+            font-size: 1rem !important;
         }
     }
 }
 
-// Navbar
-@media (min-width: 1380px) { 
-    .navbar {
-        font-size: 1rem !important;
-    }
-}
-// Navbar
 
-@media (min-width: 1450px) and (max-width: 1550px) { 
+
+// Steel bar
+
+@media (max-width: 1700px) { 
 
     header {
         .steel_bar {
             & p {
                 font-size: 1.2rem !important;
+                text-align: center !important;
             }
         }
     }
 }
-
 
 @media (min-width: 1550px) and (max-width: 1700px) { 
     
