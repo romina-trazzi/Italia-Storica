@@ -7,6 +7,9 @@
   \*************************/
 /***/ (() => {
 
+/*=============================================
+    =            VUE SECTION           =
+=============================================*/
 var app = new Vue({
   el: "#app",
   data: {
@@ -96,6 +99,12 @@ var app = new Vue({
     }
   }
 });
+/*=====  End of VUE SECTION block  ======*/
+
+/*=============================================
+    =            GLIDE SECTION           =
+=============================================*/
+
 var glideConfig = {
   type: 'carousel',
   startAt: 0,
@@ -117,6 +126,14 @@ var glideConfig = {
   }
 };
 var glide = new Glide('.glide', glideConfig).mount();
+/*=====  End of GLIDE SECTION block  ======*/
+
+/*=================================================
+=            VANILLA JAVASCRIPT SECTION           =
+==================================================*/
+
+/*----------  Subsection Card outline colors  ----------*/
+
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
 
@@ -152,6 +169,33 @@ for (var _i = 0; _i < buttonsArray.length; _i++) {
 }
 
 ;
+/*---------- End Subsection Card outline colors  ----------*/
+
+/*----------  Subsection Validation Form  ----------*/
+// Validation test + Invio mail
+
+function controlloForm() {
+  // Selezioniamo i dati del form e li salviamo in variabili
+  var nome = document.sendemail.from.value;
+  var email = document.sendemail.email.value;
+  var subject = document.sendemail.subject.value;
+  var body = document.sendemail.body.value;
+  console.log(nome, email, subject, body); // Espressione regolare per l'email
+
+  var valid_email = /^([a-zA-Z0-9_.-]) +@ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/; // Se i campi sono vuoti o undefined manda alert 
+
+  if (nome == "" || email == "" || subject == "" || body == "" || nome == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
+    alert("Per inviare la email compila i campi vuoti o undefined");
+    return false; // Verifica correttezza indirizzo mail ed eventualmente manda alert
+  } else if (email.indexOf("@") == -1 || email.indexOf(".") == false || !valid_email.test(email)) {
+    alert("Controlla l'indirizzo email");
+    document.invio.email.focus();
+    return false; // Se tutto apposto invia la email
+  } else {
+    location.href = "mailto:" + email + "?Subject=" + subject + "&Body=" + messaggio;
+  }
+}
+/*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
 /***/ }),
 
@@ -294,7 +338,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
 /******/ 				}
 /******/ 			}
-/******/ 			if(runtime) runtime(__webpack_require__);
+/******/ 			if(runtime) var result = runtime(__webpack_require__);
 /******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
 /******/ 			for(;i < chunkIds.length; i++) {
 /******/ 				chunkId = chunkIds[i];
@@ -303,7 +347,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 				installedChunks[chunkIds[i]] = 0;
 /******/ 			}
-/******/ 			__webpack_require__.O();
+/******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunkmyapp"] = self["webpackChunkmyapp"] || [];

@@ -80,7 +80,7 @@
       <!-- / Header -->
       
       <div class="container_80">
-        
+
         <!-- Main -->
         <main>
 
@@ -414,11 +414,11 @@
                   <i class="fas fa-envelope-open-text"></i>
                 </div>
               
-                <form name="sendemail" action="/login" method="get" class="d-flex flex-column justify-content-center">
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="namesurname" placeholder="Inserisci Nome e Cognome">
+                <form name="sendemail" action="" method="post" enctype="" onsubmit="return controlloForm()" class="d-flex flex-column justify-content-center">
+                  <input type="text" name="from" size="20" min-length="6" maxlength="30" required id="namesurname" placeholder="Inserisci Nome e Cognome">
                   <input type="email" placeholder="Email" id="email" required>
-                  <input type="text" name="nomeCasella" size="20" maxlength="20" required id="object" placeholder="Oggetto">
-                  <textarea name="commento" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
+                  <input type="text" name="subject" size="20" maxlength="20" required id="subject" placeholder="Oggetto">
+                  <textarea name="body" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required></textarea>
                   <button type="submit" name="submit_button" class="button orange">Invia Email</button>
                 </form>
 

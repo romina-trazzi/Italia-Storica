@@ -1,3 +1,8 @@
+
+/*=============================================
+    =            VUE SECTION           =
+=============================================*/
+
 let app = new Vue ({
     el: "#app",
     data: {
@@ -116,6 +121,15 @@ let app = new Vue ({
     
 });
 
+
+/*=====  End of VUE SECTION block  ======*/
+
+
+
+/*=============================================
+    =            GLIDE SECTION           =
+=============================================*/
+
 const glideConfig = {
     type: 'carousel',
     startAt: 0,
@@ -146,6 +160,19 @@ const glideConfig = {
 let glide = new Glide('.glide', glideConfig).mount();
 
 
+
+/*=====  End of GLIDE SECTION block  ======*/
+
+
+
+/*=================================================
+=            VANILLA JAVASCRIPT SECTION           =
+==================================================*/
+
+
+/*----------  Subsection Card outline colors  ----------*/
+
+
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 
 // Selezioniamo i buttons delle card (nodeList)
@@ -174,6 +201,57 @@ for (let i = 0; i < buttonsArray.length; i++) {
         cards[i].style.outlineColor = 'rgb(250, 153, 28)';
     });
 };
+
+
+/*---------- End Subsection Card outline colors  ----------*/
+
+
+/*----------  Subsection Validation Form  ----------*/
+
+  
+// Validation test + Invio mail
+function controlloForm() {
+
+    // Selezioniamo i dati del form e li salviamo in variabili
+    let nome = document.sendemail.from.value;
+    let email = document.sendemail.email.value;
+    let subject = document.sendemail.subject.value;
+    let body = document.sendemail.body.value;
+
+    console.log(nome, email, subject, body);
+
+    // Espressione regolare per l'email
+    let valid_email = /^([a-zA-Z0-9_.-]) +@ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/;
+
+    // Se i campi sono vuoti o undefined manda alert 
+    if (nome == "" || email == "" || subject == "" || body == "" || 
+        nome == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
+        alert("Per inviare la email compila i campi vuoti o undefined");
+        return false;
+
+    // Verifica correttezza indirizzo mail ed eventualmente manda alert
+    } else if (email.indexOf("@") == (-1) || email.indexOf(".") == false || !valid_email.test(email) ) {
+        alert("Controlla l'indirizzo email");
+        document.invio.email.focus();
+        return false;
+
+    // Se tutto apposto invia la email
+    } else {
+        location.href = "mailto:" + email + "?Subject=" + subject + "&Body=" + messaggio;
+
+    }
+}
+
+
+/*=====  End of VANILLA JAVASCRIPT SECTION ======*/
+
+
+
+
+
+
+
+
 
 
 
