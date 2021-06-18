@@ -130,9 +130,8 @@ body {
         .core {
             @include sezioni;
 
-             // Classi di animazione carosello 
-
-             .fade-enter, .fade-leave-to {
+            // Classi di animazione carosello 
+            .fade-enter, .fade-leave-to {
                 opacity: 0;
             }
 
@@ -155,9 +154,6 @@ body {
                 margin: 0;
                 width: 100%;
                 min-height: 660px;
-
-               
-
             }
 
             .book-second_row {

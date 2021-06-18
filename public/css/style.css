@@ -60,6 +60,32 @@
 }
 
 /*=============================================
+        =            MEDIAQUERY       =
+=============================================*/
+@media (max-width: 1550px) {
+  .book_details div {
+    font-size: 1.08rem !important;
+  }
+
+  .book_details div > span {
+    font-size: 1.2rem !important;
+  }
+
+  .book_details div #about {
+    font-size: 0.96rem !important;
+  }
+
+  .shield-wrap::before, .shield-wrap::after {
+    width: 25rem !important;
+  }
+}
+/*=====  End of Section comment block  ======*/
+@media (max-width: 1300px) {
+  .shield-wrap::before, .shield-wrap::after {
+    width: 22rem !important;
+  }
+}
+/*=============================================
 =            Section INPUT RADIO           =
 =============================================*/
 label {
@@ -305,10 +331,10 @@ a:hover {
   border-color: white;
 }
 .glide__arrow--left {
-  left: 100px;
+  left: 5em;
 }
 .glide__arrow--right {
-  right: 100px;
+  right: 5em;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -356,7 +382,7 @@ a:hover {
   cursor: default !important;
 }
 
-@media (min-width: 1700px) and (max-width: 1800px) {
+@media (min-width: 1550px) and (max-width: 1700px) {
   .glide--left {
     left: 15rem;
   }
@@ -552,7 +578,7 @@ body main .core .book-main .book_details {
 }
 body main .core .book-main .book_details div {
   font-family: "Open Sans", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 body main .core .book-main .book_details div > span {

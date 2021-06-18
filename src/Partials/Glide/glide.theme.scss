@@ -34,11 +34,13 @@
     }
 
     &#{$sm}left {
-      left: 100px;
+      // left: 80px;
+      left: 5em;
     }
 
     &#{$sm}right {
-      right: 100px;
+      // right: 80px;
+      right: 5em;
     }
 
     &#{$sm}disabled {
@@ -102,10 +104,10 @@
 
 
 
-@media (min-width: 1700px) and (max-width: 1800px) { 
+@media (min-width: 1550px) and (max-width: 1700px) { 
 
   .#{$glide-class} {
-    $this: &;
+    $this:&;
   
     $se: $glide-element-separator;
     $sm: $glide-modifier-separator;
