@@ -1,15 +1,15 @@
 /* Codice CSS Italia Storica */
 
 // Basic Stykesheet
-@import "./Partials/_common.scss";
-@import "./Partials/_elements.scss";
+@import "./Partials/Main Style/_common.scss";
+@import "./Partials/Main Style/_elements.scss";
 
 // Glide Js Required Stylesheet
-@import "./Partials/CaroselloGlide/_variables.scss";
-@import "./Partials/CaroselloGlide/glide.core.scss";
-@import "./Partials/CaroselloGlide/glide.theme.scss";
+@import "./Partials/Glide/_variables.scss";
+@import "./Partials/Glide/glide.core.scss";
+@import "./Partials/Glide/glide.theme.scss";
 
-@import "./Partials/_glide.scss";
+@import "./Partials/Main Style/_glide.scss";
 
 // Special GoogleFont
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
