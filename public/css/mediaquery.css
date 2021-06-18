@@ -214,32 +214,10 @@ a:hover {
 }
 
 /*=====  End of Section SCROLLBARS  ======*/
-@media (max-width: 659px) {
-  header .navbar {
-    font-size: 0.7rem !important;
-  }
-  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
-    display: none;
-  }
-  header .navbar .social span {
-    display: none;
-  }
-}
-@media (min-width: 660px) and (max-width: 829px) {
-  header .navbar {
-    font-size: 0.7rem !important;
-  }
-  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
-    display: none;
-  }
-  header .navbar .social span {
-    display: none;
-  }
-}
+/*=============================================
+=            HEADER MEDIA QUERY         =
+=============================================*/
 @media (min-width: 830px) and (max-width: 992px) {
-  header .navbar {
-    font-size: 1rem !important;
-  }
   header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
     display: none;
   }
@@ -273,6 +251,49 @@ a:hover {
     font-size: 1rem !important;
   }
 }
+@media (max-width: 550px) {
+  header .navbar .icons > span:nth-child(5) > a:nth-child(1) {
+    display: none;
+  }
+}
+@media (max-width: 659px) {
+  header .navbar {
+    font-size: 0.7rem !important;
+  }
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
+  }
+}
+@media (min-width: 660px) and (max-width: 829px) {
+  header .navbar {
+    font-size: 0.7rem !important;
+  }
+  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
+    display: none;
+  }
+  header .navbar .social span {
+    display: none;
+  }
+}
+@media (max-width: 623px) {
+  header .navbar .icons {
+    font-size: 0.8rem;
+  }
+  header .my_jumbotron div:nth-child(1) {
+    height: inherit;
+    width: 100%;
+  }
+  header .my_jumbotron .main_title h1 {
+    top: 27% !important;
+  }
+  header .my_jumbotron .steel_bar p {
+    position: sticky;
+    top: 29% !important;
+  }
+}
 @media (max-width: 1700px) {
   header .steel_bar p {
     font-size: 1.2rem !important;
@@ -289,3 +310,4 @@ a:hover {
     font-size: 1.4rem !important;
   }
 }
+/*=====  End of Section comment block  ======*/

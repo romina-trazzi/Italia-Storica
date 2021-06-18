@@ -446,7 +446,7 @@ body header .my_jumbotron .row {
   padding: 0;
 }
 body header .my_jumbotron .main_title img {
-  max-height: 350px !important;
+  height: 350px !important;
   width: 100% !important;
   overflow: hidden;
 }

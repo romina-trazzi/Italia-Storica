@@ -7,45 +7,9 @@
 
 
 
-
-@media (max-width: 659px) {  
-    header {
-        .navbar {
-            font-size: 0.7rem !important;
-            
-            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
-                display: none;
-            }
-            
-            .social span {
-                display: none;
-            }
-            
-        }
-    }
-}
-
-
-
-@media (min-width: 660px) and (max-width: 829px) {  
-    header {
-        .navbar {
-            font-size: 0.7rem !important;
-            
-            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
-                display: none;
-            }
-            
-            .social span {
-                display: none;
-            }
-            
-        }
-    }
-
-
-
-};
+/*=============================================
+=            HEADER MEDIA QUERY         =
+=============================================*/
 
 
 
@@ -53,7 +17,6 @@
 @media (min-width: 830px) and (max-width: 992px) {
     header {
         .navbar {
-            font-size: 1rem !important;
             
             .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
                 display: none;
@@ -109,9 +72,101 @@
 }
 
 
+// Navbar icons
+@media (max-width: 550px) {  
+    header {
+        .navbar {
+            
+            .icons > span:nth-child(5) > a:nth-child(1) {
+                display: none;
+            }
+         
+        }
+
+        
+    }
+}
+
+@media (max-width: 659px) {  
+    header {
+        .navbar {
+            font-size: 0.7rem !important;
+            
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
+            }
+            
+            .social span {
+                display: none;
+            }
+            
+        }
+
+        
+    }
+}
+
+@media (min-width: 660px) and (max-width: 829px) {  
+    header {
+        .navbar {
+            font-size: 0.7rem !important;
+            
+            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
+                display: none;
+            }
+            
+            .social span {
+                display: none;
+            }
+            
+        }
+    }
+
+
+
+}
+
+
+// Jumbotron title
+@media (max-width: 623px) {
+   
+    header {
+
+        .navbar {
+            
+            .icons {
+
+                font-size: 0.8rem;
+            } 
+        }
+
+        .my_jumbotron {
+            
+            div:nth-child(1) {
+                height: inherit;
+                width: 100%;   
+            }
+            
+            .main_title {
+                h1 {
+                    top: 27% !important;
+                }
+            }
+            
+            .steel_bar {
+                & p {
+                    position: sticky;
+                    top: 29% !important;
+                }
+            }
+        }
+
+        
+    }
+}
+
 
 // Steel bar
-
 @media (max-width: 1700px) { 
 
     header {
@@ -148,5 +203,30 @@
     };
 
 }
+
+
+
+
+/*=====  End of Section comment block  ======*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
