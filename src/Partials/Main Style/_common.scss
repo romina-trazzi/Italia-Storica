@@ -52,6 +52,7 @@ $color-map: (
     font-size: 3.3rem !important;
 }
 
+
 // Shield decoration
 @mixin shieldknot {
     .shield-wrap {
@@ -243,17 +244,6 @@ $color-map: (
     }
 }
 
-@media (max-width: 1200px) {
-    
-  
- 
-}
-
-
-
-/*=====  End of Section comment block  ======*/
-
-
 
 // Shieldknot
 @media (max-width: 1300px) {
@@ -265,6 +255,46 @@ $color-map: (
     }
 }
 
+@media (min-width: 821px) and (max-width: 980px) {
+
+    .shield-wrap::before, .shield-wrap::after {
+
+        width: 18rem !important;
+
+    }
+}
+
+@media (min-width: 660px) and (max-width: 820px) {
+
+    .shield-wrap::before, .shield-wrap::after {
+
+        width: 14rem !important;
+
+    }
+}
+
+@media (min-width: 585px) and (max-width: 659px) {
+
+    .shield-wrap::before, .shield-wrap::after {
+
+        width: 12rem !important;
+
+    }
+}
+
+@media (min-width: 535px) and (max-width: 584px) {
+
+    .shield-wrap::before, .shield-wrap::after {
+
+        width: 10.5rem !important;
+
+    }
+}
 
 
 
+
+
+
+
+/*=====  End of Section comment block  ======*/

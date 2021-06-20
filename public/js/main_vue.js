@@ -60,7 +60,30 @@ var app = new Vue({
       "descrizione": "Un classico della storia militare, coniugante l'accuratezza della documentata ricostruzione storica degli ultimi combattimenti per Berlino dell'aprile-maggio 1945, dallo sfondamento sovietico sull'Oder sino alla battaglia di Seelow e la difesa finale della capitale del III Reich, e l'avvincente narrazione delle vicende di un pugno di carristi della Panzer-Division 'Müncheberg' e volontari francesi dell'SS-Sturmbataillon 'Charlemagne', tra gli ultimi difensori di Berlino. Questa edizione presenta una traduzione rivista e annotata a cura del Wehrmacht Research Group, ed è integrata da nuove dettagliate mappe delle operazioni, drammatiche fotografie in azione dell'epoca, immagini attuali dei luoghi dei combattimenti e di illustrazioni a colori.",
       "prezzo": "23,75 euro",
       "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
-    }]
+    }],
+    isActive: false,
+
+    /* Cambiando questo valore in TRUE si attiverà nell'HTML l'aggiunta della classe order-last.
+    Altrimenti ci sarà order-first. Entrambe sono classi Bootstrap.
+    Vogliamo che il valore di isActive cambi se la dimensione dello schermo è inferiore a 1200px. */
+    // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
+    windowWidth: 0
+    /* Se fosse stato un oggetto con altezza e larghezza: 
+    window: {
+        width: 0,
+        height: 0
+        
+    } */
+
+  },
+  // Controlla la larghezza dello schermo in modo dinamico da quando viene caricata la pagina (mounted) tramite il richiamo della funzione handleResize
+  // (passaggio 3)
+  mounted: function mounted() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  },
+  destroyed: function destroyed() {
+    window.removeEventListener('resize', this.handleResize);
   },
   methods: {
     nextImg: function nextImg() {
@@ -96,13 +119,32 @@ var app = new Vue({
       dots[currentIndex].classList.add('selected'); // Aggiorniamo il counter
 
       this.counter = currentIndex;
+    },
+    // Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed. Il valore di width in data viene aggiornato da 0 a valore corrente.
+    // (passaggio 2)
+    handleResize: function handleResize() {
+      this.windowWidth = window.screen.width;
+    }
+  },
+  watch: {
+    // Quando il valore di windowWidth cambia fai partire questa funzione
+    windowWidth: function windowWidth() {
+      var column = document.getElementById("book_change");
+
+      if (this.windowWidth <= 1200) {
+        column.className = column.classList + " order-last" + " order-css";
+        return this.isActive = true;
+      } else {
+        column.className = column.classList + " order-first";
+        return this.isActive = false;
+      }
     }
   }
 });
 /*=====  End of VUE SECTION block  ======*/
 
 /*=============================================
-    =            GLIDE SECTION           =
+=            GLIDE SECTION           =
 =============================================*/
 
 var glideConfig = {

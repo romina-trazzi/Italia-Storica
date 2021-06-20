@@ -100,39 +100,38 @@
             <div class="row d-flex book-main">
 
               <!-- Descrizione -->
-              <div class="col-lg-6 d-flex">
-
+              <div class="col-xl-6 col-lg-12 d-flex" id="book_change">
                 <div class="d-flex flex-column justify-content-center align-items-center book_description">
+              
+                <div class="d-flex flex-column align-items-start book_details"> 
                 
-                  <div class="d-flex flex-column align-items-start book_details"> 
-                  
-                    <!-- Transition dei dettagli dei libri -->
-                    <transition-group name="fade" mode="out-in" appear>
-                      <div v-bind:key="libri[counter]">
-                        
-                        <span>Titolo:</span> {{ libri[counter].titolo }} <br>
-                        <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} <br>
-                        <span>Autore:</span> {{ libri[counter].autore }} <br>
-                        <p id ="about"> {{ libri[counter].descrizione }} </p>
-                        <span>Pagine:</span> {{ libri[counter].pagine }} <br>
-                        <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
-         
-                      </div>
-                    </transition>
-                    <!-- / Transition dei dettagli dei libri -->
-                  </div>  
+                  <!-- Transition dei dettagli dei libri -->
+                  <transition-group name="fade" mode="out-in" appear>
+                    <div v-bind:key="libri[counter]">
+                      
+                      <span>Titolo:</span> {{ libri[counter].titolo }} <br>
+                      <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} <br>
+                      <span>Autore:</span> {{ libri[counter].autore }} <br>
+                      <p id ="about"> {{ libri[counter].descrizione }} </p>
+                      <span>Pagine:</span> {{ libri[counter].pagine }} <br>
+                      <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
+        
+                    </div>
+                  </transition>
+                  <!-- / Transition dei dettagli dei libri -->
+                </div>  
 
-                </div>
-                  
+              </div>
+                
               </div>
               <!-- / Descrizione -->
-              
+
               <!-- Carosello libri -->
-              <div class="col-lg-6">
+              <div class="col-xl-6 col-lg-12">
                 
                 <!-- Glide -->
                 <div class="glide">
-                 
+                  
                   <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides d-flex">
                       <li class="glide__slide d-flex justify-content-center align-items-center">
@@ -175,7 +174,7 @@
 
               </div>
               <!-- Carosello libri -->
-            
+
             </div>
             <!-- / Book main -->
 

@@ -72,9 +72,35 @@ let app = new Vue ({
             }
 
         ], 
+       
+        isActive: false,   
+        /* Cambiando questo valore in TRUE si attiverà nell'HTML l'aggiunta della classe order-last.
+        Altrimenti ci sarà order-first. Entrambe sono classi Bootstrap.
+        Vogliamo che il valore di isActive cambi se la dimensione dello schermo è inferiore a 1200px. */
+        
+        // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
+        windowWidth: 0,
+        
+        /* Se fosse stato un oggetto con altezza e larghezza: 
+        window: {
+            width: 0,
+            height: 0
+            
+        } */
 
     },
 
+    // Controlla la larghezza dello schermo in modo dinamico da quando viene caricata la pagina (mounted) tramite il richiamo della funzione handleResize
+    // (passaggio 3)
+    mounted() {
+        window.addEventListener('resize', this.handleResize);
+        this.handleResize();
+    },
+
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize);
+    },
+    
     methods: {
         nextImg() {
             this.counter++;
@@ -82,18 +108,18 @@ let app = new Vue ({
                 this.counter = 0;
             }
         },
-
+        
         prevImg() {
             if (this.counter > 0) {
                 this.counter--;
             } else {
                 this.counter = this.images.length -1;
             }
-
+            
         },
-
+        
         slideBullet() {
-
+            
             // Selezioniamo dal Dom i dots
             let dots = document.querySelectorAll('.glide__bullet');
             
@@ -101,9 +127,9 @@ let app = new Vue ({
             for (let i = 0; i < dots.length; i++) { 
                 dots[i].classList.remove('selected');   
             }
-
+            
             let currentIndex = 0;
-
+            
             // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
             dots.forEach(function (element, index) {
                 if (element === document.activeElement) {
@@ -116,8 +142,34 @@ let app = new Vue ({
            
             // Aggiorniamo il counter
             this.counter = currentIndex;
-        }
-    } 
+        },
+        
+        // Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed. Il valore di width in data viene aggiornato da 0 a valore corrente.
+        // (passaggio 2)
+        handleResize () {
+            this.windowWidth = window.screen.width;
+        },
+    },
+
+    watch: {
+        
+        // Quando il valore di windowWidth cambia fai partire questa funzione
+        windowWidth: function () {
+            let column = document.getElementById("book_change");
+
+            if (this.windowWidth <= 1200) {
+                column.className = column.classList + " order-last" + " order-css";
+                return this.isActive = true;
+            } else {
+                column.className = column.classList + " order-first";
+                return this.isActive = false;
+            }
+            
+        },
+
+      
+    }
+    
     
 });
 
@@ -127,7 +179,7 @@ let app = new Vue ({
 
 
 /*=============================================
-    =            GLIDE SECTION           =
+=            GLIDE SECTION           =
 =============================================*/
 
 const glideConfig = {
