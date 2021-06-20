@@ -104,7 +104,7 @@
     width: 10.5rem !important;
   }
 }
-/*=====  End of Section comment block  ======*/
+/*=====  End of Section Mediaquery comment block  ======*/
 /*=============================================
 =            Section INPUT RADIO           =
 =============================================*/
@@ -155,6 +155,7 @@ label {
 =            Section BUTTON         =
 ========================================*/
 .button {
+  width: 100%;
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -262,6 +263,9 @@ a:hover {
 }
 
 /*=====  End of Section SCROLLBARS  ======*/
+/*=============================================
+        =            MEDIAQUERY       =
+=============================================*/
 .glide {
   position: relative;
   width: 100%;
@@ -642,9 +646,6 @@ body main .order .card-collector {
   padding: 0;
   margin-bottom: 150px;
 }
-body main .order .card-collector .card-container {
-  max-height: 500px;
-}
 body main .order .card-collector .card-container .card {
   background-color: rgba(209, 191, 142, 0.2);
   border: 1px solid #292929;
@@ -654,7 +655,7 @@ body main .order .card-collector .card-container .card {
 body main .order .card-collector .card-container .card .card-title {
   color: floralwhite;
   text-shadow: 2px 2px black;
-  font-size: 1.4em;
+  font-size: 1.4rem;
 }
 body main .order .card-collector .card-container .card .card-body i {
   width: 100%;
@@ -679,6 +680,13 @@ body main .order .card-collector .card-container .card .card-body .button {
 }
 body main .order .card-collector .card-container .card .btn-primary {
   text-align: center;
+}
+body main .order .card-collector .card-container .cpl-xl-4, body main .order .card-collector .card-container .col-lg-4, body main .order .card-collector .card-container .col-md-4 {
+  padding-right: 45px !important;
+  padding-left: 45px !important;
+}
+body main .order .card-collector .card-container .card {
+  max-height: 550px;
 }
 body main .order .card-collector .card-container .card:hover {
   box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);

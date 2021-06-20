@@ -175,6 +175,10 @@ let app = new Vue ({
                 column.classList.toggle("order-last", false);
                 column.classList.toggle("order-css", false);
             }
+
+            // Salva in una variabile la HTML collection con classe card-text > .button orange 
+            // let column = document.get
+
             
         },
 

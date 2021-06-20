@@ -96,6 +96,9 @@
   }
 }
 /*=====  End of Section comment block  ======*/
+/*=============================================
+=            MAIN ROW CORE MEDIAQUERY        =
+=============================================*/
 @media (max-width: 1550px) {
   main .core .glide img {
     min-height: 550px !important;

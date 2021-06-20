@@ -84,6 +84,7 @@ label {
 ========================================*/
 
 .button {
+    width: 100%;
     display: inline-block;
 	outline: none;
 	cursor: pointer;
@@ -231,11 +232,26 @@ a:hover {
 
 
 
+/*=============================================
+        =            MEDIAQUERY       =
+=============================================*/
 
 
+// Button
 
+// @media (min-width: 1550px) and (max-width: 1700px) {
+
+//     .button {
+//         font-size: 1.15vw;
+//     }
+// }
     
-   
+// @media (min-width: 1400px) and (max-width: 1549px) {
+
+//     .button {
+//         font-size: 1.12vw;
+//     }
+// }
     
     
 

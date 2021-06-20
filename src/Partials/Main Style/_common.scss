@@ -136,7 +136,7 @@ $color-map: (
         .card-title {
             color: map-get($color-map, text_color);
             text-shadow: 2px 2px black;
-            font-size: 1.4em;
+            font-size: 1.4rem;
         }
         
         .card-body {
@@ -292,9 +292,62 @@ $color-map: (
 }
 
 
+// Card
+
+// @media (min-width: 1464px) and (max-width: 1550px) {
+
+//     .card-body {
+//         i {   
+//             font-size: 3.5rem !important;
+//         }
+//     }
+
+//     .card-text {
+//         font-size: 1.3rem !important;
+//     }
+
+//     .card-title {
+//         font-size: 1.3rem !important;
+//     }
+// }
+
+// @media (min-width: 1400px) and (max-width: 1463px) {
 
 
 
+//     .card-body {
+//         i {   
+//             font-size: 3.5rem !important;
+//         }
+//     }
+
+//     .card-text {
+//         font-size: 1.3rem !important;
+//     }
+
+//     .card-title {
+//         font-size: 1.3rem !important;
+//     }
+// }
 
 
-/*=====  End of Section comment block  ======*/
+// @media (min-width: 1400px) and (max-width: 1474px) {
+
+//     .card-body {
+//         i {   
+//             font-size: 3rem !important;
+//         }
+//     }
+
+//     .card-text {
+//         font-size: 1.2rem !important;
+//     }
+
+//     .card-title {
+//         font-size: 1.2rem !important;
+//     }
+// }
+
+
+
+/*=====  End of Section Mediaquery comment block  ======*/
