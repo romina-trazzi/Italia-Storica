@@ -239,21 +239,21 @@ a:hover {
 
 // Button
 
-// @media (min-width: 1550px) and (max-width: 1700px) {
+@media (min-width: 1335px) and (max-width: 1550px) {
 
-//     .button {
-//         font-size: 1.15vw;
-//     }
-// }
+    .button {
+        font-size: 1.22vw !important;
+    }
+}
     
-// @media (min-width: 1400px) and (max-width: 1549px) {
+@media (min-width: 1200px) and (max-width: 1334px) {
 
-//     .button {
-//         font-size: 1.12vw;
-//     }
-// }
-    
-    
+    .button {
+        font-size: 1.22vw !important;
+        margin-top: 15px !important;
+        
+    }
+}   
 
 
 

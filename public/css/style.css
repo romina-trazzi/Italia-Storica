@@ -104,6 +104,36 @@
     width: 10.5rem !important;
   }
 }
+@media (min-width: 1334px) and (max-width: 1550px) {
+  .card-body i {
+    font-size: 3.5rem !important;
+  }
+
+  .card-text {
+    font-size: 1.3rem !important;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1333px) {
+  .card {
+    height: 491px !important;
+  }
+
+  .card-body i {
+    font-size: 3.5rem !important;
+  }
+
+  .card-text {
+    font-size: 1.3rem !important;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
+  }
+}
 /*=====  End of Section Mediaquery comment block  ======*/
 /*=============================================
 =            Section INPUT RADIO           =
@@ -266,6 +296,17 @@ a:hover {
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
+@media (min-width: 1335px) and (max-width: 1550px) {
+  .button {
+    font-size: 1.22vw !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1334px) {
+  .button {
+    font-size: 1.22vw !important;
+    margin-top: 15px !important;
+  }
+}
 .glide {
   position: relative;
   width: 100%;
@@ -681,7 +722,7 @@ body main .order .card-collector .card-container .card .card-body .button {
 body main .order .card-collector .card-container .card .btn-primary {
   text-align: center;
 }
-body main .order .card-collector .card-container .cpl-xl-4, body main .order .card-collector .card-container .col-lg-4, body main .order .card-collector .card-container .col-md-4 {
+body main .order .card-collector .card-container .col-xl-4 {
   padding-right: 45px !important;
   padding-left: 45px !important;
 }

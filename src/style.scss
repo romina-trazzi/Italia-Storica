@@ -187,7 +187,7 @@ body {
                 .card-container {
                     @include card;
 
-                    .cpl-xl-4, .col-lg-4, .col-md-4 {
+                    .col-xl-4 {
                         padding-right: 45px !important;
                         padding-left: 45px !important;
                     }

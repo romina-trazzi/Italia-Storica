@@ -294,24 +294,46 @@ $color-map: (
 
 // Card
 
-// @media (min-width: 1464px) and (max-width: 1550px) {
+@media (min-width: 1334px) and (max-width: 1550px) {
 
-//     .card-body {
-//         i {   
-//             font-size: 3.5rem !important;
-//         }
-//     }
+    .card-body {
+        i {   
+            font-size: 3.5rem !important;
+        }
+    }
 
-//     .card-text {
-//         font-size: 1.3rem !important;
-//     }
+    .card-text {
+        font-size: 1.3rem !important;
+    }
 
-//     .card-title {
-//         font-size: 1.3rem !important;
-//     }
-// }
+    .card-title {
+        font-size: 1.3rem !important;
+    }
+}
 
-// @media (min-width: 1400px) and (max-width: 1463px) {
+@media (min-width: 1200px) and (max-width: 1333px) {
+    
+    .card {
+        height: 491px !important;
+    }
+
+    .card-body {
+        i {   
+            font-size: 3.5rem !important;
+        }
+    }
+
+    .card-text {
+        font-size: 1.3rem !important;
+    }
+
+    .card-title {
+        font-size: 1.3rem !important;
+    }
+}
+
+
+
 
 
 
