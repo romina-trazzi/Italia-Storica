@@ -61,11 +61,6 @@ var app = new Vue({
       "prezzo": "23,75 euro",
       "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
     }],
-    isActive: false,
-
-    /* Cambiando questo valore in TRUE si attiverà nell'HTML l'aggiunta della classe order-last.
-    Altrimenti ci sarà order-first. Entrambe sono classi Bootstrap.
-    Vogliamo che il valore di isActive cambi se la dimensione dello schermo è inferiore a 1200px. */
     // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
     windowWidth: 0
     /* Se fosse stato un oggetto con altezza e larghezza: 
@@ -130,13 +125,23 @@ var app = new Vue({
     // Quando il valore di windowWidth cambia fai partire questa funzione
     windowWidth: function windowWidth() {
       var column = document.getElementById("book_change");
+      /* Se la larghezza dello schermo è uguale o inferiore di 1200px
+      aggiungi le classi order-last e order-css
+      se c'è, rimuovi la classe order-first
+      */
 
       if (this.windowWidth <= 1200) {
-        column.className = column.classList + " order-last" + " order-css";
-        return this.isActive = true;
-      } else {
-        column.className = column.classList + " order-first";
-        return this.isActive = false;
+        column.classList.add("order-last");
+        column.classList.add("order-css");
+        column.classList.toggle("order-first", false);
+        /* Altrimenti, se larghezza dello schermo è maggiore di 1200px
+        aggiungi la classe order-first
+        se c'è, rimuovi le classi order-last e order-css
+        */
+      } else if (this.windowWidth > 1200) {
+        column.classList.add("order-first");
+        column.classList.toggle("order-last", false);
+        column.classList.toggle("order-css", false);
       }
     }
   }
