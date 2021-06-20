@@ -560,15 +560,6 @@ body main .core {
   margin: 0;
   padding: 0 0 45px 0;
 }
-body main .core .fade-enter, body main .core .fade-leave-to {
-  opacity: 0;
-}
-body main .core .fade-enter-active, body main .core .fade-leave-active {
-  transition: opacity 1s ease-in-out;
-}
-body main .core .fade-move {
-  transition: opacity 2.1s ease-in-out;
-}
 body main .core .book-title .shield-wrap {
   text-align: center;
   margin-bottom: 75px;
@@ -586,6 +577,15 @@ body main .core .book-title img {
   width: 30px;
   margin-left: 10px;
   margin-right: 10px;
+}
+body main .core .fade-enter, body main .core .fade-leave-to {
+  opacity: 0;
+}
+body main .core .fade-enter-active, body main .core .fade-leave-active {
+  transition: opacity 1s ease-in-out;
+}
+body main .core .fade-move {
+  transition: opacity 2.1s ease-in-out;
 }
 body main .core .book-main {
   margin: 0;
@@ -618,6 +618,9 @@ body main .core .book-main .book_details div #about {
   line-height: 1.6;
   text-transform: none;
   margin: 20px 0 20px 0;
+}
+body main .core .book-main .order-css {
+  padding-top: 115px !important;
 }
 body main .core .book-second_row {
   width: 100%;

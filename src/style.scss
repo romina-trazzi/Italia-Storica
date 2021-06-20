@@ -130,6 +130,10 @@ body {
         .core {
             @include sezioni;
 
+            .book-title {
+                @include shieldknot;
+            }
+
             // Classi di animazione carosello 
             .fade-enter, .fade-leave-to {
                 opacity: 0;
@@ -145,15 +149,19 @@ body {
 
             // End classi di animazione carosello
             
-            .book-title {
-                @include shieldknot;
-            }
-            
+
             .book-main {
                 @include descrizioni;
                 margin: 0;
                 width: 100%;
                 min-height: 660px;
+
+                // Classe che si attiva se la dimensione schermo è < 1200px
+                .order-css {
+                    padding-top: 115px !important;
+                }
+            
+                 
             }
 
             .book-second_row {

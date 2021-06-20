@@ -106,3 +106,8 @@
     min-height: 500px !important;
   }
 }
+@media (min-width: 450px) and (max-width: 1200px) {
+  .book_details {
+    padding-left: 0 !important;
+  }
+}

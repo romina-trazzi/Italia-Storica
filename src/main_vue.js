@@ -85,8 +85,9 @@ let app = new Vue ({
 
     },
 
-    // Controlla la larghezza dello schermo in modo dinamico da quando viene caricata la pagina (mounted) tramite il richiamo della funzione handleResize
-    // (passaggio 3)
+    /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
+    l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
+    (passaggio 3) */
     mounted() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
@@ -139,8 +140,10 @@ let app = new Vue ({
             this.counter = currentIndex;
         },
         
-        // Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed. Il valore di width in data viene aggiornato da 0 a valore corrente.
-        // (passaggio 2)
+        /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed. 
+        Il valore di width in data viene aggiornato da 0 a valore corrente.
+        (passaggio 2) */
+        
         handleResize () {
             this.windowWidth = window.screen.width;
         },
@@ -150,6 +153,8 @@ let app = new Vue ({
         
         // Quando il valore di windowWidth cambia fai partire questa funzione
         windowWidth: function () {
+
+            // Salva in una variabile l'elemento HTML che ha id book_change
             let column = document.getElementById("book_change");
 
             /* Se la larghezza dello schermo è uguale o inferiore di 1200px
@@ -160,13 +165,12 @@ let app = new Vue ({
                 column.classList.add("order-last");
                 column.classList.add("order-css");
                 column.classList.toggle("order-first", false);
-                
             
             /* Altrimenti, se larghezza dello schermo è maggiore di 1200px
             aggiungi la classe order-first
             se c'è, rimuovi le classi order-last e order-css
             */
-            } else if (this.windowWidth > 1200) {
+            } else {
                 column.classList.add("order-first");
                 column.classList.toggle("order-last", false);
                 column.classList.toggle("order-css", false);
