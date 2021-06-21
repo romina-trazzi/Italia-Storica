@@ -84,7 +84,7 @@ label {
 ========================================*/
 
 .button {
-    width: 100%;
+    // width: 100%;
     display: inline-block;
 	outline: none;
 	cursor: pointer;
@@ -94,6 +94,8 @@ label {
 	-webkit-border-radius: 0.5em; 
 	-moz-border-radius: 0.5em;
 	border-radius: 0.5em;
+    letter-spacing: 1px;
+    white-space: pre-wrap;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -238,24 +240,38 @@ a:hover {
 
 
 // Button
-
-@media (min-width: 1335px) and (max-width: 1550px) {
+@media (min-width: 1611px) and (max-width: 1630px) {
 
     .button {
         font-size: 1.22vw !important;
+        
     }
 }
     
-@media (min-width: 1200px) and (max-width: 1334px) {
+@media (min-width: 1401px) and (max-width: 1610px) {
+
+    .button {
+        font-size: 1.2vw !important;
+        
+    }
+}
+
+
+
+@media (min-width: 1333px) and (max-width: 1400px) {
 
     .button {
         font-size: 1.22vw !important;
-        margin-top: 15px !important;
-        
     }
 }   
 
+@media (min-width: 1000px) and (max-width: 1332px) {
 
+    .button {
+        font-size: 1.3vw !important;
+       
+    }
+}   
 
 
 

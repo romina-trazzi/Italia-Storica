@@ -294,7 +294,7 @@ $color-map: (
 
 // Card
 
-@media (min-width: 1334px) and (max-width: 1550px) {
+@media (min-width: 1000px) and (max-width: 1571px) {
 
     .card-body {
         i {   
@@ -311,26 +311,36 @@ $color-map: (
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1333px) {
-    
+
+@media (min-width: 1000px) and (max-width: 1571px) {
+
     .card {
-        height: 491px !important;
-    }
-
-    .card-body {
-        i {   
-            font-size: 3.5rem !important;
-        }
-    }
-
-    .card-text {
-        font-size: 1.3rem !important;
-    }
-
-    .card-title {
-        font-size: 1.3rem !important;
+        height: 507px !important;
     }
 }
+
+@media (min-width: 1000px) and (max-width: 1333px) {
+    
+    div.col-xl-4:nth-child(3) p {
+        padding-top: 5px !important;
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1210px) {
+    
+    div.col-xl-4:nth-child(1) p {
+        padding-top: 5px !important;
+    }
+
+}
+
+
+
+
+
+
+
 
 
 
