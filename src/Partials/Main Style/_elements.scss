@@ -256,8 +256,6 @@ a:hover {
     }
 }
 
-
-
 @media (min-width: 1333px) and (max-width: 1400px) {
 
     .button {
@@ -265,7 +263,7 @@ a:hover {
     }
 }   
 
-@media (min-width: 1000px) and (max-width: 1332px) {
+@media (min-width: 1200px) and (max-width: 1332px) {
 
     .button {
         font-size: 1.3vw !important;
@@ -273,8 +271,21 @@ a:hover {
     }
 }   
 
+@media (min-width: 1159px) and (max-width: 1199px) {
 
+    .button {
+        font-size: 1.35vw !important;
+       
+    }
+}   
 
+@media (min-width: 992px) and (max-width: 1158px) {
+
+    .button {
+        font-size: 1.4vw !important;
+       
+    }
+}   
 
 
 

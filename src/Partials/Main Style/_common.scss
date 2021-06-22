@@ -292,9 +292,9 @@ $color-map: (
 }
 
 
-// Card
+// Card (verticali, fino a 992 px)
 
-@media (min-width: 1000px) and (max-width: 1571px) {
+@media (max-width: 1571px) {
 
     .card-body {
         i {   
@@ -311,15 +311,26 @@ $color-map: (
     }
 }
 
-
-@media (min-width: 1000px) and (max-width: 1571px) {
+@media (min-width: 1200px) and (max-width: 1571px) {
 
     .card {
         height: 507px !important;
     }
 }
 
-@media (min-width: 1000px) and (max-width: 1333px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .card {
+        height: 520px !important;
+    }
+}
+
+
+
+
+
+
+@media (min-width: 992px) and (max-width: 1333px) {
     
     div.col-xl-4:nth-child(3) p {
         padding-top: 5px !important;
@@ -327,7 +338,24 @@ $color-map: (
 
 }
 
-@media (min-width: 1200px) and (max-width: 1210px) {
+@media (min-width: 993px) and (max-width: 1062px) {
+    
+    .card-text {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 993px) {
+    
+    div.col-xl-4:nth-child(2) .card-body .card-text {
+        padding: 0;
+    }
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1210px) {
     
     div.col-xl-4:nth-child(1) p {
         padding-top: 5px !important;
@@ -335,6 +363,7 @@ $color-map: (
 
 }
 
+// Card (orizzontali, fra 992px e 450px)
 
 
 
@@ -344,41 +373,6 @@ $color-map: (
 
 
 
-
-
-
-//     .card-body {
-//         i {   
-//             font-size: 3.5rem !important;
-//         }
-//     }
-
-//     .card-text {
-//         font-size: 1.3rem !important;
-//     }
-
-//     .card-title {
-//         font-size: 1.3rem !important;
-//     }
-// }
-
-
-// @media (min-width: 1400px) and (max-width: 1474px) {
-
-//     .card-body {
-//         i {   
-//             font-size: 3rem !important;
-//         }
-//     }
-
-//     .card-text {
-//         font-size: 1.2rem !important;
-//     }
-
-//     .card-title {
-//         font-size: 1.2rem !important;
-//     }
-// }
 
 
 

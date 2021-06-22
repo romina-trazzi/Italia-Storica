@@ -257,12 +257,9 @@ function controlloForm() {
 /*!************************!*\
   !*** ./src/style.scss ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: Undefined variable.\n   ╷\n37 │     background: map-get($color-map, background_color);\r\n   │                         ^^^^^^^^^^\n   ╵\n  src\\Partials\\Main Style\\_elements.scss 37:25  @import\n  src\\style.scss 5:9                            root stylesheet\n    at processResult (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\webpack\\lib\\NormalModule.js:701:19)\n    at E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\webpack\\lib\\NormalModule.js:807:5\n    at E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\sass-loader\\dist\\index.js:54:7\n    at Function.call$2 (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\sass\\sass.dart.js:93417:16)\n    at _render_closure1.call$2 (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\sass\\sass.dart.js:81775:12)\n    at _RootZone.runBinary$3$3 (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\sass\\sass.dart.js:27547:18)\n    at _FutureListener.handleError$1 (E:\\Documenti da altro Asus\\BOOLEAN\\Progetti Personali\\Italia Storica\\node_modules\\sass\\sass.dart.js:26096:19)");
 
 /***/ }),
 
@@ -365,7 +362,6 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/main_vue": 0,
-/******/ 			"css/style": 0,
 /******/ 			"css/mediaquery": 0
 /******/ 		};
 /******/ 		
@@ -414,9 +410,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/style","css/mediaquery"], () => (__webpack_require__("./src/main_vue.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/style","css/mediaquery"], () => (__webpack_require__("./src/style.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/style","css/mediaquery"], () => (__webpack_require__("./src/mediaquery.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/mediaquery"], () => (__webpack_require__("./src/main_vue.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/mediaquery"], () => (__webpack_require__("./src/style.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/mediaquery"], () => (__webpack_require__("./src/mediaquery.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
