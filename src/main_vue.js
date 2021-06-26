@@ -161,7 +161,7 @@ let app = new Vue ({
             aggiungi le classi order-last e order-css
             se c'è, rimuovi la classe order-first
             */
-            if (this.windowWidth <= 1200) {
+            if (this.windowWidth <= 1199) {
                 column.classList.add("order-last");
                 column.classList.add("order-css");
                 column.classList.toggle("order-first", false);

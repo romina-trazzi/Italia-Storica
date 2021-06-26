@@ -291,8 +291,16 @@ $color-map: (
     }
 }
 
+@media (max-width: 439px) {
+    .shield-wrap::before, .shield-wrap::after {
 
-// Card (verticali, fino a 992 px)
+        max-width: 10.5rem !important;
+
+    }
+}
+
+
+// Card (orizzontali, fino a 992 px)
 
 @media (max-width: 1571px) {
 
@@ -311,24 +319,24 @@ $color-map: (
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1571px) {
-
-    .card {
-        height: 507px !important;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 1200px) and (max-width: 1570px) {
 
     .card {
         height: 520px !important;
     }
 }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+    .col-xl-4 {
+        padding-left: 25px !important; 
+        padding-right: 25px !important; 
 
+    }
 
-
-
+    .card {
+        height: 520px !important;
+    }
+}
 
 @media (min-width: 992px) and (max-width: 1333px) {
     
@@ -338,32 +346,63 @@ $color-map: (
 
 }
 
-@media (min-width: 993px) and (max-width: 1062px) {
-    
-    .card-text {
-        margin: 0;
-        padding: 0;
+
+// Card (verticali, da 992 px fino a 440px)
+
+@media (min-width: 400px) and (max-width: 991px) {
+   
+    .card-container > .col-xl-4:not(:first-child) {
+
+        margin-top: 60px !important;
+    }
+
+    .card-container .col-xl-4 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 360px !important;
     }
 }
 
-@media (min-width: 992px) and (max-width: 993px) {
+
+
+
+
+
+
+
+
+
+
+// @media (min-width: 993px) and (max-width: 1062px) {
     
-    div.col-xl-4:nth-child(2) .card-body .card-text {
-        padding: 0;
-    }
-}
+//     .card-text {
+//         margin: 0;
+//         padding: 0;
+//     }
+// }
 
-
-
-@media (min-width: 992px) and (max-width: 1210px) {
+// @media (min-width: 992px) and (max-width: 1199px) {
     
-    div.col-xl-4:nth-child(1) p {
-        padding-top: 5px !important;
-    }
+//     div.col-xl-4:nth-child(2) .card-body .card-text {
+//         padding: 0;
+//     }
+// }
 
-}
 
-// Card (orizzontali, fra 992px e 450px)
+
+// @media (min-width: 992px) and (max-width: 1210px) {
+    
+//     div.col-xl-4:nth-child(1) p {
+//         padding-top: 5px !important;
+//     }
+
+// }
+
+
 
 
 

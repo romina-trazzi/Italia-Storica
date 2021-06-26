@@ -104,6 +104,11 @@
     width: 10.5rem !important;
   }
 }
+@media (max-width: 439px) {
+  .shield-wrap::before, .shield-wrap::after {
+    max-width: 10.5rem !important;
+  }
+}
 @media (max-width: 1571px) {
   .card-body i {
     font-size: 3.5rem !important;
@@ -117,12 +122,17 @@
     font-size: 1.3rem !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 1571px) {
+@media (min-width: 1200px) and (max-width: 1570px) {
   .card {
-    height: 507px !important;
+    height: 520px !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-xl-4 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
   .card {
     height: 520px !important;
   }
@@ -132,15 +142,19 @@
     padding-top: 5px !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1062px) {
-  .card-text {
-    margin: 0;
-    padding: 0;
+@media (min-width: 400px) and (max-width: 991px) {
+  .card-container > .col-xl-4:not(:first-child) {
+    margin-top: 60px !important;
   }
-}
-@media (min-width: 992px) and (max-width: 1210px) {
-  div.col-xl-4:nth-child(1) p {
-    padding-top: 5px !important;
+
+  .card-container .col-xl-4 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .card {
+    width: 360px !important;
   }
 }
 /*=====  End of Section Mediaquery comment block  ======*/
@@ -306,34 +320,9 @@ a:hover {
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
-@media (min-width: 1611px) and (max-width: 1630px) {
+@media (min-width: 1350px) and (max-width: 1630px) {
   .button {
     font-size: 1.22vw !important;
-  }
-}
-@media (min-width: 1401px) and (max-width: 1610px) {
-  .button {
-    font-size: 1.2vw !important;
-  }
-}
-@media (min-width: 1333px) and (max-width: 1400px) {
-  .button {
-    font-size: 1.22vw !important;
-  }
-}
-@media (min-width: 1200px) and (max-width: 1332px) {
-  .button {
-    font-size: 1.3vw !important;
-  }
-}
-@media (min-width: 1159px) and (max-width: 1199px) {
-  .button {
-    font-size: 1.35vw !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1158px) {
-  .button {
-    font-size: 1.4vw !important;
   }
 }
 .glide {
@@ -752,8 +741,8 @@ body main .order .card-collector .card-container .card .btn-primary {
   text-align: center;
 }
 body main .order .card-collector .card-container .col-xl-4 {
-  padding-right: 45px !important;
-  padding-left: 45px !important;
+  padding-right: 45px;
+  padding-left: 45px;
 }
 body main .order .card-collector .card-container .card {
   max-height: 550px;
