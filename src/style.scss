@@ -217,52 +217,53 @@ body {
         .personal {
             @include sezioni;
             background-color: map-get($color-map, primary_color);
+            
+            p {
+                font-size: 1.04rem;
+                font-family: "Open Sans", sans-serif;
+                color: map-get($color-map, text_color);
+                text-align: left;
+                line-height: 1.5;
+                margin: 0;
+                padding: 0;
+            }
 
             .publisher-title  {
                 @include shieldknot;
             }
 
-            .about {
+            #bio {
                 padding: 0 50px 0 50px;
 
                 img {
-                    max-width: 20vw;
+                    max-width: 17vw;
                     margin-right: 40px;
                     filter: grayscale(0%);
                 }
-                
-                p {
-                    font-family: "Open Sans", sans-serif;
-                    font-size: 1.04rem;
-                    text-align: left;
-                    line-height: 1.5;
-                    color: map-get($color-map, text_color);
-                }
 
-                .about-text > p:nth-child(3) {
-                    margin: 0;
+                p {
+                    align-self: center;
                 }
+            }
+
+            #middle {
+                padding: 50px 50px 0 50px;
+
 
             }
 
-            .news {
-               
+            #operas {
+                padding: 50px 50px 0 50px;
+
+                img {
+                    max-width: 21vw;
+                    margin-right: 40px;
+                    filter: grayscale(80%);
+                }
 
                 p {
-                    color: map-get($color-map, text_color);
-                    background-color: map-get($color-map, bg_card_color);
-                    padding: 30px;
-                    border-radius: 10px;
-                    font-family: "Open Sans", sans-serif;
-                    font-size: 1.04rem;
-                    text-align: left;
-                    line-height: 1.5;
-                    margin: 0 0 150px 0;
-                    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
-                    border: 1px solid map-get($color-map, background_color);
-                   
+                    height: max-content;
+                
                 }
             }
 
@@ -311,11 +312,32 @@ body {
                 }
             }
 
+            .news {
+
+                p {
+                    color: map-get($color-map, text_color);
+                    background-color: map-get($color-map, bg_card_color);
+                    padding: 30px;
+                    border-radius: 10px;
+                    font-family: "Open Sans", sans-serif;
+                    font-size: 1.04rem;
+                    text-align: left;
+                    line-height: 1.5;
+                    margin: 0 0 150px 0;
+                    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.25);
+                    border: 1px solid map-get($color-map, background_color);
+                   
+                }
+            }
+            
             .order-bar {
                 margin: 0;
                 padding: 0;
                 @include barra;
             }
+
 
             
         }  

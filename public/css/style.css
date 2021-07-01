@@ -765,6 +765,15 @@ body main .personal {
   padding: 0 0 45px 0;
   background-color: #303b2f;
 }
+body main .personal p {
+  font-size: 1.04rem;
+  font-family: "Open Sans", sans-serif;
+  color: floralwhite;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
 body main .personal .publisher-title .shield-wrap {
   text-align: center;
   margin-bottom: 75px;
@@ -783,36 +792,32 @@ body main .personal .publisher-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
-body main .personal .about {
+body main .personal #bio {
   padding: 0 50px 0 50px;
 }
-body main .personal .about img {
-  max-width: 20vw;
+body main .personal #bio img {
+  max-width: 17vw;
   margin-right: 40px;
   filter: grayscale(0%);
 }
-body main .personal .about p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.04rem;
-  text-align: left;
-  line-height: 1.5;
-  color: floralwhite;
+body main .personal #bio p {
+  align-self: center;
 }
-body main .personal .about .about-text > p:nth-child(3) {
-  margin: 0;
+body main .personal #middle {
+  padding: 50px 50px 0 50px;
 }
-body main .personal .news p {
-  color: floralwhite;
-  background-color: rgba(209, 191, 142, 0.2);
-  padding: 30px;
-  border-radius: 10px;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.04rem;
-  text-align: left;
-  line-height: 1.5;
-  margin: 0 0 150px 0;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
-  border: 1px solid #292929;
+body main .personal #operas {
+  padding: 50px 50px 0 50px;
+}
+body main .personal #operas img {
+  max-width: 21vw;
+  margin-right: 40px;
+  filter: grayscale(80%);
+}
+body main .personal #operas p {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 body main .personal .sponsor-title {
   padding: 0;
@@ -846,6 +851,19 @@ body main .personal .supporters img:hover {
 body main .personal .supporters .terloghi > img:nth-child(4) {
   position: relative;
   bottom: 2rem;
+}
+body main .personal .news p {
+  color: floralwhite;
+  background-color: rgba(209, 191, 142, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.04rem;
+  text-align: left;
+  line-height: 1.5;
+  margin: 0 0 150px 0;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #292929;
 }
 body main .personal .order-bar {
   margin: 0;
