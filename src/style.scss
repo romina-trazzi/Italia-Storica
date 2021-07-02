@@ -236,7 +236,7 @@ body {
                 padding: 0 50px 0 50px;
 
                 img {
-                    max-width: 17vw;
+                    width: 17vw;
                     margin-right: 40px;
                     filter: grayscale(0%);
                 }
@@ -256,9 +256,9 @@ body {
                 padding: 50px 50px 0 50px;
 
                 img {
-                    max-width: 21vw;
+                    width: 20vw;
                     margin-right: 40px;
-                    filter: grayscale(80%);
+                    filter: grayscale(80%) drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
                 }
 
                 p {

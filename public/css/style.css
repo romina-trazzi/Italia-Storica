@@ -216,7 +216,6 @@ label {
   padding: 0.5em 2em 0.55em;
   border-radius: 0.5em;
   letter-spacing: 1px;
-  white-space: pre-wrap;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
@@ -796,7 +795,7 @@ body main .personal #bio {
   padding: 0 50px 0 50px;
 }
 body main .personal #bio img {
-  max-width: 17vw;
+  width: 17vw;
   margin-right: 40px;
   filter: grayscale(0%);
 }
@@ -810,9 +809,9 @@ body main .personal #operas {
   padding: 50px 50px 0 50px;
 }
 body main .personal #operas img {
-  max-width: 21vw;
+  width: 20vw;
   margin-right: 40px;
-  filter: grayscale(80%);
+  filter: grayscale(80%) drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 body main .personal #operas p {
   height: -webkit-max-content;

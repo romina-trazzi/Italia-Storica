@@ -114,3 +114,35 @@
     padding-left: 0 !important;
   }
 }
+/*=============================================
+=            MAIN ROW PERSONAL MEDIAQUERY        =
+=============================================*/
+@media (max-width: 999px) {
+  main .personal #bio img {
+    display: none;
+  }
+  main .personal #middle {
+    padding: 0 50px 0 50px !important;
+  }
+  main .personal #operas img {
+    display: none;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1199px) {
+  main .personal #bio img {
+    display: block;
+    width: 20vw !important;
+  }
+  main .personal #operas img {
+    display: none;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1299px) {
+  main .personal #bio img {
+    display: block;
+    width: 20vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+  }
+}

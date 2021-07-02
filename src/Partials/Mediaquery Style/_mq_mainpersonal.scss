@@ -1,0 +1,72 @@
+/*=============================================
+=            MAIN ROW PERSONAL MEDIAQUERY        =
+=============================================*/
+
+
+
+// Immagini della bigrafia e delle opere
+@media (max-width: 999px) {
+    main {
+        .personal {
+            #bio {
+                img {
+                    display: none;
+                }
+            }
+
+            #middle {
+                padding: 0 50px 0 50px !important;
+            }
+
+            #operas {
+                img {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    main {
+        .personal {
+            #bio {
+                img {
+                    display: block;
+                    width: 20vw !important;
+                }
+            }
+
+            #operas {
+                img {
+                    display: none;
+                  
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    main {
+        .personal {
+            #bio {
+                img {
+                    display: block;
+                    width: 20vw !important;
+                }
+            }
+
+            #operas {
+                img {
+                    display: block;
+                  
+                }
+            }
+
+           
+        }
+    }
+}
