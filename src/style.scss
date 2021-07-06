@@ -277,19 +277,22 @@ body {
 
                 .loghi {
                     margin-top: 25px;
+                   
                 }
 
                 .secloghi {
                     padding-top: 50px;
+                    
                 }
                         
                 .terloghi {
                     padding-top: 50px;
                     padding-bottom: 130px;
+                   
                 }
 
                 img {
-                    width: 10%;
+                    width: 15%;
                     filter:grayscale(100%);
                     transform:scale(1);
                     transition: all 1s ease 0.2s;
@@ -308,7 +311,7 @@ body {
                 // Logo Italia Storica
                 .terloghi > img:nth-child(4) {
                     position: relative;
-                    bottom: 2rem;
+                    bottom: 2.1rem;
                 }
             }
 
