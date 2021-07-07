@@ -188,12 +188,12 @@ let app = new Vue ({
                 this.normalWidth = false;
                 this.duoWidth = false;
                 this.monoWidth = false;
-            } else if (this.windowWidth <= 991 && this.windowWidth >= 850) {
+            } else if (this.windowWidth >= 650 && this.windowWidth <= 991) {
                 this.duoWidth = true;
                 this.specialWidth = false;
                 this.normalWidth = false;
                 this.monoWidth = false;
-            } else if (this.windowWidth <= 849) {
+            } else if (this.windowWidth <= 649) {
                 this.monowidth = true;
                 this.normalWidth = false;
                 this.specialWidth = false;
