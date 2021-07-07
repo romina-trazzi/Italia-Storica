@@ -62,14 +62,16 @@ var app = new Vue({
       "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
     }],
     // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
-    windowWidth: 0
+    windowWidth: 0,
+
     /* Se fosse stato un oggetto con altezza e larghezza: 
     window: {
         width: 0,
         height: 0
         
     } */
-
+    normalWidth: true,
+    specialWidth: false
   },
 
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
@@ -147,9 +149,16 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
-      } // Salva in una variabile la HTML collection con classe card-text > .button orange 
-      // let column = document.get
+      } // Sezione del cambio template dei loghi
 
+
+      if (this.windowWidth <= 1050) {
+        this.specialWidth = true;
+        this.normalWidth = false;
+      } else {
+        this.specialWidth = false;
+        this.normalWidth = true;
+      }
     }
   }
 });

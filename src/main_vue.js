@@ -83,6 +83,9 @@ let app = new Vue ({
             
         } */
 
+        normalWidth: true,
+        specialWidth: false,
+
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
@@ -176,9 +179,15 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
 
-            // Salva in una variabile la HTML collection con classe card-text > .button orange 
-            // let column = document.get
+            // Sezione del cambio template dei loghi
 
+            if (this.windowWidth <= 1050) {
+                this.specialWidth = true;
+                this.normalWidth = false;
+            } else {
+                this.specialWidth = false;
+                this.normalWidth = true;
+            }
             
         },
 
