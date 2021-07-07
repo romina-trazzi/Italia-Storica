@@ -73,16 +73,16 @@
 
 // Loghi supporters
 
-@media (min-width: 1050px) and (max-width: 1300px) {
+@media (min-width: 1400px) and (max-width: 1550px) {
     main {
         .personal {
             .supporters {
                 img {
-                    width: 15% !important;
+                    width: 12% !important;
                 }
-                .terloghi > img:nth-child(4) {
+                .terloghi > img:nth-child(3) {
                     position: relative;
-                    bottom: 1.4rem !important;
+                    bottom: 1.5rem !important;
                 } 
             }
             
@@ -90,14 +90,14 @@
     }
 }
 
-@media (min-width: 700px) and (max-width: 1049px) {
+@media (min-width: 1150px) and (max-width: 1399px) {
     main {
         .personal {
             .supporters {
                 img {
-                    width: 15% !important;
+                    width: 14% !important;
                 }
-                .terloghi > img:nth-child(4) {
+                .terloghi > img:nth-child(3) {
                     position: relative;
                     bottom: 1rem !important;
                 } 
@@ -107,36 +107,53 @@
     }
 }
 
-// @media (min-width: 550px) and (max-width: 699px) {
-//     main {
-//         .personal {
-//             .supporters {
-//                 img {
-//                     width: 20% !important;
-//                 }
-//                 .terloghi > img:nth-child(4) {
-//                     position: relative;
-//                     bottom: 1rem !important;
-//                 } 
-//             }
+@media (min-width: 992px) and (max-width: 1149px) {
+    main {
+        .personal {
+            .supporters {
+                img {
+                    width: 16% !important;
+                }
+                .terloghi > img:nth-child(3) {
+                    position: relative;
+                    bottom: 1rem !important;
+                } 
+            }
             
-//         }
-//     }
-// }
+        }
+    }
+}
 
-// @media (min-width: 400px) and (max-width: 549px) {
-//     main {
-//         .personal {
-//             .supporters {
-//                 img {
-//                     width: 25% !important;
-//                 }
-//                 .terloghi > img:nth-child(4) {
-//                     position: relative;
-//                     bottom: 1rem !important;
-//                 } 
-//             }
+@media (min-width: 850px) and (max-width: 991px) {
+    main {
+        .personal {
+            .supporters {
+                img {
+                    min-width: 19% !important;
+                }
+                .terloghi > img:nth-child(2) {
+                    position: relative;
+                    bottom: 1rem !important;
+                } 
+            }
             
-//         }
-//     }
-// }
+        }
+    }
+}
+
+@media (min-width: 700px) and (max-width: 849px) {
+    main {
+        .personal {
+            .supporters {
+                img {
+                    width: 22% !important;
+                }
+                .terloghi > img:nth-child(2) {
+                    position: relative;
+                    bottom: 1rem !important;
+                } 
+            }
+            
+        }
+    }
+}

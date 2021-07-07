@@ -71,7 +71,9 @@ var app = new Vue({
         
     } */
     normalWidth: true,
-    specialWidth: false
+    specialWidth: false,
+    duoWidth: false,
+    monoWidth: false
   },
 
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
@@ -152,12 +154,26 @@ var app = new Vue({
       } // Sezione del cambio template dei loghi
 
 
-      if (this.windowWidth <= 1050) {
+      if (this.windowWidth >= 992 && this.windowWidth <= 1550) {
         this.specialWidth = true;
         this.normalWidth = false;
-      } else {
+        this.duoWidth = false;
+        this.monoWidth = false;
+      } else if (this.windowWidth <= 991 && this.windowWidth >= 850) {
+        this.duoWidth = true;
         this.specialWidth = false;
+        this.normalWidth = false;
+        this.monoWidth = false;
+      } else if (this.windowWidth <= 849) {
+        this.monowidth = true;
+        this.normalWidth = false;
+        this.specialWidth = false;
+        this.duoWidth = false;
+      } else {
         this.normalWidth = true;
+        this.specialWidth = false;
+        this.duoWidth = false;
+        this.monoWidth = false;
       }
     }
   }
