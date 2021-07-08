@@ -208,10 +208,13 @@
     flex-direction: column;
     justify-content: center;
   }
-  main .form .contatti_container .form-container form {
-    margin: 0;
+  main .form .contatti_container #form-container {
+    max-height: 650px !important;
   }
-  main .form .contatti_container .form-container #form-container i {
+  main .form .contatti_container #form-container form {
+    margin: 0 !important;
+  }
+  main .form .contatti_container #form-container i {
     margin: 0 !important;
   }
   main .form .contatti_container #map-container {

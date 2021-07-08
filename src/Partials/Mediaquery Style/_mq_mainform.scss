@@ -11,15 +11,17 @@
                 flex-direction: column;
                 justify-content: center;
 
-                .form-container {
+                #form-container {
+                    max-height: 650px !important;
                     form {
-                        margin: 0;
+                        margin: 0 !important;
+                       
                     }
-                    #form-container {
-                        i {
-                            margin: 0 !important;
-                        }
+                    
+                    i {
+                        margin: 0 !important;
                     }
+                    
                 }
 
                 #map-container {
