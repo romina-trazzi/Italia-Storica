@@ -930,7 +930,7 @@ body main .form .contatti_container .form-container {
   padding: 0;
 }
 body main .form .contatti_container .form-container form {
-  width: 45%;
+  width: 500px;
   height: 100%;
   margin-left: -115px;
 }
@@ -947,7 +947,7 @@ body main .form .contatti_container .form-container input, body main .form .cont
 body main .form .contatti_container .map-container {
   width: 100%;
   padding: 0;
-  align-items: center;
+  align-items: center !important;
   font-size: 1.04rem;
   margin-left: -170px;
 }

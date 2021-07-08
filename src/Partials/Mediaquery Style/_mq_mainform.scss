@@ -1,0 +1,33 @@
+/*=============================================
+=            MAIN ROW FORM MEDIAQUERY        =
+=============================================*/
+
+// Form e mappa
+
+@media (max-width: 1550px) {
+    main {
+        .form {
+            .contatti_container {
+                flex-direction: column;
+                justify-content: center;
+
+                .form-container {
+                    form {
+                        margin: 0 !important;
+                    }
+                    #form-container {
+                        i {
+                            margin: 0 !important;
+                        }
+                    }
+                }
+
+                #map-container {
+                    margin: 0 !important;
+
+                }
+            }
+        }
+    }
+
+}

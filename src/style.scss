@@ -375,7 +375,7 @@ body {
                     padding: 0;
 
                     form {
-                        width: 45%;
+                        width: 500px;
                         height: 100%;
                         margin-left: -115px;
                     }
@@ -398,7 +398,7 @@ body {
                 .map-container {
                     width: 100%;
                     padding: 0;
-                    align-items: center;
+                    align-items: center !important;
                     font-size: 1.04rem;
                     margin-left: -170px;
                 

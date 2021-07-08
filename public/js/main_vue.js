@@ -174,6 +174,30 @@ var app = new Vue({
         this.specialWidth = false;
         this.duoWidth = false;
         this.monoWidth = false;
+      } // Sezione form
+
+
+      var map = document.getElementById("map_container");
+      var form = document.getElementById("form_container");
+      /* Se la larghezza dello schermo è uguale o inferiore di 1550px
+      aggiungi la classe col-lg-12
+      se c'è, rimuovi la classe col-lg-8
+      */
+
+      if (this.windowWidth >= 1550) {
+        map.classList.add("col-lg-12");
+        form.classList.add("col-lg-12");
+        map.classList.toggle("col-lg-4", false);
+        form.classList.toggle("col-lg-8", false);
+        /* Altrimenti, se larghezza dello schermo è maggiore di 1550px
+        aggiungi la classe col-lg-8
+        se c'è, rimuovi la classe col-lg-12
+        */
+      } else {
+        map.classList.add("col-lg-8");
+        form.classList.add("col-lg-8");
+        map.classList.toggle("col-lg-4", false);
+        column.classList.toggle("col-lg-8", false);
       }
     }
   }

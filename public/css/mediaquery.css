@@ -114,9 +114,9 @@
     padding-left: 0 !important;
   }
 }
-/*=============================================
+/*================================================
 =            MAIN ROW PERSONAL MEDIAQUERY        =
-=============================================*/
+=================================================*/
 @media (max-width: 999px) {
   main .personal #bio img {
     display: none;
@@ -198,5 +198,23 @@
   main .personal .supporters .terloghi > img:nth-child(2) {
     position: relative;
     bottom: 1rem !important;
+  }
+}
+/*=============================================
+=            MAIN ROW FORM MEDIAQUERY        =
+=============================================*/
+@media (max-width: 1550px) {
+  main .form .contatti_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .form .contatti_container .form-container form {
+    margin: 0 !important;
+  }
+  main .form .contatti_container .form-container #form-container i {
+    margin: 0 !important;
+  }
+  main .form .contatti_container #map-container {
+    margin: 0 !important;
   }
 }
