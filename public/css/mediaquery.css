@@ -203,16 +203,17 @@
 /*=============================================
 =            MAIN ROW FORM MEDIAQUERY        =
 =============================================*/
-@media (max-width: 1550px) {
+@media (max-width: 1650px) {
+  main .form .help {
+    padding-bottom: 60px !important;
+  }
   main .form .contatti_container {
     flex-direction: column;
     justify-content: center;
   }
-  main .form .contatti_container #form-container {
-    max-height: 650px !important;
-  }
   main .form .contatti_container #form-container form {
-    margin: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 100px;
   }
   main .form .contatti_container #form-container i {
     margin: 0 !important;

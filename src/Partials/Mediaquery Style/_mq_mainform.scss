@@ -4,17 +4,23 @@
 
 // Form e mappa
 
-@media (max-width: 1550px) {
+@media (max-width: 1650px) {
     main {
         .form {
+
+            .help {
+                padding-bottom: 60px !important;
+            }
+
             .contatti_container {
                 flex-direction: column;
                 justify-content: center;
 
                 #form-container {
-                    max-height: 650px !important;
+                   
                     form {
-                        margin: 0 !important;
+                        margin-left: 0 !important;
+                        margin-bottom: 100px;
                        
                     }
                     

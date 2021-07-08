@@ -924,6 +924,7 @@ body main .form .help p {
 }
 body main .form .contatti_container {
   padding: 0;
+  height: 100%;
 }
 body main .form .contatti_container #form-container {
   width: 100%;
@@ -931,8 +932,8 @@ body main .form .contatti_container #form-container {
 }
 body main .form .contatti_container #form-container form {
   width: 500px;
-  height: 100%;
   margin-left: -115px;
+  max-height: 450px !important;
 }
 body main .form .contatti_container #form-container i {
   font-size: 5rem;
@@ -945,11 +946,15 @@ body main .form .contatti_container #form-container input, body main .form .cont
   padding: 8px;
 }
 body main .form .contatti_container #map-container {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 100%;
   padding: 0;
   align-items: center !important;
   font-size: 1.04rem;
   margin-left: -170px;
+  max-height: 500px;
 }
 body main .form .contatti_container #map-container .map_responsive {
   overflow: hidden;

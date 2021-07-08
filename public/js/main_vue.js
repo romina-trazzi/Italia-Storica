@@ -184,7 +184,7 @@ var app = new Vue({
       se c'è, rimuovi la classe col-lg-8 da form e classe col-lg-4 da map
       */
 
-      if (this.windowWidth <= 1550) {
+      if (this.windowWidth <= 1650) {
         form.classList.add("col-lg-12");
         form.classList.toggle("col-lg-8", false);
         map.classList.add("col-lg-12");
