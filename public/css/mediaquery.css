@@ -209,7 +209,7 @@
     justify-content: center;
   }
   main .form .contatti_container .form-container form {
-    margin: 0 !important;
+    margin: 0;
   }
   main .form .contatti_container .form-container #form-container i {
     margin: 0 !important;

@@ -925,46 +925,46 @@ body main .form .help p {
 body main .form .contatti_container {
   padding: 0;
 }
-body main .form .contatti_container .form-container {
+body main .form .contatti_container #form-container {
   width: 100%;
   padding: 0;
 }
-body main .form .contatti_container .form-container form {
+body main .form .contatti_container #form-container form {
   width: 500px;
   height: 100%;
   margin-left: -115px;
 }
-body main .form .contatti_container .form-container i {
+body main .form .contatti_container #form-container i {
   font-size: 5rem;
   padding-bottom: 40px;
   margin-left: -100px;
 }
-body main .form .contatti_container .form-container input, body main .form .contatti_container .form-container textarea {
+body main .form .contatti_container #form-container input, body main .form .contatti_container #form-container textarea {
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
 }
-body main .form .contatti_container .map-container {
+body main .form .contatti_container #map-container {
   width: 100%;
   padding: 0;
   align-items: center !important;
   font-size: 1.04rem;
   margin-left: -170px;
 }
-body main .form .contatti_container .map-container .map_responsive {
+body main .form .contatti_container #map-container .map_responsive {
   overflow: hidden;
   justify-content: center;
   position: relative;
 }
-body main .form .contatti_container .map-container .map_responsive iframe {
+body main .form .contatti_container #map-container .map_responsive iframe {
   height: 100%;
   width: 0%;
   position: absolute;
 }
-body main .form .contatti_container .map-container .icons-container {
+body main .form .contatti_container #map-container .icons-container {
   margin-top: 70px;
 }
-body main .form .contatti_container .map-container .icons-container p {
+body main .form .contatti_container #map-container .icons-container p {
   margin: 0;
   width: 100%;
 }

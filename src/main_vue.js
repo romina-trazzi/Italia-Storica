@@ -205,30 +205,31 @@ let app = new Vue ({
                 this.monoWidth = false;
             }
 
+
             // Sezione form
-            let map = document.getElementById("map_container");
-            let form = document.getElementById("form_container");
+            let map = document.getElementById("map-container");
+            let form = document.getElementById("form-container");
 
             /* Se la larghezza dello schermo è uguale o inferiore di 1550px
-            aggiungi la classe col-lg-12
-            se c'è, rimuovi la classe col-lg-8
+            aggiungi la classe col-lg-12 a form e map
+            se c'è, rimuovi la classe col-lg-8 da form e classe col-lg-4 da map
             */
-            if (this.windowWidth >= 1550) {
-                map.classList.add("col-lg-12");
+            if (this.windowWidth <= 1550) {
                 form.classList.add("col-lg-12");
-                map.classList.toggle("col-lg-4", false);
                 form.classList.toggle("col-lg-8", false);
+                map.classList.add("col-lg-12");
+                map.classList.toggle("col-lg-4", false);
 
             /* Altrimenti, se larghezza dello schermo è maggiore di 1550px
-            aggiungi la classe col-lg-8
-            se c'è, rimuovi la classe col-lg-12
+            aggiungi le classi col-lg-8 a form e col-lg-4 a map
+            se c'è, rimuovi la classe col-lg-12 a entrambi
             */
 
             } else {
-                map.classList.add("col-lg-8");
                 form.classList.add("col-lg-8");
-                map.classList.toggle("col-lg-4", false);
-                column.classList.toggle("col-lg-8", false);
+                form.classList.toggle("col-lg-12", false);
+                map.classList.add("col-lg-4");
+                map.classList.toggle("col-lg-12", false);
             }
 
             
