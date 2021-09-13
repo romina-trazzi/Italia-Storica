@@ -94,14 +94,23 @@
                 
             }
 
-            #map-container {
-                margin: 0 !important;
-
-            }
-            
         }
     }
 
 }
 
 
+@media  (max-width: 649px) {
+    main {
+        .form {
+            #map-container {
+                iframe {
+
+                    display: none !important;
+                }
+            }
+            
+        }
+    }
+
+}
