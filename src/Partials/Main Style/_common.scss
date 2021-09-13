@@ -92,7 +92,7 @@ $color-map: (
 @mixin descrizioni {
     .book_details {
         padding-left: 50px;
-        padding-bottom: 50px;
+        
     }
 
     .book_details  div {
@@ -294,7 +294,7 @@ $color-map: (
 @media (max-width: 439px) {
     .shield-wrap::before, .shield-wrap::after {
 
-        max-width: 10.5rem !important;
+        max-width: 5.5rem !important;
 
     }
 }
@@ -345,6 +345,9 @@ $color-map: (
     }
 
 }
+
+
+
 
 
 // Card (verticali, da 992 px fino a 440px)

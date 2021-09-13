@@ -2,37 +2,137 @@
 =            MAIN ROW CORE MEDIAQUERY        =
 =============================================*/
 
+// Distacco da steelbar schermo piccolo
+@media (max-width: 375px) {
+  main {
+    .core {
+      margin: 150px 0 0 0 !important;
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 474px) {
+  main {
+    .core {
+      margin: 120px 0 0 0 !important;
+    }
+  }
+}
+
 
 
 // Copertina libri
 @media (max-width: 1550px) {
     main {
       .core {
+        .book-main {
           .glide {
-              img {
-                min-height: 550px !important; 
-              }
+            img {
+              min-height: 550px; 
+            }
           }
+
+          .book_details {
+            max-height: 550px;
+          }
+
+          #book_details {
+            max-height: 550px;
+          }
+        }
+
+        .book-second_row {
+          .button {
+            font-size: 1.1vw !important;
+            margin-top: 10px;
+          }
+        }
+
+
       }
     }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1428px) {
     main {
       .core {
-          .glide {
-              img {
-                min-height: 500px !important; 
-              }
+        .glide {
+          img {
+            min-height: 500px !important; 
           }
+        }
+
+        .book_details {
+          max-height: 500px !important;
+        }
+
+        #book_details {
+          max-height: 500px;
+        }
       }
     }
 }
 
+@media (max-width: 534px) {
+  main {
+    .core {
+      // margin-bottom: 380% !important; 
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      .glide {
+        img {
+          min-height: 400px !important; 
+        }
+      }
 
-// Descrizione libri 
-@media (min-width: 450px) and (max-width: 1200px) {
-    .book_details {
-        padding-left: 0 !important;
+      .book_details {
+        padding-left: 0px !important;
+      }
     }
+  }
 }
+
+
+
+
+
+// Bottoni libri
+@media (max-width: 799px) {
+  main {
+    .core {
+      .glide {
+       .glide__arrows {
+         display: none !important;
+        }
+
+      }
+    }
+  }
+}
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Descrizione libri 
+// @media (min-width: 450px) and (max-width: 1200px) {
+//   .book_details {
+//     padding-left: 0 !important;
+//   }
+// }

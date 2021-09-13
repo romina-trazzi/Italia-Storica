@@ -2,7 +2,10 @@
 /*=============================================
 =            HEADER MEDIA QUERY         =
 =============================================*/
-@media (min-width: 830px) and (max-width: 992px) {
+@media (min-width: 350px) and (max-width: 599px) {
+  header .navbar {
+    font-size: 0.7rem !important;
+  }
   header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
     display: none;
   }
@@ -10,7 +13,7 @@
     display: none;
   }
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 600px) and (max-width: 1200px) {
   header .navbar {
     font-size: 1rem !important;
   }
@@ -31,9 +34,9 @@
     font-size: 0.9rem !important;
   }
 }
-@media (min-width: 1380px) {
-  header .navbar {
-    font-size: 1rem !important;
+@media (max-width: 415px) {
+  header .navbar .icons > span:nth-child(8) {
+    display: none;
   }
 }
 @media (max-width: 550px) {
@@ -42,20 +45,6 @@
   }
 }
 @media (max-width: 659px) {
-  header .navbar {
-    font-size: 0.7rem !important;
-  }
-  header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
-    display: none;
-  }
-  header .navbar .social span {
-    display: none;
-  }
-}
-@media (min-width: 660px) and (max-width: 829px) {
-  header .navbar {
-    font-size: 0.7rem !important;
-  }
   header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
     display: none;
   }
@@ -64,9 +53,6 @@
   }
 }
 @media (max-width: 623px) {
-  header .navbar .icons {
-    font-size: 0.8rem;
-  }
   header .my_jumbotron div:nth-child(1) {
     height: inherit;
     width: 100%;
@@ -99,21 +85,58 @@
 /*=============================================
 =            MAIN ROW CORE MEDIAQUERY        =
 =============================================*/
-@media (max-width: 1550px) {
-  main .core .glide img {
-    min-height: 550px !important;
+@media (max-width: 375px) {
+  main .core {
+    margin: 150px 0 0 0 !important;
   }
 }
-@media (max-width: 1300px) {
+@media (min-width: 376px) and (max-width: 474px) {
+  main .core {
+    margin: 120px 0 0 0 !important;
+  }
+}
+@media (max-width: 1550px) {
+  main .core .book-main .glide img {
+    min-height: 550px;
+  }
+  main .core .book-main .book_details {
+    max-height: 550px;
+  }
+  main .core .book-main #book_details {
+    max-height: 550px;
+  }
+  main .core .book-second_row .button {
+    font-size: 1.1vw !important;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 1428px) {
   main .core .glide img {
     min-height: 500px !important;
   }
-}
-@media (min-width: 450px) and (max-width: 1200px) {
-  .book_details {
-    padding-left: 0 !important;
+  main .core .book_details {
+    max-height: 500px !important;
+  }
+  main .core #book_details {
+    max-height: 500px;
   }
 }
+@media (max-width: 534px) {
+  main .core .glide img {
+    min-height: 400px !important;
+  }
+  main .core .book_details {
+    padding-left: 0px !important;
+  }
+}
+@media (max-width: 799px) {
+  main .core .glide .glide__arrows {
+    display: none !important;
+  }
+}
+/*=============================================
+=            MAIN ROW ORDER MEDIAQUERY        =
+=============================================*/
 /*================================================
 =            MAIN ROW PERSONAL MEDIAQUERY        =
 =================================================*/
@@ -203,7 +226,7 @@
 /*=============================================
 =            MAIN ROW FORM MEDIAQUERY        =
 =============================================*/
-@media (max-width: 1650px) {
+@media (min-width: 750px) and (max-width: 1650px) {
   main .form .help {
     padding-bottom: 60px !important;
   }
@@ -219,6 +242,38 @@
     margin: 0 !important;
   }
   main .form .contatti_container #map-container {
+    margin: 0 !important;
+  }
+}
+@media (min-width: 350px) and (max-width: 749px) {
+  main .form .help {
+    padding-bottom: 60px !important;
+  }
+  main .form .contatti_container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  main .form .contatti_container #form-container form {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+  main .form .contatti_container #form-container i {
+    margin: 0 !important;
+  }
+  main .form .contatti_container #map-container {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 749px) {
+  main .form #form-container form {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+    width: 75% !important;
+  }
+  main .form #form-container i {
+    margin: 0 !important;
+  }
+  main .form #map-container {
     margin: 0 !important;
   }
 }

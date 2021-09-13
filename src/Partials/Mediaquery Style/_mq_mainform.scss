@@ -4,7 +4,7 @@
 
 // Form e mappa
 
-@media (max-width: 1650px) {
+@media (min-width: 750px) and (max-width: 1650px) {
     main {
         .form {
 
@@ -39,3 +39,69 @@
     }
 
 }
+
+@media (min-width: 350px) and (max-width: 749px) {
+    main {
+        .form {
+
+            .help {
+                padding-bottom: 60px !important;
+            }
+
+            .contatti_container {
+                flex-direction: column;
+                justify-content: center;
+
+                #form-container {
+                   
+                    form {
+                        margin-left: 0 !important;
+                        margin-bottom: 100px;
+                    }
+                    
+                    i {
+                        margin: 0 !important;
+                    }
+                    
+                }
+
+                #map-container {
+                    margin: 0 !important;
+
+                }
+            }
+        }
+    }
+
+}
+
+
+@media  (max-width: 749px) {
+    main {
+        .form {
+
+            #form-container {
+                
+                form {
+                    margin-left: 0 !important;
+                    margin-bottom: 100px;
+                    width: 75% !important;
+                }
+                
+                i {
+                    margin: 0 !important;
+                }
+                
+            }
+
+            #map-container {
+                margin: 0 !important;
+
+            }
+            
+        }
+    }
+
+}
+
+

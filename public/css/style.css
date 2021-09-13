@@ -106,7 +106,7 @@
 }
 @media (max-width: 439px) {
   .shield-wrap::before, .shield-wrap::after {
-    max-width: 10.5rem !important;
+    max-width: 5.5rem !important;
   }
 }
 @media (max-width: 1571px) {
@@ -424,7 +424,7 @@ a:hover {
 .glide__bullets {
   position: absolute;
   z-index: 2;
-  bottom: -2rem;
+  bottom: -4vh;
   left: 50%;
   display: inline-flex;
   cursor: pointer;
@@ -464,14 +464,6 @@ a:hover {
   cursor: default !important;
 }
 
-@media (min-width: 1550px) and (max-width: 1700px) {
-  .glide--left {
-    left: 15rem;
-  }
-  .glide--right {
-    right: 15rem;
-  }
-}
 .glide {
   position: initial;
   display: flex;
@@ -479,7 +471,7 @@ a:hover {
 }
 
 .glide img {
-  min-height: 600px;
+  min-height: 580px;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -652,11 +644,10 @@ body main .core .fade-move {
 body main .core .book-main {
   margin: 0;
   width: 100%;
-  min-height: 660px;
+  max-height: 660px;
 }
 body main .core .book-main .book_details {
   padding-left: 50px;
-  padding-bottom: 50px;
 }
 body main .core .book-main .book_details div {
   font-family: "Open Sans", sans-serif;
@@ -681,13 +672,16 @@ body main .core .book-main .book_details div #about {
   text-transform: none;
   margin: 20px 0 20px 0;
 }
-body main .core .book-main .order-css {
+body main .core .book-main .book_description #book_details {
+  margin: 0px;
+}
+body main .core .book-main .book_description .order-css {
   padding-top: 115px !important;
 }
 body main .core .book-second_row {
   width: 100%;
   height: 100%;
-  margin: 0;
+  margin: 15px 0 0 0;
 }
 body main .core .book-second_row #buy {
   font-family: "Oswald", sans-serif;

@@ -51,7 +51,7 @@
   &#{$se}bullets {
     position: absolute;
     z-index: 2;
-    bottom: -2rem;
+    bottom: -4vh;
     left: 50%;
     display: inline-flex;
     cursor: pointer;
@@ -104,23 +104,23 @@
 
 
 
-@media (min-width: 1550px) and (max-width: 1700px) { 
+// @media (min-width: 1550px) and (max-width: 1700px) { 
 
-  .#{$glide-class} {
-    $this:&;
+//   .#{$glide-class} {
+//     $this:&;
   
-    $se: $glide-element-separator;
-    $sm: $glide-modifier-separator;
+//     $se: $glide-element-separator;
+//     $sm: $glide-modifier-separator;
 
-    &#{$sm}left {
-      left: 15rem;
-    }
+//     &#{$sm}left {
+//       left: 15rem;
+//     }
 
-    &#{$sm}right {
-      right: 15rem;
-    }
+//     &#{$sm}right {
+//       right: 15rem;
+//     }
 
 
-  }
+//   }
 
-}
+// }

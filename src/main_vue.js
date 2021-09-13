@@ -88,6 +88,9 @@ let app = new Vue ({
         duoWidth: false,
         monoWidth: false,
 
+        // Proprietà larghezza bookDetails
+        bookDetails: 0,
+
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
@@ -96,6 +99,9 @@ let app = new Vue ({
     mounted() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
+
+        window.addEventListener('resize', this.bookDetailsResize);
+        this.bookDetailsResize();
     },
 
     destroyed() {
@@ -152,26 +158,35 @@ let app = new Vue ({
         handleResize () {
             this.windowWidth = window.screen.width;
         },
-    },
 
+        // Salva il valore di larghezza della classe bookDetails
+        bookDetailsResize () {
+            let bd = document.getElementById('book_details');
+            let bdWidth = bd.getBoundingClientRect().width;
+            this.bookDetails = bdWidth;
+        }
+    },
+    
+    
+    
     watch: {
         
-        // Quando il valore di windowWidth cambia fai partire questa funzione
+        // Quando il valore di windowWidth cambia, fai partire questa funzione
         windowWidth: function () {
-
+            
             // Salva in una variabile l'elemento HTML che ha id book_change
             let column = document.getElementById("book_change");
-
-            /* Se la larghezza dello schermo è uguale o inferiore di 1200px
+            
+            /* Se la larghezza dello schermo è uguale o inferiore di 1500px
             aggiungi le classi order-last e order-css
             se c'è, rimuovi la classe order-first
             */
-            if (this.windowWidth <= 1199) {
+            if (this.windowWidth <= 1200) {
                 column.classList.add("order-last");
                 column.classList.add("order-css");
                 column.classList.toggle("order-first", false);
             
-            /* Altrimenti, se larghezza dello schermo è maggiore di 1200px
+            /* Altrimenti, se larghezza dello schermo è maggiore di 1500px
             aggiungi la classe order-first
             se c'è, rimuovi le classi order-last e order-css
             */
@@ -234,6 +249,29 @@ let app = new Vue ({
 
             
         },
+
+
+        // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
+        bookDetails: function() {
+            
+            // Seleziona l'altezza dell'immagine di copertina
+            let cover = document.querySelector('.glide__slide--active');
+            let coverHeight = cover.getBoundingClientRect().height;
+
+            // Seleziona l'altezza di bookDetails
+            let bd = document.getElementById('book_details');
+            let bdHeight = bd.getBoundingClientRect().height;
+            
+            console.log(coverHeight);
+            console.log(bdHeight);
+
+            // Cambia l'altezza corrente con l'altezza di bookDetails
+            if (bdHeight !== coverHeight) {
+                bdHeight == coverHeight
+            };
+        }
+
+
 
       
     }

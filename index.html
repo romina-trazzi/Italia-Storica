@@ -2,11 +2,11 @@
 <html lang="it">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description"
-    content="L'Associazione Culturale “ITALIA Storica” con sede a Genova, ha per oggetto lo studio, la diffusione e l'​approfondimento della storia militare. Novità, contatti e catalogo delle pubblicazioni.">
+  <meta name="description" content="L'Associazione Culturale “ITALIA Storica” con sede a Genova, ha per oggetto lo studio, la diffusione e l'​approfondimento della storia militare. Novità, contatti e catalogo delle pubblicazioni.">
   <!-- Meta tag descrizione Google search -->
   <meta name="keyword" content="libri, editoria, storia militare, guerra, guerra mondiale">
   <meta name="author" content="Romina Trazzi">
@@ -14,12 +14,10 @@
   <title>Italia Storica - Edizioni storico-militari </title>
 
   <!-- Favicon -->
-  <link rel="icon" href="https://iconifier.net/iconified/20210617041034_shield%20knot/favicon.ico"
-    sizes="16x16 32x32 64x64">
+  <link rel="icon" href="https://iconifier.net/iconified/20210617041034_shield%20knot/favicon.ico" sizes="16x16 32x32 64x64">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Custom styles for this website -->
 
@@ -29,9 +27,7 @@
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&display=swap">
 
 </head>
 
@@ -43,25 +39,38 @@
 
       <!-- Navbar -->
       <div class="navbar d-flex justify-content-center align-items-center">
-
+        
+        <!-- Navbar dx -->
         <div class="d-flex justify-content-start align-items-center icons">
           <i class="icon fas fa-map-marker-alt"></i> <span> via Onorato 9/18, 16144 Genova </span> <br>
-          <i class="icon far fa-envelope"></i> <span> <a href="mailto:italiastorica@hotmail.com"
-              class="my_links">italiastorica@hotmail.com</a> </span> <br>
+          <i class="icon far fa-envelope"></i> 
+          <span> 
+            <a href="mailto:italiastorica@hotmail.com" class="my_links">italiastorica@hotmail.com</a> 
+          </span> <br>
           <i class="icon fa fa-phone"></i> <span> 010 8983461 </span>
         </div>
+        <!--/ Navbar dx -->
 
-
+        <!-- Navbar sx -->
         <div class="d-flex justify-content-end align-items-center social">
-          <a href="https://www.facebook.com/italiastoricaedizioni" class="my_links"> <i
-              class="icon fab fa-facebook-square"></i> <span>italiastoricaedizioni</span> </a> <br>
-          <a href="indirizzo instagram" class="my_links"> <i class="icon fab fa-instagram"></i>
-            <span>italia_storica</span> </a> <br>
-          <a href="https://t.me/italia_storica" class="my_links"> <i class="icon fab fab fa-telegram"></i>
-            <span>italia_storica</span> </a> <br>
-          <a href="https://associazioneitalia.blogspot.com/2020/?m=0" class="my_links"> <i
-              class="icon fab fas fa-blog"></i> <span>associazioneitalia</span></a>
+          <a href="https://www.facebook.com/italiastoricaedizioni" class="my_links"> 
+            <i class="icon fab fa-facebook-square"></i> 
+            <span>italiastoricaedizioni</span> 
+          </a> <br>
+          <a href="indirizzo instagram" class="my_links"> 
+            <i class="icon fab fa-instagram"></i>
+            <span>italia_storica</span> 
+          </a> <br>
+          <a href="https://t.me/italia_storica" class="my_links"> 
+            <i class="icon fab fab fa-telegram"></i>
+            <span>italia_storica</span> 
+          </a> <br>
+          <a href="https://associazioneitalia.blogspot.com/2020/?m=0" class="my_links"> 
+            <i class="icon fab fas fa-blog"></i> 
+            <span>associazioneitalia</span>
+          </a>
         </div>
+        <!-- / Navbar sx -->
 
       </div>
       <!-- / Navbar -->
@@ -118,7 +127,7 @@
 
                   <!-- Transition dei dettagli dei libri -->
                   <transition-group name="fade" mode="out-in" appear>
-                    <div v-bind:key="libri[counter]">
+                    <div v-bind:key="libri[counter]" id="book_details">
 
                       <span>Titolo:</span> {{ libri[counter].titolo }} <br>
                       <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} <br>
@@ -128,8 +137,9 @@
                       <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
 
                     </div>
-                    </transition>
-                    <!-- / Transition dei dettagli dei libri -->
+                  </transition>
+                  <!-- / Transition dei dettagli dei libri -->
+               
                 </div>
 
               </div>

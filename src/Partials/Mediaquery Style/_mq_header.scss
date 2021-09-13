@@ -2,13 +2,13 @@
 =            HEADER MEDIA QUERY         =
 =============================================*/
 
-
-
 // Navbar
-@media (min-width: 830px) and (max-width: 992px) {
+
+@media (min-width: 350px) and (max-width: 599px) {  
     header {
         .navbar {
-            
+            font-size: 0.7rem !important;
+
             .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
                 display: none;
             }
@@ -16,11 +16,13 @@
             .social span {
                 display: none;
             }
+        
+           
         }
     }
 }
-
-@media (min-width: 992px) and (max-width: 1200px) { 
+   
+@media (min-width: 600px) and (max-width: 1200px) { 
     
     header {
         .navbar {
@@ -52,18 +54,22 @@
     }
 }
 
-@media (min-width: 1380px) { 
 
+// Navbar icons
+
+@media (max-width: 415px) {  
     header {
-       
         .navbar {
-            font-size: 1rem !important;
+            
+            .icons > span:nth-child(8) {
+                display: none;
+            }
+         
         }
+
     }
 }
 
-
-// Navbar icons
 @media (max-width: 550px) {  
     header {
         .navbar {
@@ -74,14 +80,12 @@
          
         }
 
-        
     }
 }
 
 @media (max-width: 659px) {  
     header {
         .navbar {
-            font-size: 0.7rem !important;
             
             .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
                 display: none;
@@ -97,39 +101,13 @@
     }
 }
 
-@media (min-width: 660px) and (max-width: 829px) {  
-    header {
-        .navbar {
-            font-size: 0.7rem !important;
-            
-            .icons > span:nth-child(2), .icons i.icon.fas.fa-map-marker-alt {
-                display: none;
-            }
-            
-            .social span {
-                display: none;
-            }
-            
-        }
-    }
-
-
-
-}
 
 
 // Jumbotron title
+
 @media (max-width: 623px) {
    
     header {
-
-        .navbar {
-            
-            .icons {
-
-                font-size: 0.8rem;
-            } 
-        }
 
         .my_jumbotron {
             
@@ -150,14 +128,14 @@
                     top: 29% !important;
                 }
             }
-        }
-
-        
+        }   
     }
 }
 
 
+
 // Steel bar
+
 @media (max-width: 1700px) { 
 
     header {

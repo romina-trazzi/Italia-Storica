@@ -153,11 +153,18 @@ body {
                 @include descrizioni;
                 margin: 0;
                 width: 100%;
-                min-height: 660px;
+                max-height: 660px;
 
-                // Classe che si attiva se la dimensione schermo è < 1200px
-                .order-css {
-                    padding-top: 115px !important;
+                .book_description {
+
+                    #book_details {
+                        margin: 0px;
+                    }
+
+                    // Classe che si attiva se la dimensione schermo è < 1200px
+                    .order-css {
+                        padding-top: 115px !important;
+                    }
                 }
             
                  
@@ -166,7 +173,8 @@ body {
             .book-second_row {
                 width: 100%;
                 height: 100%;
-                margin: 0;
+                margin: 15px 0 0 0;
+
                 #buy {
                     font-family: "Oswald", sans-serif;
                     color: map-get($color-map, text_color);
@@ -377,7 +385,6 @@ body {
 
                     form {
                         width: 500px;
-                        // height: 100%;
                         margin-left: -115px;
                         max-height: 450px !important;
                     }
