@@ -93,8 +93,6 @@
 
 
 
-
-
 // Bottoni libri
 @media (max-width: 799px) {
   main {
@@ -108,23 +106,13 @@
     }
   }
 }
-      
 
 
+// Descrizione libri 
+@media (max-width: 1200px) {
+  .book_details {
+    padding-left: 0 !important;
+    padding-top: 130px !important;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-// // Descrizione libri 
-// @media (min-width: 450px) and (max-width: 1200px) {
-//   .book_details {
-//     padding-left: 0 !important;
-//   }
-// }
