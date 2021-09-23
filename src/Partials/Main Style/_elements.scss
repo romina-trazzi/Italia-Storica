@@ -240,15 +240,10 @@ a:hover {
 
 // Button
 
-@media (min-width: 1601px) {
 
-    .button {
-        font-size: 1.22vw !important;
-        
-    }
-}
+// Card orizzontali
 
-@media (min-width: 1300px) and (max-width: 1600px) {
+@media (min-width: 1300px) and (max-width: 1500px) {
 
     .button {
         font-size: 1.3vw !important;
@@ -263,11 +258,13 @@ a:hover {
     }
     
     .col-xl-4:first-child .button, .col-xl-4:last-child .button {
-        white-space: pre-line !important; 
+        white-space: normal !important; 
     }
 }   
 
-@media (min-width: 580px) {
+// Card vertcali
+
+@media (min-width: 580px) and (max-width: 991px) {
 
     .button {
         padding: 0.5em 2em 0.55em;

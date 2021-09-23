@@ -109,7 +109,17 @@
     max-width: 5.5rem !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1600px) {
+@media (min-width: 1023px) {
+  .col-xl-4 {
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+
+  .card {
+    height: 510px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1022px) {
   .col-xl-4 {
     padding-left: 25px !important;
     padding-right: 25px !important;
@@ -319,12 +329,7 @@ a:hover {
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
-@media (min-width: 1601px) {
-  .button {
-    font-size: 1.22vw !important;
-  }
-}
-@media (min-width: 1300px) and (max-width: 1600px) {
+@media (min-width: 1300px) and (max-width: 1500px) {
   .button {
     font-size: 1.3vw !important;
   }
@@ -335,10 +340,10 @@ a:hover {
   }
 
   .col-xl-4:first-child .button, .col-xl-4:last-child .button {
-    white-space: pre-line !important;
+    white-space: normal !important;
   }
 }
-@media (min-width: 580px) {
+@media (min-width: 580px) and (max-width: 991px) {
   .button {
     padding: 0.5em 2em 0.55em;
   }

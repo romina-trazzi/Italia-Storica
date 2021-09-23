@@ -302,7 +302,19 @@ $color-map: (
 
 // Card (orizzontali, da a 992 px in poi)
 
-@media (min-width: 992px) and (max-width: 1600px) {
+@media (min-width: 1023px) {
+    .col-xl-4 {
+        padding-left: 25px !important; 
+        padding-right: 25px !important; 
+    }
+
+    .card {
+        height: 510px !important;
+    }
+}
+
+
+@media (min-width: 992px) and (max-width: 1022px) {
     .col-xl-4 {
         padding-left: 25px !important; 
         padding-right: 25px !important; 
