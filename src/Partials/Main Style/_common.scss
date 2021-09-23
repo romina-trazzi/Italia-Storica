@@ -386,7 +386,13 @@ $color-map: (
 }
 
 
+// Titoli principali (class .my_title)
 
+@media (max-width: 400px) {
+    .my_title {
+        font-size: 3.5rem !important;
+    }
+}
 
 
 

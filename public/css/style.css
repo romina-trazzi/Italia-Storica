@@ -167,6 +167,11 @@
     font-size: 1.3rem !important;
   }
 }
+@media (max-width: 400px) {
+  .my_title {
+    font-size: 3.5rem !important;
+  }
+}
 /*=====  End of Section Mediaquery comment block  ======*/
 /*=============================================
 =            Section INPUT RADIO           =
