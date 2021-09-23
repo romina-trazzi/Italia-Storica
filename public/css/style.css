@@ -109,19 +109,6 @@
     max-width: 5.5rem !important;
   }
 }
-@media (max-width: 1571px) {
-  .card-body i {
-    font-size: 3.5rem !important;
-  }
-
-  .card-text {
-    font-size: 1.3rem !important;
-  }
-
-  .card-title {
-    font-size: 1.3rem !important;
-  }
-}
 @media (min-width: 992px) and (max-width: 1600px) {
   .col-xl-4 {
     padding-left: 25px !important;
@@ -155,6 +142,19 @@
 
   .card {
     width: 360px !important;
+  }
+}
+@media (max-width: 1571px) {
+  .card-body i {
+    font-size: 3.5rem !important;
+  }
+
+  .card-text {
+    font-size: 1.3rem !important;
+  }
+
+  .card-title {
+    font-size: 1.3rem !important;
   }
 }
 /*=====  End of Section Mediaquery comment block  ======*/
@@ -319,13 +319,26 @@ a:hover {
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
-@media (min-width: 992px) and (max-width: 1158px) {
+@media (min-width: 1601px) {
   .button {
-    font-size: 1.6vw !important;
+    font-size: 1.22vw !important;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1600px) {
+  .button {
+    font-size: 1.3vw !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1299px) {
+  .button {
+    font-size: 1rem !important;
+  }
+
+  .col-xl-4:first-child .button, .col-xl-4:last-child .button {
     white-space: pre-line !important;
   }
 }
-@media (min-width: 581px) {
+@media (min-width: 580px) {
   .button {
     padding: 0.5em 2em 0.55em;
   }

@@ -239,64 +239,40 @@ a:hover {
 
 
 // Button
-// @media (min-width: 1350px) and (max-width: 1630px) {
 
-//     .button {
-//         font-size: 1.22vw !important;
-        
-//     }
-// }
-
-
-
-// @media (min-width: 1401px) and (max-width: 1610px) {
-
-//     .button {
-//         font-size: 1.2vw !important;
-        
-//     }
-// }
-
-// @media (min-width: 1333px) and (max-width: 1400px) {
-
-//     .button {
-//         font-size: 1.22vw !important;
-//     }
-// }   
-
-// @media (min-width: 1200px) and (max-width: 1332px) {
-
-//     .button {
-//         font-size: 1.3vw !important;
-       
-//     }
-// }   
-
-// @media (min-width: 1159px) and (max-width: 1199px) {
-
-//     .button {
-//         font-size: 1.35vw !important;
-       
-//     }
-// }   
-
-@media (min-width: 992px) and (max-width: 1158px) {
+@media (min-width: 1601px) {
 
     .button {
-        font-size: 1.6vw !important;
+        font-size: 1.22vw !important;
+        
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1600px) {
+
+    .button {
+        font-size: 1.3vw !important;
+       
+    }
+}   
+
+@media (min-width: 992px) and (max-width: 1299px) {
+
+    .button {
+        font-size: 1rem !important;
+    }
+    
+    .col-xl-4:first-child .button, .col-xl-4:last-child .button {
         white-space: pre-line !important; 
     }
 }   
 
-
-@media (min-width: 581px) {
+@media (min-width: 580px) {
 
     .button {
         padding: 0.5em 2em 0.55em;
     }
 }   
-
-
 
 @media (min-width: 471px) and (max-width: 579px) {
 

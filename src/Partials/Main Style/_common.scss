@@ -302,24 +302,6 @@ $color-map: (
 
 // Card (orizzontali, da a 992 px in poi)
 
-@media (max-width: 1571px) {
-
-    .card-body {
-        i {   
-            font-size: 3.5rem !important;
-        }
-    }
-
-    .card-text {
-        font-size: 1.3rem !important;
-    }
-
-    .card-title {
-        font-size: 1.3rem !important;
-    }
-}
-
-
 @media (min-width: 992px) and (max-width: 1600px) {
     .col-xl-4 {
         padding-left: 25px !important; 
@@ -330,9 +312,6 @@ $color-map: (
         height: 540px !important;
     }
 }
-
-
-
 
 
 // Card orizzontali - "I nostri libri storico-militari"
@@ -356,7 +335,6 @@ $color-map: (
 
 
 
-
 // Card (verticali, da 0 a 991 px)
 
 @media (max-width: 991px) {
@@ -376,6 +354,24 @@ $color-map: (
 }
 
 
+// Card (mediaquery testo)
+
+@media (max-width: 1571px) {
+
+    .card-body {
+        i {   
+            font-size: 3.5rem !important;
+        }
+    }
+
+    .card-text {
+        font-size: 1.3rem !important;
+    }
+
+    .card-title {
+        font-size: 1.3rem !important;
+    }
+}
 
 
 
