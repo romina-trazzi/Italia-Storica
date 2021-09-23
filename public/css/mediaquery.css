@@ -245,7 +245,7 @@
     margin: 0 !important;
   }
 }
-@media (min-width: 350px) and (max-width: 749px) {
+@media (max-width: 749px) {
   main .form .help {
     padding-bottom: 60px !important;
   }
@@ -256,6 +256,7 @@
   main .form .contatti_container #form-container form {
     margin-left: 0 !important;
     margin-bottom: 100px;
+    width: 75% !important;
   }
   main .form .contatti_container #form-container i {
     margin: 0 !important;
@@ -264,17 +265,10 @@
     margin: 0 !important;
   }
 }
-@media (max-width: 749px) {
-  main .form #form-container form {
-    margin-left: 0 !important;
-    margin-bottom: 100px;
-    width: 75% !important;
-  }
-  main .form #form-container i {
-    margin: 0 !important;
-  }
-}
 @media (max-width: 649px) {
+  main .form #map-container .icons-container {
+    margin-top: 0px !important;
+  }
   main .form #map-container iframe {
     display: none !important;
   }

@@ -2,14 +2,32 @@
 =            MAIN ROW ORDER MEDIAQUERY        =
 =============================================*/
 
+// @media (min-width: 400px) and (max-width: 991px) {
+//     main {
+//         .order {
+//             .card-container {
+//                 .card {
+//                     word-wrap: normal !important;
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media (max-width: 534px) {
-    main {
-      .order {
-        
-      }
-    }
-}
+
+// @media (max-width: 379px) {
+//     main {
+//         .order {
+//             padding-top: 800px !important;
+//             // .card-container {
+//             //     .card {
+//             //         max-height: 380px !important;
+//             //     }
+//             // }
+//         }
+//     }
+// }
+
 
         
         

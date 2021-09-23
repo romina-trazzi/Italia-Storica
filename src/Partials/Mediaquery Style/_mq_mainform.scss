@@ -40,7 +40,7 @@
 
 }
 
-@media (min-width: 350px) and (max-width: 749px) {
+@media (max-width: 749px) {
     main {
         .form {
 
@@ -57,6 +57,7 @@
                     form {
                         margin-left: 0 !important;
                         margin-bottom: 100px;
+                        width: 75% !important;
                     }
                     
                     i {
@@ -64,9 +65,9 @@
                     }
                     
                 }
-
+                
                 #map-container {
-                    margin: 0 !important;
+                    margin: 0 !important;                  
 
                 }
             }
@@ -75,41 +76,21 @@
 
 }
 
-
-@media  (max-width: 749px) {
-    main {
-        .form {
-
-            #form-container {
-                
-                form {
-                    margin-left: 0 !important;
-                    margin-bottom: 100px;
-                    width: 75% !important;
-                }
-                
-                i {
-                    margin: 0 !important;
-                }
-                
-            }
-
-        }
-    }
-
-}
-
-
-@media  (max-width: 649px) {
+@media (max-width: 649px) {
     main {
         .form {
             #map-container {
-                iframe {
 
+                .icons-container {
+                    margin-top: 0px !important;
+                }
+
+                iframe {
                     display: none !important;
                 }
+
             }
-            
+
         }
     }
 

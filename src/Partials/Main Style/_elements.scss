@@ -289,5 +289,29 @@ a:hover {
 // }   
 
 
+@media (min-width: 581px) {
 
+    .button {
+        padding: 0.5em 2em 0.55em;
+    }
+}   
+
+
+
+@media (min-width: 471px) and (max-width: 579px) {
+
+    .button {
+        font-size: 1.15rem !important;
+        padding: 0.5em 0.55em;
+    }
+}   
+
+@media (max-width: 470px) {
+
+    .button {
+        font-size: 1rem !important;
+        padding: 0.5em 0.55em;
+        white-space: normal !important;
+    }
+}   
 

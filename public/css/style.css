@@ -142,7 +142,7 @@
     padding-top: 5px !important;
   }
 }
-@media (min-width: 400px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .card-container > .col-xl-4:not(:first-child) {
     margin-top: 60px !important;
   }
@@ -322,6 +322,24 @@ a:hover {
 @media (min-width: 1350px) and (max-width: 1630px) {
   .button {
     font-size: 1.22vw !important;
+  }
+}
+@media (min-width: 581px) {
+  .button {
+    padding: 0.5em 2em 0.55em;
+  }
+}
+@media (min-width: 471px) and (max-width: 579px) {
+  .button {
+    font-size: 1.15rem !important;
+    padding: 0.5em 0.55em;
+  }
+}
+@media (max-width: 470px) {
+  .button {
+    font-size: 1rem !important;
+    padding: 0.5em 0.55em;
+    white-space: normal !important;
   }
 }
 .glide {
