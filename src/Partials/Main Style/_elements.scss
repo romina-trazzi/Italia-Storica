@@ -239,13 +239,13 @@ a:hover {
 
 
 // Button
-@media (min-width: 1350px) and (max-width: 1630px) {
+// @media (min-width: 1350px) and (max-width: 1630px) {
 
-    .button {
-        font-size: 1.22vw !important;
+//     .button {
+//         font-size: 1.22vw !important;
         
-    }
-}
+//     }
+// }
 
 
 
@@ -280,13 +280,13 @@ a:hover {
 //     }
 // }   
 
-// @media (min-width: 992px) and (max-width: 1158px) {
+@media (min-width: 992px) and (max-width: 1158px) {
 
-//     .button {
-//         font-size: 1.4vw !important;
-       
-//     }
-// }   
+    .button {
+        font-size: 1.6vw !important;
+        white-space: pre-line !important; 
+    }
+}   
 
 
 @media (min-width: 581px) {

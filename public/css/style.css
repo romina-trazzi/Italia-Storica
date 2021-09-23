@@ -122,23 +122,23 @@
     font-size: 1.3rem !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 1570px) {
-  .card {
-    height: 520px !important;
-  }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1600px) {
   .col-xl-4 {
     padding-left: 25px !important;
     padding-right: 25px !important;
   }
 
   .card {
-    height: 520px !important;
+    height: 540px !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1333px) {
+@media (min-width: 992px) and (max-width: 1183px) {
   div.col-xl-4:nth-child(3) p {
+    padding-top: 5px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1059px) {
+  div.col-xl-4:nth-child(1) p {
     padding-top: 5px !important;
   }
 }
@@ -319,9 +319,10 @@ a:hover {
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
-@media (min-width: 1350px) and (max-width: 1630px) {
+@media (min-width: 992px) and (max-width: 1158px) {
   .button {
-    font-size: 1.22vw !important;
+    font-size: 1.6vw !important;
+    white-space: pre-line !important;
   }
 }
 @media (min-width: 581px) {

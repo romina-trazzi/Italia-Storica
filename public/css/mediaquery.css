@@ -137,6 +137,19 @@
 /*=============================================
 =            MAIN ROW ORDER MEDIAQUERY        =
 =============================================*/
+@media (min-width: 400px) and (max-width: 991px) {
+  main .order .card-container .card {
+    word-wrap: normal !important;
+  }
+}
+@media (max-width: 379px) {
+  main .order .card-container .card {
+    max-height: 580px !important;
+  }
+  main .order .card-container .card .card-title {
+    font-size: 1.29rem !important;
+  }
+}
 /*================================================
 =            MAIN ROW PERSONAL MEDIAQUERY        =
 =================================================*/

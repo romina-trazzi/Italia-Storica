@@ -300,7 +300,7 @@ $color-map: (
 }
 
 
-// Card (orizzontali, fino a 992 px)
+// Card (orizzontali, da a 992 px in poi)
 
 @media (max-width: 1571px) {
 
@@ -319,27 +319,26 @@ $color-map: (
     }
 }
 
-@media (min-width: 1200px) and (max-width: 1570px) {
 
-    .card {
-        height: 520px !important;
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1600px) {
     .col-xl-4 {
         padding-left: 25px !important; 
         padding-right: 25px !important; 
-
     }
 
     .card {
-        height: 520px !important;
+        height: 540px !important;
     }
 }
 
-@media (min-width: 992px) and (max-width: 1333px) {
-    
+
+
+
+
+// Card orizzontali - "I nostri libri storico-militari"
+
+@media (min-width: 992px) and (max-width: 1183px) {
+
     div.col-xl-4:nth-child(3) p {
         padding-top: 5px !important;
     }
@@ -347,13 +346,21 @@ $color-map: (
 }
 
 
+@media (min-width: 992px) and (max-width: 1059px) {
 
-// Card (verticali, da 991 px fino a 0px)
+    div.col-xl-4:nth-child(1) p {
+        padding-top: 5px !important;
+    }
+    
+}
+
+
+
+
+// Card (verticali, da 0 a 991 px)
 
 @media (max-width: 991px) {
-   
     .card-container > .col-xl-4:not(:first-child) {
-
         margin-top: 60px !important;
     }
     
