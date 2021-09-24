@@ -95,8 +95,16 @@
     margin: 120px 0 0 0 !important;
   }
 }
-@media (max-width: 1200px) {
-  .book-second_row .button {
+@media (min-width: 1200px) {
+  main .core #book-main {
+    max-height: 660px !important;
+  }
+  main .core .book-second_row .button {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 1199px) {
+  main .core .book-second_row .button {
     font-size: 1rem !important;
     margin-top: 40px;
   }
