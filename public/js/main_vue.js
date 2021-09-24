@@ -200,57 +200,7 @@ var app = new Vue({
         form.classList.toggle("col-lg-12", false);
         map.classList.add("col-lg-4");
         map.classList.toggle("col-lg-12", false);
-      } // Sezione core (padding-top delle descrizioni)
-      // Il valore del radio button corrente è salvato in this.counter
-      // Salva in una variabile book_main
-
-
-      var sectionBook = document.getElementById("book-main"); // Scegliamo la larghezza dello schermo e aggiungiamo il padding a seconda del radio button corrente
-      // if (this.windowWidth <= 361 && this.counter == 0) {
-      //     sectionBook.style.marginBottom="62em";
-      // } else if (this.windowWidth >= 362 && this.windowWidth <= 370) {
-      //     sectionBook.style.marginBottom="59em";
-      // } else if (this.windowWidth >= 371 && this.windowWidth <= 399) {
-      //     sectionBook.style.marginBottom="58em";
-      // } else if (this.windowWidth > 1200) {
-      //     sectionBook.style.marginBottom="0px";
-      // }
-      // if (this.windowWidth <= 380 && this.counter == 1) {
-      //     sectionBook.style.marginBottom="2000px";
-      // } else if (this.windowWidth >= 381 && this.windowWidth <= 600) {
-      //     sectionBook.style.marginBottom="1000px";
-      // } else if (this.windowWidth >= 601 && this.windowWidth <= 1199) {
-      //     sectionBook.style.marginBottom="1500px";
-      // } else if (this.windowWidth > 1200) {
-      //     sectionBook.style.marginBottom="0px";
-      // }
-      // if (this.windowWidth <= 380 && this.counter == 2) {
-      //     sectionBook.style.marginBottom="2000px";
-      // } else if (this.windowWidth >= 381 && this.windowWidth <= 600) {
-      //     sectionBook.style.marginBottom="1000px";
-      // } else if (this.windowWidth >= 601 && this.windowWidth <= 1199) {
-      //     sectionBook.style.marginBottom="1500px";
-      // } else if (this.windowWidth > 1200) {
-      //     sectionBook.style.marginBottom="0px";
-      // }
-      // if (this.windowWidth <= 380 && this.counter == 3) {
-      //     sectionBook.style.marginBottom="2000px";
-      // } else if (this.windowWidth >= 381 && this.windowWidth <= 600) {
-      //     sectionBook.style.marginBottom="1000px";
-      // } else if (this.windowWidth >= 601 && this.windowWidth <= 1199) {
-      //     sectionBook.style.marginBottom="1500px";
-      // } else if (this.windowWidth > 1200) {
-      //     sectionBook.style.marginBottom="0px";
-      // }
-      // if (this.windowWidth <= 380 && this.counter == 4) {
-      //     sectionBook.style.marginBottom="2000px";
-      // } else if (this.windowWidth >= 381 && this.windowWidth <= 600) {
-      //     sectionBook.style.marginBottom="1000px";
-      // } else if (this.windowWidth >= 601 && this.windowWidth <= 1199) {
-      //     sectionBook.style.marginBottom="1500px";
-      // } else if (this.windowWidth > 1200) {
-      //     sectionBook.style.marginBottom="0px";
-      // }
+      }
     },
     // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
     bookDetails: function bookDetails() {

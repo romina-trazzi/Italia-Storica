@@ -22,6 +22,33 @@
 
 
 // Copertina libri
+@media (max-width: 600px) {
+  main {
+    .core {
+      
+      .glide {
+        img {
+          min-height: 400px !important; 
+        }
+      }
+
+      .book_details {
+        padding-left: 0px !important;
+      }
+    }
+  }
+}
+
+
+// Descrizione libri 
+@media (max-width: 1200px) {
+  .book_details {
+    padding-left: 0 !important;
+    padding-top: 100px !important;
+  }
+}
+
+
 // @media (min-width: 1429px) and (max-width: 1550px) {
 //     main {
 //       .core {
@@ -51,25 +78,32 @@
 //     }
 // }
 
-// @media (min-width: 1200px) and (max-width: 1429px) {
-//     main {
-//       .core {
-//         .glide {
-//           img {
-//             min-height: 550px !important; 
-//           }
-//         }
+@media (min-width: 1200px) and (max-width: 1429px) {
+    main {
+      .core {
+        .glide {
+          img {
+            // min-height: 550px !important; 
+          }
+        }
 
-//         .book_details {
-//           // max-height: 700px !important;
-//         }
+        .book_details {
+          max-height: 550px !important;
+        }
 
-//         #book_details {
-//           // max-height: 700px;
-//         }
-//       }
-//     }
-// }
+        #book_details {
+          max-height: 550px;
+        }
+      }
+    }
+}
+
+
+
+// Book-main
+
+
+
 
 
 @media (min-width: 1200px) {
@@ -81,7 +115,7 @@
       
       .book-second_row {
         .button {
-          margin-top: 40px;
+          margin-top: 50px;
         }
       }
     }
@@ -96,39 +130,12 @@
       .book-second_row {
         .button {
           font-size: 1rem !important;
-          margin-top: 40px;
+          margin-top: 50px;
         }
       }
     }
   }
 }
-
-
-@media (max-width: 600px) {
-  main {
-    .core {
-      
-      .glide {
-        img {
-          min-height: 400px !important; 
-        }
-      }
-
-      .book_details {
-        padding-left: 0px !important;
-      }
-    }
-  }
-}
-
-
-
-
-
-
-
-
-
 
 
 
@@ -147,12 +154,70 @@
   }
 }
 
-
-// Descrizione libri 
-@media (max-width: 1200px) {
-  .book_details {
-    padding-left: 0 !important;
-    padding-top: 100px !important;
+@media (min-width: 1200px) and (max-width: 1699px) {
+  main {
+    .core {
+      .glide {
+       .glide__arrows {
+         display: none !important;
+        }
+      }
+    }
   }
 }
 
+
+// Spaziature Glide arrows
+
+@media (min-width: 800px) and (max-width: 899px) {
+  main {
+    .core {
+      .glide {
+       .glide__arrow--left {
+         left: 3em !important;
+        }
+
+        .glide__arrow--right {
+          right: 3em !important;
+         }
+
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  main {
+    .core {
+      .glide {
+        
+        .glide__arrow--left {
+          left: 4em !important;
+        }
+
+        .glide__arrow--right {
+          right: 4em !important;
+        }
+
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  main {
+    .core {
+      .glide {
+        
+        .glide__arrow--left {
+          left: 7em !important;
+        }
+
+        .glide__arrow--right {
+          right: 7em !important;
+        }
+
+      }
+    }
+  }
+}
