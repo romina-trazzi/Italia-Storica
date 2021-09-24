@@ -22,61 +22,62 @@
 
 
 // Copertina libri
-@media (max-width: 1550px) {
-    main {
-      .core {
-        .book-main {
-          .glide {
-            img {
-              min-height: 550px; 
-            }
-          }
+// @media (min-width: 1429px) and (max-width: 1550px) {
+//     main {
+//       .core {
+//         .book-main {
+//           .glide {
+//             img {
+//               min-height: 550px; 
+//             }
+//           }
 
-          .book_details {
-            max-height: 550px;
-          }
+//           .book_details {
+//             // max-height: 550px;
+//           }
 
-          #book_details {
-            max-height: 550px;
-          }
-        }
+//           #book_details {
+//             // max-height: 550px;
+//           }
+//         }
 
-        .book-second_row {
-          .button {
-            font-size: 1.1vw !important;
-            margin-top: 10px;
-          }
-        }
+//         .book-second_row {
+//           .button {
+//             // font-size: 1.1vw !important;
+//             margin-top: 10px;
+//           }
+//         }
+//       }
+//     }
+// }
+
+// @media (min-width: 1200px) and (max-width: 1429px) {
+//     main {
+//       .core {
+//         .glide {
+//           img {
+//             min-height: 550px !important; 
+//           }
+//         }
+
+//         .book_details {
+//           // max-height: 700px !important;
+//         }
+
+//         #book_details {
+//           // max-height: 700px;
+//         }
+//       }
+//     }
+// }
 
 
-      }
-    }
-}
 
-@media (max-width: 1428px) {
-    main {
-      .core {
-        .glide {
-          img {
-            min-height: 500px !important; 
-          }
-        }
 
-        .book_details {
-          max-height: 500px !important;
-        }
 
-        #book_details {
-          max-height: 500px;
-        }
-      }
-    }
-}
-
-@media (max-width: 534px) {
+@media (max-width: 600px) {
   main {
     .core {
-      // margin-bottom: 380% !important; 
       
       .glide {
         img {
@@ -87,13 +88,29 @@
       .book_details {
         padding-left: 0px !important;
       }
+
+      .book-second_row {
+        .button {
+          
+        }
+      }
     }
   }
 }
 
 
 
-// Bottoni libri
+
+
+
+
+
+
+
+
+
+
+// Glide arrows
 @media (max-width: 799px) {
   main {
     .core {
@@ -112,7 +129,7 @@
 @media (max-width: 1200px) {
   .book_details {
     padding-left: 0 !important;
-    padding-top: 130px !important;
+    padding-top: 100px !important;
   }
 }
 
