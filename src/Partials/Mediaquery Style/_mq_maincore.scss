@@ -43,7 +43,7 @@
 
 //         .book-second_row {
 //           .button {
-//             // font-size: 1.1vw !important;
+//             
 //             margin-top: 10px;
 //           }
 //         }
@@ -72,7 +72,14 @@
 // }
 
 
-
+@media (max-width: 1200px) {
+  .book-second_row {
+    .button {
+      font-size: 1rem !important;
+      margin-top: 40px;
+    }
+  }
+}
 
 
 @media (max-width: 600px) {
@@ -87,12 +94,6 @@
 
       .book_details {
         padding-left: 0px !important;
-      }
-
-      .book-second_row {
-        .button {
-          
-        }
       }
     }
   }

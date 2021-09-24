@@ -95,6 +95,12 @@
     margin: 120px 0 0 0 !important;
   }
 }
+@media (max-width: 1200px) {
+  .book-second_row .button {
+    font-size: 1rem !important;
+    margin-top: 40px;
+  }
+}
 @media (max-width: 600px) {
   main .core .glide img {
     min-height: 400px !important;
