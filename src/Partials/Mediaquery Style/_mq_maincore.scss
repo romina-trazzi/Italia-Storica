@@ -78,39 +78,35 @@
 //     }
 // }
 
-@media (min-width: 1200px) and (max-width: 1429px) {
-    main {
-      .core {
-        .glide {
-          img {
-            // min-height: 550px !important; 
-          }
-        }
+// @media (min-width: 1200px) and (max-width: 1429px) {
+//     main {
+//       .core {
+//         .glide {
+//           img {
+//             // min-height: 580px !important; 
+//           }
+//         }
 
-        .book_details {
-          max-height: 550px !important;
-        }
+//         .book_details {
+//           // max-height: 550px !important;
+//         }
 
-        #book_details {
-          max-height: 550px;
-        }
-      }
-    }
-}
+//         #book_details {
+//           // max-height: 550px;
+//         }
+//       }
+//     }
+// }
 
 
 
 // Book-main
 
-
-
-
-
 @media (min-width: 1200px) {
   main {
     .core {
       #book-main {
-        max-height: 660px !important;
+       
       }
       
       .book-second_row {

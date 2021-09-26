@@ -254,8 +254,53 @@ let app = new Vue ({
             if (bdHeight !== coverHeight) {
                 bdHeight == coverHeight;
             };
-        }
+        },
 
+        // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
+        counter: function() {
+
+            /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
+
+            // Selezioniamo i radiobutton del corosello (nodeList)
+            let nodeRadiobutton = document.querySelectorAll('.glide__bullet');
+
+            // Trasformiamo i radiobutton in Array
+            let radiobuttonArray = Array.from(nodeRadiobutton);
+
+            // Creiamo un array filtrato per restituire solo il radiobutton con classe selected e salviamo l'array in una variabile
+            let filteredArray = radiobuttonArray.filter(function(element) {
+                if (element.classList.contains("selected")) {
+                    return element;
+                };         
+                
+            });
+
+            // Estraiamo il dataset (che farà da indice) del radiobutton selected
+            for (let i = 0; i <= filteredArray.length; i++) {
+                let glideDirValue = filteredArray[i].dataset;
+                console.log(glideDirValue);
+            };
+            
+            let bottomRadiobutton = ["2", "4", "5", "3", "8"];
+            let ciao;
+            
+            // Accoppiare il numero presente in glideDir (dataset.glideDir) con l'indice dell'array bottomRadiObutton e modificare lo style
+            for (let i = 0; i <= bottomRadiobutton.length; i++) {
+               
+              let ciao = glideDirValue.dataset == "0";
+              
+                //     };
+                //     if (this.counter == bottomRadiobutton[i]) {
+                    //         let ciao = bottomRadiobutton[i];
+                   
+                }
+                
+                console.log(ciao);
+            
+            
+        
+        },
+        
     }
         
 });
@@ -343,6 +388,22 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 
 /*---------- End Subsection Card outline colors  ----------*/
+
+
+
+
+
+
+
+
+
+
+
+/* Se il radiobutto con indice 0 ha la classe selected allora lo style è 0%
+Se il secondo 
+
+
+
 
 
 /*----------  Subsection Validation Form  ----------*/

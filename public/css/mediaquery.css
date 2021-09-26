@@ -109,18 +109,7 @@
     padding-top: 100px !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 1429px) {
-  main .core .book_details {
-    max-height: 550px !important;
-  }
-  main .core #book_details {
-    max-height: 550px;
-  }
-}
 @media (min-width: 1200px) {
-  main .core #book-main {
-    max-height: 660px !important;
-  }
   main .core .book-second_row .button {
     margin-top: 50px;
   }

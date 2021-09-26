@@ -216,6 +216,40 @@ var app = new Vue({
       }
 
       ;
+    },
+    // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
+    counter: function counter() {
+      /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
+      // Selezioniamo i radiobutton del corosello (nodeList)
+      var nodeRadiobutton = document.querySelectorAll('.glide__bullet'); // Trasformiamo i radiobutton in Array
+
+      var radiobuttonArray = Array.from(nodeRadiobutton); // Creiamo un array filtrato per restituire solo il radiobutton con classe selected e salviamo l'array in una variabile
+
+      var filteredArray = radiobuttonArray.filter(function (element) {
+        if (element.classList.contains("selected")) {
+          return element;
+        }
+
+        ;
+      }); // Estraiamo il dataset (che farà da indice) del radiobutton selected
+
+      for (var i = 0; i <= filteredArray.length; i++) {
+        var _glideDirValue = filteredArray[i].dataset;
+        console.log(_glideDirValue);
+      }
+
+      ;
+      var bottomRadiobutton = ["2", "4", "5", "3", "8"];
+      var ciao; // Accoppiare il numero presente in glideDir (dataset.glideDir) con l'indice dell'array bottomRadiObutton e modificare lo style
+
+      for (var _i = 0; _i <= bottomRadiobutton.length; _i++) {
+        var _ciao = glideDirValue.dataset == "0"; //     };
+        //     if (this.counter == bottomRadiobutton[i]) {
+        //         let ciao = bottomRadiobutton[i];
+
+      }
+
+      console.log(ciao);
     }
   }
 });
@@ -277,19 +311,26 @@ for (var i = 0; i < buttonsArray.length; i++) {
 
 ;
 
-var _loop2 = function _loop2(_i) {
-  buttonsArray[_i].addEventListener('mouseleave', function () {
-    iconsFas[_i].style.color = 'rgb(250, 153, 28)';
-    cards[_i].style.outlineColor = 'rgb(250, 153, 28)';
+var _loop2 = function _loop2(_i2) {
+  buttonsArray[_i2].addEventListener('mouseleave', function () {
+    iconsFas[_i2].style.color = 'rgb(250, 153, 28)';
+    cards[_i2].style.outlineColor = 'rgb(250, 153, 28)';
   });
 };
 
-for (var _i = 0; _i < buttonsArray.length; _i++) {
-  _loop2(_i);
+for (var _i2 = 0; _i2 < buttonsArray.length; _i2++) {
+  _loop2(_i2);
 }
 
 ;
 /*---------- End Subsection Card outline colors  ----------*/
+
+/* Se il radiobutto con indice 0 ha la classe selected allora lo style è 0%
+Se il secondo 
+
+
+
+
 
 /*----------  Subsection Validation Form  ----------*/
 // Validation test + Invio mail

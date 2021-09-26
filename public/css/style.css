@@ -466,7 +466,7 @@ a:hover {
 .glide__bullets {
   position: absolute;
   z-index: 2;
-  bottom: -9%;
+  bottom: 1%;
   left: 50%;
   display: inline-flex;
   cursor: pointer;
