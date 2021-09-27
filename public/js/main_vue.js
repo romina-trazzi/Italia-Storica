@@ -220,36 +220,24 @@ var app = new Vue({
     // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
     counter: function counter() {
       /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
-      // Selezioniamo i radiobutton del corosello (nodeList)
-      var nodeRadiobutton = document.querySelectorAll('.glide__bullet'); // Trasformiamo i radiobutton in Array
+      // Selezioniamo i singoli radiobutton del corosello (nodeList)
+      var nodeRadiobutton = document.querySelectorAll('.glide__bullet');
+      var rdbIndex = 0; // Salviamo l'indice dell'elemento attivo (variabile rdbIndex)
 
-      var radiobuttonArray = Array.from(nodeRadiobutton); // Creiamo un array filtrato per restituire solo il radiobutton con classe selected e salviamo l'array in una variabile
-
-      var filteredArray = radiobuttonArray.filter(function (element) {
+      nodeRadiobutton.forEach(function (element, index) {
         if (element.classList.contains("selected")) {
-          return element;
+          rdbIndex = index;
         }
+      });
+      var bottomValue = ["1%", "-11%", "11%", "8%", "-11%"]; // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
 
-        ;
-      }); // Estraiamo il dataset (che farà da indice) del radiobutton selected
+      var allRadiobuttons = document.getElementById('radiobuttonController'); // Accoppiamo l'indice dell'elemento attivo rdbIndex con l'indice dei valori % di bottom che ci interessano per modificare lo stile
 
-      for (var i = 0; i <= filteredArray.length; i++) {
-        var _glideDirValue = filteredArray[i].dataset;
-        console.log(_glideDirValue);
-      }
-
-      ;
-      var bottomRadiobutton = ["2", "4", "5", "3", "8"];
-      var ciao; // Accoppiare il numero presente in glideDir (dataset.glideDir) con l'indice dell'array bottomRadiObutton e modificare lo style
-
-      for (var _i = 0; _i <= bottomRadiobutton.length; _i++) {
-        var _ciao = glideDirValue.dataset == "0"; //     };
-        //     if (this.counter == bottomRadiobutton[i]) {
-        //         let ciao = bottomRadiobutton[i];
-
-      }
-
-      console.log(ciao);
+      bottomValue.forEach(function (element, index) {
+        if (index == rdbIndex) {
+          allRadiobuttons.style.bottom = element;
+        }
+      });
     }
   }
 });
@@ -311,15 +299,15 @@ for (var i = 0; i < buttonsArray.length; i++) {
 
 ;
 
-var _loop2 = function _loop2(_i2) {
-  buttonsArray[_i2].addEventListener('mouseleave', function () {
-    iconsFas[_i2].style.color = 'rgb(250, 153, 28)';
-    cards[_i2].style.outlineColor = 'rgb(250, 153, 28)';
+var _loop2 = function _loop2(_i) {
+  buttonsArray[_i].addEventListener('mouseleave', function () {
+    iconsFas[_i].style.color = 'rgb(250, 153, 28)';
+    cards[_i].style.outlineColor = 'rgb(250, 153, 28)';
   });
 };
 
-for (var _i2 = 0; _i2 < buttonsArray.length; _i2++) {
-  _loop2(_i2);
+for (var _i = 0; _i < buttonsArray.length; _i++) {
+  _loop2(_i);
 }
 
 ;

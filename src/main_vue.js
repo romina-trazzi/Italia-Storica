@@ -261,46 +261,34 @@ let app = new Vue ({
 
             /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
 
-            // Selezioniamo i radiobutton del corosello (nodeList)
+            // Selezioniamo i singoli radiobutton del corosello (nodeList)
             let nodeRadiobutton = document.querySelectorAll('.glide__bullet');
-
-            // Trasformiamo i radiobutton in Array
-            let radiobuttonArray = Array.from(nodeRadiobutton);
-
-            // Creiamo un array filtrato per restituire solo il radiobutton con classe selected e salviamo l'array in una variabile
-            let filteredArray = radiobuttonArray.filter(function(element) {
+            
+            let rdbIndex = 0;
+            
+            // Salviamo l'indice dell'elemento attivo (variabile rdbIndex)
+            nodeRadiobutton.forEach(function (element, index) {
                 if (element.classList.contains("selected")) {
-                    return element;
-                };         
-                
-            });
-
-            // Estraiamo il dataset (che farà da indice) del radiobutton selected
-            for (let i = 0; i <= filteredArray.length; i++) {
-                let glideDirValue = filteredArray[i].dataset;
-                console.log(glideDirValue);
-            };
-            
-            let bottomRadiobutton = ["2", "4", "5", "3", "8"];
-            let ciao;
-            
-            // Accoppiare il numero presente in glideDir (dataset.glideDir) con l'indice dell'array bottomRadiObutton e modificare lo style
-            for (let i = 0; i <= bottomRadiobutton.length; i++) {
-               
-              let ciao = glideDirValue.dataset == "0";
-              
-                //     };
-                //     if (this.counter == bottomRadiobutton[i]) {
-                    //         let ciao = bottomRadiobutton[i];
-                   
+                    rdbIndex = index;
                 }
-                
-                console.log(ciao);
+            });
             
-            
-        
-        },
-        
+            let bottomValue = ["1%", "-11%", "11%", "8%", "-11%"];
+
+            // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
+            let allRadiobuttons = document.getElementById('radiobuttonController');
+
+
+            // Accoppiamo l'indice dell'elemento attivo rdbIndex con l'indice dei valori % di bottom che ci interessano per modificare lo stile
+            bottomValue.forEach(function (element, index) {
+                if (index == rdbIndex) {
+                    allRadiobuttons.style.bottom = element;
+                }
+            }); 
+           
+           
+         
+        }
     }
         
 });
