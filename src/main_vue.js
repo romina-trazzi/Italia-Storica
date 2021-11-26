@@ -102,6 +102,7 @@ let app = new Vue ({
 
         window.addEventListener('resize', this.bookDetailsResize);
         this.bookDetailsResize();
+
     },
 
     destroyed() {
@@ -261,30 +262,39 @@ let app = new Vue ({
 
             /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
 
-            // Selezioniamo i singoli radiobutton del corosello (nodeList)
-            let nodeRadiobutton = document.querySelectorAll('.glide__bullet');
-            
-            let rdbIndex = 0;
-            
-            // Salviamo l'indice dell'elemento attivo (variabile rdbIndex)
-            nodeRadiobutton.forEach(function (element, index) {
-                if (element.classList.contains("selected")) {
-                    rdbIndex = index;
-                }
-            });
-            
-            let bottomValue = ["1%", "-11%", "11%", "8%", "-11%"];
-
             // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
             let allRadiobuttons = document.getElementById('radiobuttonController');
 
+            // Selezioniamo i valori posizionali dei radiobutton
 
-            // Accoppiamo l'indice dell'elemento attivo rdbIndex con l'indice dei valori % di bottom che ci interessano per modificare lo stile
-            bottomValue.forEach(function (element, index) {
-                if (index == rdbIndex) {
-                    allRadiobuttons.style.bottom = element;
-                }
-            }); 
+            let valuesB = allRadiobuttons.getBoundingClientRect().bottom;
+            let valuesT = allRadiobuttons.getBoundingClientRect().top;
+            let valuesY = allRadiobuttons.getBoundingClientRect().y;
+
+            let allValues = allRadiobuttons.getBoundingClientRect();
+
+            console.log(allValues);
+            
+           // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
+            // const rdbB = 596.8333129882812;
+            // const rdbT = 581.8333129882812;
+            const rdbY = 596.8333129882812;
+
+
+            // if (valuesB != rdbB && valuesT != rdbT) {
+            if (valuesY != rdbY) {
+                console.log("diverso");
+                valuesY == rdbY;
+                console.log(valuesY);
+            } else {
+                console.log("uguale");
+            }
+            
+            // console.log (fixedValuesB, rdbB, fixedValuesT, rdbT);
+
+
+
+          
            
            
          
