@@ -193,13 +193,63 @@
     display: none;
   }
 }
-@media (min-width: 1200px) and (max-width: 1299px) {
+@media (min-width: 1200px) and (max-width: 2079px) {
   main .personal #bio img {
     display: block;
     width: 20vw !important;
   }
   main .personal #operas img {
     display: block;
+  }
+}
+@media (min-width: 2080px) and (max-width: 2219px) {
+  main .personal #bio img {
+    display: block;
+    width: 18vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+    width: 18vw !important;
+  }
+}
+@media (min-width: 2220px) and (max-width: 2299px) {
+  main .personal #bio img {
+    display: block;
+    width: 16vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+    width: 16vw !important;
+  }
+}
+@media (min-width: 2300px) and (max-width: 2599px) {
+  main .personal #bio img {
+    display: block;
+    max-width: 14vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+    max-width: 14vw !important;
+  }
+}
+@media (min-width: 2600px) and (max-width: 2949px) {
+  main .personal #bio img {
+    display: block;
+    max-width: 12vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+    max-width: 12vw !important;
+  }
+}
+@media (min-width: 2950px) {
+  main .personal #bio img {
+    display: block;
+    max-width: 10vw !important;
+  }
+  main .personal #operas img {
+    display: block;
+    max-width: 10vw !important;
   }
 }
 @media (min-width: 1551px) {
