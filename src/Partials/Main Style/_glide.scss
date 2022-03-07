@@ -5,7 +5,7 @@
 }
 
 .glide img {
-    min-height: 580px;
+    min-height: 596px;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 
 }
@@ -26,4 +26,5 @@
 
 .glide .glide__slides {
     overflow: visible;
+    margin-bottom: 0;
 }

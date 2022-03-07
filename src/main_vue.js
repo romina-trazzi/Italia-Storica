@@ -2,6 +2,7 @@
 /*=============================================
     =            VUE SECTION           =
 =============================================*/
+Vue.config.devtools = true;
 
 let app = new Vue ({
     el: "#app",
@@ -165,8 +166,14 @@ let app = new Vue ({
             let bd = document.getElementById('book_details');
             let bdWidth = bd.getBoundingClientRect().width;
             this.bookDetails = bdWidth;
-        }
-    },
+        },
+
+       
+
+
+       
+
+    },   
     
     watch: {
         
@@ -237,7 +244,40 @@ let app = new Vue ({
                 map.classList.add("col-lg-4");
                 map.classList.toggle("col-lg-12", false);
             }
+
+            //Trova la copertina attiva
+            if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
+
+                // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
+                let cover = document.getElementsByClassName("glide__slide--active");
+                let coverChild = cover[0].childNodes;
+                let coverArray = Array.from(coverChild);
+
+                const distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); // 193
+
+                console.log(distanceCover);
+
+                // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
+                let gal = document.querySelector('.glide__arrow--left');
+                const distanceGal = Math.ceil(gal.getBoundingClientRect().right); // 162
+                
+                console.log(distanceGal);
+
+                const distanceWin = distanceCover - distanceGal;
+
+                console.log(distanceWin); // circa 26-31 px
+                
+                if (distanceWin !== 31) {
+                    distanceWin = 31;
+                }
+                
+                
+
+           
+            }
+
         },
+        
 
 
         // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
@@ -273,9 +313,9 @@ let app = new Vue ({
 
             let allValues = allRadiobuttons.getBoundingClientRect();
 
-            console.log(allValues);
+            // console.log(allValues);
             
-           // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
+            // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
             // const rdbB = 596.8333129882812;
             // const rdbT = 581.8333129882812;
             const rdbY = 596.8333129882812;
@@ -335,8 +375,6 @@ const glideConfig = {
         }
     },
 
-
-    
 }
 
 let glide = new Glide('.glide', glideConfig).mount();
@@ -392,13 +430,21 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 
 
+    
+
+
+        
 
 
 
 
 
-/* Se il radiobutto con indice 0 ha la classe selected allora lo style è 0%
-Se il secondo 
+
+
+
+
+
+
 
 
 
@@ -419,7 +465,7 @@ function controlloForm() {
     console.log(nome, email, subject, body);
 
     // Espressione regolare per l'email
-    let valid_email = /^([a-zA-Z0-9_.-]) +@ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/;
+    let valid_email = /^([a-zA-Z0-9_.-]) + @ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/;
 
     // Se i campi sono vuoti o undefined manda alert 
     if (nome == "" || email == "" || subject == "" || body == "" || 
@@ -432,11 +478,8 @@ function controlloForm() {
         alert("Controlla l'indirizzo email");
         document.invio.email.focus();
         return false;
-
-    // Se tutto apposto invia la email
     } else {
-        location.href = "mailto:" + email + "?Subject=" + subject + "&Body=" + messaggio;
-
+        return true;
     }
 }
 

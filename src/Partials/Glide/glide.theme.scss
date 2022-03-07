@@ -6,11 +6,8 @@
   $se: $glide-element-separator;
   $sm: $glide-modifier-separator;
 
+
   &#{$se}arrow {
-    position: absolute;
-    display: block;
-    top: 45%;
-    z-index: 2;
     color: floralwhite;
     text-transform: uppercase;
     padding: 12px 15px;
@@ -34,11 +31,8 @@
     }
 
     &#{$sm}left {
-      left: 5em;
-    }
-
-    &#{$sm}right {
-      right: 5em;
+      margin-right: 32em;
+      margin-left: -19em;
     }
 
     &#{$sm}disabled {
@@ -97,3 +91,7 @@
     cursor: default !important;
   }
 }
+
+
+
+

@@ -417,6 +417,10 @@ a:hover {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 .glide__bullets {
   -webkit-touch-callout: none;
@@ -430,10 +434,6 @@ a:hover {
 }
 
 .glide__arrow {
-  position: absolute;
-  display: block;
-  top: 45%;
-  z-index: 2;
   color: floralwhite;
   text-transform: uppercase;
   padding: 12px 15px;
@@ -455,10 +455,8 @@ a:hover {
   border-color: white;
 }
 .glide__arrow--left {
-  left: 5em;
-}
-.glide__arrow--right {
-  right: 5em;
+  margin-right: 32em;
+  margin-left: -19em;
 }
 .glide__arrow--disabled {
   opacity: 0.33;
@@ -513,7 +511,7 @@ a:hover {
 }
 
 .glide img {
-  min-height: 580px;
+  min-height: 596px;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
@@ -531,6 +529,7 @@ a:hover {
 
 .glide .glide__slides {
   overflow: visible;
+  margin-bottom: 0;
 }
 
 body {
@@ -780,6 +779,7 @@ body main .order .card-collector .card-container .col-xl-4 {
 }
 body main .order .card-collector .card-container .card {
   max-height: 550px;
+  max-width: 473.33px;
 }
 body main .order .card-collector .card-container .card:hover {
   box-shadow: 10px 10px 5px 0px rgba(41, 41, 41, 0.25);

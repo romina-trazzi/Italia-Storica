@@ -50,7 +50,11 @@
 
   &#{$se}arrows {
     -webkit-touch-callout: none;
-    user-select: none;
+    user-select: none;  
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
   }
 
   &#{$se}bullets {

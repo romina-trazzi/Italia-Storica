@@ -7,9 +7,12 @@
   \*************************/
 /***/ (() => {
 
+function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
+
 /*=============================================
     =            VUE SECTION           =
 =============================================*/
+Vue.config.devtools = true;
 var app = new Vue({
   el: "#app",
   data: {
@@ -200,6 +203,28 @@ var app = new Vue({
         form.classList.toggle("col-lg-12", false);
         map.classList.add("col-lg-4");
         map.classList.toggle("col-lg-12", false);
+      } //Trova la copertina attiva
+
+
+      if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
+        // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
+        var cover = document.getElementsByClassName("glide__slide--active");
+        var coverChild = cover[0].childNodes;
+        var coverArray = Array.from(coverChild);
+        var distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); // 193
+
+        console.log(distanceCover); // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
+
+        var gal = document.querySelector('.glide__arrow--left');
+        var distanceGal = Math.ceil(gal.getBoundingClientRect().right); // 162
+
+        console.log(distanceGal);
+        var distanceWin = distanceCover - distanceGal;
+        console.log(distanceWin); // circa 26-31 px
+
+        if (distanceWin !== 31) {
+          31, _readOnlyError("distanceWin");
+        }
       }
     },
     // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
@@ -226,8 +251,8 @@ var app = new Vue({
       var valuesB = allRadiobuttons.getBoundingClientRect().bottom;
       var valuesT = allRadiobuttons.getBoundingClientRect().top;
       var valuesY = allRadiobuttons.getBoundingClientRect().y;
-      var allValues = allRadiobuttons.getBoundingClientRect();
-      console.log(allValues); // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
+      var allValues = allRadiobuttons.getBoundingClientRect(); // console.log(allValues);
+      // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
       // const rdbB = 596.8333129882812;
       // const rdbT = 581.8333129882812;
 
@@ -316,13 +341,6 @@ for (var _i = 0; _i < buttonsArray.length; _i++) {
 ;
 /*---------- End Subsection Card outline colors  ----------*/
 
-/* Se il radiobutto con indice 0 ha la classe selected allora lo style è 0%
-Se il secondo 
-
-
-
-
-
 /*----------  Subsection Validation Form  ----------*/
 // Validation test + Invio mail
 
@@ -334,7 +352,7 @@ function controlloForm() {
   var body = document.sendemail.body.value;
   console.log(nome, email, subject, body); // Espressione regolare per l'email
 
-  var valid_email = /^([a-zA-Z0-9_.-]) +@ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/; // Se i campi sono vuoti o undefined manda alert 
+  var valid_email = /^([a-zA-Z0-9_.-]) + @ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/; // Se i campi sono vuoti o undefined manda alert 
 
   if (nome == "" || email == "" || subject == "" || body == "" || nome == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
     alert("Per inviare la email compila i campi vuoti o undefined");
@@ -342,9 +360,9 @@ function controlloForm() {
   } else if (email.indexOf("@") == -1 || email.indexOf(".") == false || !valid_email.test(email)) {
     alert("Controlla l'indirizzo email");
     document.invio.email.focus();
-    return false; // Se tutto apposto invia la email
+    return false;
   } else {
-    location.href = "mailto:" + email + "?Subject=" + subject + "&Body=" + messaggio;
+    return true;
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
@@ -431,7 +449,8 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 				if(fulfilled) {
 /******/ 					deferred.splice(i--, 1)
-/******/ 					result = fn();
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
@@ -485,19 +504,21 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
 /******/ 			var moduleId, chunkId, i = 0;
-/******/ 			for(moduleId in moreModules) {
-/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
 /******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
 /******/ 			}
-/******/ 			if(runtime) var result = runtime(__webpack_require__);
 /******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
 /******/ 			for(;i < chunkIds.length; i++) {
 /******/ 				chunkId = chunkIds[i];
 /******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
 /******/ 					installedChunks[chunkId][0]();
 /******/ 				}
-/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 				installedChunks[chunkId] = 0;
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
