@@ -84,7 +84,6 @@ label {
 ========================================*/
 
 .button {
-    // width: 100%;
     display: inline-block;
 	outline: none;
 	cursor: pointer;
@@ -231,11 +230,9 @@ a:hover {
 /*=====  End of Section SCROLLBARS  ======*/  
 
 
-
-
-/*=============================================
-        =            MEDIAQUERY       =
-=============================================*/
+/*================================================
+    =           Section CARD BUTTONS       =
+================================================*/
 
 
 // Card orizzontali
@@ -284,4 +281,6 @@ a:hover {
         white-space: normal !important;
     }
 }   
+
+
 

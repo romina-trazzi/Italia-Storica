@@ -168,17 +168,14 @@ let app = new Vue ({
             this.bookDetails = bdWidth;
         },
 
-       
-
-
-       
-
     },   
     
     watch: {
         
         // Quando il valore di windowWidth cambia, fai partire questa funzione
         windowWidth: function () {
+
+            // Sezione CORE
             
             // Salva in una variabile l'elemento HTML che ha id book_change
             let column = document.getElementById("book_change");
@@ -222,8 +219,72 @@ let app = new Vue ({
                 this.monoWidth = false;
             }
 
+            // Sezione ORDER
 
-            // Sezione form
+            /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi xl-4 lg-4 */
+
+            /* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */    
+
+            // Salva in una variabile l'elemento HTML con classe card container 
+            let cardContainer = document.getElementsByClassName('card-container');
+
+            // Salva in una variabile gli elementi HTML con classe card
+            let cardsPosition = document.querySelectorAll('.card');
+
+            // Trasformiamo cardsPosition in Array
+            let cardsPositionArray = Array.from(cardsPosition); 
+
+            // Cloniamo i nodi delle card + parents + discendenti
+            let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
+            let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
+            let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
+
+            // Cloniamo i nodi delle cards + discendenti
+            let cloneNode = cardsPositionArray[0].cloneNode(true);
+            let cloneNode1 = cardsPositionArray[1].cloneNode(true);
+            let cloneNode2 = cardsPositionArray[2].cloneNode(true);
+
+            if (this.windowWidth >= 2000) {
+    
+                // Eliminiamo i parent nodes con le card
+                cardContainer[0].children[0].remove();
+                cardContainer[0].children[1].remove();
+                cardContainer[0].children[0].remove();
+                
+                // Visualizziamo le card senza parent nodes
+                cardContainer[0].appendChild(cloneNode);
+                cardContainer[0].appendChild(cloneNode1);
+                cardContainer[0].appendChild(cloneNode2);
+                
+                // Aggiungiamo le classi a tutte le card 
+                for (let i = 0; i < cardsPositionArray.length; i++) {
+                    cloneNode.classList.add("col-xl-4");
+                    cloneNode.classList.add("col-lg-4");
+                    cloneNode1.classList.add("col-xl-4");
+                    cloneNode1.classList.add("col-lg-4");
+                    cloneNode2.classList.add("col-xl-4");
+                    cloneNode2.classList.add("col-lg-4");
+                }
+            } else if (this.windowWidth < 2000) {
+                
+                //Togliamo i nodi "nuovi"
+                cardContainer[0].children[0].remove();
+                cardContainer[0].children[1].remove();
+                cardContainer[0].children[0].remove();
+                
+                // Ripristiniamo i "vecchi" parent nodes con le card
+                cardContainer[0].appendChild(parentCloneNode);
+                cardContainer[0].appendChild(parentCloneNode1);
+                cardContainer[0].appendChild(parentCloneNode2);
+
+            }
+
+
+
+
+          
+    
+            // Sezione FORM
             let map = document.getElementById("map-container");
             let form = document.getElementById("form-container");
 
@@ -270,16 +331,11 @@ let app = new Vue ({
                 if (distanceWin !== 31) {
                     distanceWin = 31;
                 }
-                
-                
 
-           
             }
 
         },
         
-
-
         // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
         bookDetails: function() {
             
@@ -323,22 +379,14 @@ let app = new Vue ({
 
             // if (valuesB != rdbB && valuesT != rdbT) {
             if (valuesY != rdbY) {
-                console.log("diverso");
                 valuesY == rdbY;
-                console.log(valuesY);
-            } else {
-                console.log("uguale");
-            }
-            
+            } 
+
             // console.log (fixedValuesB, rdbB, fixedValuesT, rdbT);
 
-
-
-          
-           
-           
-         
         }
+
+
     }
         
 });
@@ -427,21 +475,78 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 
 
+/*----------  Subsection div Card   ----------*/
 
+/* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi xl-4 lg-4 */
+
+/* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */
+
+// let windowWidth = window.screen.width;
+
+// // Salva in una variabile l'elemento HTML con classe card container 
+// let cardContainer = document.getElementsByClassName('card-container');
+
+// // Salva in una variabile gli elementi HTML con classe card
+// let cardsPosition = document.querySelectorAll('.card');
+
+// // Trasformiamo cardsPosition in Array
+// let cardsPositionArray = Array.from(cardsPosition); 
+
+// // Cloniamo i nodi delle card + parents + discendenti
+// let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
+// let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
+// let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
+
+// // Cloniamo i nodi delle cards + discendenti
+// let cloneNode = cardsPositionArray[0].cloneNode(true);
+// let cloneNode1 = cardsPositionArray[1].cloneNode(true);
+// let cloneNode2 = cardsPositionArray[2].cloneNode(true);
+
+// window.addEventListener("resize", windowLarge(windowWidth));
+
+// function windowLarge(windowWidth) {
+    
+//     if (windowWidth >= 2000) {
+    
+//         // Eliminiamo i parent nodes con le card
+//         cardContainer[0].children[0].remove();
+//         cardContainer[0].children[1].remove();
+//         cardContainer[0].children[0].remove();
+        
+//         // Visualizziamo le card senza parent nodes
+//         cardContainer[0].appendChild(cloneNode);
+//         cardContainer[0].appendChild(cloneNode1);
+//         cardContainer[0].appendChild(cloneNode2);
+        
+//         // Aggiungiamo le classi a tutte le card 
+//         for (let i = 0; i < cardsPositionArray.length; i++) {
+//             cloneNode.classList.add("col-xl-4");
+//             cloneNode.classList.add("col-lg-4");
+//             cloneNode1.classList.add("col-xl-4");
+//             cloneNode1.classList.add("col-lg-4");
+//             cloneNode2.classList.add("col-xl-4");
+//             cloneNode2.classList.add("col-lg-4");
+//         }
+//     } else if (windowWidth < 2000) {
+
+//         // Togliamo i nodi "nuovi"
+//         cardContainer[0].children[0].remove();
+//         cardContainer[0].children[1].remove();
+//         cardContainer[0].children[0].remove();
+        
+//         // Ripristiniamo i "vecchi" parent nodes con le card
+//         cardContainer[0].appendChild(parentCloneNode);
+//         cardContainer[0].appendChild(parentCloneNode1);
+//         cardContainer[0].appendChild(parentCloneNode2);
+
+
+//     }
+// }
 
 
     
 
-
-        
-
-
-
-
-
-
-
-
+    
 
 
 
