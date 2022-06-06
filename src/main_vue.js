@@ -72,16 +72,16 @@ let app = new Vue ({
                 "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
             }
 
-        ], 
-       
+        ],
+
         // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
         windowWidth: 0,
-        
-        /* Se fosse stato un oggetto con altezza e larghezza: 
+
+        /* Se fosse stato un oggetto con altezza e larghezza:
         window: {
             width: 0,
             height: 0
-            
+
         } */
 
         normalWidth: true,
@@ -94,7 +94,7 @@ let app = new Vue ({
 
     },
 
-    /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta 
+    /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
     l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
     (passaggio 3) */
     mounted() {
@@ -109,7 +109,7 @@ let app = new Vue ({
     destroyed() {
         window.removeEventListener('resize', this.handleResize);
     },
-    
+
     methods: {
         nextImg() {
             this.counter++;
@@ -117,28 +117,28 @@ let app = new Vue ({
                 this.counter = 0;
             }
         },
-        
+
         prevImg() {
             if (this.counter > 0) {
                 this.counter--;
             } else {
                 this.counter = this.images.length -1;
             }
-            
+
         },
-        
+
         slideBullet() {
-            
+
             // Selezioniamo dal Dom i dots
             let dots = document.querySelectorAll('.glide__bullet');
-            
+
             // Rimuoviamo la classe selected da tutti gli elementi
-            for (let i = 0; i < dots.length; i++) { 
-                dots[i].classList.remove('selected');   
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove('selected');
             }
-            
+
             let currentIndex = 0;
-            
+
             // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
             dots.forEach(function (element, index) {
                 if (element === document.activeElement) {
@@ -148,15 +148,15 @@ let app = new Vue ({
 
             // Aggiungiamo la classe selected all'elemento attivo
             dots[currentIndex].classList.add('selected');
-           
+
             // Aggiorniamo il counter
             this.counter = currentIndex;
         },
-        
-        /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed. 
+
+        /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
         Il valore di width in data viene aggiornato da 0 a valore corrente.
         (passaggio 2) */
-        
+
         handleResize () {
             this.windowWidth = window.screen.width;
         },
@@ -168,25 +168,25 @@ let app = new Vue ({
             this.bookDetails = bdWidth;
         },
 
-    },   
-    
+    },
+
     watch: {
-        
+
         // Quando il valore di windowWidth cambia, fai partire questa funzione
         windowWidth: function () {
 
             // Sezione CORE
-            
+
             // Salva in una variabile l'elemento HTML che ha id book_change
             let column = document.getElementById("book_change");
-            
+
             /* Se la larghezza dello schermo è uguale o inferiore di 1200px aggiungi le classi order-last e order-css
             se c'è, rimuovi la classe order-first */
             if (this.windowWidth <= 1200) {
                 column.classList.add("order-last");
                 column.classList.add("order-css");
                 column.classList.toggle("order-first", false);
-            
+
             /* Altrimenti, se larghezza dello schermo è maggiore di 1200px aggiungi la classe order-first
             se c'è, rimuovi le classi order-last e order-css */
             } else {
@@ -195,8 +195,85 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
 
+
+            // Sezione ORDER
+
+            /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
+
+            /* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */
+
+            // Salva in una variabile l'elemento HTML con classe card container
+            let cardContainer = document.getElementsByClassName('card-container');
+
+            // Salva in una variabile i figli dell'elemento HTML con classe card container (cioè i 3 "div class = "col-xl-4 col-lg-4")
+            let cardContainerChildren = document.getElementsByClassName('card-container')[0].children;
+
+            // Salva in una variabile gli elementi HTML con classe card
+            let cardsPosition = document.querySelectorAll('.card');
+
+            // Trasformiamo cardsPosition in Array
+            let cardsPositionArray = Array.from(cardsPosition);
+
+            // Cloniamo i nodi delle card + parents + discendenti (cioè div class = "col-xl-4 col-lg-4")
+            let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
+            let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
+            let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
+
+            // Cloniamo i nodi delle cards + discendenti (cioè div class = "card")
+            let cloneNode = cardsPositionArray[0].cloneNode(true);
+            let cloneNode1 = cardsPositionArray[1].cloneNode(true);
+            let cloneNode2 = cardsPositionArray[2].cloneNode(true);
+
+            if (this.windowWidth >= 2000) {
+
+                // Eliminiamo i parent nodes con le card
+                cardContainer[0].children[0].remove();
+                cardContainer[0].children[1].remove();
+                cardContainer[0].children[0].remove();
+
+                // Visualizziamo le card senza parent nodes
+                cardContainer[0].appendChild(cloneNode);
+                cardContainer[0].appendChild(cloneNode1);
+                cardContainer[0].appendChild(cloneNode2);
+
+                // Aggiungiamo le classi a tutte le card (abbiamo adesso la struttura div = "card col-xl-4 col-lg-4")
+                for (let i = 0; i < cardsPositionArray.length; i++) {
+                    cloneNode.classList.add("col-xl-4");
+                    cloneNode.classList.add("col-lg-4");
+                    cloneNode1.classList.add("col-xl-4");
+                    cloneNode1.classList.add("col-lg-4");
+                    cloneNode2.classList.add("col-xl-4");
+                    cloneNode2.classList.add("col-lg-4");
+                }
             
-            // Sezione del cambio template dei loghi
+            } else if (this.windowWidth < 2000) {
+
+                // Elimina tutto il codice html delle card 
+                cardContainer[0].children[0].remove();
+                cardContainer[0].children[1].remove();
+                cardContainer[0].children[0].remove();
+                
+                // // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
+                cardContainer[0].innerHTML += 
+
+                ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
+                + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+
+                +
+
+                ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' 
+                + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
+
+                +
+
+                ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
+                + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> '
+                
+            }
+            
+            // Sezione PERSONAL
+
+            // Cambio template dei loghi
             if (this.windowWidth >= 992 && this.windowWidth <= 1550) {
                 this.specialWidth = true;
                 this.normalWidth = false;
@@ -219,71 +296,12 @@ let app = new Vue ({
                 this.monoWidth = false;
             }
 
-            // Sezione ORDER
-
-            /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi xl-4 lg-4 */
-
-            /* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */    
-
-            // Salva in una variabile l'elemento HTML con classe card container 
-            let cardContainer = document.getElementsByClassName('card-container');
-
-            // Salva in una variabile gli elementi HTML con classe card
-            let cardsPosition = document.querySelectorAll('.card');
-
-            // Trasformiamo cardsPosition in Array
-            let cardsPositionArray = Array.from(cardsPosition); 
-
-            // Cloniamo i nodi delle card + parents + discendenti
-            let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
-            let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
-            let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
-
-            // Cloniamo i nodi delle cards + discendenti
-            let cloneNode = cardsPositionArray[0].cloneNode(true);
-            let cloneNode1 = cardsPositionArray[1].cloneNode(true);
-            let cloneNode2 = cardsPositionArray[2].cloneNode(true);
-
-            if (this.windowWidth >= 2000) {
-    
-                // Eliminiamo i parent nodes con le card
-                cardContainer[0].children[0].remove();
-                cardContainer[0].children[1].remove();
-                cardContainer[0].children[0].remove();
-                
-                // Visualizziamo le card senza parent nodes
-                cardContainer[0].appendChild(cloneNode);
-                cardContainer[0].appendChild(cloneNode1);
-                cardContainer[0].appendChild(cloneNode2);
-                
-                // Aggiungiamo le classi a tutte le card 
-                for (let i = 0; i < cardsPositionArray.length; i++) {
-                    cloneNode.classList.add("col-xl-4");
-                    cloneNode.classList.add("col-lg-4");
-                    cloneNode1.classList.add("col-xl-4");
-                    cloneNode1.classList.add("col-lg-4");
-                    cloneNode2.classList.add("col-xl-4");
-                    cloneNode2.classList.add("col-lg-4");
-                }
-            } else if (this.windowWidth < 2000) {
-                
-                //Togliamo i nodi "nuovi"
-                cardContainer[0].children[0].remove();
-                cardContainer[0].children[1].remove();
-                cardContainer[0].children[0].remove();
-                
-                // Ripristiniamo i "vecchi" parent nodes con le card
-                cardContainer[0].appendChild(parentCloneNode);
-                cardContainer[0].appendChild(parentCloneNode1);
-                cardContainer[0].appendChild(parentCloneNode2);
-
-            }
 
 
 
 
-          
-    
+
+
             // Sezione FORM
             let map = document.getElementById("map-container");
             let form = document.getElementById("form-container");
@@ -321,13 +339,13 @@ let app = new Vue ({
                 // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
                 let gal = document.querySelector('.glide__arrow--left');
                 const distanceGal = Math.ceil(gal.getBoundingClientRect().right); // 162
-                
+
                 console.log(distanceGal);
 
                 const distanceWin = distanceCover - distanceGal;
 
                 console.log(distanceWin); // circa 26-31 px
-                
+
                 if (distanceWin !== 31) {
                     distanceWin = 31;
                 }
@@ -335,10 +353,10 @@ let app = new Vue ({
             }
 
         },
-        
+
         // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
         bookDetails: function() {
-            
+
             // Seleziona l'altezza dell'immagine di copertina
             let cover = document.querySelector('.glide__slide--active');
             let coverHeight = cover.getBoundingClientRect().height;
@@ -346,7 +364,7 @@ let app = new Vue ({
             // Seleziona l'altezza di bookDetails
             let bd = document.getElementById('book_details');
             let bdHeight = bd.getBoundingClientRect().height;
-            
+
             // Cambia l'altezza corrente con l'altezza di bookDetails
             if (bdHeight !== coverHeight) {
                 bdHeight == coverHeight;
@@ -370,7 +388,7 @@ let app = new Vue ({
             let allValues = allRadiobuttons.getBoundingClientRect();
 
             // console.log(allValues);
-            
+
             // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
             // const rdbB = 596.8333129882812;
             // const rdbT = 581.8333129882812;
@@ -380,7 +398,7 @@ let app = new Vue ({
             // if (valuesB != rdbB && valuesT != rdbT) {
             if (valuesY != rdbY) {
                 valuesY == rdbY;
-            } 
+            }
 
             // console.log (fixedValuesB, rdbB, fixedValuesT, rdbT);
 
@@ -388,7 +406,7 @@ let app = new Vue ({
 
 
     }
-        
+
 });
 
 
@@ -410,14 +428,14 @@ const glideConfig = {
     dragThreshold: false,
     breakpoints: {
         1200: {
-            perView: 1, 
+            perView: 1,
         },
-     
+
         992: {
         perView: 1,
-     
+
         },
-        
+
         480: {
             perView: 1,
         }
@@ -460,7 +478,7 @@ for (let i = 0; i < buttonsArray.length; i++) {
         iconsFas[i].style.color = 'rgb(244, 124, 32)';
         cards[i].style.outlineColor = 'rgb(244, 124, 32)';
     });
-    
+
 };
 
 for (let i = 0; i < buttonsArray.length; i++) {
@@ -483,14 +501,14 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 // let windowWidth = window.screen.width;
 
-// // Salva in una variabile l'elemento HTML con classe card container 
+// // Salva in una variabile l'elemento HTML con classe card container
 // let cardContainer = document.getElementsByClassName('card-container');
 
 // // Salva in una variabile gli elementi HTML con classe card
 // let cardsPosition = document.querySelectorAll('.card');
 
 // // Trasformiamo cardsPosition in Array
-// let cardsPositionArray = Array.from(cardsPosition); 
+// let cardsPositionArray = Array.from(cardsPosition);
 
 // // Cloniamo i nodi delle card + parents + discendenti
 // let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
@@ -505,20 +523,20 @@ for (let i = 0; i < buttonsArray.length; i++) {
 // window.addEventListener("resize", windowLarge(windowWidth));
 
 // function windowLarge(windowWidth) {
-    
+
 //     if (windowWidth >= 2000) {
-    
+
 //         // Eliminiamo i parent nodes con le card
 //         cardContainer[0].children[0].remove();
 //         cardContainer[0].children[1].remove();
 //         cardContainer[0].children[0].remove();
-        
+
 //         // Visualizziamo le card senza parent nodes
 //         cardContainer[0].appendChild(cloneNode);
 //         cardContainer[0].appendChild(cloneNode1);
 //         cardContainer[0].appendChild(cloneNode2);
-        
-//         // Aggiungiamo le classi a tutte le card 
+
+//         // Aggiungiamo le classi a tutte le card
 //         for (let i = 0; i < cardsPositionArray.length; i++) {
 //             cloneNode.classList.add("col-xl-4");
 //             cloneNode.classList.add("col-lg-4");
@@ -533,7 +551,7 @@ for (let i = 0; i < buttonsArray.length; i++) {
 //         cardContainer[0].children[0].remove();
 //         cardContainer[0].children[1].remove();
 //         cardContainer[0].children[0].remove();
-        
+
 //         // Ripristiniamo i "vecchi" parent nodes con le card
 //         cardContainer[0].appendChild(parentCloneNode);
 //         cardContainer[0].appendChild(parentCloneNode1);
@@ -544,9 +562,9 @@ for (let i = 0; i < buttonsArray.length; i++) {
 // }
 
 
-    
 
-    
+
+
 
 
 
@@ -557,7 +575,7 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 /*----------  Subsection Validation Form  ----------*/
 
-  
+
 // Validation test + Invio mail
 function controlloForm() {
 
@@ -572,8 +590,8 @@ function controlloForm() {
     // Espressione regolare per l'email
     let valid_email = /^([a-zA-Z0-9_.-]) + @ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/;
 
-    // Se i campi sono vuoti o undefined manda alert 
-    if (nome == "" || email == "" || subject == "" || body == "" || 
+    // Se i campi sono vuoti o undefined manda alert
+    if (nome == "" || email == "" || subject == "" || body == "" ||
         nome == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
         alert("Per inviare la email compila i campi vuoti o undefined");
         return false;

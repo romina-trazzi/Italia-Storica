@@ -1,5 +1,4 @@
-/* MediaQuery CSS Italia Storica */
-/*=============================================
+/* MediaQuery CSS Italia Storica */ /*=============================================
 =            HEADER MEDIA QUERY         =
 =============================================*/
 @media (min-width: 350px) and (max-width: 599px) {
@@ -139,7 +138,6 @@
     padding-left: 25px !important;
     padding-right: 25px !important;
   }
-
   .card {
     height: 510px !important;
   }
@@ -149,7 +147,6 @@
     padding-left: 25px !important;
     padding-right: 25px !important;
   }
-
   .card {
     height: 540px !important;
   }
@@ -168,13 +165,11 @@
   .card-container > .col-xl-4:not(:first-child) {
     margin-top: 60px !important;
   }
-
   .card-container .col-xl-4 {
     display: flex;
     justify-content: center;
     width: 100%;
   }
-
   .card {
     width: 360px !important;
   }

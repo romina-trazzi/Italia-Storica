@@ -1,4 +1,4 @@
-// webpack.mix.jsnm
+// webpack.mix.js
 
 let mix = require('laravel-mix');	
 
@@ -20,3 +20,5 @@ mix
 .options({
     processCssUrls: false
 })
+
+
