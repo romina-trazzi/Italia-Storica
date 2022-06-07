@@ -485,27 +485,28 @@ for (let i = 0; i < buttonsArray.length; i++) {
 function controlloForm() {
 
     // Selezioniamo i dati del form e li salviamo in variabili
-    let nome = document.sendemail.from.value;
-    let email = document.sendemail.email.value;
-    let subject = document.sendemail.subject.value;
-    let body = document.sendemail.body.value;
+    let name = document.getElementById('namesurname').value;
+    let email = document.getElementById('email').value;
+    let subject = document.getElementById('subject').value;
+    let mailbody = document.getElementById('mailbody').value;
 
-    console.log(nome, email, subject, body);
-
-    // Espressione regolare per l'email
-    let valid_email = /^([a-zA-Z0-9_.-]) + @ (([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+ $/;
-
+    
+    // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
+    let valid_email = /^ ([a-zA-Z0-9_.-]) + @ ( ([a-zA-Z0-9-]{2,}) +. ) + ( [a-zA-Z0-9]{2,} ) $/;
+    
     // Se i campi sono vuoti o undefined manda alert
-    if (nome == "" || email == "" || subject == "" || body == "" ||
-        nome == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
+    if (name == "" || email == "" || subject == "" || body == "" || name == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
         alert("Per inviare la email compila i campi vuoti o undefined");
         return false;
-
-    // Verifica correttezza indirizzo mail ed eventualmente manda alert
-    } else if (email.indexOf("@") == (-1) || email.indexOf(".") == false || !valid_email.test(email) ) {
+        
+    // Verifica correttezza indirizzo mail (se la chiocciola non c'è, se il punto non c'è, oppure se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
+    } else if (email.indexOf("@") == (-1) || email.indexOf(".") == (-1) || !valid_email.test(email) ) {
         alert("Controlla l'indirizzo email");
+        console.log(name, email, subject, mailbody);
         document.invio.email.focus();
         return false;
+
+    // Se tutto è ok, convalida i dati e inviali alla pagina 
     } else {
         return true;
     }
@@ -514,8 +515,7 @@ function controlloForm() {
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
-
-
+ 
 
 
 
