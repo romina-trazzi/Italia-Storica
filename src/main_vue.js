@@ -182,7 +182,7 @@ let app = new Vue ({
 
             /* Se la larghezza dello schermo è uguale o inferiore di 1200px aggiungi le classi order-last e order-css
             se c'è, rimuovi la classe order-first */
-            if (this.windowWidth <= 1200) {
+            if (this.windowWidth < 1200) {
                 column.classList.add("order-last");
                 column.classList.add("order-css");
                 column.classList.toggle("order-first", false);
@@ -205,21 +205,13 @@ let app = new Vue ({
             // Salva in una variabile l'elemento HTML con classe card container
             let cardContainer = document.getElementsByClassName('card-container');
 
-            // Salva in una variabile i figli dell'elemento HTML con classe card container (cioè i 3 "div class = "col-xl-4 col-lg-4")
-            let cardContainerChildren = document.getElementsByClassName('card-container')[0].children;
-
             // Salva in una variabile gli elementi HTML con classe card
             let cardsPosition = document.querySelectorAll('.card');
 
             // Trasformiamo cardsPosition in Array
             let cardsPositionArray = Array.from(cardsPosition);
 
-            // Cloniamo i nodi delle card + parents + discendenti (cioè div class = "col-xl-4 col-lg-4")
-            let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
-            let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
-            let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
-
-            // Cloniamo i nodi delle cards + discendenti (cioè div class = "card")
+            // Cloniamo i nodi delle cards + discendenti   
             let cloneNode = cardsPositionArray[0].cloneNode(true);
             let cloneNode1 = cardsPositionArray[1].cloneNode(true);
             let cloneNode2 = cardsPositionArray[2].cloneNode(true);
@@ -296,12 +288,6 @@ let app = new Vue ({
                 this.monoWidth = false;
             }
 
-
-
-
-
-
-
             // Sezione FORM
             let map = document.getElementById("map-container");
             let form = document.getElementById("form-container");
@@ -369,6 +355,7 @@ let app = new Vue ({
             if (bdHeight !== coverHeight) {
                 bdHeight == coverHeight;
             };
+
         },
 
         // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
@@ -403,12 +390,9 @@ let app = new Vue ({
             // console.log (fixedValuesB, rdbB, fixedValuesT, rdbT);
 
         }
-
-
     }
 
 });
-
 
 /*=====  End of VUE SECTION block  ======*/
 
@@ -490,85 +474,6 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 
 /*---------- End Subsection Card outline colors  ----------*/
-
-
-
-/*----------  Subsection div Card   ----------*/
-
-/* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi xl-4 lg-4 */
-
-/* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */
-
-// let windowWidth = window.screen.width;
-
-// // Salva in una variabile l'elemento HTML con classe card container
-// let cardContainer = document.getElementsByClassName('card-container');
-
-// // Salva in una variabile gli elementi HTML con classe card
-// let cardsPosition = document.querySelectorAll('.card');
-
-// // Trasformiamo cardsPosition in Array
-// let cardsPositionArray = Array.from(cardsPosition);
-
-// // Cloniamo i nodi delle card + parents + discendenti
-// let parentCloneNode = cardContainer[0].children[0].cloneNode(true);
-// let parentCloneNode1 = cardContainer[0].children[1].cloneNode(true);
-// let parentCloneNode2 = cardContainer[0].children[2].cloneNode(true);
-
-// // Cloniamo i nodi delle cards + discendenti
-// let cloneNode = cardsPositionArray[0].cloneNode(true);
-// let cloneNode1 = cardsPositionArray[1].cloneNode(true);
-// let cloneNode2 = cardsPositionArray[2].cloneNode(true);
-
-// window.addEventListener("resize", windowLarge(windowWidth));
-
-// function windowLarge(windowWidth) {
-
-//     if (windowWidth >= 2000) {
-
-//         // Eliminiamo i parent nodes con le card
-//         cardContainer[0].children[0].remove();
-//         cardContainer[0].children[1].remove();
-//         cardContainer[0].children[0].remove();
-
-//         // Visualizziamo le card senza parent nodes
-//         cardContainer[0].appendChild(cloneNode);
-//         cardContainer[0].appendChild(cloneNode1);
-//         cardContainer[0].appendChild(cloneNode2);
-
-//         // Aggiungiamo le classi a tutte le card
-//         for (let i = 0; i < cardsPositionArray.length; i++) {
-//             cloneNode.classList.add("col-xl-4");
-//             cloneNode.classList.add("col-lg-4");
-//             cloneNode1.classList.add("col-xl-4");
-//             cloneNode1.classList.add("col-lg-4");
-//             cloneNode2.classList.add("col-xl-4");
-//             cloneNode2.classList.add("col-lg-4");
-//         }
-//     } else if (windowWidth < 2000) {
-
-//         // Togliamo i nodi "nuovi"
-//         cardContainer[0].children[0].remove();
-//         cardContainer[0].children[1].remove();
-//         cardContainer[0].children[0].remove();
-
-//         // Ripristiniamo i "vecchi" parent nodes con le card
-//         cardContainer[0].appendChild(parentCloneNode);
-//         cardContainer[0].appendChild(parentCloneNode1);
-//         cardContainer[0].appendChild(parentCloneNode2);
-
-
-//     }
-// }
-
-
-
-
-
-
-
-
-
 
 
 

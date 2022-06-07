@@ -41,21 +41,34 @@
 
 
 // Descrizione libri 
-@media (max-width: 1200px) {
-  .book_details {
-    padding-left: 0 !important;
-    padding-top: 180px !important;
+@media (max-width: 1199px) {
+  main {
+    .core {
+
+      .book_details {
+        padding-left: 50px !important;
+        padding-top: 180px !important;
+      }
+    
+      .book-second_row {
+        .button {
+          font-size: 1rem !important;
+          margin-top: 50px;
+        }
+      }
+    }
   }
 }
 
-// Book-main
-
 @media (min-width: 1200px) {
+
   main {
     .core {
-      // #book-main {
-       
-      // }
+
+      .book_details {
+        padding-top: 0px !important;
+        padding-left: 50px !important;
+      }
       
       .book-second_row {
         .button {
@@ -68,22 +81,6 @@
 }
 
 
-@media (max-width: 1199px) {
-  main {
-    .core {
-      .book-second_row {
-        .button {
-          font-size: 1rem !important;
-          margin-top: 50px;
-        }
-      }
-    }
-  }
-}
-
-
-
-
 // Glide arrows
 @media (max-width: 799px) {
   main {
@@ -92,7 +89,6 @@
        .glide__arrows {
          display: none !important;
         }
-
       }
     }
   }
