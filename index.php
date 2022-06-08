@@ -13,12 +13,18 @@
 
             $from = $_POST['from'];  // proprietà name del campo del form nel file HTML
             $subject = $_POST['subject'];
-            $email = $_POST['email'];
+            $email = $_POST['email']; // mail del visitatore del sito
             $body = $_POST['body'];
+            $to = "romina.trazzi@posta.it"; // mail del webmaster ricevente
+
+            $message = "Messaggio da $from (email: $email).";
             
             echo $from . " " . $subject . " " . $email . " " . $body;
+
+            mail($to, $subject, $message); //andrea.lombardi@hotmail.com
+
             
-        ?>
+        ?> 
 
         <hr>
 

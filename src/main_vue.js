@@ -175,6 +175,34 @@ let app = new Vue ({
         // Quando il valore di windowWidth cambia, fai partire questa funzione
         windowWidth: function () {
 
+            // Sezione Jumbotron
+
+            // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
+
+        
+            let jumboTitleParent = document.getElementsByClassName('main_title');
+            let jumboTitleClone = jumboTitleParent[0].cloneNode(true);
+
+            
+            if (this.windowWidth >= 300 && this.windowWidth < 1000) {
+
+                // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
+                jumboTitleParent[0].children[1].remove();
+
+                // Sostituiamo con l'HTML che divide il titolo in due 
+                jumboTitleParent[0].innerHTML = 
+
+                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
+
+            } else {
+
+                jumboTitleParent[0].innerHTML = 
+
+                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica </h1>'
+
+                jumboTitleParent[0].childNodes[0].classList.toggle('special_title');
+            }
+            
             // Sezione CORE
 
             // Salva in una variabile l'elemento HTML che ha id book_change
@@ -245,7 +273,7 @@ let app = new Vue ({
                 cardContainer[0].children[1].remove();
                 cardContainer[0].children[0].remove();
                 
-                // // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
+                // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
                 cardContainer[0].innerHTML += 
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'

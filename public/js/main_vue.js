@@ -144,8 +144,23 @@ var app = new Vue({
   watch: {
     // Quando il valore di windowWidth cambia, fai partire questa funzione
     windowWidth: function windowWidth() {
-      // Sezione CORE
+      // Sezione Jumbotron
+      // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
+      var jumboTitleParent = document.getElementsByClassName('main_title');
+      var jumboTitleClone = jumboTitleParent[0].cloneNode(true);
+
+      if (this.windowWidth >= 300 && this.windowWidth < 1000) {
+        // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
+        jumboTitleParent[0].children[1].remove(); // Sostituiamo con l'HTML che divide il titolo in due 
+
+        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
+      } else {
+        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica </h1>';
+        jumboTitleParent[0].childNodes[0].classList.toggle('special_title');
+      } // Sezione CORE
       // Salva in una variabile l'elemento HTML che ha id book_change
+
+
       var column = document.getElementById("book_change");
       /* Se la larghezza dello schermo è uguale o inferiore di 1200px aggiungi le classi order-last e order-css
       se c'è, rimuovi la classe order-first */
@@ -200,7 +215,7 @@ var app = new Vue({
         // Elimina tutto il codice html delle card 
         cardContainer[0].children[0].remove();
         cardContainer[0].children[1].remove();
-        cardContainer[0].children[0].remove(); // // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
+        cardContainer[0].children[0].remove(); // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
 
         cardContainer[0].innerHTML += ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' + ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>' + ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> ';
       } // Sezione PERSONAL
