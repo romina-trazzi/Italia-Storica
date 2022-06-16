@@ -1,36 +1,39 @@
-<!DOCTYPE html>
+<?php 
+    // Impostiamo le variabili PHP raccogliendo i dati dal form HTML tramite l'attributo "name"
+    $userName = $_POST['name'];  // proprietà name del campo del form nel file HTML
+    $userEmail = $_POST['email']; // mail del visitatore del sito
+    $messageSubject = $_POST['subject'];
+    $message = $_POST['message'];
+    $button = $_POST['submit_button'];
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    </head>
+    // Aggiungiamo l'indirizzo mail del web master ricevente andrea.lombardi@hotmail.com
+    $to = "romina.trazzi@posta.it"; 
+    
+    // Impostiamo il corpo della mail in arrivo
+    $body = "";
 
+    $body .= "Messaggio da " . $userName . "\r\n" ;
+    $body .= "Email " . $userEmail . "\r\n";
+    $body .= "Oggetto " . $messageSubject . "\r\n";
+    $body .= "Testo " .$message . "\r\n";
 
-    <body>
+    // se la variabile legata al bottone di invio del form è presente alias quando viene premuto il bottone
+    if (isset ($button)) {
+
+        // controlla se la variabile mail del destinatario è presente ed è diversa da campo vuoto
+        if (isset ($userEmail) && !empty($userEmail)) {
+            
+            // spedisci il form
+            mail($to, $messageSubject, $body); 
+            
+        }
         
-        <?php> 
-
-            $from = $_POST['from'];  // proprietà name del campo del form nel file HTML
-            $subject = $_POST['subject'];
-            $email = $_POST['email']; // mail del visitatore del sito
-            $body = $_POST['body'];
-            $to = "romina.trazzi@posta.it"; // mail del webmaster ricevente
-
-            $message = "Messaggio da $from (email: $email).";
-            
-            echo $from . " " . $subject . " " . $email . " " . $body;
-
-            mail($to, $subject, $message); //andrea.lombardi@hotmail.com
-
-            
-        ?> 
-
-        <hr>
-
-        <a href="index.html"> Torna alla home </a>
-       
-    </body>
-</html>
 
 
+
+    }
+?> 
+
+<hr>
+
+<a href="index.html"> Torna alla home </a>

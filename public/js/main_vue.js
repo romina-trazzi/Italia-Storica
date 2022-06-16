@@ -147,7 +147,6 @@ var app = new Vue({
       // Sezione Jumbotron
       // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
       var jumboTitleParent = document.getElementsByClassName('main_title');
-      var jumboTitleClone = jumboTitleParent[0].cloneNode(true);
 
       if (this.windowWidth >= 300 && this.windowWidth < 1000) {
         // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
@@ -155,8 +154,8 @@ var app = new Vue({
 
         jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
       } else {
+        // Ripristiniamo l'HTML originale
         jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica </h1>';
-        jumboTitleParent[0].childNodes[0].classList.toggle('special_title');
       } // Sezione CORE
       // Salva in una variabile l'elemento HTML che ha id book_change
 
@@ -405,18 +404,17 @@ function controlloForm() {
   var email = document.getElementById('email').value;
   var subject = document.getElementById('subject').value;
   var mailbody = document.getElementById('mailbody').value; // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
+  //     let valid_email = /^ ([a-zA-Z0-9_.-]) + @ + ([a-zA-Z0-9-]{2,}) $/;
+  // Se i campi sono vuoti o undefined manda alert
 
-  var valid_email = /^ ([a-zA-Z0-9_.-]) + @ ( ([a-zA-Z0-9-]{2,}) +. ) + ( [a-zA-Z0-9]{2,} ) $/; // Se i campi sono vuoti o undefined manda alert
-
-  if (name == "" || email == "" || subject == "" || body == "" || name == "undefined" || email == "undefined" || subject == "undefined" || body == "undefined") {
+  if (name == "" || email == "" || subject == "" || mailbody == "" || name == "undefined" || email == "undefined" || subject == "undefined" || mailbody == "undefined") {
     alert("Per inviare la email compila i campi vuoti o undefined");
     return false; // Verifica correttezza indirizzo mail (se la chiocciola non c'è, se il punto non c'è, oppure se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
   } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1 || !valid_email.test(email)) {
     alert("Controlla l'indirizzo email");
-    console.log(name, email, subject, mailbody);
-    document.invio.email.focus();
     return false; // Se tutto è ok, convalida i dati e inviali alla pagina 
   } else {
+    alert("Vai felice");
     return true;
   }
 }
