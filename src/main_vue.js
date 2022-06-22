@@ -505,44 +505,36 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 // Validation test + Invio mail
 function controlloForm() {
-
     // Selezioniamo i dati del form e li salviamo in variabili
-    let name = document.getElementById('namesurname').value;
+    // let name = document.getElementById('namesurname').value;
     let email = document.getElementById('email').value;
-    let subject = document.getElementById('subject').value;
-    let mailbody = document.getElementById('mailbody').value;
-
+    // let subject = document.getElementById('subject').value;
+    // let mailbody = document.getElementById('mailbody').value;
     
-     // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
-//     let valid_email = /^ ([a-zA-Z0-9_.-]) + @ + ([a-zA-Z0-9-]{2,}) $/;
-    
-    // Se i campi sono vuoti o undefined manda alert
-    if (name == "" || email == "" || subject == "" || mailbody == "" || name == "undefined" || email == "undefined" || subject == "undefined" || mailbody == "undefined") {
-        alert("Per inviare la email compila i campi vuoti o undefined");
-        return false;
-        
-    // Verifica correttezza indirizzo mail (se la chiocciola non c'è, se il punto non c'è, oppure se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
-    } else if (email.indexOf("@") == (-1) || email.indexOf(".") == (-1) || !valid_email.test(email)) {
-        alert("Controlla l'indirizzo email");
-        return false;
+    // Variabile di tipo regExp - oggetto Javascript
+    // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
+    let regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
 
-    // Se tutto è ok, convalida i dati e inviali alla pagina 
+    let regEmail = regx.test(email);
+
+
+    // Verifica correttezza indirizzo mail se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
+   if (regEmail) {
+
+       // Se tutto è ok, convalida i dati e inviali alla pagina
+       alert("Mail inviata. Grazie per averci contattato.");
+       return true;
+
     } else {
-        alert("Vai felice");
-        return true;
+
+        alert("Controlla l'indirizzo mail inserito.");
+        return false;
     }
+
 }
 
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
-
- 
-
-
-
-
-
-
 
 
 

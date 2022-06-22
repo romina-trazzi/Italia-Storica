@@ -17,23 +17,18 @@
     $body .= "Oggetto " . $messageSubject . "\r\n";
     $body .= "Testo " .$message . "\r\n";
 
-    // se la variabile legata al bottone di invio del form è presente alias quando viene premuto il bottone
-    if (isset ($button)) {
+    // Se la variabile legata al bottone di invio del form è presente alias quando viene premuto il bottone
+    
+    // if (isset ($button)) {
 
-        // controlla se la variabile mail del destinatario è presente ed è diversa da campo vuoto
-        if (isset ($userEmail) && !empty($userEmail)) {
-            
-            // spedisci il form
-            mail($to, $messageSubject, $body); 
-            
-        }
-        
+        // // Spedisci il form
+        // mail($to, $messageSubject, $body); 
 
+        // // Ritorna a index.html
+        // header("Location: index.html");
 
+   // } 
 
-    }
+ 
 ?> 
 
-<hr>
-
-<a href="index.html"> Torna alla home </a>

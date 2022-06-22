@@ -403,22 +403,24 @@ function controlloForm() {
   var name = document.getElementById('namesurname').value;
   var email = document.getElementById('email').value;
   var subject = document.getElementById('subject').value;
-  var mailbody = document.getElementById('mailbody').value; // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
-  //     let valid_email = /^ ([a-zA-Z0-9_.-]) + @ + ([a-zA-Z0-9-]{2,}) $/;
-  // Se i campi sono vuoti o undefined manda alert
+  var mailbody = document.getElementById('mailbody').value; // Variabile di tipo regExp - oggetto Javascript
+  // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
 
-  if (name == "" || email == "" || subject == "" || mailbody == "" || name == "undefined" || email == "undefined" || subject == "undefined" || mailbody == "undefined") {
-    alert("Per inviare la email compila i campi vuoti o undefined");
-    return false; // Verifica correttezza indirizzo mail (se la chiocciola non c'è, se il punto non c'è, oppure se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
-  } else if (email.indexOf("@") == -1 || email.indexOf(".") == -1 || !valid_email.test(email)) {
-    alert("Controlla l'indirizzo email");
-    return false; // Se tutto è ok, convalida i dati e inviali alla pagina 
-  } else {
-    alert("Vai felice");
+  var regx = /^([a-z A-Z 0-9 \. -] +) $/; // Verifica correttezza indirizzo mail se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
+
+  if (regx.test(email)) {
+    // Se tutto è ok, convalida i dati e inviali alla pagina
+    alert("Mail inviata. Grazie per averci contattato.");
+    location.href = "index.html";
     return true;
+  } else {
+    alert("Controlla l'indirizzo mail inserito.");
+    return false;
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
+// @ ([a-z A-Z 0-9 -] +) \. ([a-z] {2, 20})  
+// (\.[a-z] {2-10}) ?
 
 /***/ }),
 
