@@ -19,7 +19,7 @@
         
         // Se la variabile legata al bottone di invio del form è presente, alias quando viene premuto il bottone
         // + se sono presenti i campi Name + Email + Subject + Messaggio
-        if (isset ($userName && $userEmail && $messageSubject && $message && $button)) {
+        if   ( isset($userName) && isset($userEmail) && isset($messageSubject) && isset($message) && isset($button) ) {
             
             // Aggiungiamo l'indirizzo mail del web master ricevente andrea.lombardi@hotmail.com
             $to = "romina.trazzi@posta.it"; 
@@ -51,7 +51,7 @@
 
             
     
-        
+       
         
         
         
