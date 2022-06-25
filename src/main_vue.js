@@ -409,9 +409,6 @@ let app = new Vue ({
             if (valuesY != rdbY) {
                 valuesY == rdbY;
             }
-
-            // console.log (fixedValuesB, rdbB, fixedValuesT, rdbT);
-
         }
     }
 
@@ -505,11 +502,15 @@ for (let i = 0; i < buttonsArray.length; i++) {
 
 // Validation test + Invio mail
 function controlloForm() {
-    // Selezioniamo i dati del form e li salviamo in variabili
-    // let name = document.getElementById('namesurname').value;
+
+    // Disabilitiamo il bottone dopo il primo click per non inviare dati multipli
+    document.getElementById('submit_button').disabled = true;
+
+    // Selezioniamo la mail inserita nel form e la salviamo in una variabile
+    let name = document.getElementById('namesurname').value;
     let email = document.getElementById('email').value;
-    // let subject = document.getElementById('subject').value;
-    // let mailbody = document.getElementById('mailbody').value;
+    let subject = document.getElementById('subject').value;
+    let mailbody = document.getElementById('mailbody').value;
     
     // Variabile di tipo regExp - oggetto Javascript
     // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
@@ -517,19 +518,54 @@ function controlloForm() {
 
     let regEmail = regx.test(email);
 
-
-    // Verifica correttezza indirizzo mail se l'espressione regolare dà come risultato falso -cioè l'indirizzo mail è scritto sbagliato- )
+    // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
    if (regEmail) {
 
        // Se tutto è ok, convalida i dati e inviali alla pagina
-       alert("Mail inviata. Grazie per averci contattato.");
-       return true;
 
+       // Costruiamo l'oggetto che conterrà i dati da inviare
+       let formdata = {};
+       formdata = {
+            n: name,
+            e: email,
+            s: subject,
+            m: mailbody
+        }
+
+        console.log(formdata);
+        
+        // Chiamata AJAX al server
+        let xhr = new XMLHttpRequest();
+        
+        xhr.open( "POST", "index.php", true);
+   
+        xhr.onreadystatechange = function () {
+           if (this.readyState == 4 && this.status == 200) {
+               console.log(this.response);
+               const obj = JSON.parse(this.response);
+               console.log(obj.success, obj.response);
+               
+            } else {
+                
+                alert("C'è un problema. Mail non inviata.");
+                
+                // Riabilitiamo il bottone 
+                document.getElementById('submit_button').disabled = false;
+            }
+        }
+        
+        xhr.send(formdata);
+        
+        alert(`Dati inviati al server. Grazie ${name} per averci contattato.`);
+       
+        return true;
+       
     } else {
-
+        
+        // Altrimenti segnala che l'indirizzo mail è errato
         alert("Controlla l'indirizzo mail inserito.");
         return false;
-    }
+    }    
 
 }
 
