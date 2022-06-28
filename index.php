@@ -26,9 +26,9 @@
 
             // Creiamo altre variabili php per impostare la funzione mail
             $from = $userEmail;
-            $subject = 'Contact Form Message ItaliaStorica' . $messageSubject;
+            // $subject = 'Contact Form Message ItaliaStorica' . $messageSubject;
 
-            var_dump($subject);
+            // var_dump($subject);
 
             // Impostiamo l'headers della mail in arrivo
             $headers = "From: $from";

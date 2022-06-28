@@ -546,20 +546,21 @@ function controlloForm() {
             } else {
                 console.log(this.readyState, this.status);
                 
-                // Riabilitiamo il bottone 
-                document.getElementById('submit_button').disabled = false;
             }
         }
         
         xhr.send(formdata);
 
         alert(`Mail inviata. Grazie ${name} per averci contattato.`);
-
-
+        
+        
     } else {
-
+        
         // Altrimenti segnala che l'indirizzo mail è errato
         alert("Controlla l'indirizzo mail inserito.");
+        
+        // Riabilitiamo il bottone 
+        document.getElementById('submit_button').disabled = false;
     }   
 
 }
