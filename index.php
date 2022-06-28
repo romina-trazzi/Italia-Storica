@@ -28,6 +28,8 @@
             $from = $userEmail;
             $subject = 'Contact Form Message ItaliaStorica' . $messageSubject;
 
+            var_dump($subject);
+
             // Impostiamo l'headers della mail in arrivo
             $headers = "From: $from" . "\n";
             $headers .= "MIME-Version: 1.0" . "\n";
@@ -35,10 +37,10 @@
             
             // Impostiamo il corpo della mail in arrivo
             $body = "";
-            $body .= '<b> Messaggio da: </b>' . $userName . '\r\n';
-            $body .= '<br><b> Email: </b>' . $userEmail . '\r\n';
-            $body .= '<br><b> Oggetto: </b>' . $messageSubject . '\r\n';
-            $body .= '<p><b> Testo: </b>' . $message . '</p>' . '\r\n';
+            $body .= '<b>Messaggio da:</b>' . $userName . '\r\n';
+            $body .= '<br><b>Email:</b>' . $userEmail . '\r\n';
+            $body .= '<br><b>Oggetto:</b>' . $messageSubject . '\r\n';
+            $body .= '<p><b>Testo:</b>' . $message . '</p>' . '\r\n';
 
             // Spedisci il form
             if (mail ($to, $messageSubject, nl2br($body), nl2br($headers))) {
