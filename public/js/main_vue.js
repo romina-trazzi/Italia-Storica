@@ -399,8 +399,8 @@ for (var _i = 0; _i < buttonsArray.length; _i++) {
 
 function controlloForm() {
   // Disabilitiamo il bottone dopo il primo click per non inviare dati multipli
-  document.getElementById('submit_button').disabled = true; // Selezioniamo la mail inserita nel form e la salviamo in una variabile
-
+  // document.getElementById('submit_button').disabled = true;
+  // Selezioniamo la mail inserita nel form e la salviamo in una variabile
   var name = document.getElementById('namesurname').value;
   var email = document.getElementById('email').value;
   var subject = document.getElementById('subject').value;
@@ -423,23 +423,22 @@ function controlloForm() {
     }; // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "index.php", true);
+    xhr.open("POST", "form.php", true);
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         console.log(this.responseText);
       } else {
-        console.log(this.readyState, this.status); // Riabilitiamo il bottone 
-
-        document.getElementById('submit_button').disabled = false;
+        console.log(this.readyState, this.status);
       }
     };
 
     xhr.send(formdata);
-    alert("Dati inviati al server. Grazie ".concat(name, " per averci contattato."));
+    alert("Mail inviata. Grazie ".concat(name, " per averci contattato."));
   } else {
     // Altrimenti segnala che l'indirizzo mail è errato
-    alert("Controlla l'indirizzo mail inserito.");
+    alert("Controlla l'indirizzo mail inserito."); // Riabilitiamo il bottone 
+    // document.getElementById('submit_button').disabled = false;
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/

@@ -26,10 +26,7 @@
 
             // Creiamo altre variabili php per impostare la funzione mail
             $from = $userEmail;
-            // $subject = 'Contact Form Message ItaliaStorica' . $messageSubject;
-
-            // var_dump($subject);
-
+           
             // Impostiamo l'headers della mail in arrivo
             $headers = "From: $from";
             $headers .= "MIME-Version: 1.0";
@@ -44,10 +41,10 @@
 
             // Spedisci il form
             if (mail ($to, $messageSubject, nl2br($body), nl2br($headers))) {
-                echo nl2br("Mail inviata. \n Grazie $userName per averci contattato.");
+                // echo nl2br("Mail inviata. \n Grazie $userName per averci contattato.");
                 
                 // Ritorna a index.html
-                header("Location: index.html");
+                header("Location: \index.html");
 
             } else {
                 echo("Il server non è riuscito ad inviare la mail. Per favore $userName riprova.");

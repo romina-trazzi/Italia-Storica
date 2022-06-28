@@ -504,7 +504,7 @@ for (let i = 0; i < buttonsArray.length; i++) {
 function controlloForm() {
 
     // Disabilitiamo il bottone dopo il primo click per non inviare dati multipli
-    document.getElementById('submit_button').disabled = true;
+    // document.getElementById('submit_button').disabled = true;
 
     // Selezioniamo la mail inserita nel form e la salviamo in una variabile
     let name = document.getElementById('namesurname').value;
@@ -537,7 +537,7 @@ function controlloForm() {
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
-        xhr.open( "POST", "index.php", true);
+        xhr.open( "POST", "form.php", true);
         
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
@@ -558,9 +558,9 @@ function controlloForm() {
         
         // Altrimenti segnala che l'indirizzo mail è errato
         alert("Controlla l'indirizzo mail inserito.");
-        
+
         // Riabilitiamo il bottone 
-        document.getElementById('submit_button').disabled = false;
+        // document.getElementById('submit_button').disabled = false;
     }   
 
 }
