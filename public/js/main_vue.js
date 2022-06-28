@@ -423,7 +423,7 @@ function controlloForm() {
     }; // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "form.php", true);
+    xhr.open("POST", "/form.php", true);
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {

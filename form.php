@@ -44,7 +44,7 @@
                 // echo nl2br("Mail inviata. \n Grazie $userName per averci contattato.");
                 
                 // Ritorna a index.html
-                header("Location: \index.html");
+                header("Location: index.html");
 
             } else {
                 echo("Il server non è riuscito ad inviare la mail. Per favore $userName riprova.");
