@@ -423,7 +423,7 @@ function controlloForm() {
     }; // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/form.php", true);
+    xhr.open("POST", "form.php", true);
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -437,8 +437,7 @@ function controlloForm() {
     alert("Mail inviata. Grazie ".concat(name, " per averci contattato."));
   } else {
     // Altrimenti segnala che l'indirizzo mail è errato
-    alert("Controlla l'indirizzo mail inserito."); // Riabilitiamo il bottone 
-    // document.getElementById('submit_button').disabled = false;
+    alert("Controlla l'indirizzo mail inserito.");
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/

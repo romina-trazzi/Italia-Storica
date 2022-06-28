@@ -551,7 +551,7 @@ function controlloForm() {
         
         xhr.send(formdata);
 
-        alert(`Mail inviata. Grazie ${name} per averci contattato.`);
+        // alert(`Mail inviata. Grazie ${name} per averci contattato.`);
         
         
     } else {
