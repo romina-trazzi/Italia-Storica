@@ -41,30 +41,20 @@
             $body .= '<p><b> Testo: </b>' . $message . '</p>' . '\r\n';
 
             // Spedisci il form
-            if (mail ($to, $messageSubject, nl2br($body), nlbr($headers))) {
+            if (mail ($to, $messageSubject, nl2br($body), nl2br($headers))) {
                 echo nl2br("Mail inviata. \n Grazie $userName per averci contattato.");
+                
+                // Ritorna a index.html
+                header("Location: index.html");
+
             } else {
                 echo("Il server non è riuscito ad inviare la mail. Per favore $userName riprova.");
+
             }
 
-        }; 
-
-            
-    
-       
-        
-        
-        
-        
-
-        //     Ritorna a index.html
-        //     header("Location: index.html");
-
-        // } 
-
-
+        };
     ?> 
-    
+
 </body>
 </html>
 

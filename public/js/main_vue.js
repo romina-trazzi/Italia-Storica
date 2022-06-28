@@ -408,7 +408,8 @@ function controlloForm() {
   // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
 
   var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
-  var regEmail = regx.test(email); // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
+  var regEmail = regx.test(email);
+  console.log(regEmail); // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
 
   if (regEmail) {
     // Se tutto è ok, convalida i dati e inviali alla pagina
@@ -419,19 +420,16 @@ function controlloForm() {
       e: email,
       s: subject,
       m: mailbody
-    };
-    console.log(formdata); // Chiamata AJAX al server
+    }; // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "index.php", true);
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.response);
-        var obj = JSON.parse(this.response);
-        console.log(obj.success, obj.response);
+        console.log(this.responseText);
       } else {
-        alert("C'è un problema. Mail non inviata."); // Riabilitiamo il bottone 
+        console.log(this.readyState, this.status); // Riabilitiamo il bottone 
 
         document.getElementById('submit_button').disabled = false;
       }
@@ -439,11 +437,9 @@ function controlloForm() {
 
     xhr.send(formdata);
     alert("Dati inviati al server. Grazie ".concat(name, " per averci contattato."));
-    return true;
   } else {
     // Altrimenti segnala che l'indirizzo mail è errato
     alert("Controlla l'indirizzo mail inserito.");
-    return false;
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
