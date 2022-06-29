@@ -517,9 +517,9 @@ function controlloForm() {
     let regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
 
     let regEmail = regx.test(email);
-
     console.log(regEmail);
 
+    
     // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
     if (regEmail) {
         // Se tutto è ok, convalida i dati e inviali alla pagina
@@ -533,7 +533,8 @@ function controlloForm() {
             s: subject,
             m: mailbody
         }
-
+        
+        
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
@@ -541,23 +542,37 @@ function controlloForm() {
         
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                console.log(this.responseText);
-           
+
+                console.log("Raggiunto 4-200!");
+               
+                
+                // if (this.responseText == "success") {
+
+                //     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
+                    
+                // }
+                
             } else {
+                
                 console.log(this.readyState, this.status);
                 
             }
+            
         }
         
+        
         xhr.send(formdata);
-
-        alert(`Mail inviata. Grazie ${name} per averci contattato.`);
         
+        // let valueForm = document.getElementById('my-form');
+        // valueForm.submit();
         
+        // window.location.href = "index.html";
+             
     } else {
         
         // Altrimenti segnala che l'indirizzo mail è errato
         alert("Controlla l'indirizzo mail inserito.");
+
     }   
 
 }

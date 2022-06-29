@@ -427,14 +427,17 @@ function controlloForm() {
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText);
+        console.log("Raggiunto 4-200!"); // if (this.responseText == "success") {
+        //     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
+        // }
       } else {
         console.log(this.readyState, this.status);
       }
     };
 
-    xhr.send(formdata);
-    alert("Mail inviata. Grazie ".concat(name, " per averci contattato."));
+    xhr.send(formdata); // let valueForm = document.getElementById('my-form');
+    // valueForm.submit();
+    // window.location.href = "index.html";
   } else {
     // Altrimenti segnala che l'indirizzo mail è errato
     alert("Controlla l'indirizzo mail inserito.");
