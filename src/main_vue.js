@@ -528,45 +528,35 @@ function controlloForm() {
         let formdata = {};
        
         formdata = {
-            n: name,
-            e: email,
-            s: subject,
-            m: mailbody
+            name: name,
+            email: email,
+            subject: subject,
+            message: mailbody
         }
         
+        // Trasformiamo formdata in un oggetto Json
+        let jason = JSON.stringify(formdata).serializeArray();
         
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
         xhr.open( "POST", "form.php", true);
         
+        
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-
-                console.log("Raggiunto 4-200!");
-               
                 
-                // if (this.responseText == "success") {
-
-                //     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
+                if (this.responseText == "success") {
+                    window.location.href = "index.html";
+                    alert(`Mail inviata. Grazie ${name} per averci contattato.`);
+                }
                     
-                // }
-                
-            } else {
-                
-                console.log(this.readyState, this.status);
-                
             }
-            
         }
-        
-        
-        xhr.send(formdata);
-        
-        // let valueForm = document.getElementById('my-form');
-        // valueForm.submit();
-        
-        // window.location.href = "index.html";
+                
+        xhr.setRequestHeader("Content-type", "text/html", "charset=UTF-8");
+        xhr.send(jason);
+                
              
     } else {
         
@@ -581,5 +571,14 @@ function controlloForm() {
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
 
+// console.log(this.response);
+// console.log(this.responseType);
+// console.log(xhr.getAllResponseHeaders());
 
+// let responseJSON = JSON.parse(this.responseText);
+// console.log(responseJSON.success);
+
+// let valueForm = document.getElementById('my-form');
+// valueForm.submit();
+//
     

@@ -416,10 +416,10 @@ function controlloForm() {
     // Costruiamo l'oggetto che conterrà i dati da inviare
     var formdata = {};
     formdata = {
-      n: name,
-      e: email,
-      s: subject,
-      m: mailbody
+      name: name,
+      email: email,
+      subject: subject,
+      message: mailbody
     }; // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
@@ -427,23 +427,25 @@ function controlloForm() {
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log("Raggiunto 4-200!"); // if (this.responseText == "success") {
+        console.log(this.responseText); // if (this.responseText == "success") {
         //     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
         // }
-      } else {
-        console.log(this.readyState, this.status);
+        // } else {  
+        //     console.log(this.readyState, this.status);
       }
     };
 
-    xhr.send(formdata); // let valueForm = document.getElementById('my-form');
-    // valueForm.submit();
-    // window.location.href = "index.html";
+    console.log(formdata);
+    xhr.send(formdata);
   } else {
     // Altrimenti segnala che l'indirizzo mail è errato
     alert("Controlla l'indirizzo mail inserito.");
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
+// let valueForm = document.getElementById('my-form');
+// valueForm.submit();
+// window.location.href = "index.html";
 
 /***/ }),
 
