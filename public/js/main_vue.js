@@ -408,11 +408,10 @@ function controlloForm() {
   // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
 
   var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
-  var regEmail = regx.test(email);
-  console.log(regEmail); // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
+  var regEmail = regx.test(email); // Verifica l'espressione regolare. 
+  // Se tutto è ok, convalida i dati e inviali alla pagina
 
   if (regEmail) {
-    // Se tutto è ok, convalida i dati e inviali alla pagina
     // Costruiamo l'oggetto che conterrà i dati da inviare
     var formdata = {};
     formdata = {
@@ -420,32 +419,41 @@ function controlloForm() {
       email: email,
       subject: subject,
       message: mailbody
-    }; // Chiamata AJAX al server
+    }; // Trasformiamo formdata in un oggetto Json
+
+    var jason = JSON.stringify(formdata).serializeArray();
+    console.log(jason); // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "form.php", true);
+    xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log(this.responseText); // if (this.responseText == "success") {
-        //     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
-        // }
-        // } else {  
-        //     console.log(this.readyState, this.status);
+        if (this.responseText == "success") {
+          // window.location.href = "https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html";
+          alert("Mail inviata. Grazie ".concat(name, " per averci contattato."));
+        }
       }
     };
 
-    console.log(formdata);
-    xhr.send(formdata);
+    xhr.onerror = function () {
+      console.log(xhr.status, xhr.statusText);
+    };
+
+    xhr.send(jason); // Se falso l'indirizzo mail è scritto sbagliato       
   } else {
-    // Altrimenti segnala che l'indirizzo mail è errato
     alert("Controlla l'indirizzo mail inserito.");
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
-// let valueForm = document.getElementById('my-form');
-// valueForm.submit();
-// window.location.href = "index.html";
+// Utilizziamo un oggetto FormData per selezionare i dati del form
+// let formData = new FormData(document.getElementById('my-form'));
+// console.log(this.response);
+// console.log(this.responseType);
+// console.log(xhr.getAllResponseHeaders());
+// let responseJSON = JSON.parse(this.responseText);
+// console.log(responseJSON.success);
 
 /***/ }),
 

@@ -517,58 +517,67 @@ function controlloForm() {
     let regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
 
     let regEmail = regx.test(email);
-    console.log(regEmail);
-
     
-    // Verifica l'espressione regolare. Se falso l'indirizzo mail è scritto sbagliato
+    // Verifica l'espressione regolare. 
+    
+    // Se tutto è ok, convalida i dati e inviali alla pagina
     if (regEmail) {
-        // Se tutto è ok, convalida i dati e inviali alla pagina
         
         // Costruiamo l'oggetto che conterrà i dati da inviare
         let formdata = {};
-       
+            
         formdata = {
             name: name,
             email: email,
             subject: subject,
             message: mailbody
         }
-        
+
         // Trasformiamo formdata in un oggetto Json
         let jason = JSON.stringify(formdata).serializeArray();
-        
+
+        console.log(jason);
+
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
         xhr.open( "POST", "form.php", true);
         
+        xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
         
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 
                 if (this.responseText == "success") {
-                    window.location.href = "index.html";
+                    // window.location.href = "https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html";
                     alert(`Mail inviata. Grazie ${name} per averci contattato.`);
-                }
-                    
+                }   
             }
         }
-                
-        xhr.setRequestHeader("Content-type", "text/html", "charset=UTF-8");
-        xhr.send(jason);
-                
-             
-    } else {
-        
-        // Altrimenti segnala che l'indirizzo mail è errato
-        alert("Controlla l'indirizzo mail inserito.");
 
+        xhr.onerror = function () {
+            console.log(xhr.status, xhr.statusText);
+        }
+                
+
+        xhr.send(jason);
+    
+
+
+    // Se falso l'indirizzo mail è scritto sbagliato       
+    } else {
+        alert("Controlla l'indirizzo mail inserito.");
     }   
 
 }
 
+                
+
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
+
+   // Utilizziamo un oggetto FormData per selezionare i dati del form
+   // let formData = new FormData(document.getElementById('my-form'));
 
 
 // console.log(this.response);
@@ -577,8 +586,5 @@ function controlloForm() {
 
 // let responseJSON = JSON.parse(this.responseText);
 // console.log(responseJSON.success);
-
-// let valueForm = document.getElementById('my-form');
-// valueForm.submit();
-//
     
+ 
