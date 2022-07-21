@@ -9,7 +9,7 @@
     <body>
 
         <?php 
-        
+
             // Creiamo le variabili PHP raccogliendo i dati dal form HTML tramite l'attributo "name"
             // Se la variabile legata al bottone di invio del form è presente, alias quando viene premuto il bottone
             // + se sono presenti i campi Name + Email + Subject + Messaggio
@@ -32,10 +32,10 @@
                 
                 // Impostiamo il corpo della mail in arrivo
                 $body = "";
-                $body .= "<b>" . "Messaggio da: " . "</b>" . "$userName ". "<br>";
-                $body .= "<b>" . "Email: " . "</b>" . "$userEmail" . "<br>";
-                $body .= "<b>" . "Oggetto: " . "</b>" . "$messageSubject" . "<br>";
-                $body .= "<p> <b>" ."Testo: " . "</b>" . "$message" . "</p>";
+                $body .= "Messaggio da: $userName\r\n\nEmail: $userEmail\r\n\nOggetto: $messageSubject\r\n\n";
+                $body .= "Testo: $message";
+          
+                echo $body;
                 
                 // Spedisci la mail
                 if (mail ($to, $messageSubject, $body, $headers)) {
