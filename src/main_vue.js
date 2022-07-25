@@ -536,8 +536,8 @@ function controlloForm() {
         // Trasformiamo formdata in un oggetto Json
         let jason = JSON.stringify(formdata).serializeArray();
 
-        console.log(jason);
-
+        // console.log(jason);
+        
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
@@ -548,20 +548,29 @@ function controlloForm() {
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
                 
-                if (this.responseText == "success") {
-                    // window.location.href = "https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html";
-                    alert(`Mail inviata. Grazie ${name} per averci contattato.`);
-                }   
-            }
-        }
-
-        xhr.onerror = function () {
-            console.log(xhr.status, xhr.statusText);
-        }
+                // if (xhr.responseText == "success") {
+                    location.assign('https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html');
+                    
+                    // console.log(typeof jason);
+                    // console.log(this.response);
+                    // console.log(this.responseType);
+                    // console.log(xhr.getAllResponseHeaders());
+                    // let responseJSON = JSON.parse(this.responseText);
+                    // console.log(responseJSON.success);
+                
+               
+            
+            } else {
+                xhr.onerror = function () {
+                    console.log(xhr.status, xhr.statusText);
+                }
                 
 
+            }
+        }
+            
         xhr.send(jason);
-    
+        
 
 
     // Se falso l'indirizzo mail è scritto sbagliato       
@@ -576,15 +585,8 @@ function controlloForm() {
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
-   // Utilizziamo un oggetto FormData per selezionare i dati del form
-   // let formData = new FormData(document.getElementById('my-form'));
 
 
-// console.log(this.response);
-// console.log(this.responseType);
-// console.log(xhr.getAllResponseHeaders());
 
-// let responseJSON = JSON.parse(this.responseText);
-// console.log(responseJSON.success);
-    
- 
+
+
