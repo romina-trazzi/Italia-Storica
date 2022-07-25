@@ -447,7 +447,7 @@ const glideConfig = {
 
 }
 
-let glide = new Glide('.glide', glideConfig).mount();
+let glide = new glide('.glide', glideConfig).mount();
 
 
 
@@ -503,9 +503,6 @@ for (let i = 0; i < buttonsArray.length; i++) {
 // Validation test + Invio mail
 function controlloForm() {
 
-    // Disabilitiamo il bottone dopo il primo click per non inviare dati multipli
-    // document.getElementById('submit_button').disabled = true;
-
     // Selezioniamo la mail inserita nel form e la salviamo in una variabile
     let name = document.getElementById('namesurname').value;
     let email = document.getElementById('email').value;
@@ -518,7 +515,8 @@ function controlloForm() {
 
     let regEmail = regx.test(email);
     
-    // Verifica l'espressione regolare. 
+    // Verifica l'espressione regolare.
+    console.log(regEmail); 
     
     // Se tutto è ok, convalida i dati e inviali alla pagina
     if (regEmail) {
@@ -532,11 +530,9 @@ function controlloForm() {
             subject: subject,
             message: mailbody
         }
-        
+
         // Trasformiamo formdata in un oggetto Json
         let jason = JSON.stringify(formdata).serializeArray();
-
-        console.log(jason, typeof jason);
         
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
@@ -550,6 +546,7 @@ function controlloForm() {
             
             }
         }
+
         xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
         
         xhr.onerror = function () {
@@ -558,11 +555,22 @@ function controlloForm() {
             
         xhr.send(jason);
         
-
-
     // Se falso l'indirizzo mail è scritto sbagliato       
     } else {
-        alert("Controlla l'indirizzo mail inserito.");
+
+        // Selezioniamo il div con il messaggio di errore (displayNone)
+        let invalidEmail = document.querySelector('.error');
+        
+        // Mettiamo visibile il div
+        invalidEmail.setAttribute('style', 'display:inline-block !important');
+
+        // Impostiamo l'outline color di errore
+        let invalidInput = document.getElementById('email');
+
+        invalidInput.style.outline = "thin solid rgb(244, 124, 32)"; 
+        
+        // Usciamo dalla funzione senza inviare il file
+        return false;
     }   
 
 }

@@ -402,6 +402,13 @@ body {
                         font-size: 0.9rem;
                         padding: 8px;
                     }
+
+                    .error {
+                        font-family: "Open Sans", sans-serif;
+                        color: map-get($color-map, hover_color);
+                        font-size: 0.8rem;
+                        display: none !important;
+                    }
             
                 }
 

@@ -579,12 +579,35 @@
                   <i class="fas fa-envelope-open-text"></i>
                 </div>
 
-                <form name="sendemail" action="form.php" method="post" enctype="multipart/form-data" onsubmit="controlloForm(); return false;" auto_complete="off" class="d-flex flex-column justify-content-center" id="my-form"> 
-                  <input type="text" name="name" min-length="6" maxlength="30" placeholder="Inserisci Nome e Cognome"  id="namesurname" required>
-                  <input type="email" name="email" placeholder="Email" id="email" required>
-                  <input type="text" name="subject" maxlength="80" placeholder="Oggetto" id="subject" required>
-                  <textarea name="message" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" required> </textarea>
-                  <button type="submit" name="submit_button" class="button orange" id="submit_button">Invia Email</button>
+                <form name="sendemail" action="form.php" method="post" enctype="multipart/form-data" onsubmit="controlloForm(); return false;" auto_complete="off" class="d-flex flex-column justify-content-center needs-validation" id="my-form">
+                  
+                  <!-- Name -->
+                  <div class="form-group">
+                    <input type="text" name="name" min-length="6" maxlength="30" placeholder="Inserisci Nome e Cognome"  id="namesurname" class="form-control" required>
+                  </div> 
+                  
+                  <!-- Email -->
+                  <div class="form-group">
+                    <input type="email" name="email" placeholder="Email" id="email" class="form-control" required>
+                    <div class="error">Inserisci una mail valida.</div> 
+                  </div>
+
+                  <!-- Object -->
+                  <div class="form-group">
+                    <input type="text" name="subject" maxlength="80" placeholder="Oggetto" id="subject" class="form-control" required>
+
+                  </div>
+
+                  <!-- Textarea-->
+                  <div class="form-group">
+                    <textarea name="message" rows="6" cols="60" placeholder="Scrivi il testo del tuo messaggio" id="mailbody" class="form-control" required> </textarea>
+                  </div>
+
+                  <!-- Button -->
+                  <div class="form-group d-flex justify-content-center">
+                    <button type="submit" name="submit_button" class="button orange" id="submit_button">Invia Email</button>
+                  </div>
+  
                 </form>
 
               </div>

@@ -925,6 +925,12 @@ body main .form .contatti_container #form-container input, body main .form .cont
   font-size: 0.9rem;
   padding: 8px;
 }
+body main .form .contatti_container #form-container .error {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(244, 124, 32);
+  font-size: 0.8rem;
+  display: none !important;
+}
 body main .form .contatti_container #map-container {
   height: -webkit-max-content;
   height: -moz-max-content;

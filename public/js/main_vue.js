@@ -7,8 +7,6 @@
   \*************************/
 /***/ (() => {
 
-function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
-
 function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
 
 /*=============================================
@@ -350,7 +348,7 @@ var glideConfig = {
     }
   }
 };
-var glide = new Glide('.glide', glideConfig).mount();
+var glide = new glide('.glide', glideConfig).mount();
 /*=====  End of GLIDE SECTION block  ======*/
 
 /*=================================================
@@ -400,8 +398,6 @@ for (var _i = 0; _i < buttonsArray.length; _i++) {
 // Validation test + Invio mail
 
 function controlloForm() {
-  // Disabilitiamo il bottone dopo il primo click per non inviare dati multipli
-  // document.getElementById('submit_button').disabled = true;
   // Selezioniamo la mail inserita nel form e la salviamo in una variabile
   var name = document.getElementById('namesurname').value;
   var email = document.getElementById('email').value;
@@ -410,8 +406,9 @@ function controlloForm() {
   // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
 
   var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
-  var regEmail = regx.test(email); // Verifica l'espressione regolare. 
-  // Se tutto è ok, convalida i dati e inviali alla pagina
+  var regEmail = regx.test(email); // Verifica l'espressione regolare.
+
+  console.log(regEmail); // Se tutto è ok, convalida i dati e inviali alla pagina
 
   if (regEmail) {
     // Costruiamo l'oggetto che conterrà i dati da inviare
@@ -423,8 +420,7 @@ function controlloForm() {
       message: mailbody
     }; // Trasformiamo formdata in un oggetto Json
 
-    var jason = JSON.stringify(formdata).serializeArray();
-    console.log(jason, _typeof(jason)); // Chiamata AJAX al server
+    var jason = JSON.stringify(formdata).serializeArray(); // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "form.php", true);
@@ -443,7 +439,15 @@ function controlloForm() {
 
     xhr.send(jason); // Se falso l'indirizzo mail è scritto sbagliato       
   } else {
-    alert("Controlla l'indirizzo mail inserito.");
+    // Selezioniamo il div con il messaggio di errore (displayNone)
+    var invalidEmail = document.querySelector('.error'); // Mettiamo visibile il div
+
+    invalidEmail.setAttribute('style', 'display:inline-block !important'); // Impostiamo l'outline color di errore
+
+    var invalidInput = document.getElementById('email');
+    invalidInput.style.outline = "thin solid rgb(244, 124, 32)"; // Usciamo dalla funzione senza inviare il file
+
+    return false;
   }
 }
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
