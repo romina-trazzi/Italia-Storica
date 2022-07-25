@@ -1,7 +1,6 @@
 <?php 
-    ob_start();
-    // error_reporting(E_ALL);
-    // ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     
     /* Se sono presenti i campi Name + Email + Subject + Messaggio
     Creiamo le variabili PHP raccogliendo i dati dal form HTML tramite l'attributo "name" */
@@ -38,42 +37,18 @@
             $referer = $_SERVER ['HTTP_REFERER'];
             
             function redirect($url) {
-                ob_start();
-                header('Location:'.$url, true, 200);
-                ob_end_flush();
+                header('Location:'.$url);
                 exit();
             }
 
             redirect($referer); 
     
-        }
+        } else {
+            
+            echo ("Il server non è riuscito ad inviare la mail. Per favore $userName riprova.");  
+        } 
+        
     }     
         
 ?>
-
-
-<!-- // echo "success";
-// echo "<script> location.href='https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html'; </script>"; -->
-
-<!-- } else {
-    
-    // echo ("Il server non è riuscito ad inviare la mail. Per favore $userName riprova.");  
-} -->
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Php form contact</title>
-    </head>
-    <body>  -->
-  
-    
-    <!-- </body>
-</html> 
-     -->
-    
-    
     
