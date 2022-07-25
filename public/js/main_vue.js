@@ -7,6 +7,8 @@
   \*************************/
 /***/ (() => {
 
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
+
 function _readOnlyError(name) { throw new TypeError("\"" + name + "\" is read-only"); }
 
 /*=============================================
@@ -421,27 +423,22 @@ function controlloForm() {
       message: mailbody
     }; // Trasformiamo formdata in un oggetto Json
 
-    var jason = JSON.stringify(formdata).serializeArray(); // console.log(jason);
-    // Chiamata AJAX al server
+    var jason = JSON.stringify(formdata).serializeArray();
+    console.log(jason, _typeof(jason)); // Chiamata AJAX al server
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "form.php", true);
-    xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
 
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        // if (xhr.responseText == "success") {
-        location.assign('https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html'); // console.log(typeof jason);
-        // console.log(this.response);
-        // console.log(this.responseType);
-        // console.log(xhr.getAllResponseHeaders());
-        // let responseJSON = JSON.parse(this.responseText);
-        // console.log(responseJSON.success);
-      } else {
-        xhr.onerror = function () {
-          console.log(xhr.status, xhr.statusText);
-        };
+        console.log("Grazie ".concat(name, " per averci scritto. Ti risponderemo al pi\xF9 presto."));
       }
+    };
+
+    xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
+
+    xhr.onerror = function () {
+      console.log(this.status, this.statusText);
     };
 
     xhr.send(jason); // Se falso l'indirizzo mail è scritto sbagliato       

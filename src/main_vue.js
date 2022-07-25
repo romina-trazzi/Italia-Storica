@@ -532,41 +532,28 @@ function controlloForm() {
             subject: subject,
             message: mailbody
         }
-
+        
         // Trasformiamo formdata in un oggetto Json
         let jason = JSON.stringify(formdata).serializeArray();
 
-        // console.log(jason);
+        console.log(jason, typeof jason);
         
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
         
         xhr.open( "POST", "form.php", true);
         
-        xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
-        
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                
-                // if (xhr.responseText == "success") {
-                    location.assign('https://piattaformaviola.com/piattaformaviola.com/italiastorica/index.html');
-                    
-                    // console.log(typeof jason);
-                    // console.log(this.response);
-                    // console.log(this.responseType);
-                    // console.log(xhr.getAllResponseHeaders());
-                    // let responseJSON = JSON.parse(this.responseText);
-                    // console.log(responseJSON.success);
-                
-               
+     
+                console.log(`Grazie ${name} per averci scritto. Ti risponderemo al più presto.`);
             
-            } else {
-                xhr.onerror = function () {
-                    console.log(xhr.status, xhr.statusText);
-                }
-                
-
             }
+        }
+        xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
+        
+        xhr.onerror = function () {
+            console.log(this.status, this.statusText);
         }
             
         xhr.send(jason);

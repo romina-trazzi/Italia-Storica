@@ -18,13 +18,19 @@
         // Creiamo altre variabili php per impostare la funzione mail
         $from = $userEmail;
     
-        // Impostiamo l'headers della mail in arrivo
-        $headers = "From: $from";
+        // Questo headers ci permette di inviare mail in formato HTML
+        $headers = "MIME-Version: 1.0\r\n";
+        $headers .= "Content-type: text/html; charset=UTF-8\r\n";
+        
+        // Impostiamo l'headers dell'autore della mail in arrivo
+        $headers .= "From: $from";
     
         // Impostiamo il corpo della mail in arrivo formattandola con i caratteri di escape
         $body = "";
-        $body .= "Messaggio da: $userName\r\n\nEmail: $userEmail\r\n\nOggetto: $messageSubject\r\n\n";
-        $body .= "Testo: $message";
+        $body .= "<b>Messaggio da:</b> $userName <br><br>";
+        $body .= "<b>Email:</b> $userEmail <br><br>";
+        $body .= "<b>Oggetto:</b> $messageSubject <br>";
+        $body .= "<p><b>Testo:</b> $message </p>";
     
     }
         
@@ -37,7 +43,7 @@
             $referer = $_SERVER ['HTTP_REFERER'];
             
             function redirect($url) {
-                header('Location:'.$url);
+                header('Location:'.$url, true, 200);
                 exit();
             }
 
