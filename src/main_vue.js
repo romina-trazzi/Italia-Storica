@@ -1,4 +1,4 @@
-document.addEventListener('load',()=> {
+// document.addEventListener('load',()=> {
 
     /*=============================================
         =            VUE SECTION           =
@@ -104,6 +104,41 @@ document.addEventListener('load',()=> {
 
             window.addEventListener('resize', this.bookDetailsResize);
             this.bookDetailsResize();
+
+            
+            /*=============================================
+            =            GLIDE SECTION           =
+            =============================================*/
+
+            const glideConfig = {
+                type: 'carousel',
+                startAt: 0,
+                perView: 1,
+                focusAt: 'center',
+                keyboard: false,
+                swipeThresold: false,
+                dragThreshold: false,
+                breakpoints: {
+                    1200: {
+                        perView: 1,
+                    },
+
+                    992: {
+                    perView: 1,
+
+                    },
+
+                    480: {
+                        perView: 1,
+                    }
+                },
+
+            }
+            
+            let glide = new Glide('.glide', glideConfig).mount();
+
+            
+            /*=====  End of GLIDE SECTION block  ======*/
 
         },
 
@@ -420,45 +455,6 @@ document.addEventListener('load',()=> {
 
 
 
-    /*=============================================
-    =            GLIDE SECTION           =
-    =============================================*/
-
-    const glideConfig = {
-        type: 'carousel',
-        startAt: 0,
-        perView: 1,
-        focusAt: 'center',
-        keyboard: false,
-        swipeThresold: false,
-        dragThreshold: false,
-        breakpoints: {
-            1200: {
-                perView: 1,
-            },
-
-            992: {
-            perView: 1,
-
-            },
-
-            480: {
-                perView: 1,
-            }
-        },
-
-    }
-
-    document.addEventListener ('load',()=> {
-            
-        let glide = new Glide('.glide', glideConfig).mount();
-
-    });
-
-
-
-
-    /*=====  End of GLIDE SECTION block  ======*/
 
 
 
@@ -501,8 +497,6 @@ document.addEventListener('load',()=> {
 
 
     /*---------- End Subsection Card outline colors  ----------*/
-
-
 
 
     /*----------  Subsection Validation Form  ----------*/
@@ -585,7 +579,7 @@ document.addEventListener('load',()=> {
 
     /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
-})
+// })
 
 
 
