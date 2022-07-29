@@ -17,27 +17,30 @@
         
         // Creiamo altre variabili php per impostare la funzione mail
         $from = $userEmail;
-    
+        
         // Questo headers ci permette di inviare mail in formato HTML
         $headers = "MIME-Version: 1.0\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8\r\n";
         
         // Impostiamo l'headers dell'autore della mail in arrivo
         $headers .= "From: $from";
-    
+        
         // Impostiamo il corpo della mail in arrivo formattandola con i caratteri di escape
         $body = "";
         $body .= "<b>Messaggio da:</b> $userName <br><br>";
         $body .= "<b>Email:</b> $userEmail <br><br>";
         $body .= "<b>Oggetto:</b> $messageSubject <br>";
         $body .= "<p><b>Testo:</b> $message </p>";
-    
-    }
         
+    }
+    
     // Quando viene premuto il pulsante invio spedisci la mail
     if (isset($button)) {
         
         if (mail ($to, $messageSubject, $body, $headers)) {
+            
+            // Flash message
+            
             
             // Redirect
             $referer = $_SERVER ['HTTP_REFERER'];
