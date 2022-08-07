@@ -1,5 +1,3 @@
-
-
 /*=============================================
     =            VUE SECTION           =
 =============================================*/
@@ -93,6 +91,9 @@ let app = new Vue ({
         // Proprietà larghezza bookDetails
         bookDetails: 0,
 
+        // Proprietà per fixare Glid
+        fix: false
+
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -104,7 +105,6 @@ let app = new Vue ({
 
         window.addEventListener('resize', this.bookDetailsResize);
         this.bookDetailsResize();
-
     },
 
     destroyed() {
@@ -157,7 +157,6 @@ let app = new Vue ({
         /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
         Il valore di width in data viene aggiornato da 0 a valore corrente.
         (passaggio 2) */
-
         handleResize () {
             this.windowWidth = window.screen.width;
         },
@@ -219,15 +218,17 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
             
+            
+            // Selezioniamo l'img della copertina attiva
+            let cover = document.getElementsByClassName("glide__slide--active");
+            let coverChild = cover[0].childNodes;
+            let coverArray = Array.from(coverChild);
 
-            // Trova la copertina attiva
+           
+            // Per tenere le copertine sempre alla stessa distanza dalle frecce
             if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
 
                 // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
-                let cover = document.getElementsByClassName("glide__slide--active");
-                let coverChild = cover[0].childNodes;
-                let coverArray = Array.from(coverChild);
-
                 const distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); // 193
 
                 console.log(distanceCover);
@@ -247,7 +248,6 @@ let app = new Vue ({
                 }
 
             }
-
 
             // Sezione ORDER
 
@@ -418,8 +418,7 @@ let app = new Vue ({
 
 /*=====  End of VUE SECTION block  ======*/
 
-
- /*=============================================
+/*=============================================
     =            GLIDE SECTION           =
 =============================================*/
 
@@ -448,8 +447,8 @@ const glideConfig = {
 
 }
 
-let glide = new Glide('.glide', glideConfig).mount();
-
+let glide = new Glide('.glide', glideConfig);
+glide.mount();
 
 /*=====  End of GLIDE SECTION block  ======*/
 
@@ -573,9 +572,40 @@ function controlloForm() {
 
 }
 
+/*---------- End Subsection Validation Form  ----------*/
 
+
+ /*----------  Subsection Reload page - Fix Glide Js problems  ----------*/
+
+
+let ulCarousel = document.getElementsByTagName("ul");
+let ulCarouselChild = ulCarousel[0].childNodes;
+let ulCarouselChildArray = Array.from(ulCarouselChild);
+
+let classFlag = false;
+
+for (let key in ulCarouselChildArray) {
+   
+    // 1 - Se non c'è una slide con classe active ricarica pagina
+    if (ulCarouselChildArray[key].classList.contains("glide__slide--active")) {
+        classFlag = true; 
+        let activeSlide = ulCarouselChildArray[key];
+        
+        // 2 - Se la larghezza dell'immagine attiva è minore di 290 px ricarica la pagina (il valore è trovato grazie alla console quando la pagina è larga 400px)
+        if (activeSlide.style.width < 290) {
+            classFlag == false;
+        }
+    }
+
+    // 3 - Se la proprietà di ul transform blablabla ricarica ???
+    // console.log(ulCarouselChildArray[key].style); // stampa i valori di tutti gli elementi dell'array 1 volta
+} 
+
+if (classFlag == false) {
+    window.location.reload();
+}
+    
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
-
 
 
 

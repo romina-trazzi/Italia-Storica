@@ -924,6 +924,7 @@ body main .form .contatti_container #form-container input, body main .form .cont
   font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   padding: 8px;
+  resize: none;
 }
 body main .form .contatti_container #form-container .error {
   font-family: "Open Sans", sans-serif;
