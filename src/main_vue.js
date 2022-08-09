@@ -91,9 +91,6 @@ let app = new Vue ({
         // Proprietà larghezza bookDetails
         bookDetails: 0,
 
-        // Proprietà per fixare Glid
-        fix: false
-
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -133,7 +130,7 @@ let app = new Vue ({
         slideBullet() {
 
             // Selezioniamo dal Dom i dots
-            let dots = document.querySelectorAll('.glide__bullet');
+            let dots = document.querySelectorAll('carousel_bullet');
 
             // Rimuoviamo la classe selected da tutti gli elementi
             for (let i = 0; i < dots.length; i++) {
@@ -220,74 +217,6 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
             
-            
-            // Selezioniamo l'img della copertina attiva
-            let cover = document.getElementsByClassName("glide__slide--active");
-            let coverChild = cover[0].childNodes;
-            let coverArray = Array.from(coverChild);
-
-            
-            // Per tenere le copertine sempre alla stessa distanza dalle frecce
-            if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
-
-                // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
-                const distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); // 193
-
-                console.log(distanceCover);
-
-                // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
-                let gal = document.querySelector('.glide__arrow--left');
-                const distanceGal = Math.ceil(gal.getBoundingClientRect().right); // 162
-
-                console.log(distanceGal);
-
-                const distanceWin = distanceCover - distanceGal;
-
-                console.log(distanceWin); // circa 26-31 px
-
-                if (distanceWin !== 31) {
-                    distanceWin = 31;
-                }
-
-            }
-
-
-
-            /*----------  Subsection Reload page - Fix Glide Js problems  ----------*/
-            let ulCarousel = document.getElementsByTagName("ul");
-            let ulCarouselChild = ulCarousel[0].childNodes;
-            let ulCarouselChildArray = Array.from(ulCarouselChild);
-
-            var activeSlideNumber = 0;
-
-            console.log(ulCarouselChildArray);
-
-            ulCarouselChildArray.forEach((item, index) => {
-                
-                if (item.classList.contains("glide__slide--active")) {
-                    let activeItem = item;
-                    let activeIndex = index;
-
-                } 
-
-                let activeSlide = item.style.width;
-                activeSlideNumber = parseInt(activeSlide); 
-        
-                console.log(activeSlideNumber);
-
-                /* 2 - Se la larghezza della copertina attiva è minore di 290 px ?
-                (il valore è trovato grazie alla console quando la pagina è larga 400px) */
-                if (activeSlideNumber < 290) {
-                
-                    item.setAttribute("style", "width: 290px, margin-right: 5px, margin-left: 5px"); 
-                }
-
-
-
-            }); 
-
-        
-
             // Sezione ORDER
 
             /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
@@ -408,7 +337,7 @@ let app = new Vue ({
         bookDetails: function() {
 
             // Seleziona l'altezza dell'immagine di copertina
-            let cover = document.querySelector('.glide__slide--active');
+            let cover = document.querySelector('.active');
             let coverHeight = cover.getBoundingClientRect().height;
 
             // Seleziona l'altezza di bookDetails
@@ -457,40 +386,7 @@ let app = new Vue ({
 
 /*=====  End of VUE SECTION block  ======*/
 
-/*=============================================
-    =            GLIDE SECTION           =
-=============================================*/
 
-// const glideConfig = {
-//     type: 'carousel',
-//     startAt: 0,
-//     perView: 1,
-//     focusAt: 'center',
-//     keyboard: false,
-//     swipeThresold: false,
-//     dragThreshold: false,
-//     breakpoints: {
-//         1200: {
-//             perView: 1,
-//         },
-
-//         992: {
-//         perView: 1,
-
-//         },
-
-//         480: {
-//             perView: 1,
-//         }
-//     },
-
-// }
-
-// let glide = new Glide('.glide', glideConfig);
-// glide.mount();
-
-
-/*=====  End of GLIDE SECTION block  ======*/
 
 
 
@@ -614,44 +510,53 @@ function controlloForm() {
 
 /*---------- End Subsection Validation Form  ----------*/
 
+/*---------- Subsection Carousel  ----------*/
+
+// https://codepen.io/sautumn/pen/qBVGOmo
+
+const buttonLeft = document.querySelector('.prev');
+const buttonRight = document.querySelector('.next');
+const track = document.querySelector('.carousel_track');
+const slides = document.querySelectorAll('.carousel_slide');
+const slideWidth = slides[0].getBoundingClientRect().width;
+let currentSlideIdx = 0;
+
+const slidesArray = Array.from(slides);
+slidesArray.forEach((slide, i) => {
+  slides[i].style.left = i * slideWidth + 'px';
+});
+
+function onClick(direction) {
+  const currentSlide = slidesArray[currentSlideIdx];
+  const nextSlide = direction === -1 ? currentSlide.previousElementSibling : currentSlide.nextElementSibling;
+  
+  if (nextSlide) {
+    const amountToMove = nextSlide.style.left;
+    track.style.transform = `translateX(-${amountToMove})`;
+    currentSlideIdx += direction;
+    
+    if (currentSlideIdx > slidesArray.length) {
+      currentSlideIdx = slidesArray.length - 1;
+    }
+    
+    if (currentSlideIdx < 0) {
+      currentSlideIdx = 0;
+    }
+  }
+}
+
+
+
+
+buttonRight.addEventListener('click', () => onClick(1));
+buttonLeft.addEventListener('click', () => onClick(-1));
+
+
+
+
+/*---------- Emd Subsection Carousel  ----------*/
+
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
-
-
-
-     
-
-
-
-     // if ((activeSlideNumber == 0) || (activeSlideNumber == 90) || (activeSlideNumber < 290)) {
-         
-   
-     //     console.log("There is a width problem");
-     //     continue
-         
-     // }
-
-        //  {
-
-             //     let newWindowWidth = window;
-             //     let prova = newWindowWidth.getBoundingClientRect().width;
-             //     console.log(prova);
-             // }
-
-                 //         console.log(ulCarouselChildArray[key].style.width);
-
- // }
- 
- // if (this.windowWidth < 400) {
- //     console.log("Ma porca miseria");
- // }
-     
- // }
-
- 
- // 3 - Se la proprietà di ul transform blablabla ricarica ???
- // console.log(ulCarouselChildArray[key].style); // stampa i valori di tutti gli elementi dell'array 1 volta
- 
- 
 
 

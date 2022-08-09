@@ -1,0 +1,138 @@
+.carousel {
+    position: initial;
+    height: 100%;
+}
+  
+.carousel_image {
+    // width: 100%;
+    min-height: 596px;
+    filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+    // object-fit: cover;
+    overflow: visible;
+    margin-bottom: 0;
+}
+  
+.carousel_track_container {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+  
+.carousel_track {
+    padding: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+    filter: blur(3px);
+    opacity: 20%;
+    transition: 0.5s linear;
+}
+  
+.carousel_slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+  
+.carousel_button {
+    color: floralwhite;
+    text-transform: uppercase;
+    padding: 12px 15px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 240, 0.5);
+    border-radius: 4px;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease, border 300ms ease-in-out;
+    line-height: 1;
+}
+  
+.carousel_button:hover {
+    outline: none;
+    border-color: white; 
+}
+
+.carousel_button:focus {
+    color: floralwhite;
+}
+
+.carousel_button.prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+
+.carousel_button.next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+}
+  
+// .carousel_bullet {
+//     background-color: rgba(255, 250, 240, 0.5);
+//     width: 15px;
+//     height: 15px;
+//     padding: 0;
+//     padding-left: 5px;
+//     border-radius: 50%;
+//     border: 2px solid transparent;
+//     transition: all 200ms ease-in-out;
+//     cursor: pointer;
+//     line-height: 0;
+//     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+//     margin: -6.3em 0.75em;
+    
+
+//     &:focus {
+//         outline: none;
+//         background-color: floralwhite;
+//     }
+
+//     &:hover {
+//         outline: none;
+//         border: 2px solid floralwhite;
+//         background-color: rgba(255, 255, 240, 0.5);
+//     }
+
+//     &:active {
+//         background-color: floralwhite;
+//     }
+//  }
+  
+// @mixin bookButton {
+//     .options {
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 50%;
+//         transform: translateY(-50%);
+//         color: #ddd;
+//         // padding: $spacing-unit * 3;
+//         font-family: 'Open Sans', sans-serif;
+//         text-align: center;
+//     }
+    
+//     input {
+//         display: none;
+//     }
+// }
+    
+
+
+// .carousel {
+//     position: initial;
+//     display: flex;
+//     height: 100%;
+// }
+
+// .carousel-item .active {
+//     opacity: 1;
+//     filter: none;
+// }

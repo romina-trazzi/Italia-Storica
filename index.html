@@ -153,53 +153,47 @@
 
               <!-- Carosello libri -->
               <div class="col-xl-6 col-lg-12">
+              
+                <div class="carousel">
+                  <button class="carousel_button prev">
+                    <i class="fas fa-angle-left"></i>
+                  </button>
+                  
+                  <div class="carousel_track_container">
+                    <ul class="carousel_track d_flex">
+                      
+                      <li class="carousel_slide d-flex justify-content-center align-items-center">
+                        <img class="carousel_image" src="public/img/carousel0.jpg">
+                      </li>
+                      <li class="carousel_slide d-flex justify-content-center align-items-center">
+                        <img class="carousel_image"src="public/img/carousel1.jpg">
+                      </li>
+                      <li class="carousel_slide d-flex justify-content-center align-items-center">
+                        <img class="carousel_image" src="public/img/carousel2.jpg">
+                      </li>
+                      <li class="carousel_slide d-flex justify-content-center align-items-center">
+                        <img class="carousel_image"src="public/img/carousel3.jpg">
+                      </li>
+                      <li class="carousel_slide d-flex justify-content-center align-items-center">
+                        <img class="carousel_image" src="public/img/carousel4.jpg">
+                      </li>
 
-                <!-- Glide -->
-                
-                  <transition-group name="fade" mode="out-in" appear>
-                  <div class="glide">
-                    <div class="glide__track" data-glide-el="track" v-bind:key="libri[counter]">
-                      <ul class="glide__slides d-flex">
-                        <li class="glide__slide d-flex justify-content-center align-items-center">
-                          <img src="public/img/carousel0.jpg">
-                        </li>
-                        <li class="glide__slide d-flex justify-content-center align-items-center">
-                          <img src="public/img/carousel1.jpg">
-                        </li>
-                        <li class="glide__slide d-flex justify-content-center align-items-center">
-                          <img src="public/img/carousel2.jpg">
-                        </li>
-                        <li class="glide__slide d-flex justify-content-center align-items-center">
-                          <img src="public/img/carousel3.jpg">
-                        </li>
-                        <li class="glide__slide d-flex justify-content-center align-items-center">
-                          <img src="public/img/carousel4.jpg">
-                        </li>
-                      </ul>
-                    </div>
-
-                  </transition-group>
-
-                  <div class="glide__arrows" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<" @click="prevImg()">
-                      <i class="fas fa-angle-left"></i>
-                    </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">" @click="nextImg()">
-                      <i class="fas fa-angle-right"></i>
-                    </button>
+                    </ul>
                   </div>
 
-                  <div id ="radiobuttonController" class="glide__bullets d-flex justify-content-center align-items-end" data-glide-el="controls[nav]">
-                    <button class="glide__bullet selected" data-glide-dir="=0" @click="slideBullet()"></button>
-                    <button class="glide__bullet" data-glide-dir="=1" @click="slideBullet()"> </button>
-                    <button class="glide__bullet" data-glide-dir="=2" @click="slideBullet()"></button>
-                    <button class="glide__bullet" data-glide-dir="=3" @click="slideBullet()"></button>
-                    <button class="glide__bullet" data-glide-dir="=4" @click="slideBullet()"></button>
+                  <button class="carousel_button next">
+                    <i class="fas fa-angle-right"></i>
+                  </button>
+
+                  <div id ="radiobuttonController" class="d-flex justify-content-center align-items-end">
+                    <button class="carousel_bullet selected" data-slide-dir="=0" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=1" @click="slideBullet()"> </button>
+                    <button class="carousel_bullet" data-slide-dir="=2" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=3" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=4" @click="slideBullet()"></button>
                   </div>
 
                 </div>
-                <!-- / Glide -->
-
               </div>
               <!-- Carosello libri -->
 
@@ -685,7 +679,6 @@
   <!-- Javascript files -->
   <script src="https://kit.fontawesome.com/dc7f057ed2.js" crossorigin="anonymous" type="text/Javascript"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
-  <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
   <script src="src/main_vue.js" type="text/Javascript"> </script>
 
 </html>
