@@ -251,102 +251,42 @@ let app = new Vue ({
 
             }
 
-            
+
+
             /*----------  Subsection Reload page - Fix Glide Js problems  ----------*/
             let ulCarousel = document.getElementsByTagName("ul");
             let ulCarouselChild = ulCarousel[0].childNodes;
             let ulCarouselChildArray = Array.from(ulCarouselChild);
-    
-            let activeSlideNumber = 0;
+
+            var activeSlideNumber = 0;
+
+            console.log(ulCarouselChildArray);
+
+            ulCarouselChildArray.forEach((item, index) => {
+                
+                if (item.classList.contains("glide__slide--active")) {
+                    let activeItem = item;
+                    let activeIndex = index;
+
+                } 
+
+                let activeSlide = item.style.width;
+                activeSlideNumber = parseInt(activeSlide); 
         
-            for (let key in ulCarouselChildArray) {
-            
-                // 1 - Se non c'è una slide con classe active ?
-                if (ulCarouselChildArray[key].classList.contains("glide__slide--active") == false) {
-                    console.log("there is no active slide");
-                } else {
-                    console.log("There is an active slide"); 
-                    
-                    /* 2 - Se la larghezza della copertina attiva è minore di 290 px ?
-                    (il valore è trovato grazie alla console quando la pagina è larga 400px) */
-                    let activeSlide = ulCarouselChildArray[key].style.width;
-                    activeSlideNumber = parseInt(activeSlide); 
-                    
-                    console.log(activeSlideNumber);
+                console.log(activeSlideNumber);
 
-                    for (let i = 0; i < ulCarouselChildArray.length; i++) {
-                        
-                        if ((activeSlideNumber == 0) || (activeSlideNumber == 90)) {
-                            console.log("There is a width problem");
-                            ulCarouselChildArray[key].setAttribute("style", "width: 290px"); // width slide attiva
-                            ulCarouselChildArray[i].setAttribute("style", "width: 290px");  // width altre slide
-                            
-                            
-                        }
-                        
-                        // if (activeSlideNumber < 290) {
-                        //     console.log("There is a width problem");
-                        //     let newWindowWidth = window;
-                        //     let prova = newWindowWidth.getBoundingClientRect().width;
-                        //     console.log(prova);
-                        // }
-
-
-                    }
-                    
-
-
-
+                /* 2 - Se la larghezza della copertina attiva è minore di 290 px ?
+                (il valore è trovato grazie alla console quando la pagina è larga 400px) */
+                if (activeSlideNumber < 290) {
+                
+                    item.setAttribute("style", "width: 290px, margin-right: 5px, margin-left: 5px"); 
                 }
-            }
 
 
 
-                   
-            
-                    
+            }); 
 
-            //         console.log(ulCarouselChildArray[key].style.width);
-                    
-            //         
-                   
-                    
-            //     } 
-
-               
-            
-            
-            // }
-            
-            // if (this.windowWidth < 400) {
-            //     console.log("Ma porca miseria");
-            // }
-
-                
-                
-            
-            
-
-
-
-
-                    
-               
-
-                //     if (classFlag == false) {
-                //         window.location.reload();
-                //         console.log("Width is wrong");
-                //         console.log(ulCarouselChildArray[2]);
-                //     }
-                // }
-                   
-                
-            // }
-
-            // 3 - Se la proprietà di ul transform blablabla ricarica ???
-            // console.log(ulCarouselChildArray[key].style); // stampa i valori di tutti gli elementi dell'array 1 volta
-            
-            
+        
 
             // Sezione ORDER
 
@@ -513,7 +453,7 @@ let app = new Vue ({
         }
     }
 
-});
+})
 
 /*=====  End of VUE SECTION block  ======*/
 
@@ -521,33 +461,33 @@ let app = new Vue ({
     =            GLIDE SECTION           =
 =============================================*/
 
-const glideConfig = {
-    type: 'carousel',
-    startAt: 0,
-    perView: 1,
-    focusAt: 'center',
-    keyboard: false,
-    swipeThresold: false,
-    dragThreshold: false,
-    breakpoints: {
-        1200: {
-            perView: 1,
-        },
+// const glideConfig = {
+//     type: 'carousel',
+//     startAt: 0,
+//     perView: 1,
+//     focusAt: 'center',
+//     keyboard: false,
+//     swipeThresold: false,
+//     dragThreshold: false,
+//     breakpoints: {
+//         1200: {
+//             perView: 1,
+//         },
 
-        992: {
-        perView: 1,
+//         992: {
+//         perView: 1,
 
-        },
+//         },
 
-        480: {
-            perView: 1,
-        }
-    },
+//         480: {
+//             perView: 1,
+//         }
+//     },
 
-}
+// }
 
-let glide = new Glide('.glide', glideConfig);
-glide.mount();
+// let glide = new Glide('.glide', glideConfig);
+// glide.mount();
 
 
 /*=====  End of GLIDE SECTION block  ======*/
@@ -679,5 +619,39 @@ function controlloForm() {
 
 
 
+     
+
+
+
+     // if ((activeSlideNumber == 0) || (activeSlideNumber == 90) || (activeSlideNumber < 290)) {
+         
+   
+     //     console.log("There is a width problem");
+     //     continue
+         
+     // }
+
+        //  {
+
+             //     let newWindowWidth = window;
+             //     let prova = newWindowWidth.getBoundingClientRect().width;
+             //     console.log(prova);
+             // }
+
+                 //         console.log(ulCarouselChildArray[key].style.width);
+
+ // }
+ 
+ // if (this.windowWidth < 400) {
+ //     console.log("Ma porca miseria");
+ // }
+     
+ // }
+
+ 
+ // 3 - Se la proprietà di ul transform blablabla ricarica ???
+ // console.log(ulCarouselChildArray[key].style); // stampa i valori di tutti gli elementi dell'array 1 volta
+ 
+ 
 
 

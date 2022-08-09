@@ -155,27 +155,30 @@
               <div class="col-xl-6 col-lg-12">
 
                 <!-- Glide -->
-                <div class="glide">
+                
+                  <transition-group name="fade" mode="out-in" appear>
+                  <div class="glide">
+                    <div class="glide__track" data-glide-el="track" v-bind:key="libri[counter]">
+                      <ul class="glide__slides d-flex">
+                        <li class="glide__slide d-flex justify-content-center align-items-center">
+                          <img src="public/img/carousel0.jpg">
+                        </li>
+                        <li class="glide__slide d-flex justify-content-center align-items-center">
+                          <img src="public/img/carousel1.jpg">
+                        </li>
+                        <li class="glide__slide d-flex justify-content-center align-items-center">
+                          <img src="public/img/carousel2.jpg">
+                        </li>
+                        <li class="glide__slide d-flex justify-content-center align-items-center">
+                          <img src="public/img/carousel3.jpg">
+                        </li>
+                        <li class="glide__slide d-flex justify-content-center align-items-center">
+                          <img src="public/img/carousel4.jpg">
+                        </li>
+                      </ul>
+                    </div>
 
-                  <div class="glide__track" data-glide-el="track">
-                    <ul class="glide__slides d-flex">
-                      <li class="glide__slide d-flex justify-content-center align-items-center">
-                        <img src="public/img/carousel0.jpg">
-                      </li>
-                      <li class="glide__slide d-flex justify-content-center align-items-center">
-                        <img src="public/img/carousel1.jpg">
-                      </li>
-                      <li class="glide__slide d-flex justify-content-center align-items-center">
-                        <img src="public/img/carousel2.jpg">
-                      </li>
-                      <li class="glide__slide d-flex justify-content-center align-items-center">
-                        <img src="public/img/carousel3.jpg">
-                      </li>
-                      <li class="glide__slide d-flex justify-content-center align-items-center">
-                        <img src="public/img/carousel4.jpg">
-                      </li>
-                    </ul>
-                  </div>
+                  </transition-group>
 
                   <div class="glide__arrows" data-glide-el="controls">
                     <button class="glide__arrow glide__arrow--left" data-glide-dir="<" @click="prevImg()">
