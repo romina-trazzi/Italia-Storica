@@ -498,7 +498,7 @@ const slides = document.querySelectorAll(".slide");
 
 // loop through slides and set each slides translateX property to index * 100% 
 slides.forEach((slide, index) => {
-  slide.style.transform = `translateX(${index * 100}%)`;
+  slide.style.transform = `translateX(${index * 3 * 100}%)`;
 });
 
 // current slide counter
@@ -522,7 +522,7 @@ nextSlide.addEventListener("click", function () {
   
     //   move slide by -100%
     slides.forEach((slide, index) => {
-      slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+      slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
     });
 
 });
@@ -541,7 +541,7 @@ prevSlide.addEventListener("click", function () {
 
     //   move slide by 100%
     slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+        slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
     });
 });
 

@@ -166,17 +166,17 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
-      } // Selezioniamo l'img della copertina attiva
-
-
-      var cover = document.getElementsByClassName("active");
-      var coverChild = cover[0].childNodes;
-      var coverArray = Array.from(coverChild); // Sezione ORDER
+      } // // Selezioniamo l'img della copertina attiva
+      // let cover = document.getElementsByClassName("active");
+      // let coverChild = cover[0].childNodes;
+      // let coverArray = Array.from(coverChild);
+      // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
 
       /* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */
       // Salva in una variabile l'elemento HTML con classe card container
+
 
       var cardContainer = document.getElementsByClassName('card-container'); // Salva in una variabile gli elementi HTML con classe card
 
@@ -262,24 +262,23 @@ var app = new Vue({
     // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
     counter: function counter() {
       /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello modificando la proprietà bottom */
-      // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
-      var allRadiobuttons = document.getElementById('radiobuttonController'); // Selezioniamo i valori posizionali dei radiobutton
-
-      var valuesB = allRadiobuttons.getBoundingClientRect().bottom;
-      var valuesT = allRadiobuttons.getBoundingClientRect().top;
-      var valuesY = allRadiobuttons.getBoundingClientRect().y;
-      var allValues = allRadiobuttons.getBoundingClientRect();
-      console.log(allValues); // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
-
-      var rdbB = 1382.449951171875;
-      var rdbT = 1382.449951171875;
-      var rdbY = 1302.5999755859375;
-
-      if (valuesY != rdbY || valuesT != rdbT || valuesB != rdbB) {
-        valuesY == rdbY;
-        valuesT == rdbT;
-        valuesB == rdbB;
-      }
+      // // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
+      // let allRadiobuttons = document.getElementById('radiobuttonController');
+      // // Selezioniamo i valori posizionali dei radiobutton
+      // let valuesB = allRadiobuttons.getBoundingClientRect().bottom;
+      // let valuesT = allRadiobuttons.getBoundingClientRect().top;
+      // let valuesY = allRadiobuttons.getBoundingClientRect().y;
+      // let allValues = allRadiobuttons.getBoundingClientRect();
+      // console.log(allValues);
+      // // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
+      // const rdbB = 1382.449951171875;
+      // const rdbT = 1382.449951171875;
+      // const rdbY = 1302.5999755859375;
+      // if ((valuesY != rdbY) ||  (valuesT != rdbT) || (valuesB != rdbB)) {
+      //     valuesY == rdbY;
+      //     valuesT == rdbT;
+      //     valuesB == rdbB;
+      // }
     }
   }
 });
@@ -388,64 +387,53 @@ function controlloForm() {
 
 /*---------- Subsection Carousel  ----------*/
 // https://codepen.io/sautumn/pen/qBVGOmo
+// Select all slides
 
 
-var buttonLeft = document.querySelector('.prev');
-var buttonRight = document.querySelector('.next');
-var track = document.querySelector('.carousel_track');
-var slides = document.querySelectorAll('.carousel_slide');
-var slideWidth = slides[0].getBoundingClientRect().width;
-var currentSlideIdx = 0;
-/* Trasforma le slide (li) in un array e aggiunge i valori "Bézier" di spostamento a sinistra delle slide (style.left)
-con l'operazione index * larghezza  della slide[0] a chi ha classe carousel_slide*/
+var slides = document.querySelectorAll(".slide"); // loop through slides and set each slides translateX property to index * 100% 
 
-var slidesArray = Array.from(slides);
-slidesArray.forEach(function (slide, i) {
-  var initialAmount = slides[i].style.left = i * slideWidth + 'px';
-  console.log(initialAmount);
-}); // Funzione per far muovere le slide al click con parametro direzione (next = +1, prev = -1)
+slides.forEach(function (slide, index) {
+  slide.style.transform = "translateX(".concat(index * 3 * 100, "%)");
+}); // current slide counter
 
-function onClick(direction) {
-  // Imposta slide corrente; inizialmente è la 0  
-  var currentSlide = slidesArray[currentSlideIdx];
-  /* Se direction vale - 1 (cioè click prev) vai indietro (nodo previous Sibling), altrimenti (click next) vai avanti (modo next Sibling)
-  Questi nodi sono legati a currentSlide, che è la posizione 0 dell'Array delle slide, ovvero gli elementi LI che contengono le IMG */
+var curSlide = 0; // maximum number of slides
 
-  var moveSlide = direction === -1 ? currentSlide.previousElementSibling : currentSlide.nextElementSibling;
-  /* Se moveSlide è true, quindi se c'è click, bisogna traslare in orizzontale (translate X) le LI del valore amountToMove applicato a 
-  .carousel_track (style.left) */
+var maxSlide = slides.length - 1; // select next slide button
 
-  if (moveSlide) {
-    var amountToMove = moveSlide.style.left;
-    track.style.transform = "translateX(-".concat(amountToMove, ")");
-    currentSlideIdx = currentSlideIdx + direction; // Se lo slideIndex è maggiore della lunghezza dell'Array, fallo diventare -1
+var nextSlide = document.querySelector(".btn-next"); // add event listener and navigation functionality
 
-    if (currentSlideIdx > slidesArray.length) {
-      currentSlideIdx = slidesArray.length - 1;
-    } // Se lo slideIndex è uguale della lunghezza dell'Array (cioè arriva alla fine delle slide), fallo diventare 0, così torna all'inizio
+nextSlide.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  } //   move slide by -100%
 
 
-    if (currentSlideIdx == slidesArray.length) {
-      currentSlideIdx == 0;
-    } // Se lo slideIndex è minore della lunghezza dell'Array, allora è 0 e quindi è all'inizio
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
+  });
+}); // select prev slide button
+
+var prevSlide = document.querySelector(".btn-prev"); // add event listener and navigation functionality
+
+prevSlide.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  } //   move slide by 100%
 
 
-    if (currentSlideIdx < 0) {
-      currentSlideIdx = 0;
-    }
-  }
-}
-
-buttonRight.addEventListener('click', function () {
-  return onClick(1);
-});
-buttonLeft.addEventListener('click', function () {
-  return onClick(-1);
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
+  });
 });
 /*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
-//
 
 /***/ }),
 

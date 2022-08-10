@@ -1,26 +1,18 @@
 .slider {
-    width: 100%;
     max-width: 800px;
-    height: 350px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
     overflow: hidden;  
     border-radius: 15px;
-    margin-bottom: 30px;
+
 }
 
 .active {
     opacity: 1 !important;
     filter: none !important;
     transition: transform 250ms ease-in  !important;
-    visibility: visible;
 }
   
 .slide {
     width: 100%;
-    max-width: 800px;
-    height: 350px;
     position: absolute;
     transition: all 0.5s;
     
@@ -31,17 +23,17 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -7%);
     // width: 100%;
     // height: 100%;
     object-fit: cover;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-    filter: blur(3px);
+    // filter: blur(3px);
     opacity: 20%;
     transition: 0.5s linear;
 }
 
-.btn {
+.btnC {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -54,7 +46,7 @@
     font-size: 18px;
 }
 
-.btn:active {
+.btnC:active {
     transform: scale(1.1);
 }
 
@@ -67,23 +59,6 @@
     top: 45%;
     right: 2%;
 }  
-
-
-
-
-
-
-
-// .carousel img {
-//     min-height: 560px;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-     
-// }
-
-
 
 .carousel_button {
     color: floralwhite;
@@ -109,20 +84,6 @@
     color: floralwhite;
 }
 
-.carousel_button.prev {
-    position: absolute;
-    top: 50%;
-    // left: 25%;
-    z-index: 1;
-}
-
-.carousel_button.next {
-    position: absolute;
-    top: 50%;
-    // right: 25%;
-    z-index: 1;
-}
-  
 .carousel_bullet {
     background-color: rgba(255, 250, 240, 0.5);
     width: 15px;
@@ -152,5 +113,10 @@
     &:active {
         background-color: floralwhite;
     }
- }
+}
 
+#radiobuttonController {
+    position: absolute;
+    left: 45%;
+    bottom: -10%;
+}
