@@ -153,47 +153,53 @@
 
               <!-- Carosello libri -->
               <div class="col-xl-6 col-lg-12">
-              
-                <div class="carousel">
-                  <button class="carousel_button prev">
-                    <i class="fas fa-angle-left"></i>
-                  </button>
-                  
-                  <div class="carousel_track_container">
-                    <ul class="carousel_track d_flex">
-                      
-                      <li class="carousel_slide d-flex justify-content-center align-items-center">
-                        <img class="carousel_image" src="public/img/carousel0.jpg">
-                      </li>
-                      <li class="carousel_slide d-flex justify-content-center align-items-center">
-                        <img class="carousel_image"src="public/img/carousel1.jpg">
-                      </li>
-                      <li class="carousel_slide d-flex justify-content-center align-items-center">
-                        <img class="carousel_image" src="public/img/carousel2.jpg">
-                      </li>
-                      <li class="carousel_slide d-flex justify-content-center align-items-center">
-                        <img class="carousel_image"src="public/img/carousel3.jpg">
-                      </li>
-                      <li class="carousel_slide d-flex justify-content-center align-items-center">
-                        <img class="carousel_image" src="public/img/carousel4.jpg">
-                      </li>
 
-                    </ul>
+                <div class="slider d-flex">
+
+                  <!-- slide 1 -->
+                  <div class="slide active">
+                    <img src="public/img/carousel0.jpg">
+                  </div>
+              
+                  <!-- slide 2 -->
+                  <div class="slide">
+                    <img src="public/img/carousel1.jpg">
+                  </div>
+              
+                  <!-- slide 3 -->
+                  <div class="slide">
+                    <img src="public/img/carousel2.jpg">
+                  </div>
+              
+                  <!-- slide 4 -->
+                  <div class="slide">
+                    <img src="public/img/carousel3.jpg">
                   </div>
 
-                  <button class="carousel_button next">
-                    <i class="fas fa-angle-right"></i>
-                  </button>
-
-                  <div id ="radiobuttonController" class="d-flex justify-content-center align-items-end">
-                    <button class="carousel_bullet selected" data-slide-dir="=0" @click="slideBullet()"></button>
-                    <button class="carousel_bullet" data-slide-dir="=1" @click="slideBullet()"> </button>
-                    <button class="carousel_bullet" data-slide-dir="=2" @click="slideBullet()"></button>
-                    <button class="carousel_bullet" data-slide-dir="=3" @click="slideBullet()"></button>
-                    <button class="carousel_bullet" data-slide-dir="=4" @click="slideBullet()"></button>
+                  <!-- slide 5 -->
+                  <div class="slide">
+                    <img src="public/img/carousel4.jpg">
                   </div>
 
                 </div>
+
+                <!-- Control buttons -->
+                <button class="btn btn-prev carousel_button" @click="prevImg()">
+                  <i class="fas fa-angle-right"></i>
+                </button>
+
+                <button class="btn btn-next carousel_button" @click="nextImg()">
+                  <i class="fas fa-angle-left"></i>
+                </button>
+
+                <div id ="radiobuttonController" class="d-flex justify-content-center align-items-end">
+                  <button class="carousel_bullet selected" data-slide-dir="=0" @click="slideBullet()"></button>
+                  <button class="carousel_bullet" data-slide-dir="=1" @click="slideBullet()"> </button>
+                  <button class="carousel_bullet" data-slide-dir="=2" @click="slideBullet()"></button>
+                  <button class="carousel_bullet" data-slide-dir="=3" @click="slideBullet()"></button>
+                  <button class="carousel_bullet" data-slide-dir="=4" @click="slideBullet()"></button>
+                </div>
+
               </div>
               <!-- Carosello libri -->
 

@@ -1,42 +1,90 @@
-.carousel {
-    position: initial;
-    height: 100%;
+.slider {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    overflow: hidden;  
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.active {
+    opacity: 1 !important;
+    filter: none !important;
+    transition: transform 250ms ease-in  !important;
+    visibility: visible;
 }
   
-.carousel_image {
+.slide {
+    width: 100%;
+    max-width: 800px;
+    height: 350px;
+    position: absolute;
+    transition: all 0.5s;
+    
+}
+
+.slide img {
+    min-height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     // width: 100%;
-    min-height: 596px;
+    // height: 100%;
+    object-fit: cover;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-    // object-fit: cover;
-    overflow: visible;
-    margin-bottom: 0;
-}
-  
-.carousel_track_container {
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-  
-.carousel_track {
-    padding: 0;
-    padding: 0;
-    list-style: none;
-    position: relative;
-    height: 100%;
-    transition: transform 250ms ease-in;
     filter: blur(3px);
     opacity: 20%;
     transition: 0.5s linear;
 }
-  
-.carousel_slide {
+
+.btn {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 18px;
 }
-  
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}  
+
+
+
+
+
+
+
+// .carousel img {
+//     min-height: 560px;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+     
+// }
+
+
+
 .carousel_button {
     color: floralwhite;
     text-transform: uppercase;
@@ -64,75 +112,45 @@
 .carousel_button.prev {
     position: absolute;
     top: 50%;
-    left: 0;
+    // left: 25%;
     z-index: 1;
 }
 
 .carousel_button.next {
     position: absolute;
     top: 50%;
-    right: 0;
+    // right: 25%;
     z-index: 1;
 }
   
-// .carousel_bullet {
-//     background-color: rgba(255, 250, 240, 0.5);
-//     width: 15px;
-//     height: 15px;
-//     padding: 0;
-//     padding-left: 5px;
-//     border-radius: 50%;
-//     border: 2px solid transparent;
-//     transition: all 200ms ease-in-out;
-//     cursor: pointer;
-//     line-height: 0;
-//     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-//     margin: -6.3em 0.75em;
+.carousel_bullet {
+    background-color: rgba(255, 250, 240, 0.5);
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    padding-left: 5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin: -2.3em 0.75em;
     
 
-//     &:focus {
-//         outline: none;
-//         background-color: floralwhite;
-//     }
+    &:focus {
+        outline: none;
+        background-color: floralwhite;
+    }
 
-//     &:hover {
-//         outline: none;
-//         border: 2px solid floralwhite;
-//         background-color: rgba(255, 255, 240, 0.5);
-//     }
+    &:hover {
+        outline: none;
+        border: 2px solid floralwhite;
+        background-color: rgba(255, 255, 240, 0.5);
+    }
 
-//     &:active {
-//         background-color: floralwhite;
-//     }
-//  }
-  
-// @mixin bookButton {
-//     .options {
-//         position: absolute;
-//         left: 0;
-//         right: 0;
-//         top: 50%;
-//         transform: translateY(-50%);
-//         color: #ddd;
-//         // padding: $spacing-unit * 3;
-//         font-family: 'Open Sans', sans-serif;
-//         text-align: center;
-//     }
-    
-//     input {
-//         display: none;
-//     }
-// }
-    
+    &:active {
+        background-color: floralwhite;
+    }
+ }
 
-
-// .carousel {
-//     position: initial;
-//     display: flex;
-//     height: 100%;
-// }
-
-// .carousel-item .active {
-//     opacity: 1;
-//     filter: none;
-// }

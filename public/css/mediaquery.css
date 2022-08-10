@@ -211,8 +211,11 @@
   }
 }
 @media (max-width: 600px) {
-  main .core .glide img {
+  main .core .carousel img {
     min-height: 400px !important;
+  }
+  main .core .carousel .carousel_track_container {
+    margin-bottom: -50px !important;
   }
   main .core .book_details {
     padding-left: 0px !important;
@@ -238,12 +241,12 @@
   }
 }
 @media (max-width: 799px) {
-  main .core .glide .glide__arrows {
+  main .core .carousel .carousel_button {
     display: none !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1699px) {
-  main .core .glide .glide__arrows {
+  main .core .carousel .carousel_button {
     display: none !important;
   }
 }

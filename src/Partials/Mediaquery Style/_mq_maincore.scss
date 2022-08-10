@@ -26,9 +26,13 @@
   main {
     .core {
       
-      .glide {
+      .carousel {
         img {
           min-height: 400px !important; 
+        }
+
+        .carousel_track_container {
+          margin-bottom: -50px !important;
         }
       }
 
@@ -85,8 +89,8 @@
 @media (max-width: 799px) {
   main {
     .core {
-      .glide {
-       .glide__arrows {
+      .carousel {
+       .carousel_button {
          display: none !important;
         }
       }
@@ -97,8 +101,8 @@
 @media (min-width: 1200px) and (max-width: 1699px) {
   main {
     .core {
-      .glide {
-       .glide__arrows {
+      .carousel {
+       .carousel_button {
          display: none !important;
         }
       }

@@ -131,12 +131,6 @@ var app = new Vue({
     (passaggio 2) */
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
-    },
-    // Salva il valore di larghezza della classe bookDetails
-    bookDetailsResize: function bookDetailsResize() {
-      var bd = document.getElementById('book_details');
-      var bdWidth = bd.getBoundingClientRect().width;
-      this.bookDetails = bdWidth;
     }
   },
   watch: {
@@ -172,13 +166,17 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
-      } // Sezione ORDER
+      } // Selezioniamo l'img della copertina attiva
+
+
+      var cover = document.getElementsByClassName("active");
+      var coverChild = cover[0].childNodes;
+      var coverArray = Array.from(coverChild); // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
 
       /* Quando lo schermo è < 2000px allora vengono ripristinati i div originali e le card non hanno più le classi xl-4 e lg-4 */
       // Salva in una variabile l'elemento HTML con classe card container
-
 
       var cardContainer = document.getElementsByClassName('card-container'); // Salva in una variabile gli elementi HTML con classe card
 
@@ -261,39 +259,26 @@ var app = new Vue({
         map.classList.toggle("col-lg-12", false);
       }
     },
-    // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
-    bookDetails: function bookDetails() {
-      // Seleziona l'altezza dell'immagine di copertina
-      var cover = document.querySelector('.active');
-      var coverHeight = cover.getBoundingClientRect().height; // Seleziona l'altezza di bookDetails
-
-      var bd = document.getElementById('book_details');
-      var bdHeight = bd.getBoundingClientRect().height; // Cambia l'altezza corrente con l'altezza di bookDetails
-
-      if (bdHeight !== coverHeight) {
-        bdHeight == coverHeight;
-      }
-
-      ;
-    },
     // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
     counter: function counter() {
-      /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
+      /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello modificando la proprietà bottom */
       // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
       var allRadiobuttons = document.getElementById('radiobuttonController'); // Selezioniamo i valori posizionali dei radiobutton
 
       var valuesB = allRadiobuttons.getBoundingClientRect().bottom;
       var valuesT = allRadiobuttons.getBoundingClientRect().top;
       var valuesY = allRadiobuttons.getBoundingClientRect().y;
-      var allValues = allRadiobuttons.getBoundingClientRect(); // console.log(allValues);
-      // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
-      // const rdbB = 596.8333129882812;
-      // const rdbT = 581.8333129882812;
+      var allValues = allRadiobuttons.getBoundingClientRect();
+      console.log(allValues); // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
 
-      var rdbY = 596.8333129882812; // if (valuesB != rdbB && valuesT != rdbT) {
+      var rdbB = 1382.449951171875;
+      var rdbT = 1382.449951171875;
+      var rdbY = 1302.5999755859375;
 
-      if (valuesY != rdbY) {
+      if (valuesY != rdbY || valuesT != rdbT || valuesB != rdbB) {
         valuesY == rdbY;
+        valuesT == rdbT;
+        valuesB == rdbB;
       }
     }
   }
@@ -411,23 +396,39 @@ var track = document.querySelector('.carousel_track');
 var slides = document.querySelectorAll('.carousel_slide');
 var slideWidth = slides[0].getBoundingClientRect().width;
 var currentSlideIdx = 0;
+/* Trasforma le slide (li) in un array e aggiunge i valori "Bézier" di spostamento a sinistra delle slide (style.left)
+con l'operazione index * larghezza  della slide[0] a chi ha classe carousel_slide*/
+
 var slidesArray = Array.from(slides);
 slidesArray.forEach(function (slide, i) {
-  slides[i].style.left = i * slideWidth + 'px';
-});
+  var initialAmount = slides[i].style.left = i * slideWidth + 'px';
+  console.log(initialAmount);
+}); // Funzione per far muovere le slide al click con parametro direzione (next = +1, prev = -1)
 
 function onClick(direction) {
+  // Imposta slide corrente; inizialmente è la 0  
   var currentSlide = slidesArray[currentSlideIdx];
-  var nextSlide = direction === -1 ? currentSlide.previousElementSibling : currentSlide.nextElementSibling;
+  /* Se direction vale - 1 (cioè click prev) vai indietro (nodo previous Sibling), altrimenti (click next) vai avanti (modo next Sibling)
+  Questi nodi sono legati a currentSlide, che è la posizione 0 dell'Array delle slide, ovvero gli elementi LI che contengono le IMG */
 
-  if (nextSlide) {
-    var amountToMove = nextSlide.style.left;
+  var moveSlide = direction === -1 ? currentSlide.previousElementSibling : currentSlide.nextElementSibling;
+  /* Se moveSlide è true, quindi se c'è click, bisogna traslare in orizzontale (translate X) le LI del valore amountToMove applicato a 
+  .carousel_track (style.left) */
+
+  if (moveSlide) {
+    var amountToMove = moveSlide.style.left;
     track.style.transform = "translateX(-".concat(amountToMove, ")");
-    currentSlideIdx += direction;
+    currentSlideIdx = currentSlideIdx + direction; // Se lo slideIndex è maggiore della lunghezza dell'Array, fallo diventare -1
 
     if (currentSlideIdx > slidesArray.length) {
       currentSlideIdx = slidesArray.length - 1;
-    }
+    } // Se lo slideIndex è uguale della lunghezza dell'Array (cioè arriva alla fine delle slide), fallo diventare 0, così torna all'inizio
+
+
+    if (currentSlideIdx == slidesArray.length) {
+      currentSlideIdx == 0;
+    } // Se lo slideIndex è minore della lunghezza dell'Array, allora è 0 e quindi è all'inizio
+
 
     if (currentSlideIdx < 0) {
       currentSlideIdx = 0;
@@ -441,9 +442,10 @@ buttonRight.addEventListener('click', function () {
 buttonLeft.addEventListener('click', function () {
   return onClick(-1);
 });
-/*---------- Emd Subsection Carousel  ----------*/
+/*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
+//
 
 /***/ }),
 

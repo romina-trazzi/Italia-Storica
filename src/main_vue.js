@@ -101,9 +101,7 @@ let app = new Vue ({
         this.handleResize();
 
         window.addEventListener('resize', this.bookDetailsResize);
-        this.bookDetailsResize();
-
-       
+        this.bookDetailsResize();  
     },
 
     destroyed() {
@@ -160,13 +158,6 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
-        // Salva il valore di larghezza della classe bookDetails
-        bookDetailsResize () {
-            let bd = document.getElementById('book_details');
-            let bdWidth = bd.getBoundingClientRect().width;
-            this.bookDetails = bdWidth;
-        },
-
     },
 
     watch: {
@@ -216,6 +207,11 @@ let app = new Vue ({
                 column.classList.toggle("order-last", false);
                 column.classList.toggle("order-css", false);
             }
+
+            // // Selezioniamo l'img della copertina attiva
+            // let cover = document.getElementsByClassName("active");
+            // let coverChild = cover[0].childNodes;
+            // let coverArray = Array.from(coverChild);
             
             // Sezione ORDER
 
@@ -333,52 +329,35 @@ let app = new Vue ({
 
         },
 
-        // Quando il valore di bookDetails (larghezza) cambia, fai partire questa funzione e aggiorna il valore di altezza delle copertine
-        bookDetails: function() {
-
-            // Seleziona l'altezza dell'immagine di copertina
-            let cover = document.querySelector('.active');
-            let coverHeight = cover.getBoundingClientRect().height;
-
-            // Seleziona l'altezza di bookDetails
-            let bd = document.getElementById('book_details');
-            let bdHeight = bd.getBoundingClientRect().height;
-
-            // Cambia l'altezza corrente con l'altezza di bookDetails
-            if (bdHeight !== coverHeight) {
-                bdHeight == coverHeight;
-            };
-
-        },
-
         // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
         counter: function() {
 
-            /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello (vedi glide.theme.scss) modificando la proprietà bottom */
+            /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello modificando la proprietà bottom */
 
-            // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
-            let allRadiobuttons = document.getElementById('radiobuttonController');
+            // // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
+            // let allRadiobuttons = document.getElementById('radiobuttonController');
 
-            // Selezioniamo i valori posizionali dei radiobutton
+            // // Selezioniamo i valori posizionali dei radiobutton
 
-            let valuesB = allRadiobuttons.getBoundingClientRect().bottom;
-            let valuesT = allRadiobuttons.getBoundingClientRect().top;
-            let valuesY = allRadiobuttons.getBoundingClientRect().y;
+            // let valuesB = allRadiobuttons.getBoundingClientRect().bottom;
+            // let valuesT = allRadiobuttons.getBoundingClientRect().top;
+            // let valuesY = allRadiobuttons.getBoundingClientRect().y;
 
-            let allValues = allRadiobuttons.getBoundingClientRect();
+            // let allValues = allRadiobuttons.getBoundingClientRect();
 
             // console.log(allValues);
 
-            // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
-            // const rdbB = 596.8333129882812;
-            // const rdbT = 581.8333129882812;
-            const rdbY = 596.8333129882812;
+            // // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
+            // const rdbB = 1382.449951171875;
+            // const rdbT = 1382.449951171875;
+            // const rdbY = 1302.5999755859375;
 
 
-            // if (valuesB != rdbB && valuesT != rdbT) {
-            if (valuesY != rdbY) {
-                valuesY == rdbY;
-            }
+            // if ((valuesY != rdbY) ||  (valuesT != rdbT) || (valuesB != rdbB)) {
+            //     valuesY == rdbY;
+            //     valuesT == rdbT;
+            //     valuesB == rdbB;
+            // }
         }
     }
 
@@ -514,49 +493,66 @@ function controlloForm() {
 
 // https://codepen.io/sautumn/pen/qBVGOmo
 
-const buttonLeft = document.querySelector('.prev');
-const buttonRight = document.querySelector('.next');
-const track = document.querySelector('.carousel_track');
-const slides = document.querySelectorAll('.carousel_slide');
-const slideWidth = slides[0].getBoundingClientRect().width;
-let currentSlideIdx = 0;
+// Select all slides
+const slides = document.querySelectorAll(".slide");
 
-const slidesArray = Array.from(slides);
-slidesArray.forEach((slide, i) => {
-  slides[i].style.left = i * slideWidth + 'px';
+// loop through slides and set each slides translateX property to index * 100% 
+slides.forEach((slide, index) => {
+  slide.style.transform = `translateX(${index * 100}%)`;
 });
 
-function onClick(direction) {
-  const currentSlide = slidesArray[currentSlideIdx];
-  const nextSlide = direction === -1 ? currentSlide.previousElementSibling : currentSlide.nextElementSibling;
+// current slide counter
+let curSlide = 0;
+
+// maximum number of slides
+let maxSlide = slides.length - 1;
+
+// select next slide button
+const nextSlide = document.querySelector(".btn-next");
+
+// add event listener and navigation functionality
+nextSlide.addEventListener("click", function () {
+    
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
   
-  if (nextSlide) {
-    const amountToMove = nextSlide.style.left;
-    track.style.transform = `translateX(-${amountToMove})`;
-    currentSlideIdx += direction;
-    
-    if (currentSlideIdx > slidesArray.length) {
-      currentSlideIdx = slidesArray.length - 1;
+    //   move slide by -100%
+    slides.forEach((slide, index) => {
+      slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+    });
+
+});
+
+// select prev slide button
+const prevSlide = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevSlide.addEventListener("click", function () {
+    // check if current slide is the first and reset current slide to last
+    if (curSlide === 0) {
+        curSlide = maxSlide;
+    } else {
+        curSlide--;
     }
-    
-    if (currentSlideIdx < 0) {
-      currentSlideIdx = 0;
-    }
-  }
-}
+
+    //   move slide by 100%
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+    });
+});
 
 
 
 
-buttonRight.addEventListener('click', () => onClick(1));
-buttonLeft.addEventListener('click', () => onClick(-1));
-
-
-
-
-/*---------- Emd Subsection Carousel  ----------*/
+/*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
 
 
+    
+   

@@ -320,33 +320,38 @@ a:hover {
   }
 }
 .carousel {
-  position: initial;
-  height: 100%;
-}
-
-.carousel_image {
-  min-height: 596px;
-  filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-  overflow: visible;
-  margin-bottom: 0;
+  height: 560px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel_track_container {
   height: 100%;
   position: relative;
-  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .carousel_track {
-  padding: 0;
-  padding: 0;
-  list-style: none;
-  position: relative;
   height: 100%;
-  transition: transform 250ms ease-in;
-  filter: blur(3px);
-  opacity: 20%;
-  transition: 0.5s linear;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel_slide.active {
+  opacity: 1 !important;
+  filter: none !important;
+  transition: transform 250ms ease-in !important;
+}
+
+.carousel img {
+  min-height: 560px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .carousel_slide {
@@ -354,6 +359,13 @@ a:hover {
   top: 0;
   bottom: 0;
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 0;
+  filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+  filter: blur(3px);
+  opacity: 20%;
+  transition: 0.5s linear;
 }
 
 .carousel_button {
@@ -383,15 +395,40 @@ a:hover {
 .carousel_button.prev {
   position: absolute;
   top: 50%;
-  left: 0;
   z-index: 1;
 }
 
 .carousel_button.next {
   position: absolute;
   top: 50%;
-  right: 0;
   z-index: 1;
+}
+
+.carousel_bullet {
+  background-color: rgba(255, 250, 240, 0.5);
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  padding-left: 5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+  line-height: 0;
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+  margin: -2.3em 0.75em;
+}
+.carousel_bullet:focus {
+  outline: none;
+  background-color: floralwhite;
+}
+.carousel_bullet:hover {
+  outline: none;
+  border: 2px solid floralwhite;
+  background-color: rgba(255, 255, 240, 0.5);
+}
+.carousel_bullet:active {
+  background-color: floralwhite;
 }
 
 body {
