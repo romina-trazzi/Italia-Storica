@@ -21,26 +21,42 @@
 
 
 // Copertina libri
-@media (max-width: 1199px) {
+@media (min-width: 1200px) {
   main {
     .core {
-      // .slider {
-        // height: 560px;
-        // .slide {
-        //   img {
-        //     position: relative;
-        //     left: 50%;
-        //     transform: translate(-50%);
-        //   }
-        // }
-
-        .radiobuttonContainer {
-          margin-top: 2em;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
+      .slider {
+        min-height: 560px;
+        .slider-track {
+          margin: 0 calc((100% - (var(--widthA)))/2);
+          --widthA: 390px;
+          img {
+            min-height: 560px;
+          }
         }
       }
+    }
+
+    .book_details {
+      padding-left: 0px !important;
+    }
+  }
+}
+
+
+@media (min-width: 600px) and (max-width: 1199px) {
+  main {
+    .core {
+      .slider {
+        img {
+          min-height: 560px !important;
+        }
+
+        .slider-track {
+          margin: 0 calc((100% - (var(--widthA)))/2);
+            --widthA: 390px;
+        }
+      }
+    }
 
     .book_details {
       padding-left: 0px !important;
@@ -49,46 +65,27 @@
   }
 }
 
-// @media (min-width: 951px) and (max-width: 1199px) {
-//   main {
-//     .core {
-//       .slider {
-//         height: 560px;
-//         .slide {
-//           img {
-//             height: 560px !important;
-//             width: auto !important;
-//             padding: 0 120px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 599px) {
+  main {
+    .core {
+      .slider {
+        height: 400px;
+        .slider-track {
+          margin: 0 calc((100% - (var(--widthA)))/2);
+          --widthA: 221px;
+        
+        }
+      }
+    }
 
+    .book_details {
+      padding-left: 0px !important;
+    }
+  }
+}
+  
 
-
-
-
-
-// @media (min-width: 585px) and (max-width: 950px) {
-//   main {
-//     .core {
-//       .slider {
-//         height: 560px;
-//         .slide {
-//           img {
-//             height: 560px !important;
-//             width: auto !important;
-//             padding: 0 100px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-
+      
 
 
 

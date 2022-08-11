@@ -1,33 +1,24 @@
 .slider {
     height: 560px;
     width: 100%;
+    position: relative;
 }
 
-.slider-track-container {
-    height: 100%;
-
-}
 
 .slider-track {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 0;
 }
 
 .slide {
     padding: 0;
-    margin: 0;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
 
 .slide img {
-    object-fit: cover;
+    
     opacity: 20%; 
     filter: blur(3px);
     transition: 0.5s linear;
-    height: 100%;
     visibility: hidden;
 }
 
@@ -88,6 +79,16 @@
     color: floralwhite;
 }
 
+.radiobuttonContainer {
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    margin: 0 calc((100% - (var(--widthA)))/2);
+    --widthA: 127px;
+    margin-top: 2em;
+}
+
 .carousel_bullet {
     background-color: rgba(255, 250, 240, 0.5);
     width: 15px;
@@ -109,6 +110,7 @@
         outline: none;
         border: 2px solid floralwhite;
         background-color: rgba(255, 255, 240, 0.5);
+        
     }
 
     &:active {
@@ -116,10 +118,5 @@
     }
 }
 
-.radiobuttonContainer {
-    margin-top: 2em;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
 

@@ -107,19 +107,20 @@ var app = new Vue({
     },
     slideBullet: function slideBullet() {
       // Selezioniamo dal Dom i dots
-      var dots = document.querySelectorAll('carousel_bullet'); // Rimuoviamo la classe selected da tutti gli elementi
+      var dots = document.querySelectorAll('carousel_bullet');
+      console.log(dots); // Rimuoviamo la classe selected da tutti gli elementi
 
       for (var i = 0; i < dots.length; i++) {
         dots[i].classList.remove('selected');
       }
 
       var currentIndex = 0; // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
-
-      dots.forEach(function (element, index) {
-        if (element === document.activeElement) {
-          currentIndex = index;
-        }
-      }); // Aggiungiamo la classe selected all'elemento attivo
+      // dots.forEach(function (element, index) {
+      //     if (element === document.activeElement) {
+      //         currentIndex = index;
+      //     }
+      // });
+      // Aggiungiamo la classe selected all'elemento attivo
 
       dots[currentIndex].classList.add('selected'); // Aggiorniamo il counter
 
@@ -166,11 +167,7 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
-      } // // Selezioniamo l'img della copertina attiva
-      // let cover = document.getElementsByClassName("active");
-      // let coverChild = cover[0].childNodes;
-      // let coverArray = Array.from(coverChild);
-      // Sezione ORDER
+      } // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
 
@@ -258,27 +255,6 @@ var app = new Vue({
         map.classList.add("col-lg-4");
         map.classList.toggle("col-lg-12", false);
       }
-    },
-    // Quando il valore del counter (che gestisce i radiobutton e le copertine) cambia, fai partire questa funzione e aggiorna la posizione dei radiobutton
-    counter: function counter() {
-      /* Dobbiamo tenere fixed la posizione dei radiobutton del carosello modificando la proprietà bottom */
-      // // Salviamo tramite id il div controllore di tutti i radiobutton (variabile allRadiobuttons)
-      // let allRadiobuttons = document.getElementById('radiobuttonController');
-      // // Selezioniamo i valori posizionali dei radiobutton
-      // let valuesB = allRadiobuttons.getBoundingClientRect().bottom;
-      // let valuesT = allRadiobuttons.getBoundingClientRect().top;
-      // let valuesY = allRadiobuttons.getBoundingClientRect().y;
-      // let allValues = allRadiobuttons.getBoundingClientRect();
-      // console.log(allValues);
-      // // Queste sono i valori pozionali dei radiobutton quando counter = 0 (costanti)
-      // const rdbB = 1382.449951171875;
-      // const rdbT = 1382.449951171875;
-      // const rdbY = 1302.5999755859375;
-      // if ((valuesY != rdbY) ||  (valuesT != rdbT) || (valuesB != rdbB)) {
-      //     valuesY == rdbY;
-      //     valuesT == rdbT;
-      //     valuesB == rdbB;
-      // }
     }
   }
 });
@@ -455,19 +431,9 @@ prevArrow.addEventListener("click", function () {
   slides.forEach(function (slide, index) {
     slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
   });
-}); // if (window.screen.width >= 800 || window.screen.width <=  1199) {
-//     slides.forEach((slide, index) => {
-//         // let shift = index - curSlide;
-//         // slide.style.transform = `translateX(${100 * (shift)}%)`;
-//     });
-// }
-// if (window.screen.width >= 800 || window.screen.width <=  1199) {
-//     slides.forEach((slide, index) => {
-//         // let shift = index - curSlide;
-//         // slide.style.transform = `translateX(${100 * (shift)}%)`;
-//     });
-// }
+}); // CENTRARE IMMAGINE CSS
 
+var coverSelected = document.getElementsByClassName("slide selected");
 /*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
