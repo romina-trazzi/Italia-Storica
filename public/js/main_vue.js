@@ -386,15 +386,10 @@ function controlloForm() {
 /*---------- End Subsection Validation Form  ----------*/
 
 /*---------- Subsection Carousel  ----------*/
-// https://codepen.io/sautumn/pen/qBVGOmo
 // Select all slides
 
 
-var slides = document.querySelectorAll(".slide"); // loop through slides and set each slides translateX property to index * 100% 
-// slides.forEach((slide, index) => {
-//   slide.style.transform = `translateX(${index * 3 * 10}%)`;
-// });
-// current slide counter
+var slides = document.querySelectorAll(".slide"); // current slide counter
 
 var curSlide = 0; // maximum number of slides
 
@@ -408,19 +403,18 @@ nextSlide.addEventListener("click", function () {
     curSlide = 0;
   } else {
     curSlide++;
-  } // move slide by -100%
+  } // gestione classe selected
 
 
-  slides.forEach(function (slide, index) {
-    slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
-  });
+  slides[curSlide].classList.add("selected");
 
-  if (window.screen.width >= 400 || window.screen.width <= 1199) {
-    console.log(window.screen.width);
-    slides.forEach(function (slide, index) {
-      slide.style.transform = "translateX(".concat(100 * 2 * (index - curSlide), "%)");
-      slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
-    });
+  if (slides[curSlide - 1] !== undefined) {
+    slides[curSlide - 1].classList.remove("selected");
+  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
+
+
+  if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
+    slides[maxSlide].classList.remove("selected");
   }
 }); // select prev slide button
 
@@ -432,21 +426,48 @@ prevSlide.addEventListener("click", function () {
     curSlide = maxSlide;
   } else {
     curSlide--;
-  } //   move slide by 100%
+  } // gestione classe selected
 
 
-  slides.forEach(function (slide, index) {
-    slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
-  });
+  slides[curSlide].classList.add("selected");
 
-  if (window.screen.width >= 400 || window.screen.width <= 1199) {
-    console.log(window.screen.width);
-    slides.forEach(function (slide, index) {
-      slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
-      slide.style.transform = "translateX(".concat(100 * 2 * (index - curSlide), "%)");
-    });
+  if (slides[curSlide + 1] !== undefined) {
+    slides[curSlide + 1].classList.remove("selected");
+  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
+
+
+  if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
+    slides[0].classList.remove("selected");
   }
-});
+}); // loop through slides and set each slides translateX property to index * 100% 
+// slides.forEach((slide, index) => {
+//   slide.style.transform = `translateX(${index * 100}%)`;
+// });
+// if (window.screen.width >= 400 || window.screen.width <=  1199) {
+//     slides.forEach((slide, index) => {
+//         let shift = index - curSlide;
+//         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
+//         slide.classList.remove('active');
+//     });
+// }
+// if (window.screen.width >= 400 || window.screen.width <=  1199) {
+//     slides.forEach((slide, index) => {
+//         let shift = index - curSlide;
+//         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
+//         slide.classList.remove("active");
+//     });
+// }
+//   move slide by 100% e remove class active
+// slides.forEach((slide, index) => {
+//     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+//     slide.classList.remove("active");
+// });
+// move slide by -100% e remove class active
+//   slides.forEach((slide, index) => {
+//     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+//     slide.classList.remove("active");
+//   });
+
 /*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/

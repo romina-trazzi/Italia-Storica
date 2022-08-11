@@ -49,21 +49,48 @@
   }
 }
 
+// @media (min-width: 951px) and (max-width: 1199px) {
+//   main {
+//     .core {
+//       .slider {
+//         height: 560px;
+//         .slide {
+//           img {
+//             height: 560px !important;
+//             width: auto !important;
+//             padding: 0 120px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-@media (max-width: 600px) {
-  main {
-    .core {
-      .slider {
-        height: 400px;
-        .slide {
-          img {
-            min-height: 400px !important;
-          }
-        }
-      }
-    }
-  }
-}
+
+
+
+
+
+// @media (min-width: 585px) and (max-width: 950px) {
+//   main {
+//     .core {
+//       .slider {
+//         height: 560px;
+//         .slide {
+//           img {
+//             height: 560px !important;
+//             width: auto !important;
+//             padding: 0 100px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+
+
+
 
 
 // Descrizione libri 

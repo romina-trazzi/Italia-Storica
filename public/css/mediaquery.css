@@ -229,14 +229,6 @@
     padding-left: 0px !important;
   }
 }
-@media (max-width: 600px) {
-  main .core .slider {
-    height: 400px;
-  }
-  main .core .slider .slide img {
-    min-height: 400px !important;
-  }
-}
 @media (max-width: 1199px) {
   main .core .book_details {
     padding-left: 0px !important;

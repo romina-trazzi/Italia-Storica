@@ -493,15 +493,8 @@ function controlloForm() {
 
 /*---------- Subsection Carousel  ----------*/
 
-// https://codepen.io/sautumn/pen/qBVGOmo
-
 // Select all slides
 const slides = document.querySelectorAll(".slide");
-
-// loop through slides and set each slides translateX property to index * 100% 
-// slides.forEach((slide, index) => {
-//   slide.style.transform = `translateX(${index * 3 * 10}%)`;
-// });
 
 // current slide counter
 let curSlide = 0;
@@ -522,23 +515,17 @@ nextSlide.addEventListener("click", function () {
       curSlide++;
     }
     
-    // move slide by -100%
-    slides.forEach((slide, index) => {
-      slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
-    });
+    // gestione classe selected
+    slides[curSlide].classList.add("selected");
     
-    if (window.screen.width >= 400 || window.screen.width <=  1199) {
+    if (slides[curSlide - 1] !== undefined) {
+        slides[curSlide -1].classList.remove("selected");
+    } 
 
-        console.log(window.screen.width);
-
-        slides.forEach((slide, index) => {
-            slide.style.transform = `translateX(${100 * 2 * (index - curSlide)}%)`;
-            slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
-        });
-    }
-
-
-
+    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
+    if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
+        slides[maxSlide].classList.remove("selected");
+    } 
 });
 
 // select prev slide button
@@ -546,6 +533,7 @@ const prevSlide = document.querySelector(".btn-prev");
 
 // add event listener and navigation functionality
 prevSlide.addEventListener("click", function () {
+
     // check if current slide is the first and reset current slide to last
     if (curSlide === 0) {
         curSlide = maxSlide;
@@ -553,24 +541,70 @@ prevSlide.addEventListener("click", function () {
         curSlide--;
     }
 
-    //   move slide by 100%
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
-    });
-
-    if (window.screen.width >= 400 || window.screen.width <=  1199) {
-
-        console.log(window.screen.width);
-
-        slides.forEach((slide, index) => {
-            slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
-            slide.style.transform = `translateX(${100 * 2 * (index - curSlide)}%)`;
-        });
-    }
+    // gestione classe selected
+    slides[curSlide].classList.add("selected");
     
-   
+    if (slides[curSlide + 1] !== undefined) {
+        slides[curSlide + 1].classList.remove("selected");
+    } 
+
+    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
+    if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
+        slides[0].classList.remove("selected");
+    } 
+
 });
 
+
+
+
+    // loop through slides and set each slides translateX property to index * 100% 
+    // slides.forEach((slide, index) => {
+    //   slide.style.transform = `translateX(${index * 100}%)`;
+    // });
+
+    // if (window.screen.width >= 400 || window.screen.width <=  1199) {
+
+    //     slides.forEach((slide, index) => {
+    //         let shift = index - curSlide;
+    //         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
+    //         slide.classList.remove('active');
+
+    //     });
+    // }
+    
+    // if (window.screen.width >= 400 || window.screen.width <=  1199) {
+
+    //     slides.forEach((slide, index) => {
+
+    //         let shift = index - curSlide;
+    //         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
+    //         slide.classList.remove("active");
+    //     });
+  
+    // }
+
+
+    
+   
+
+
+
+
+   //   move slide by 100% e remove class active
+    // slides.forEach((slide, index) => {
+    //     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+    //     slide.classList.remove("active");
+     
+    // });
+
+      // move slide by -100% e remove class active
+    //   slides.forEach((slide, index) => {
+    //     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
+    //     slide.classList.remove("active");
+  
+    //   });
+      
 
 
 
