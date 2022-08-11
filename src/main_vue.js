@@ -88,9 +88,6 @@ let app = new Vue ({
         duoWidth: false,
         monoWidth: false,
 
-        // Proprietà larghezza bookDetails
-        bookDetails: 0,
-
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -99,9 +96,6 @@ let app = new Vue ({
     mounted() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
-
-        window.addEventListener('resize', this.bookDetailsResize);
-        this.bookDetailsResize();  
     },
 
     destroyed() {
@@ -125,34 +119,6 @@ let app = new Vue ({
 
         },
 
-        slideBullet() {
-
-            // Selezioniamo dal Dom i dots
-            let dots = document.querySelectorAll('carousel_bullet');
-
-            console.log(dots);
-
-            // Rimuoviamo la classe selected da tutti gli elementi
-            for (let i = 0; i < dots.length; i++) {
-                dots[i].classList.remove('selected');
-            }
-
-            let currentIndex = 0;
-
-            // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
-            // dots.forEach(function (element, index) {
-            //     if (element === document.activeElement) {
-            //         currentIndex = index;
-            //     }
-            // });
-
-            // Aggiungiamo la classe selected all'elemento attivo
-            dots[currentIndex].classList.add('selected');
-
-            // Aggiorniamo il counter
-            this.counter = currentIndex;
-        },
-
         /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
         Il valore di width in data viene aggiornato da 0 a valore corrente.
         (passaggio 2) */
@@ -171,25 +137,25 @@ let app = new Vue ({
 
             // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
             let jumboTitleParent = document.getElementsByClassName('main_title');
-            
+
             if (this.windowWidth >= 300 && this.windowWidth < 1000) {
 
                 // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
                 jumboTitleParent[0].children[1].remove();
 
-                // Sostituiamo con l'HTML che divide il titolo in due 
-                jumboTitleParent[0].innerHTML = 
+                // Sostituiamo con l'HTML che divide il titolo in due
+                jumboTitleParent[0].innerHTML =
 
                 '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
 
             } else {
 
                 // Ripristiniamo l'HTML originale
-                jumboTitleParent[0].innerHTML = 
+                jumboTitleParent[0].innerHTML =
 
                 '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica </h1>'
             }
-            
+
             // Sezione CORE
 
             // Salva in una variabile l'elemento HTML che ha id book_change
@@ -209,7 +175,7 @@ let app = new Vue ({
                 column.classList.toggle("order-last", false);
                 column.classList.toggle("order-css", false);
             }
-            
+
             // Sezione ORDER
 
             /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
@@ -225,7 +191,7 @@ let app = new Vue ({
             // Trasformiamo cardsPosition in Array
             let cardsPositionArray = Array.from(cardsPosition);
 
-            // Cloniamo i nodi delle cards + discendenti   
+            // Cloniamo i nodi delle cards + discendenti
             let cloneNode = cardsPositionArray[0].cloneNode(true);
             let cloneNode1 = cardsPositionArray[1].cloneNode(true);
             let cloneNode2 = cardsPositionArray[2].cloneNode(true);
@@ -251,32 +217,32 @@ let app = new Vue ({
                     cloneNode2.classList.add("col-xl-4");
                     cloneNode2.classList.add("col-lg-4");
                 }
-            
+
             } else if (this.windowWidth < 2000) {
 
-                // Elimina tutto il codice html delle card 
+                // Elimina tutto il codice html delle card
                 cardContainer[0].children[0].remove();
                 cardContainer[0].children[1].remove();
                 cardContainer[0].children[0].remove();
-                
+
                 // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
-                cardContainer[0].innerHTML += 
+                cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
                 + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
-                ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' 
+                ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
                 + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
 
                 +
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
                 + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> '
-                
+
             }
-            
+
             // Sezione PERSONAL
 
             // Cambio template dei loghi
@@ -340,6 +306,126 @@ let app = new Vue ({
 =            VANILLA JAVASCRIPT SECTION           =
 ==================================================*/
 
+/*---------- Subsection Carousel  ----------*/
+
+// Select all slides
+const slides = document.querySelectorAll(".slide");
+
+// current slide counter
+let curSlide = 0;
+
+// Maximum number of slides
+let maxSlide = slides.length - 1;
+
+let bezierValue = [0, -100, -200, -300, -400];
+
+
+
+// ARROWS E MOVIMENTO DEL CAROSELLO
+
+/* FRECCIA DESTRA */
+
+// select next slide button
+const nextArrow = document.querySelector(".btn-next");
+
+// add event listener and navigation functionality
+nextArrow.addEventListener("click", function () {
+
+    // check if current slide is the last and reset current slide
+    if (curSlide === maxSlide) {
+      curSlide = 0;
+    } else {
+      curSlide++;
+    }
+
+    // gestione classe selected
+    slides[curSlide].classList.add("selected");
+
+    if (slides[curSlide - 1] !== undefined) {
+        slides[curSlide -1].classList.remove("selected");
+    }
+
+    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
+    if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
+        slides[maxSlide].classList.remove("selected");
+    }
+
+    // move slide
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${bezierValue[index]}%)`;
+    });
+
+
+});
+
+
+ /* FRECCIA SINISTRA */
+
+// select prev slide button
+const prevArrow = document.querySelector(".btn-prev");
+
+// add event listener and navigation functionality
+prevArrow.addEventListener("click", function () {
+
+    // check if current slide is the first and reset current slide to last
+    if (curSlide === 0) {
+        curSlide = maxSlide;
+    } else {
+        curSlide--;
+    }
+
+    // gestione classe selected
+    slides[curSlide].classList.add("selected");
+
+    if (slides[curSlide + 1] !== undefined) {
+        slides[curSlide + 1].classList.remove("selected");
+    }
+
+    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
+    if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
+        slides[0].classList.remove("selected");
+    }
+
+    // move slide
+    slides.forEach((slide, index) => {
+        slide.style.transform = `translateX(${bezierValue[index]}%)`;
+    });
+
+
+});
+
+
+
+
+/* RADIOBUTTON */
+
+let currentIndex = 0;
+
+// Selezioniamo dal Dom i dots
+let dots = document.getElementsByClassName('carousel_bullet');
+
+
+for (let i = 0; i < dots.length; i++) {
+    
+    
+
+    // Event listener al click su ogni button
+    dots[i].addEventListener("click", function () {
+        // Aggiungiamo la classe selected all'elemento cliccato
+        if (dots[i] === document.activeElement) {
+            currentIndex = i;
+            dots[currentIndex].classList.add('selected');
+        }
+           
+    })
+}
+
+/*---------- End Subsection Carousel  ----------*/
+
+ //  move slide
+// slides[i].style.transform = `translateX(${bezierValue[i]}%)`;
+
+
 
 /*----------  Subsection Card outline colors  ----------*/
 
@@ -349,7 +435,7 @@ let app = new Vue ({
 // Selezioniamo i buttons delle card (nodeList)
 let buttons = document.querySelectorAll('.card .orange');
 
-// Trasformiamo buttons in Array
+// Trasformiamo buttons in Array  
 let buttonsArray = Array.from(buttons);
 
 // Selezioniamo gli elementi da cambiare (nodeList)
@@ -387,22 +473,22 @@ function controlloForm() {
     let email = document.getElementById('email').value;
     let subject = document.getElementById('subject').value;
     let mailbody = document.getElementById('mailbody').value;
-    
+
     // Variabile di tipo regExp - oggetto Javascript
     // Espressione regolare per l'email (username + @ + dominio + . + estensione del dominio TLD )
     let regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
 
     let regEmail = regx.test(email);
-    
+
     // Verifica l'espressione regolare.
-    console.log(regEmail); 
-    
+    console.log(regEmail);
+
     // Se tutto è ok, convalida i dati e inviali alla pagina
     if (regEmail) {
-        
+
         // Costruiamo l'oggetto che conterrà i dati da inviare
         let formdata = {};
-            
+
         formdata = {
             name: name,
             email: email,
@@ -412,163 +498,54 @@ function controlloForm() {
 
         // Trasformiamo formdata in un oggetto Json
         let jason = JSON.stringify(formdata).serializeArray();
-        
+
         // Chiamata AJAX al server
         let xhr = new XMLHttpRequest();
-        
+
         xhr.open( "POST", "form.php", true);
-        
+
         xhr.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-    
+
                 console.log(`Grazie ${name} per averci scritto. Ti risponderemo al più presto.`);
-            
+
             }
         }
 
         xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
-        
+
         xhr.onerror = function () {
             console.log(this.status, this.statusText);
         }
-            
+
         xhr.send(jason);
-        
-    // Se falso l'indirizzo mail è scritto sbagliato       
+
+    // Se falso l'indirizzo mail è scritto sbagliato
     } else {
 
         // Selezioniamo il div con il messaggio di errore (displayNone)
         let invalidEmail = document.querySelector('.error');
-        
+
         // Rendiamo visibile il div
         invalidEmail.setAttribute('style', 'display:inline-block !important');
 
         // Impostiamo l'outline color di errore
         let invalidInput = document.getElementById('email');
 
-        invalidInput.style.outline = "thin solid rgb(244, 124, 32)"; 
-        
+        invalidInput.style.outline = "thin solid rgb(244, 124, 32)";
+
         // Usciamo dalla funzione senza inviare il file
         return false;
-    }   
+    }
 
 }
 
 /*---------- End Subsection Validation Form  ----------*/
 
-/*---------- Subsection Carousel  ----------*/
-
-// Select all slides
-const slides = document.querySelectorAll(".slide");
-
-
-// current slide counter
-let curSlide = 0;
-
-// Maximum number of slides
-let maxSlide = slides.length - 1;
-
-let bezierValue = [0, -100, -200, -300, -400];
-
-
-
-// ARROWS E MOVIMENTO DEL CAROSELLO
-
-/* FRECCIA DESTRA */ 
-
-// select next slide button
-const nextArrow = document.querySelector(".btn-next");
-
-// add event listener and navigation functionality
-nextArrow.addEventListener("click", function () {
-    
-    // check if current slide is the last and reset current slide
-    if (curSlide === maxSlide) {
-      curSlide = 0;
-    } else {
-      curSlide++;
-    }
-    
-    // gestione classe selected
-    slides[curSlide].classList.add("selected");
-    
-    if (slides[curSlide - 1] !== undefined) {
-        slides[curSlide -1].classList.remove("selected");
-    } 
-
-    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
-    if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
-        slides[maxSlide].classList.remove("selected");
-    }
-
-    // move slide 
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${bezierValue[index]}%)`;
-    });
-
-
-});
-
-
- /* FRECCIA SINISTRA */ 
-
-// select prev slide button
-const prevArrow = document.querySelector(".btn-prev");
-
-// add event listener and navigation functionality
-prevArrow.addEventListener("click", function () {
-
-    // check if current slide is the first and reset current slide to last
-    if (curSlide === 0) {
-        curSlide = maxSlide;
-    } else {
-        curSlide--;
-    }
-
-    // gestione classe selected
-    slides[curSlide].classList.add("selected");
-    
-    if (slides[curSlide + 1] !== undefined) {
-        slides[curSlide + 1].classList.remove("selected");
-    } 
-
-    // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
-    if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
-        slides[0].classList.remove("selected");
-    } 
-
-    // move slide 
-    slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(${bezierValue[index]}%)`;
-    });
-
-
-});
-
-
-// CENTRARE IMMAGINE CSS
-
-let coverSelected = document.getElementsByClassName("slide selected");
-
-
-
-   
-
-
-    
-   
-
-   
- 
-      
-
-
-
-/*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
 
 
-    
-   
+
+

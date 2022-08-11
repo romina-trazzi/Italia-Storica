@@ -73,9 +73,7 @@ var app = new Vue({
     normalWidth: true,
     specialWidth: false,
     duoWidth: false,
-    monoWidth: false,
-    // Proprietà larghezza bookDetails
-    bookDetails: 0
+    monoWidth: false
   },
 
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -84,8 +82,6 @@ var app = new Vue({
   mounted: function mounted() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
-    window.addEventListener('resize', this.bookDetailsResize);
-    this.bookDetailsResize();
   },
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
@@ -105,27 +101,6 @@ var app = new Vue({
         this.counter = this.images.length - 1;
       }
     },
-    slideBullet: function slideBullet() {
-      // Selezioniamo dal Dom i dots
-      var dots = document.querySelectorAll('carousel_bullet');
-      console.log(dots); // Rimuoviamo la classe selected da tutti gli elementi
-
-      for (var i = 0; i < dots.length; i++) {
-        dots[i].classList.remove('selected');
-      }
-
-      var currentIndex = 0; // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
-      // dots.forEach(function (element, index) {
-      //     if (element === document.activeElement) {
-      //         currentIndex = index;
-      //     }
-      // });
-      // Aggiungiamo la classe selected all'elemento attivo
-
-      dots[currentIndex].classList.add('selected'); // Aggiorniamo il counter
-
-      this.counter = currentIndex;
-    },
 
     /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
     Il valore di width in data viene aggiornato da 0 a valore corrente.
@@ -143,7 +118,7 @@ var app = new Vue({
 
       if (this.windowWidth >= 300 && this.windowWidth < 1000) {
         // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
-        jumboTitleParent[0].children[1].remove(); // Sostituiamo con l'HTML che divide il titolo in due 
+        jumboTitleParent[0].children[1].remove(); // Sostituiamo con l'HTML che divide il titolo in due
 
         jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
       } else {
@@ -179,7 +154,7 @@ var app = new Vue({
 
       var cardsPosition = document.querySelectorAll('.card'); // Trasformiamo cardsPosition in Array
 
-      var cardsPositionArray = Array.from(cardsPosition); // Cloniamo i nodi delle cards + discendenti   
+      var cardsPositionArray = Array.from(cardsPosition); // Cloniamo i nodi delle cards + discendenti
 
       var cloneNode = cardsPositionArray[0].cloneNode(true);
       var cloneNode1 = cardsPositionArray[1].cloneNode(true);
@@ -204,7 +179,7 @@ var app = new Vue({
           cloneNode2.classList.add("col-lg-4");
         }
       } else if (this.windowWidth < 2000) {
-        // Elimina tutto il codice html delle card 
+        // Elimina tutto il codice html delle card
         cardContainer[0].children[0].remove();
         cardContainer[0].children[1].remove();
         cardContainer[0].children[0].remove(); // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
@@ -264,40 +239,135 @@ var app = new Vue({
 =            VANILLA JAVASCRIPT SECTION           =
 ==================================================*/
 
+/*---------- Subsection Carousel  ----------*/
+// Select all slides
+
+var slides = document.querySelectorAll(".slide"); // current slide counter
+
+var curSlide = 0; // Maximum number of slides
+
+var maxSlide = slides.length - 1;
+var bezierValue = [0, -100, -200, -300, -400]; // ARROWS E MOVIMENTO DEL CAROSELLO
+
+/* FRECCIA DESTRA */
+// select next slide button
+
+var nextArrow = document.querySelector(".btn-next"); // add event listener and navigation functionality
+
+nextArrow.addEventListener("click", function () {
+  // check if current slide is the last and reset current slide
+  if (curSlide === maxSlide) {
+    curSlide = 0;
+  } else {
+    curSlide++;
+  } // gestione classe selected
+
+
+  slides[curSlide].classList.add("selected");
+
+  if (slides[curSlide - 1] !== undefined) {
+    slides[curSlide - 1].classList.remove("selected");
+  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
+
+
+  if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
+    slides[maxSlide].classList.remove("selected");
+  } // move slide
+
+
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
+  });
+});
+/* FRECCIA SINISTRA */
+// select prev slide button
+
+var prevArrow = document.querySelector(".btn-prev"); // add event listener and navigation functionality
+
+prevArrow.addEventListener("click", function () {
+  // check if current slide is the first and reset current slide to last
+  if (curSlide === 0) {
+    curSlide = maxSlide;
+  } else {
+    curSlide--;
+  } // gestione classe selected
+
+
+  slides[curSlide].classList.add("selected");
+
+  if (slides[curSlide + 1] !== undefined) {
+    slides[curSlide + 1].classList.remove("selected");
+  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
+
+
+  if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
+    slides[0].classList.remove("selected");
+  } // move slide
+
+
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
+  });
+});
+/* RADIOBUTTON */
+
+var currentIndex = 0; // Selezioniamo dal Dom i dots
+
+var dots = document.getElementsByClassName('carousel_bullet');
+
+var _loop = function _loop(i) {
+  // Event listener al click su ogni button
+  dots[i].addEventListener("click", function () {
+    // Aggiungiamo la classe selected all'elemento cliccato
+    if (dots[i] === document.activeElement) {
+      currentIndex = i;
+      dots[currentIndex].classList.add('selected');
+    }
+  });
+};
+
+for (var i = 0; i < dots.length; i++) {
+  _loop(i);
+}
+/*---------- End Subsection Carousel  ----------*/
+//  move slide
+// slides[i].style.transform = `translateX(${bezierValue[i]}%)`;
+
 /*----------  Subsection Card outline colors  ----------*/
 
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
 
-var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array
+
+var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array  
 
 var buttonsArray = Array.from(buttons); // Selezioniamo gli elementi da cambiare (nodeList)
 
 var iconsFas = document.querySelectorAll('.card .fas');
 var cards = document.querySelectorAll('.card'); // Creiamo i cicli con i Listener e le funzioni per cambiare i colori
 
-var _loop = function _loop(i) {
-  buttonsArray[i].addEventListener('mouseover', function () {
-    iconsFas[i].style.color = 'rgb(244, 124, 32)';
-    cards[i].style.outlineColor = 'rgb(244, 124, 32)';
-  });
-};
-
-for (var i = 0; i < buttonsArray.length; i++) {
-  _loop(i);
-}
-
-;
-
 var _loop2 = function _loop2(_i) {
-  buttonsArray[_i].addEventListener('mouseleave', function () {
-    iconsFas[_i].style.color = 'rgb(250, 153, 28)';
-    cards[_i].style.outlineColor = 'rgb(250, 153, 28)';
+  buttonsArray[_i].addEventListener('mouseover', function () {
+    iconsFas[_i].style.color = 'rgb(244, 124, 32)';
+    cards[_i].style.outlineColor = 'rgb(244, 124, 32)';
   });
 };
 
 for (var _i = 0; _i < buttonsArray.length; _i++) {
   _loop2(_i);
+}
+
+;
+
+var _loop3 = function _loop3(_i2) {
+  buttonsArray[_i2].addEventListener('mouseleave', function () {
+    iconsFas[_i2].style.color = 'rgb(250, 153, 28)';
+    cards[_i2].style.outlineColor = 'rgb(250, 153, 28)';
+  });
+};
+
+for (var _i2 = 0; _i2 < buttonsArray.length; _i2++) {
+  _loop3(_i2);
 }
 
 ;
@@ -346,7 +416,7 @@ function controlloForm() {
       console.log(this.status, this.statusText);
     };
 
-    xhr.send(jason); // Se falso l'indirizzo mail è scritto sbagliato       
+    xhr.send(jason); // Se falso l'indirizzo mail è scritto sbagliato
   } else {
     // Selezioniamo il div con il messaggio di errore (displayNone)
     var invalidEmail = document.querySelector('.error'); // Rendiamo visibile il div
@@ -360,81 +430,6 @@ function controlloForm() {
   }
 }
 /*---------- End Subsection Validation Form  ----------*/
-
-/*---------- Subsection Carousel  ----------*/
-// Select all slides
-
-
-var slides = document.querySelectorAll(".slide"); // current slide counter
-
-var curSlide = 0; // Maximum number of slides
-
-var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400]; // ARROWS E MOVIMENTO DEL CAROSELLO
-
-/* FRECCIA DESTRA */
-// select next slide button
-
-var nextArrow = document.querySelector(".btn-next"); // add event listener and navigation functionality
-
-nextArrow.addEventListener("click", function () {
-  // check if current slide is the last and reset current slide
-  if (curSlide === maxSlide) {
-    curSlide = 0;
-  } else {
-    curSlide++;
-  } // gestione classe selected
-
-
-  slides[curSlide].classList.add("selected");
-
-  if (slides[curSlide - 1] !== undefined) {
-    slides[curSlide - 1].classList.remove("selected");
-  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
-
-
-  if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
-    slides[maxSlide].classList.remove("selected");
-  } // move slide 
-
-
-  slides.forEach(function (slide, index) {
-    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
-  });
-});
-/* FRECCIA SINISTRA */
-// select prev slide button
-
-var prevArrow = document.querySelector(".btn-prev"); // add event listener and navigation functionality
-
-prevArrow.addEventListener("click", function () {
-  // check if current slide is the first and reset current slide to last
-  if (curSlide === 0) {
-    curSlide = maxSlide;
-  } else {
-    curSlide--;
-  } // gestione classe selected
-
-
-  slides[curSlide].classList.add("selected");
-
-  if (slides[curSlide + 1] !== undefined) {
-    slides[curSlide + 1].classList.remove("selected");
-  } // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento 0
-
-
-  if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
-    slides[0].classList.remove("selected");
-  } // move slide 
-
-
-  slides.forEach(function (slide, index) {
-    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
-  });
-}); // CENTRARE IMMAGINE CSS
-
-var coverSelected = document.getElementsByClassName("slide selected");
-/*---------- End Subsection Carousel  ----------*/
 
 /*=====  End of VANILLA JAVASCRIPT SECTION ======*/
 
