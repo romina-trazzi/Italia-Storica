@@ -403,9 +403,11 @@ a:hover {
   left: 50%;
   cursor: pointer;
   transform: translateX(-50%);
-  margin: 0 calc((100% - (var(--widthA))) / 2);
-  --widthA: 127px;
   margin-top: 2em;
+}
+
+#radiobuttonController {
+  text-align: center;
 }
 
 .carousel_bullet {

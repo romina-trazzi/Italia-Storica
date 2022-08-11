@@ -239,7 +239,7 @@
 }
 @media (max-width: 599px) {
   main .core .slider {
-    height: 400px;
+    height: 317px;
   }
   main .core .slider .slider-track {
     margin: 0 calc((100% - (var(--widthA))) / 2);
