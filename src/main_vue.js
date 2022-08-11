@@ -208,6 +208,8 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
 
+            
+
             // // Selezioniamo l'img della copertina attiva
             // let cover = document.getElementsByClassName("active");
             // let coverChild = cover[0].childNodes;
@@ -497,9 +499,9 @@ function controlloForm() {
 const slides = document.querySelectorAll(".slide");
 
 // loop through slides and set each slides translateX property to index * 100% 
-slides.forEach((slide, index) => {
-  slide.style.transform = `translateX(${index * 3 * 100}%)`;
-});
+// slides.forEach((slide, index) => {
+//   slide.style.transform = `translateX(${index * 3 * 10}%)`;
+// });
 
 // current slide counter
 let curSlide = 0;
@@ -519,11 +521,23 @@ nextSlide.addEventListener("click", function () {
     } else {
       curSlide++;
     }
-  
-    //   move slide by -100%
+    
+    // move slide by -100%
     slides.forEach((slide, index) => {
       slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
     });
+    
+    if (window.screen.width >= 400 || window.screen.width <=  1199) {
+
+        console.log(window.screen.width);
+
+        slides.forEach((slide, index) => {
+            slide.style.transform = `translateX(${100 * 2 * (index - curSlide)}%)`;
+            slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
+        });
+    }
+
+
 
 });
 
@@ -543,6 +557,18 @@ prevSlide.addEventListener("click", function () {
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${100 * 3 * (index - curSlide)}%)`;
     });
+
+    if (window.screen.width >= 400 || window.screen.width <=  1199) {
+
+        console.log(window.screen.width);
+
+        slides.forEach((slide, index) => {
+            slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
+            slide.style.transform = `translateX(${100 * 2 * (index - curSlide)}%)`;
+        });
+    }
+    
+   
 });
 
 

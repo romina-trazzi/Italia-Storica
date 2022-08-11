@@ -391,10 +391,10 @@ function controlloForm() {
 
 
 var slides = document.querySelectorAll(".slide"); // loop through slides and set each slides translateX property to index * 100% 
-
-slides.forEach(function (slide, index) {
-  slide.style.transform = "translateX(".concat(index * 3 * 100, "%)");
-}); // current slide counter
+// slides.forEach((slide, index) => {
+//   slide.style.transform = `translateX(${index * 3 * 10}%)`;
+// });
+// current slide counter
 
 var curSlide = 0; // maximum number of slides
 
@@ -408,12 +408,20 @@ nextSlide.addEventListener("click", function () {
     curSlide = 0;
   } else {
     curSlide++;
-  } //   move slide by -100%
+  } // move slide by -100%
 
 
   slides.forEach(function (slide, index) {
     slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
   });
+
+  if (window.screen.width >= 400 || window.screen.width <= 1199) {
+    console.log(window.screen.width);
+    slides.forEach(function (slide, index) {
+      slide.style.transform = "translateX(".concat(100 * 2 * (index - curSlide), "%)");
+      slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
+    });
+  }
 }); // select prev slide button
 
 var prevSlide = document.querySelector(".btn-prev"); // add event listener and navigation functionality
@@ -430,6 +438,14 @@ prevSlide.addEventListener("click", function () {
   slides.forEach(function (slide, index) {
     slide.style.transform = "translateX(".concat(100 * 3 * (index - curSlide), "%)");
   });
+
+  if (window.screen.width >= 400 || window.screen.width <= 1199) {
+    console.log(window.screen.width);
+    slides.forEach(function (slide, index) {
+      slide.style.transition = "all 0.5s cubic-bezier(0.79, 0.33, 0.14, 0.53)";
+      slide.style.transform = "translateX(".concat(100 * 2 * (index - curSlide), "%)");
+    });
+  }
 });
 /*---------- End Subsection Carousel  ----------*/
 

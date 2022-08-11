@@ -20,24 +20,46 @@
 }
 
 
-
 // Copertina libri
-@media (max-width: 600px) {
+@media (max-width: 1199px) {
   main {
     .core {
-      
-      .carousel {
-        img {
-          min-height: 400px !important; 
+      .slider {
+        height: 560px;
+        .slide {
+          img {
+            position: relative;
+            left: 50%;
+            transform: translate(-50%);
+          }
         }
 
-        .carousel_track_container {
-          margin-bottom: -50px !important;
+        .radiobuttonContainer {
+          margin-top: 2em;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
         }
       }
 
       .book_details {
         padding-left: 0px !important;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 600px) {
+  main {
+    .core {
+      .slider {
+        height: 400px;
+        .slide {
+          img {
+            min-height: 400px !important;
+          }
+        }
       }
     }
   }
@@ -51,7 +73,7 @@
 
       .book_details {
         padding-left: 0px !important;
-        padding-top: 180px !important;
+        padding-top: 125px !important;
       }
     
       .book-second_row {
@@ -85,15 +107,14 @@
 }
 
 
-// Glide arrows
+// Arrows
 @media (max-width: 799px) {
   main {
     .core {
-      .carousel {
-       .carousel_button {
-         display: none !important;
-        }
+      .carousel_button {
+        display: none !important;
       }
+      
     }
   }
 }
@@ -101,13 +122,13 @@
 @media (min-width: 1200px) and (max-width: 1699px) {
   main {
     .core {
-      .carousel {
-       .carousel_button {
-         display: none !important;
-        }
+      .carousel_button {
+        display: none !important;
       }
+      
     }
   }
 }
+
 
 

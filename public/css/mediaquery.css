@@ -210,21 +210,37 @@
     margin: 120px 0 0 0 !important;
   }
 }
-@media (max-width: 600px) {
-  main .core .carousel img {
-    min-height: 400px !important;
+@media (max-width: 1199px) {
+  main .core .slider {
+    height: 560px;
   }
-  main .core .carousel .carousel_track_container {
-    margin-bottom: -50px !important;
+  main .core .slider .slide img {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  main .core .slider .radiobuttonContainer {
+    margin-top: 2em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   main .core .book_details {
     padding-left: 0px !important;
   }
 }
+@media (max-width: 600px) {
+  main .core .slider {
+    height: 400px;
+  }
+  main .core .slider .slide img {
+    min-height: 400px !important;
+  }
+}
 @media (max-width: 1199px) {
   main .core .book_details {
     padding-left: 0px !important;
-    padding-top: 180px !important;
+    padding-top: 125px !important;
   }
   main .core .book-second_row .button {
     font-size: 1rem !important;
@@ -241,12 +257,12 @@
   }
 }
 @media (max-width: 799px) {
-  main .core .carousel .carousel_button {
+  main .core .carousel_button {
     display: none !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1699px) {
-  main .core .carousel .carousel_button {
+  main .core .carousel_button {
     display: none !important;
   }
 }

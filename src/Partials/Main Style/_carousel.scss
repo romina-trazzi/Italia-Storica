@@ -1,34 +1,24 @@
 .slider {
     max-width: 800px;
     overflow: hidden;  
-    border-radius: 15px;
-
 }
 
-.active {
+.slide.active img {
     opacity: 1 !important;
     filter: none !important;
     transition: transform 250ms ease-in  !important;
 }
   
 .slide {
-    width: 100%;
-    position: absolute;
-    transition: all 0.5s;
-    
+    width: inherit !important;
+    transition: all cubic-bezier(0.79, 0.33, 0.14, 0.53);
 }
 
 .slide img {
     min-height: 560px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -7%);
-    // width: 100%;
-    // height: 100%;
     object-fit: cover;
     filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-    // filter: blur(3px);
+    filter: blur(3px);
     opacity: 20%;
     transition: 0.5s linear;
 }
@@ -88,17 +78,14 @@
     background-color: rgba(255, 250, 240, 0.5);
     width: 15px;
     height: 15px;
-    padding: 0;
-    padding-left: 5px;
     border-radius: 50%;
     border: 2px solid transparent;
     transition: all 200ms ease-in-out;
     cursor: pointer;
     line-height: 0;
     box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    margin: -2.3em 0.75em;
+    margin-right: 0.75em;
     
-
     &:focus {
         outline: none;
         background-color: floralwhite;
@@ -115,8 +102,10 @@
     }
 }
 
-#radiobuttonController {
+.radiobuttonContainer {
+    margin-top: 2em;
     position: absolute;
-    left: 45%;
-    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
 }
+

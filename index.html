@@ -153,18 +153,20 @@
 
               <!-- Carosello libri -->
               <div class="col-xl-6 col-lg-12">
-
+                
+                <!-- Slider -->
                 <div class="slider d-flex">
-
+                  
                   <!-- slide 1 -->
                   <div class="slide active">
-                    <img src="public/img/carousel0.jpg">
+                    <img src="public/img/carousel0.jpg"> 
                   </div>
               
                   <!-- slide 2 -->
-                  <div class="slide">
+                  <div class="slide"> 
                     <img src="public/img/carousel1.jpg">
                   </div>
+                  
               
                   <!-- slide 3 -->
                   <div class="slide">
@@ -173,7 +175,7 @@
               
                   <!-- slide 4 -->
                   <div class="slide">
-                    <img src="public/img/carousel3.jpg">
+                    <img src="public/img/carousel3.jpg"> 
                   </div>
 
                   <!-- slide 5 -->
@@ -182,22 +184,26 @@
                   </div>
 
                 </div>
-
+                   
                 <!-- Control buttons -->
                 <button class="btnC btn-prev carousel_button" @click="prevImg()">
                   <i class="fas fa-angle-left"></i>
                 </button>
-
+  
                 <button class="btnC btn-next carousel_button" @click="nextImg()">
                   <i class="fas fa-angle-right"></i>
                 </button>
 
-                <div id ="radiobuttonController" class="d-flex justify-content-center align-items-end">
-                  <button class="carousel_bullet selected" data-slide-dir="=0" @click="slideBullet()"></button>
-                  <button class="carousel_bullet" data-slide-dir="=1" @click="slideBullet()"> </button>
-                  <button class="carousel_bullet" data-slide-dir="=2" @click="slideBullet()"></button>
-                  <button class="carousel_bullet" data-slide-dir="=3" @click="slideBullet()"></button>
-                  <button class="carousel_bullet" data-slide-dir="=4" @click="slideBullet()"></button>
+                <!-- Radiobuttons -->
+                <div class="radiobuttonContainer d-flex">
+                  <div id ="radiobuttonController">
+                    <button class="carousel_bullet selected" data-slide-dir="=0" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=1" @click="slideBullet()"> </button>
+                    <button class="carousel_bullet" data-slide-dir="=2" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=3" @click="slideBullet()"></button>
+                    <button class="carousel_bullet" data-slide-dir="=4" @click="slideBullet()"></button>
+                  </div>
+
                 </div>
 
               </div>
