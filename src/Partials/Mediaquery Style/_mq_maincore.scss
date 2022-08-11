@@ -24,15 +24,15 @@
 @media (max-width: 1199px) {
   main {
     .core {
-      .slider {
-        height: 560px;
-        .slide {
-          img {
-            position: relative;
-            left: 50%;
-            transform: translate(-50%);
-          }
-        }
+      // .slider {
+        // height: 560px;
+        // .slide {
+        //   img {
+        //     position: relative;
+        //     left: 50%;
+        //     transform: translate(-50%);
+        //   }
+        // }
 
         .radiobuttonContainer {
           margin-top: 2em;
@@ -42,10 +42,10 @@
         }
       }
 
-      .book_details {
-        padding-left: 0px !important;
-      }
+    .book_details {
+      padding-left: 0px !important;
     }
+    
   }
 }
 

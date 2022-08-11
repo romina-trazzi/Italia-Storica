@@ -391,13 +391,17 @@ function controlloForm() {
 
 var slides = document.querySelectorAll(".slide"); // current slide counter
 
-var curSlide = 0; // maximum number of slides
+var curSlide = 0; // Maximum number of slides
 
-var maxSlide = slides.length - 1; // select next slide button
+var maxSlide = slides.length - 1;
+var bezierValue = [0, -100, -200, -300, -400]; // ARROWS E MOVIMENTO DEL CAROSELLO
 
-var nextSlide = document.querySelector(".btn-next"); // add event listener and navigation functionality
+/* FRECCIA DESTRA */
+// select next slide button
 
-nextSlide.addEventListener("click", function () {
+var nextArrow = document.querySelector(".btn-next"); // add event listener and navigation functionality
+
+nextArrow.addEventListener("click", function () {
   // check if current slide is the last and reset current slide
   if (curSlide === maxSlide) {
     curSlide = 0;
@@ -415,12 +419,19 @@ nextSlide.addEventListener("click", function () {
 
   if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
     slides[maxSlide].classList.remove("selected");
-  }
-}); // select prev slide button
+  } // move slide 
 
-var prevSlide = document.querySelector(".btn-prev"); // add event listener and navigation functionality
 
-prevSlide.addEventListener("click", function () {
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
+  });
+});
+/* FRECCIA SINISTRA */
+// select prev slide button
+
+var prevArrow = document.querySelector(".btn-prev"); // add event listener and navigation functionality
+
+prevArrow.addEventListener("click", function () {
   // check if current slide is the first and reset current slide to last
   if (curSlide === 0) {
     curSlide = maxSlide;
@@ -438,35 +449,24 @@ prevSlide.addEventListener("click", function () {
 
   if (curSlide == maxSlide && slides[0].classList.contains("selected")) {
     slides[0].classList.remove("selected");
-  }
-}); // loop through slides and set each slides translateX property to index * 100% 
-// slides.forEach((slide, index) => {
-//   slide.style.transform = `translateX(${index * 100}%)`;
-// });
-// if (window.screen.width >= 400 || window.screen.width <=  1199) {
+  } // move slide 
+
+
+  slides.forEach(function (slide, index) {
+    slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
+  });
+}); // if (window.screen.width >= 800 || window.screen.width <=  1199) {
 //     slides.forEach((slide, index) => {
-//         let shift = index - curSlide;
-//         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
-//         slide.classList.remove('active');
+//         // let shift = index - curSlide;
+//         // slide.style.transform = `translateX(${100 * (shift)}%)`;
 //     });
 // }
-// if (window.screen.width >= 400 || window.screen.width <=  1199) {
+// if (window.screen.width >= 800 || window.screen.width <=  1199) {
 //     slides.forEach((slide, index) => {
-//         let shift = index - curSlide;
-//         slide.style.transform = `translateX(${100 * 3 * (shift)}%)`;
-//         slide.classList.remove("active");
+//         // let shift = index - curSlide;
+//         // slide.style.transform = `translateX(${100 * (shift)}%)`;
 //     });
 // }
-//   move slide by 100% e remove class active
-// slides.forEach((slide, index) => {
-//     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
-//     slide.classList.remove("active");
-// });
-// move slide by -100% e remove class active
-//   slides.forEach((slide, index) => {
-//     slide.style.transform = `translateX(${100 * (index - curSlide)}%)`;
-//     slide.classList.remove("active");
-//   });
 
 /*---------- End Subsection Carousel  ----------*/
 

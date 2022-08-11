@@ -211,21 +211,13 @@
   }
 }
 @media (max-width: 1199px) {
-  main .core .slider {
-    height: 560px;
-  }
-  main .core .slider .slide img {
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  main .core .slider .radiobuttonContainer {
+  main .core .radiobuttonContainer {
     margin-top: 2em;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
   }
-  main .core .book_details {
+  main .book_details {
     padding-left: 0px !important;
   }
 }
