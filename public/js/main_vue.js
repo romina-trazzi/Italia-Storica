@@ -80,7 +80,7 @@ var app = new Vue({
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
   l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
   (passaggio 3) */
-  beforeCreate: function beforeCreate() {
+  beforeMounted: function beforeMounted() {
     this.bookResize();
   },
   mounted: function mounted() {
@@ -163,6 +163,27 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
+      } // Distanza carousel_button dalla copertina attiva 
+
+
+      if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
+        // Valore recuperato quando lo schermo è pari a 800px che voglio tenere come distanza costante
+        var btnDistance = 38; // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
+
+        var cover = document.getElementsByClassName("slide selected");
+        var coverChild = cover[0].childNodes;
+        var coverArray = Array.from(coverChild);
+        var distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
+
+        var gal = document.querySelector('.btn-prev');
+        var distanceGal = Math.ceil(gal.getBoundingClientRect().right);
+        console.log(distanceCover);
+        console.log(distanceGal); // La distanza finale è il valore assoluto della sottrazione
+
+        var distanceWin = Math.abs(distanceCover - distanceGal);
+        console.log(distanceWin); // if (distanceWin !== btnDistance) {
+        //     distanceWin = btnDistance;
+        // }
       } // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
