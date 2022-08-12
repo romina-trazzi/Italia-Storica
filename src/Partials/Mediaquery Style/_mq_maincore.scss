@@ -42,7 +42,6 @@
   }
 }
 
-
 @media (min-width: 600px) and (max-width: 1199px) {
   main {
     .core {
@@ -50,11 +49,10 @@
         img {
           min-height: 560px !important;
         }
-
-        .slider-track {
-          margin: 0 calc((100% - (var(--widthA)))/2);
-            --widthA: 390px;
-        }
+        // .slider-track {
+        //   margin: 0 calc((100%- (var(--widthA))) /2);
+        //   --widthA: 390px;
+        // }
       }
     }
 

@@ -272,7 +272,7 @@ nextArrow.addEventListener("click", function () {
 
   if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
     slides[maxSlide].classList.remove("selected");
-  } // move slide
+  } // move slide + centratura copertina
 
 
   slides.forEach(function (slide, index) {
@@ -326,7 +326,15 @@ var _loop = function _loop(i) {
 
     if (dots[i] === document.activeElement) {
       currentIndex = i;
-      dots[currentIndex].classList.add('selected');
+      dots[currentIndex].classList.add('selected'); // Muoviamo le slide
+
+      slides[currentIndex].style.transform = "translateX(".concat(bezierValue[i], "%)"); // Togliamo a tutte le slide la classe selected
+
+      slides.forEach(function (slide) {
+        slide.classList.remove('selected');
+      }); // Aggiungiamo la classe selected solo a quella con indice corrente
+
+      slides[currentIndex].classList.add("selected");
     }
   });
 };
@@ -335,14 +343,23 @@ for (var i = 0; i < dots.length; i++) {
   _loop(i);
 }
 /*---------- End Subsection Carousel  ----------*/
-//  move slide
-// slides[i].style.transform = `translateX(${bezierValue[i]}%)`;
+
+/*---------- Subsection Centratura copertina attiva  ----------*/
+
+
+var coverActive = document.getElementsByClassName("slide selected");
+var coverActiveArray = Array.from(coverActive);
+var coverImage = coverActiveArray[0].firstChild;
+var coverImageWidth = coverImage.width;
+var sliderTrack = document.getElementsByClassName("slider-track");
+var sliderTrackArray = Array.from(sliderTrack);
+var sliderTrackArrayMargin = sliderTrackArray[0].setAttribute("style", "margin: 0 calc((100% - ".concat(coverImageWidth, "px) / 2)"));
+/*---------- End Subsection Centratura copertina attiva  ----------*/
 
 /*----------  Subsection Card outline colors  ----------*/
 
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
-
 
 var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array  
 

@@ -306,6 +306,7 @@ let app = new Vue ({
 =            VANILLA JAVASCRIPT SECTION           =
 ==================================================*/
 
+
 /*---------- Subsection Carousel  ----------*/
 
 // Select all slides
@@ -318,7 +319,6 @@ let curSlide = 0;
 let maxSlide = slides.length - 1;
 
 let bezierValue = [0, -100, -200, -300, -400];
-
 
 
 // ARROWS E MOVIMENTO DEL CAROSELLO
@@ -350,7 +350,8 @@ nextArrow.addEventListener("click", function () {
         slides[maxSlide].classList.remove("selected");
     }
 
-    // move slide
+
+    // move slide + centratura copertina
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${bezierValue[index]}%)`;
     });
@@ -437,6 +438,29 @@ for (let i = 0; i < dots.length; i++) {
 }
 
 /*---------- End Subsection Carousel  ----------*/
+
+
+/*---------- Subsection Centratura copertina attiva  ----------*/
+
+let coverActive = document.getElementsByClassName("slide selected");
+let coverActiveArray = Array.from(coverActive);
+let coverImage = coverActiveArray[0].firstChild;
+let coverImageWidth = coverImage.width;
+
+
+let sliderTrack = document.getElementsByClassName("slider-track");
+let sliderTrackArray = Array.from(sliderTrack);
+
+let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${coverImageWidth}px) / 2)`); 
+
+
+/*---------- End Subsection Centratura copertina attiva  ----------*/
+
+
+
+
+
+
 
 
 
