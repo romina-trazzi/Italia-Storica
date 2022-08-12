@@ -110,13 +110,17 @@ let app = new Vue ({
 
     methods: {
         nextImg() {
+            this.bookResize();
             this.counter++;
+
             if(this.counter === this.images.length) {
                 this.counter = 0;
             }
         },
 
         prevImg() {
+            this.bookResize();
+
             if (this.counter > 0) {
                 this.counter--;
             } else {

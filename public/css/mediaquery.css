@@ -216,6 +216,7 @@
   }
   main .core .slider .slider-track img {
     min-height: 560px;
+    max-width: 390px;
   }
   main .book_details {
     padding-left: 0px !important;
@@ -224,6 +225,7 @@
 @media (min-width: 600px) and (max-width: 1199px) {
   main .core .slider img {
     min-height: 560px !important;
+    max-width: 390px;
   }
   main .book_details {
     padding-left: 0px !important;

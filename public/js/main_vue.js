@@ -91,6 +91,7 @@ var app = new Vue({
   },
   methods: {
     nextImg: function nextImg() {
+      this.bookResize();
       this.counter++;
 
       if (this.counter === this.images.length) {
@@ -98,6 +99,8 @@ var app = new Vue({
       }
     },
     prevImg: function prevImg() {
+      this.bookResize();
+
       if (this.counter > 0) {
         this.counter--;
       } else {

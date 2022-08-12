@@ -27,10 +27,9 @@
       .slider {
         min-height: 560px;
         .slider-track {
-          // margin: 0 calc((100% - (var(--widthA)))/2);
-          // --widthA: 390px;
           img {
             min-height: 560px;
+            max-width: 390px;
           }
         }
       }
@@ -48,11 +47,8 @@
       .slider {
         img {
           min-height: 560px !important;
+          max-width: 390px;
         }
-        // .slider-track {
-        //   margin: 0 calc((100%- (var(--widthA))) /2);
-        //   --widthA: 390px;
-        // }
       }
     }
 
@@ -68,10 +64,6 @@
     .core {
       .slider {
         height: 317px;
-        // .slider-track {
-        //   margin: 0 calc((100% - (var(--widthA)))/2);
-        //   --widthA: 221px;
-        // }
       } 
     }
 
