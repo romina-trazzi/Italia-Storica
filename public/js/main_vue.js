@@ -314,11 +314,16 @@ prevArrow.addEventListener("click", function () {
 var currentIndex = 0; // Selezioniamo dal Dom i dots
 
 var dots = document.getElementsByClassName('carousel_bullet');
+var dotsArray = Array.from(dots);
 
 var _loop = function _loop(i) {
   // Event listener al click su ogni button
   dots[i].addEventListener("click", function () {
-    // Aggiungiamo la classe selected all'elemento cliccato
+    // Togliamo a tutti i dots la classe selected
+    dotsArray.forEach(function (dot) {
+      dot.classList.remove('selected');
+    }); // Aggiungiamo la classe selected all'elemento cliccato
+
     if (dots[i] === document.activeElement) {
       currentIndex = i;
       dots[currentIndex].classList.add('selected');

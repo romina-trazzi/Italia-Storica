@@ -403,14 +403,19 @@ let currentIndex = 0;
 
 // Selezioniamo dal Dom i dots
 let dots = document.getElementsByClassName('carousel_bullet');
+let dotsArray = Array.from(dots);
 
 
 for (let i = 0; i < dots.length; i++) {
-    
-    
 
     // Event listener al click su ogni button
     dots[i].addEventListener("click", function () {
+
+        // Togliamo a tutti i dots la classe selected
+        dotsArray.forEach(function (dot)  {
+            dot.classList.remove('selected');
+        });
+
         // Aggiungiamo la classe selected all'elemento cliccato
         if (dots[i] === document.activeElement) {
             currentIndex = i;
