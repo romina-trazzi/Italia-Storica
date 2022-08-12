@@ -395,8 +395,6 @@ prevArrow.addEventListener("click", function () {
 });
 
 
-
-
 /* RADIOBUTTON */
 
 let currentIndex = 0;
@@ -420,15 +418,25 @@ for (let i = 0; i < dots.length; i++) {
         if (dots[i] === document.activeElement) {
             currentIndex = i;
             dots[currentIndex].classList.add('selected');
-        }
+            
+            // Muoviamo le slide
+            slides[currentIndex].style.transform = `translateX(${bezierValue[i]}%)`;
+            
+            // Togliamo a tutte le slide la classe selected
+            slides.forEach(function (slide)  {
+                slide.classList.remove('selected');
+            });
+
+            // Aggiungiamo la classe selected solo a quella con indice corrente
+            slides[currentIndex].classList.add("selected");
+
+        }   
+
            
-    })
+    });
 }
 
 /*---------- End Subsection Carousel  ----------*/
-
- //  move slide
-// slides[i].style.transform = `translateX(${bezierValue[i]}%)`;
 
 
 
