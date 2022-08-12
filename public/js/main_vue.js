@@ -118,7 +118,7 @@ var app = new Vue({
       var coverActive = document.getElementsByClassName("slide selected");
       var coverActiveArray = Array.from(coverActive);
       var coverImage = coverActiveArray[0].firstChild;
-      this.bookWidth == coverImage.width;
+      this.bookWidth = coverImage.width;
       console.log(this.bookWidth);
     }
   },
@@ -249,7 +249,7 @@ var app = new Vue({
       /*---------- Subsection Centratura copertina attiva  ----------*/
       var sliderTrack = document.getElementsByClassName("slider-track");
       var sliderTrackArray = Array.from(sliderTrack);
-      var sliderTrackArrayMargin = sliderTrackArray[0].setAttribute("style", "margin: 0 calc((100% - ".concat(coverImageWidth, "px) / 2)"));
+      var sliderTrackArrayMargin = sliderTrackArray[0].setAttribute("style", "margin: 0 calc((100% - ".concat(this.bookWidth, "px) / 2)"));
       /*---------- End Subsection Centratura copertina attiva  ----------*/
     }
   }

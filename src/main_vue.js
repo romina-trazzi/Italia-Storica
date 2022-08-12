@@ -139,10 +139,10 @@ let app = new Vue ({
             let coverActive = document.getElementsByClassName("slide selected");
             let coverActiveArray = Array.from(coverActive);
             let coverImage = coverActiveArray[0].firstChild;
-
-            this.bookWidth == coverImage.width;
+            this.bookWidth = coverImage.width;
 
             console.log(this.bookWidth);
+
         },
     },
 
@@ -317,7 +317,7 @@ let app = new Vue ({
 
             let sliderTrack = document.getElementsByClassName("slider-track");
             let sliderTrackArray = Array.from(sliderTrack);
-            let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${coverImageWidth}px) / 2)`); 
+            let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${this.bookWidth}px) / 2)`); 
 
             /*---------- End Subsection Centratura copertina attiva  ----------*/
 
@@ -327,9 +327,6 @@ let app = new Vue ({
 })
 
 /*=====  End of VUE SECTION block  ======*/
-
-
-
 
 
 /*=================================================
