@@ -88,6 +88,8 @@ let app = new Vue ({
         duoWidth: false,
         monoWidth: false,
 
+        bookWidth: 0,
+
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -96,6 +98,10 @@ let app = new Vue ({
     mounted() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
+
+        window.addEventListener('resize', this.bookResize);
+        this.bookResize();
+
     },
 
     destroyed() {
@@ -126,6 +132,18 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
+
+        /* Controlla la larghezza delle copertine e passa il valore alla funzione resize in mounted 
+        Il valore di bookWidth in data viene aggiornato da 0 a valore corrente. */
+        bookResize () {
+            let coverActive = document.getElementsByClassName("slide selected");
+            let coverActiveArray = Array.from(coverActive);
+            let coverImage = coverActiveArray[0].firstChild;
+
+            this.bookWidth == coverImage.width;
+
+            console.log(this.bookWidth);
+        },
     },
 
     watch: {
@@ -292,6 +310,18 @@ let app = new Vue ({
 
         },
 
+        // Quando il valore di larghezza delle copertine cambia, fai partire questa funzione
+        bookWidth: function() {
+            
+            /*---------- Subsection Centratura copertina attiva  ----------*/
+
+            let sliderTrack = document.getElementsByClassName("slider-track");
+            let sliderTrackArray = Array.from(sliderTrack);
+            let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${coverImageWidth}px) / 2)`); 
+
+            /*---------- End Subsection Centratura copertina attiva  ----------*/
+
+        }
     }
 
 })
@@ -438,30 +468,6 @@ for (let i = 0; i < dots.length; i++) {
 }
 
 /*---------- End Subsection Carousel  ----------*/
-
-
-/*---------- Subsection Centratura copertina attiva  ----------*/
-
-let coverActive = document.getElementsByClassName("slide selected");
-let coverActiveArray = Array.from(coverActive);
-let coverImage = coverActiveArray[0].firstChild;
-let coverImageWidth = coverImage.width;
-
-
-let sliderTrack = document.getElementsByClassName("slider-track");
-let sliderTrackArray = Array.from(sliderTrack);
-
-let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${coverImageWidth}px) / 2)`); 
-
-
-/*---------- End Subsection Centratura copertina attiva  ----------*/
-
-
-
-
-
-
-
 
 
 /*----------  Subsection Card outline colors  ----------*/

@@ -214,10 +214,6 @@
   main .core .slider {
     min-height: 560px;
   }
-  main .core .slider .slider-track {
-    margin: 0 calc((100% - (var(--widthA))) / 2);
-    --widthA: 390px;
-  }
   main .core .slider .slider-track img {
     min-height: 560px;
   }
@@ -236,10 +232,6 @@
 @media (max-width: 599px) {
   main .core .slider {
     height: 317px;
-  }
-  main .core .slider .slider-track {
-    margin: 0 calc((100% - (var(--widthA))) / 2);
-    --widthA: 221px;
   }
   main .book_details {
     padding-left: 0px !important;

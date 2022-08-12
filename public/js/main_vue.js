@@ -73,7 +73,8 @@ var app = new Vue({
     normalWidth: true,
     specialWidth: false,
     duoWidth: false,
-    monoWidth: false
+    monoWidth: false,
+    bookWidth: 0
   },
 
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
@@ -82,6 +83,8 @@ var app = new Vue({
   mounted: function mounted() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
+    window.addEventListener('resize', this.bookResize);
+    this.bookResize();
   },
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
@@ -107,6 +110,16 @@ var app = new Vue({
     (passaggio 2) */
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
+    },
+
+    /* Controlla la larghezza delle copertine e passa il valore alla funzione resize in mounted 
+    Il valore di bookWidth in data viene aggiornato da 0 a valore corrente. */
+    bookResize: function bookResize() {
+      var coverActive = document.getElementsByClassName("slide selected");
+      var coverActiveArray = Array.from(coverActive);
+      var coverImage = coverActiveArray[0].firstChild;
+      this.bookWidth == coverImage.width;
+      console.log(this.bookWidth);
     }
   },
   watch: {
@@ -230,6 +243,14 @@ var app = new Vue({
         map.classList.add("col-lg-4");
         map.classList.toggle("col-lg-12", false);
       }
+    },
+    // Quando il valore di larghezza delle copertine cambia, fai partire questa funzione
+    bookWidth: function bookWidth() {
+      /*---------- Subsection Centratura copertina attiva  ----------*/
+      var sliderTrack = document.getElementsByClassName("slider-track");
+      var sliderTrackArray = Array.from(sliderTrack);
+      var sliderTrackArrayMargin = sliderTrackArray[0].setAttribute("style", "margin: 0 calc((100% - ".concat(coverImageWidth, "px) / 2)"));
+      /*---------- End Subsection Centratura copertina attiva  ----------*/
     }
   }
 });
@@ -344,22 +365,11 @@ for (var i = 0; i < dots.length; i++) {
 }
 /*---------- End Subsection Carousel  ----------*/
 
-/*---------- Subsection Centratura copertina attiva  ----------*/
-
-
-var coverActive = document.getElementsByClassName("slide selected");
-var coverActiveArray = Array.from(coverActive);
-var coverImage = coverActiveArray[0].firstChild;
-var coverImageWidth = coverImage.width;
-var sliderTrack = document.getElementsByClassName("slider-track");
-var sliderTrackArray = Array.from(sliderTrack);
-var sliderTrackArrayMargin = sliderTrackArray[0].setAttribute("style", "margin: 0 calc((100% - ".concat(coverImageWidth, "px) / 2)"));
-/*---------- End Subsection Centratura copertina attiva  ----------*/
-
 /*----------  Subsection Card outline colors  ----------*/
 
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
+
 
 var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array  
 
