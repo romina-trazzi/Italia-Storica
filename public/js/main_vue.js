@@ -80,6 +80,9 @@ var app = new Vue({
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
   l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
   (passaggio 3) */
+  beforeCreate: function beforeCreate() {
+    this.bookResize();
+  },
   mounted: function mounted() {
     window.addEventListener('resize', this.handleResize);
     this.handleResize();
@@ -107,6 +110,9 @@ var app = new Vue({
         this.counter = this.images.length - 1;
       }
     },
+    slideBullet: function slideBullet() {
+      this.bookResize();
+    },
 
     /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
     Il valore di width in data viene aggiornato da 0 a valore corrente.
@@ -122,7 +128,6 @@ var app = new Vue({
       var coverActiveArray = Array.from(coverActive);
       var coverImage = coverActiveArray[0].firstChild;
       this.bookWidth = coverImage.width;
-      console.log(this.bookWidth);
     }
   },
   watch: {
