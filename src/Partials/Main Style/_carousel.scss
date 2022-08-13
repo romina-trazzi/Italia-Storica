@@ -1,12 +1,14 @@
 .slider {
     height: 560px;
     width: 100%;
-    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 560px;
 }
-
 
 .slider-track {
     padding: 0;
+    height: 100%;
 }
 
 .slide {
@@ -28,7 +30,6 @@
 }
 
 .btnC {
-    position: absolute;
     width: 40px;
     height: 40px;
     border: none;
@@ -43,14 +44,15 @@
     transform: scale(1.1);
 }
 
-.btn-prev {
-    top: 45%;
-    left: 2%;
+
+.btn-prev-position {
+    justify-self: center;
+    align-self: center;
 }
 
-.btn-next {
-    top: 45%;
-    right: 2%;
+.btn-next-position {
+    justify-self: center;
+    align-self: center;
 }  
 
 .carousel_button {
@@ -65,6 +67,7 @@
     cursor: pointer;
     transition: opacity 150ms ease, border 300ms ease-in-out;
     line-height: 1;
+
 }
   
 .carousel_button:hover {

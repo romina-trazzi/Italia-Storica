@@ -89,6 +89,7 @@ let app = new Vue ({
         monoWidth: false,
 
         bookWidth: 0,
+        distanceCover: 38,
 
     },
 
@@ -96,15 +97,15 @@ let app = new Vue ({
     l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
     (passaggio 3) */
     beforeMounted() {
-        this.bookResize();
+        // this.bookResize();
     },
 
     mounted() {
         window.addEventListener('resize', this.handleResize);
         this.handleResize();
 
-        window.addEventListener('resize', this.bookResize);
-        this.bookResize();
+        // window.addEventListener('resize', this.bookResize);
+        // this.bookResize();
 
     },
 
@@ -114,7 +115,7 @@ let app = new Vue ({
 
     methods: {
         nextImg() {
-            this.bookResize();
+            // this.bookResize();
             this.counter++;
 
             if(this.counter === this.images.length) {
@@ -123,7 +124,7 @@ let app = new Vue ({
         },
 
         prevImg() {
-            this.bookResize();
+            // this.bookResize();
 
             if (this.counter > 0) {
                 this.counter--;
@@ -133,9 +134,9 @@ let app = new Vue ({
 
         },
 
-        slideBullet() {
-            this.bookResize();
-        },
+        // slideBullet() {
+        //     this.bookResize();
+        // },
 
         /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
         Il valore di width in data viene aggiornato da 0 a valore corrente.
@@ -147,12 +148,45 @@ let app = new Vue ({
 
         /* Controlla la larghezza delle copertine e passa il valore alla funzione resize in mounted 
         Il valore di bookWidth in data viene aggiornato da 0 a valore corrente. */
-        bookResize () {
-            let coverActive = document.getElementsByClassName("slide selected");
-            let coverActiveArray = Array.from(coverActive);
-            let coverImage = coverActiveArray[0].firstChild;
-            this.bookWidth = coverImage.width;
-        },
+        // bookResize () {
+        //     let coverActive = document.getElementsByClassName("slide selected");
+        //     let coverActiveArray = Array.from(coverActive);
+        //     let coverImage = coverActiveArray[0].firstChild;
+        //     this.bookWidth = coverImage.width;
+        // },
+
+        // distanceCover () {
+        //     // Distanza carousel_button dalla copertina attiva 
+        //     if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
+
+        //         // Valore recuperato quando lo schermo è pari a 800px che voglio tenere come distanza costante
+        //         const btnDistance = 38;
+
+        //         // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
+        //         let cover = document.getElementsByClassName("slide selected");
+        //         let coverChild = cover[0].childNodes;
+        //         let coverArray = Array.from(coverChild);
+
+        //         let distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); 
+
+        //         // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
+        //         let gal = document.querySelector('.btn-prev');
+        //         let distanceGal = Math.ceil(gal.getBoundingClientRect().right); 
+
+        //         // La distanza finale è il valore assoluto della sottrazione
+        //         const distanceWin = Math.abs(distanceCover - distanceGal);
+
+        //         console.log(distanceWin); 
+
+        //         if (distanceWin != btnDistance) {
+        //             distanceWin == btnDistance;
+        //         }
+        //     }
+
+
+        // }
+
+
     },
 
     watch: {
@@ -203,39 +237,8 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
 
-
-            // Distanza carousel_button dalla copertina attiva 
-            if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
-
-                // Valore recuperato quando lo schermo è pari a 800px che voglio tenere come distanza costante
-                const btnDistance = 38;
-
-
-                // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
-                let cover = document.getElementsByClassName("slide selected");
-                let coverChild = cover[0].childNodes;
-                let coverArray = Array.from(coverChild);
-
-                let distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); 
-
-                // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
-                let gal = document.querySelector('.btn-prev');
-                let distanceGal = Math.ceil(gal.getBoundingClientRect().right); 
-
-                console.log(distanceCover);
-                console.log(distanceGal);
-
-                // La distanza finale è il valore assoluto della sottrazione
-                const distanceWin = Math.abs(distanceCover - distanceGal);
-
-                console.log(distanceWin); 
-
-                // if (distanceWin !== btnDistance) {
-                //     distanceWin = btnDistance;
-                // }
-
-            }
-
+          
+            
 
             // Sezione ORDER
 
@@ -354,17 +357,27 @@ let app = new Vue ({
         },
 
         // Quando il valore di larghezza delle copertine cambia, fai partire questa funzione
-        bookWidth: function() {
+        // bookWidth: function() {
             
-            /*---------- Subsection Centratura copertina attiva  ----------*/
+        //     /*---------- Subsection Centratura copertina attiva  ----------*/
 
-            let sliderTrack = document.getElementsByClassName("slider-track");
-            let sliderTrackArray = Array.from(sliderTrack);
-            let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${this.bookWidth}px) / 2)`); 
+        //     let sliderTrack = document.getElementsByClassName("slider-track");
+        //     let sliderTrackArray = Array.from(sliderTrack);
+        //     let sliderTrackArrayMargin = sliderTrackArray[0].setAttribute(`style`, `margin: 0 calc((100% - ${this.bookWidth}px) / 2)`); 
 
-            /*---------- End Subsection Centratura copertina attiva  ----------*/
+        //     /*---------- End Subsection Centratura copertina attiva  ----------*/
 
-        }
+        // },
+
+        // distanceCover: function () {
+        //     this.distanceCover();
+        // }
+
+        
+
+  
+
+
     }
 
 })

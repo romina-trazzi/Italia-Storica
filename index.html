@@ -152,10 +152,17 @@
                 
                 <!-- Slider -->
                 <div class="slider">
+                
+                  <div class="btn-prev-position">
+                    <button class="btnC btn-prev carousel_button" @click="prevImg()">
+                      <i class="fas fa-angle-left"></i>
+                    </button>
+                  </div>
 
-                  <!-- <div class="slider-track-container"> -->
-
-                    <div class="slider-track d-flex">
+                  
+                  <!-- <div class="slider-track-container">  -->
+                    
+                    <div class="slider-track">
                       
                       <!-- slide 1 -->
                       <div class="slide selected">
@@ -166,7 +173,6 @@
                       <div class="slide"> 
                         <img src="public/img/carousel1.jpg">
                       </div>
-                      
                   
                       <!-- slide 3 -->
                       <div class="slide">
@@ -177,29 +183,26 @@
                       <div class="slide">
                         <img src="public/img/carousel3.jpg"> 
                       </div>
-    
+
                       <!-- slide 5 -->
                       <div class="slide">
                         <img src="public/img/carousel4.jpg">
                       </div>
-
-                    </div>
-
-
+                      
+                      
+                    </div> 
+                    
                   <!-- </div> -->
-                  
+
+
+                  <div class="btn-next-position">
+                    <button class="btnC btn-next carousel_button" @click="nextImg()">
+                      <i class="fas fa-angle-right"></i>
+                    </button>
+                  </div>
 
                 </div>
                    
-                <!-- Control buttons -->
-                <button class="btnC btn-prev carousel_button" @click="prevImg()">
-                  <i class="fas fa-angle-left"></i>
-                </button>
-  
-                <button class="btnC btn-next carousel_button" @click="nextImg()">
-                  <i class="fas fa-angle-right"></i>
-                </button>
-
                 <!-- Radiobuttons -->
                 <div class="radiobuttonContainer">
                   <div id ="radiobuttonController">
@@ -700,5 +703,8 @@
   <script src="src/main_vue.js" type="text/Javascript"> </script>
 
 </html>
+
+
+
 
 
