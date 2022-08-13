@@ -327,6 +327,12 @@ a:hover {
   grid-template-rows: 560px;
 }
 
+.slider-track-container {
+  align-self: center;
+  justify-self: center;
+  width: 390px;
+}
+
 .slider-track {
   padding: 0;
   height: 100%;
