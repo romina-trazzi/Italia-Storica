@@ -81,19 +81,15 @@ var app = new Vue({
   /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta
   l'istanza Vue (mounted e destroyed) tramite il richiamo della funzione handleResize
   (passaggio 3) */
-  beforeMounted: function beforeMounted() {// this.bookResize();
-  },
   mounted: function mounted() {
     window.addEventListener('resize', this.handleResize);
-    this.handleResize(); // window.addEventListener('resize', this.bookResize);
-    // this.bookResize();
+    this.handleResize();
   },
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
   methods: {
     nextImg: function nextImg() {
-      // this.bookResize();
       this.counter++;
 
       if (this.counter === this.images.length) {
@@ -101,16 +97,12 @@ var app = new Vue({
       }
     },
     prevImg: function prevImg() {
-      // this.bookResize();
       if (this.counter > 0) {
         this.counter--;
       } else {
         this.counter = this.images.length - 1;
       }
     },
-    // slideBullet() {
-    //     this.bookResize();
-    // },
 
     /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
     Il valore di width in data viene aggiornato da 0 a valore corrente.
@@ -118,36 +110,6 @@ var app = new Vue({
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
     }
-    /* Controlla la larghezza delle copertine e passa il valore alla funzione resize in mounted 
-    Il valore di bookWidth in data viene aggiornato da 0 a valore corrente. */
-    // bookResize () {
-    //     let coverActive = document.getElementsByClassName("slide selected");
-    //     let coverActiveArray = Array.from(coverActive);
-    //     let coverImage = coverActiveArray[0].firstChild;
-    //     this.bookWidth = coverImage.width;
-    // },
-    // distanceCover () {
-    //     // Distanza carousel_button dalla copertina attiva 
-    //     if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
-    //         // Valore recuperato quando lo schermo è pari a 800px che voglio tenere come distanza costante
-    //         const btnDistance = 38;
-    //         // Selezioniamo la distanza fra il lato sinistro (left) dell'immagine di copertina attiva e il bordo della pagina
-    //         let cover = document.getElementsByClassName("slide selected");
-    //         let coverChild = cover[0].childNodes;
-    //         let coverArray = Array.from(coverChild);
-    //         let distanceCover = Math.ceil(coverArray[0].getBoundingClientRect().left); 
-    //         // Selezioniamo la distanza fra il lato destro (right) del glideArrow left e il bordo della pagina
-    //         let gal = document.querySelector('.btn-prev');
-    //         let distanceGal = Math.ceil(gal.getBoundingClientRect().right); 
-    //         // La distanza finale è il valore assoluto della sottrazione
-    //         const distanceWin = Math.abs(distanceCover - distanceGal);
-    //         console.log(distanceWin); 
-    //         if (distanceWin != btnDistance) {
-    //             distanceWin == btnDistance;
-    //         }
-    //     }
-    // }
-
   },
   watch: {
     // Quando il valore di windowWidth cambia, fai partire questa funzione
