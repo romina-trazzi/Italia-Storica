@@ -150,62 +150,69 @@
               <!-- Carosello libri -->
               <div class="col-xl-6 col-lg-12">
                 
-                <!-- Slider -->
-                <div class="slider">
+                <!-- Slider + Arrows -->
+                <div class="sliderContainer">
+
+                  <p></p>
+
+                  <div class="slider">
                   
-                  <div class="btn-prev-position">
-                    <button class="btnC btn-prev carousel_button" @click="prevImg()">
-                      <i class="fas fa-angle-left"></i>
-                    </button>
-                  </div>
+                    <div class="btn-prev-position nested">
+                      <p> </p>
+                      <button class="btnC btn-prev carousel_button" @click="prevImg()">
+                        <i class="fas fa-angle-left"></i>
+                      </button>
+                      <p>  </p>
+                    </div>
                   
-                  <div class="slider-track-container"> 
+                    <div class="slider-track-container"> 
+                      <div class="slider-track d-flex">
+                        
+                        <!-- slide 1 -->
+                        <div class="slide selected">
+                          <img src="public/img/carousel0.jpg"> 
+                        </div>
                     
-                    <div class="slider-track d-flex">
-                      
-                      <!-- slide 1 -->
-                      <div class="slide selected">
-                        <img src="public/img/carousel0.jpg"> 
-                      </div>
-                  
-                      <!-- slide 2 -->
-                      <div class="slide"> 
-                        <img src="public/img/carousel1.jpg">
-                      </div>
-                  
-                      <!-- slide 3 -->
-                      <div class="slide">
-                        <img src="public/img/carousel2.jpg">
-                      </div>
-                  
-                      <!-- slide 4 -->
-                      <div class="slide">
-                        <img src="public/img/carousel3.jpg"> 
-                      </div>
-
-                      <!-- slide 5 -->
-                      <div class="slide">
-                        <img src="public/img/carousel4.jpg">
-                      </div>
-                      
-                      
-                    </div> 
+                        <!-- slide 2 -->
+                        <div class="slide"> 
+                          <img src="public/img/carousel1.jpg">
+                        </div>
                     
+                        <!-- slide 3 -->
+                        <div class="slide">
+                          <img src="public/img/carousel2.jpg">
+                        </div>
+                    
+                        <!-- slide 4 -->
+                        <div class="slide">
+                          <img src="public/img/carousel3.jpg"> 
+                        </div>
+
+                        <!-- slide 5 -->
+                        <div class="slide">
+                          <img src="public/img/carousel4.jpg">
+                        </div>
+
+                      </div> 
+                    </div>
+
+                    <div class="btn-next-position nested">
+                      <p> </p>
+                      <button class="btnC btn-next carousel_button" @click="nextImg()">
+                        <i class="fas fa-angle-right"></i>
+                      </button>
+                      <p> </p>
+                    </div>
+
                   </div>
 
-                   <div class="btn-next-position">
-                    <button class="btnC btn-next carousel_button" @click="nextImg()">
-                      <i class="fas fa-angle-right"></i>
-                    </button>
-                  </div>
-
+                  <p></p>
+                
                 </div>
 
+                
 
-             
 
-               
-                   
                 <!-- Radiobuttons -->
                 <div class="radiobuttonContainer">
                   <div id ="radiobuttonController">

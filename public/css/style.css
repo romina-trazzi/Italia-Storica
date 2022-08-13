@@ -319,11 +319,19 @@ a:hover {
     white-space: normal !important;
   }
 }
+.sliderContainer {
+  height: 560px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 560px;
+}
+
 .slider {
   height: 560px;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
   grid-template-rows: 560px;
 }
 
@@ -374,9 +382,20 @@ a:hover {
 .btn-prev-position {
   justify-self: center;
   align-self: center;
+  width: 100%;
 }
 
 .btn-next-position {
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: repeat(3, 35px);
+}
+.nested p {
   justify-self: center;
   align-self: center;
 }
