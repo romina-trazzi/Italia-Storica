@@ -252,6 +252,9 @@
     margin: 0 calc((100% - (var(--widthA))) / 2);
     --widthA: 221px;
   }
+  main .core .slider-track-container {
+    width: 100%;
+  }
   main .book_details {
     padding-left: 0px !important;
   }
