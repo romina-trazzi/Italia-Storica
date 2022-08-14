@@ -3,7 +3,7 @@
 =============================================*/
 
 // Navbar
-@media (min-width: 350px) and (max-width: 599px) {  
+@media (max-width: 599px) {  
 
     header {
         .navbar {
@@ -56,7 +56,6 @@
 
 
 // Navbar icons
-
 @media (max-width: 415px) {  
     header {
         .navbar {
@@ -104,8 +103,7 @@
 
 
 // Jumbotron title
-
-@media (min-width: 300px) and (max-width: 999px)  {
+@media (max-width: 999px)  {
    
     header {
 

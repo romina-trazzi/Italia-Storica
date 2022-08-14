@@ -1,7 +1,7 @@
 /* MediaQuery CSS Italia Storica */ /*=============================================
 =            HEADER MEDIA QUERY         =
 =============================================*/
-@media (min-width: 350px) and (max-width: 599px) {
+@media (max-width: 599px) {
   header .navbar {
     font-size: 0.7rem !important;
   }
@@ -51,7 +51,7 @@
     display: none;
   }
 }
-@media (min-width: 300px) and (max-width: 999px) {
+@media (max-width: 999px) {
   header .my_jumbotron div:nth-child(1) {
     height: inherit;
     width: 100%;
@@ -280,11 +280,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 560px;
+    align-self: center;
+    justify-self: center;
   }
   main .core .slider {
     display: grid;
     grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
     grid-template-rows: 560px;
+    align-self: center;
+    justify-self: center;
   }
 }
 @media (min-width: 1700px) {
@@ -292,11 +296,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 560px;
+    align-self: center;
+    justify-self: center;
   }
   main .core .slider {
     display: grid;
     grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
     grid-template-rows: 560px;
+    align-self: center;
+    justify-self: center;
   }
 }
 @media (max-width: 799px) {

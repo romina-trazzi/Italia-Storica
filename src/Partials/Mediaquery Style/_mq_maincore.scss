@@ -32,7 +32,6 @@
   }
 }
 
-
 @media (min-width: 1200px) {
   main {
     .core {
@@ -147,16 +146,21 @@
 @media (min-width: 800px) and (max-width: 1199px) {
   main {
     .core {
+
       .sliderContainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr) ;
         grid-template-rows: 560px;
+        align-self: center;
+        justify-self: center;
       }
 
       .slider {
         display: grid;
         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
         grid-template-rows: 560px;
+        align-self: center;
+        justify-self: center;
       }
 
     }
@@ -170,18 +174,20 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr) ;
         grid-template-rows: 560px;
+        align-self: center;
+        justify-self: center;
       }
 
       .slider {
         display: grid;
         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
         grid-template-rows: 560px;
+        align-self: center;
+        justify-self: center;
       }
     }
   }
 }
-
-
 
 
 // Arrows

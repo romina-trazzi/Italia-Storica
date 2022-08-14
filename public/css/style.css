@@ -217,10 +217,6 @@ label {
 }
 
 /*=====  End of Section BUTTON ======*/
-/*==========================================
-=            Section BOOK BUTTON         =
-============================================*/
-/*=========  End of Section BUTTON =========*/
 /*=============================================
     =            Section LISTS           =
 ==============================================*/
@@ -323,42 +319,41 @@ a:hover {
   height: 560px;
   width: 100%;
 }
-
-.slider {
+.sliderContainer .slider {
   height: 560px;
   width: 100%;
 }
-
-.slider-track-container {
-  align-self: center;
-  justify-self: center;
+.sliderContainer .slider-track-container {
   width: 390px;
 }
-
-.slider-track {
+.sliderContainer .slider-track {
   padding: 0;
   height: 100%;
 }
-
-.slide {
+.sliderContainer .slide {
   padding: 0;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
 }
-
-.slide img {
+.sliderContainer .slide img {
   opacity: 20%;
   filter: blur(3px);
   transition: 0.5s linear;
   visibility: hidden;
 }
-
-.slide.selected img {
+.sliderContainer .slide.selected img {
   opacity: 1 !important;
   filter: none !important;
   visibility: visible;
 }
-
-.btnC {
+.sliderContainer .nested {
+  display: grid;
+  grid-template-columns: repeat(3, 35px);
+}
+.sliderContainer .nested p {
+  justify-self: center;
+  align-self: center;
+}
+.sliderContainer .btnC {
   width: 40px;
   height: 40px;
   border: none;
@@ -368,33 +363,20 @@ a:hover {
   background-color: #fff;
   font-size: 18px;
 }
-
-.btnC:active {
+.sliderContainer .btnC:active {
   transform: scale(1.1);
 }
-
-#btn-prev-position {
+.sliderContainer #btn-prev-position {
   justify-self: center;
   align-self: center;
   width: 100%;
 }
-
-#btn-next-position {
+.sliderContainer #btn-next-position {
   justify-self: center;
   align-self: center;
   width: 100%;
 }
-
-.nested {
-  display: grid;
-  grid-template-columns: repeat(3, 35px);
-}
-.nested p {
-  justify-self: center;
-  align-self: center;
-}
-
-.carousel_button {
+.sliderContainer .carousel_button {
   color: floralwhite;
   text-transform: uppercase;
   background-color: transparent;
@@ -407,13 +389,11 @@ a:hover {
   transition: opacity 150ms ease, border 300ms ease-in-out;
   line-height: 1;
 }
-
-.carousel_button:hover {
+.sliderContainer .carousel_button:hover {
   outline: none;
   border-color: white;
 }
-
-.carousel_button:focus {
+.sliderContainer .carousel_button:focus {
   color: floralwhite;
 }
 
