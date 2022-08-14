@@ -7,6 +7,8 @@
   \*************************/
 /***/ (() => {
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /*=============================================
     =            VUE SECTION           =
 =============================================*/
@@ -96,7 +98,7 @@ var app = new Vue({
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
-  methods: {
+  methods: _defineProperty({
     nextImg: function nextImg() {
       this.counter++;
 
@@ -118,7 +120,9 @@ var app = new Vue({
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
     }
-  },
+  }, "handleResize", function handleResize() {
+    this.windowWidth = window.screen.width;
+  }),
   watch: {
     // Quando il valore di windowWidth cambia, fai partire questa funzione
     windowWidth: function windowWidth() {

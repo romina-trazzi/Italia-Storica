@@ -140,6 +140,13 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
+        /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
+        Il valore di width in data viene aggiornato da 0 a valore corrente.
+        (passaggio 2) */
+        handleResize () {
+            this.windowWidth = window.screen.width;
+        },
+
     },
 
     watch: {
