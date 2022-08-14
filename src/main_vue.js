@@ -17,58 +17,58 @@ let app = new Vue ({
 
         libri: [
             {
-                "titolo": "Il calderone delle streghe",
-                "sottotitolo": "La battaglia della sacca di Cherkassy, gennaio-febbraio 1944",
-                "autore": "Günther Jahnke, Bernd Lerch",
-                "pagine": "492 p., ill. , Brossura",
+                "titolo": "Valhalla Express",
+                "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
+                "autore": "Woland",
+                "pagine": "224 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "La prima testimonianza in assoluto edita in italiano di un membro del Battaglione (poi Reggimento) 'Azov', dalla giovinezza nell'Ucraina post 1991, tra tensioni sociali e etniche, alla militanza nelle organizzazioni nazionaliste e nei gruppi Ultras e paramilitari, sino agli scontri di Maidan a Kiev, all'entrata nel Battaglione 'Azov' e i combattimenti a Mariupol e nel Donbass del 2014. Un documento essenziale per comprendere la realtà della società ucraina e delle tensioni con la Russia dopo la caduta dell'URSS, sino al conflitto attuale. In appendice una documentazione fotografica, le linee guida del movimento 'Azov' e la cronologia delle operazioni militari del Battaglione nel 2014-2015 in un documento ufficiale del reparto, e un approfondimento sul nazionalismo radicale nell'Ucraina post-sovietica a cura di Andrea Forti. Con una introduzione di contesto di Matteo Sacchi ('Il Giornale') e una postfazione di Domenico Di Tullio.",
+                "prezzo": "25,00 euro",
+                "link_IBS": "https://www.ibs.it/valhalla-express-storia-di-nazionalista-libro-woland/e/9788831430210?queryId=8053636d6343d3cd98f2705733c09834"
+            },
+
+            {
+                "titolo": "Profeti inascoltati del Novecento",
+                "sottotitolo": "Sessantasei personalità fuori dagli schemi illustrate dai disegni di Dionisio di Francescantonio e da approfondimenti di intellettuali, scrittori e critici d'arte",
+                "autore": "AA. VV.",
+                "pagine": "230 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "La rassegna 'Profeti inascoltati del Novecento' collega pensatori liberi ed eretici, conservatori di valori e non di costumi, e di integrità morale che costituisce l'unica forma possibile di pensiero, a un disegnatore che ne ha eseguito il volto, le ansie e le riflessioni, e ad altri scrittori che ne hanno interpretato lo spirito. Da Jünger a Conrad, da Pound a Borges, da Flaiano alla Campo, da Bernanos a Camus. Un Olimpo siffatto aveva illustrato, impavido, Tullio Pericoli. Oggi tocca a Dionisio di Francescantonio con il disegno e ad altri, come Stenio Solinas, con le parole. L'arte pretende quella libertà di espressione che personaggi scomodi come Louis-Ferdinand Céline, Hannah Arendt, Filippo Tommaso Marinetti, hanno coraggiosamente e diversamente testimoniato, anche divisi dalle violentissime vicende storiche del Novecento. Non posso che guardare con favore, quindi, i ritratti - accompagnati dagli approfondimenti di apprezzati pensatori e amici come Pietrangelo Buttafuoco, Gianfranco de Turris, Luigi Iannone e altri - di Dionisio di Francescantonio, così vivi ed espressivi, lucenti nel buio di un'epoca senza maestri. (dalla prefazione di Vittorio Sgarbi)",
+                "prezzo": "29,00 euro",
+                "link_IBS": "https://www.ibs.it/profeti-inascoltati-del-novecento-sessantasei-libro-vari/e/9788831430227?queryId=d6e83c11b35a93c4d416f6d7b7b5968a"
+            },
+
+            {
+                "titolo": "1945 Germania anno zero",  
+                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
+                "autore": "Massimo Lucioli - Wehrmacht Research Group",
+                "pagine": "542 p., ill., Brossura",
                 "anno di pubblicazione": "2021",
-                "descrizione": "Il presente studio sulla 'Sacca di Cherkassy' è un'analisi operazionale e tattica. Vi sono descritte la sequenza degli avvenimenti e lo sviluppo della situazione militare del fronte tedesco a sud di Cherkassy dal 28 gennaio al 17 febbraio 1944. Viene anche data un'ampia panoramica del quadro generale di ciò che avvenne tra la fine del 1943 e l'inizio del 1944 sul fronte dell'Heeresgruppe Süd, per assicurare una migliore comprensione del contesto della battaglia, che si distinse per drammaticità e svolgimento tattico dal resto degli eventi del fronte orientale. Il presente lavoro si sforza di dare una rappresentazione fattuale e quanto più esauriente possibile, grazie alla consultazione di una vasta mole di documenti d'archivio e fonti secondarie tedesche e sovietiche, diari di guerra delle unità coinvolte e testimonianze dirette di veterani. In appendice, numerose fotografie rare e inedite della battaglia, e la riproduzione delle mappe originali tedesche delle operazioni nella sacca.",
-                "prezzo": "34,20 euro",
-                "link_IBS": "https://www.ibs.it/calderone-delle-streghe-battaglia-della-libro-gunther-jahnke-bernd-lerch/e/9788831430128"
+                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
+                "prezzo": "36,00 euro",
+                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
             },
 
             {
-                "titolo": "La caduta di Berlino",
-                "sottotitolo": "L'ultima battaglia di Hitler",
-                "autore": "Werner Haupt",
-                "pagine": "278 p., ill. , Brossura",
-                "anno di pubblicazione": "2020",
-                "descrizione": "Un classico della storia militare, coniugante l'accuratezza della documentata ricostruzione storica degli ultimi combattimenti per Berlino dell'aprile-maggio 1945, dallo sfondamento sovietico sull'Oder sino alla battaglia di Seelow e la difesa finale della capitale del III Reich, e l'avvincente narrazione delle vicende di un pugno di carristi della Panzer-Division 'Müncheberg' e volontari francesi dell'SS-Sturmbataillon 'Charlemagne', tra gli ultimi difensori di Berlino. Questa edizione presenta una traduzione rivista e annotata a cura del Wehrmacht Research Group, ed è integrata da nuove dettagliate mappe delle operazioni, drammatiche fotografie in azione dell'epoca, immagini attuali dei luoghi dei combattimenti e di illustrazioni a colori.",
-                "prezzo": "23,75 euro",
-                "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
+                "titolo": "Il sognatore con l'elmetto",
+                "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
+                "autore": "Christian de La Mazière",
+                "pagine": "402 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
+                "prezzo": "25,00 euro",
+                "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
             },
 
             {
-                "titolo": "Il gladiatore di Hitler",
-                "sottotitolo": "Vita e battaglie del Generale d'armata SS Sepp Dietrich",
-                "autore": "Charles Messenger",
-                "pagine": "492 p., ill. , Brossura",
+                "titolo": "VOLARE, LA MIA VITA",
+                "sottotitolo": "Le memorie della famosa pilota collaudatrice della Luftwaffe",
+                "autore": "Hanna Reitsch",
+                "pagine": "278 p., ill., Brossura",
                 "anno di pubblicazione": "2021",
-                "descrizione": "Veterano della prima guerra mondiale, dove servì nei primi reparti corazzati imperiali su Tank di preda bellica, e combattente nei Freikorps nei turbolenti anni della repubblica di Weimar, Josef 'Sepp' Dietrich fu uno dei primi sostenitori del Nazionalsocialismo tedesco, legando indissolubilmente la sua vita ad Adolf Hitler e la sua carriera militare alla guida dell'élite delle SS, la Leibstandarte SS Adolf Hitler, dirigendone la formazione e le attività nella Germania degli anni '30 e quindi guidandola in guerra nelle campagne di Polonia, Francia, Grecia e nei durissimi combattimenti sul fronte russo nel 1941-1943, per poi prendere il comando di Armate Panzer SS negli scontri finali in Normandia, Ardenne e Ungheria. Incensato dalla propaganda tedesca e diffamato da quella Alleata, condannato quale criminale di guerra, Sepp Dietrich fu un comandante devoto ai suoi uomini e li guidò in alcuni dei combattimenti più feroci della guerra. In questa prima edizione italiana, ampiamente illustrata, lo storico militare inglese Charles Messenger fornisce un resoconto obiettivo delle battaglie di Sepp Dietrich e delle sue Waffen-SS.",
-                "prezzo": "27,55 euro",
-                "link_IBS": "https://www.ibs.it/gladiatore-di-hitler-vita-battaglie-libro-charles-messenger/e/9788831430135"
-            },
-
-            {
-                "titolo": "Il vero volto del soldato tedesco",
-                "sottotitolo": "",
-                "autore": "Fritz Kempe",
-                "pagine": "102 p., ill. , Brossura",
-                "anno di pubblicazione": "2016",
-                "descrizione": "Questo libro fotografico dedicato al Volto del soldato tedesco nella seconda guerra mondiale, curato dal fotografo Fritz Kempe (1909-1988) per conto dell'Oberkommando della Wehrmacht, il comando supremo delle forze armate, e pubblicato nel 1943, rappresentò, per qualità tecnica delle fotografie riprodotte e per la sua 'visione', il punto più alto raggiunto dalla già monumentale opera di propaganda fotografica dei Bildberichter, i fotografi di guerra tedeschi. Le fotografie, selezionate tra migliaia di scatti, rappresentano non solo una eccezionale testimonianza storica e estetica dei militari tedeschi della Heer, delle Waffen-SS, della Kriegsmarine e della Luftwaffe impegnati su tutti i fronti e delle loro gesta, ma anche una precisa indagine, tramite un profondo sguardo fotografico sugli 'occhi specchio dell'anima' di questi uomini in guerra, sulle radici identitarie dell'Uomo e del Soldato tedesco, come membro scelto di una coesa comunità nazionale e politica, impegnato nella difesa dei valori culturali tedeschi ed europei minacciati dal bolscevismo dell'Unione Sovietica da una parte, e dal capitalismo angloamericano dall'altra.",
-                "prezzo": "22,80 euro",
-                "link_IBS": "https://www.ibs.it/vero-volto-del-soldato-tedesco-libro-fritz-kempe/e/9788894226522"
-            },
-
-            {
-                "titolo": "La caduta di Berlino",
-                "sottotitolo": "L'ultima battaglia di Hitler",
-                "autore": "Werner Haupt",
-                "pagine": "278 p., ill. , Brossura",
-                "anno di pubblicazione": "2020",
-                "descrizione": "Un classico della storia militare, coniugante l'accuratezza della documentata ricostruzione storica degli ultimi combattimenti per Berlino dell'aprile-maggio 1945, dallo sfondamento sovietico sull'Oder sino alla battaglia di Seelow e la difesa finale della capitale del III Reich, e l'avvincente narrazione delle vicende di un pugno di carristi della Panzer-Division 'Müncheberg' e volontari francesi dell'SS-Sturmbataillon 'Charlemagne', tra gli ultimi difensori di Berlino. Questa edizione presenta una traduzione rivista e annotata a cura del Wehrmacht Research Group, ed è integrata da nuove dettagliate mappe delle operazioni, drammatiche fotografie in azione dell'epoca, immagini attuali dei luoghi dei combattimenti e di illustrazioni a colori.",
-                "prezzo": "23,75 euro",
-                "link_IBS": "https://www.ibs.it/caduta-di-berlino-ultima-battaglia-libro-werner-haupt/e/9788831430012"
+                "descrizione": "Hanna Reitsch, già detentrice negli anni 1920-1930 di un gran numero di primati di volo a vela, pilotò quale pilota collaudatrice quasi tutti gli aerei militari tedeschi durante la seconda guerra mondiale, dal famoso caccia Focke-Wulf Fw 190 al gigantesco aliante da trasporto Me 321 'Gigant' al pericoloso aereo a razzo Me 163 'Komet'. Svolse inoltre un ruolo importante nello sviluppo delle V1 pilotate suicide, e di altri aerei e equipaggiamenti sperimentali della Luftwaffe, Fu poi lei quella che riuscì ad atterrare nella Berlino assediata dai sovietici nell'aprile del 1945 con il Feldmaresciallo Ritter von Greim, nominato da Adolf Hitler ultimo comandante in capo della Luftwaffe. In Germania è stata una figura leggendaria, e da ogni punto di vista è uno dei più grandi piloti che il mondo abbia mai conosciuto. Questa è la sua storia personale. È uno dei libri di guerra più illuminanti che siano usciti dalla Germania, fornendo una panoramica dei piani della Luftwaffe in molte fasi del conflitto. In appendice, un approfondimento sulle donne pilota tedesche nella seconda guerra mondiale, e più di 160 fotografie in bianco e nero e colori. Prefazione di Cristina Di Giorgi.",
+                "prezzo": "26,00 euro",
+                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
             }
 
         ],
