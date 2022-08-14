@@ -13,7 +13,8 @@
         $button = $_POST['submit_button'];
         
         // Aggiungiamo l'indirizzo mail del web master ricevente 
-        $to = "andrea.lombardi@hotmail.com"; 
+        // $to = "andrea.lombardi@hotmail.com"; 
+        $to = "romina.trazzi@posta.it";
         
         // Creiamo altre variabili php per impostare la funzione mail
         $from = $userEmail;
@@ -38,9 +39,6 @@
     if (isset($button)) {
         
         if (mail ($to, $messageSubject, $body, $headers)) {
-            
-            // Flash message
-            
             
             // Redirect
             $referer = $_SERVER ['HTTP_REFERER'];
