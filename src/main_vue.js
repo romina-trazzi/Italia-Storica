@@ -140,13 +140,6 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
-        /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
-        Il valore di width in data viene aggiornato da 0 a valore corrente.
-        (passaggio 2) */
-        handleResize () {
-            this.windowWidth = window.screen.width;
-        },
-
     },
 
     watch: {
@@ -358,6 +351,11 @@ let maxSlide = slides.length - 1;
 
 let bezierValue = [0, -100, -200, -300, -400];
 
+// loop through slides and set each slides translateX initial value property to index * 100% 
+slides.forEach((slide, index) => {
+    slide.style.transform = `translateX(${index * 100}%)`;
+});
+
 
 // ARROWS E MOVIMENTO DEL CAROSELLO
 
@@ -367,38 +365,41 @@ let bezierValue = [0, -100, -200, -300, -400];
 const nextArrow = document.querySelector(".btn-next");
 
 // add event listener and navigation functionality
-nextArrow.addEventListener("click", function () {
-
+nextArrow.addEventListener("click", function () { 
+    
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
       curSlide = 0;
     } else {
       curSlide++;
-    }
-
+    }   
+    
     // gestione classe selected
     slides[curSlide].classList.add("selected");
 
-    if (slides[curSlide - 1] !== undefined) {
+    if (slides[curSlide -1] !== undefined) {
         slides[curSlide -1].classList.remove("selected");
-    }
+    } 
 
     // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
     if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
         slides[maxSlide].classList.remove("selected");
     }
 
-
-    // move slide + centratura copertina
+    
+    // move slide
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${bezierValue[index]}%)`;
+
+        if (`translateX(${bezierValue[index]}%)` == 0) {
+            slide.style.transform = 100 + "%";
+        }
     });
-
-
+  
 });
 
 
- /* FRECCIA SINISTRA */
+/* FRECCIA SINISTRA */
 
 // select prev slide button
 const prevArrow = document.querySelector(".btn-prev");
@@ -441,7 +442,6 @@ let currentIndex = 0;
 // Selezioniamo dal Dom i dots
 let dots = document.getElementsByClassName('carousel_bullet');
 let dotsArray = Array.from(dots);
-
 
 for (let i = 0; i < dots.length; i++) {
 

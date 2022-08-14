@@ -7,8 +7,6 @@
   \*************************/
 /***/ (() => {
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 /*=============================================
     =            VUE SECTION           =
 =============================================*/
@@ -98,7 +96,7 @@ var app = new Vue({
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
   },
-  methods: _defineProperty({
+  methods: {
     nextImg: function nextImg() {
       this.counter++;
 
@@ -120,9 +118,7 @@ var app = new Vue({
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
     }
-  }, "handleResize", function handleResize() {
-    this.windowWidth = window.screen.width;
-  }),
+  },
   watch: {
     // Quando il valore di windowWidth cambia, fai partire questa funzione
     windowWidth: function windowWidth() {
@@ -280,7 +276,11 @@ var slides = document.querySelectorAll(".slide"); // current slide counter
 var curSlide = 0; // Maximum number of slides
 
 var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400]; // ARROWS E MOVIMENTO DEL CAROSELLO
+var bezierValue = [0, -100, -200, -300, -400]; // loop through slides and set each slides translateX initial value property to index * 100% 
+
+slides.forEach(function (slide, index) {
+  slide.style.transform = "translateX(".concat(index * 100, "%)");
+}); // ARROWS E MOVIMENTO DEL CAROSELLO
 
 /* FRECCIA DESTRA */
 // select next slide button
@@ -305,11 +305,15 @@ nextArrow.addEventListener("click", function () {
 
   if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
     slides[maxSlide].classList.remove("selected");
-  } // move slide + centratura copertina
+  } // move slide
 
 
   slides.forEach(function (slide, index) {
     slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
+
+    if ("translateX(".concat(bezierValue[index], "%)") == 0) {
+      slide.style.transform = 100 + "%";
+    }
   });
 });
 /* FRECCIA SINISTRA */
