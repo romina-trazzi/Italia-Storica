@@ -125,17 +125,22 @@ var app = new Vue({
       var currentIndex = 0; // Rimuoviamo la classe selected da tutti gli elementi
 
       for (var i = 0; i < dots.length; i++) {
-        dotsArray[i].classList.remove('selected');
-      } // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+        // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+        // Aggiungiamo la classe selected all'elemento cliccato
+        if (dots[i] === document.activeElement) {
+          currentIndex = i;
+          dots[currentIndex].classList.add('selected'); // Muoviamo le slide
 
+          slides[currentIndex].style.transform = "translateX(".concat(bezierValue[i], "%)"); // Togliamo a tutte le slide la classe selected
 
-      dotsArray.forEach(function (element, index) {
-        if (element === document.activeElement) {
-          currentIndex = index;
+          slides.forEach(function (slide) {
+            slide.classList.remove('selected');
+          }); // Aggiungiamo la classe selected solo a quella con indice corrente
+
+          slides[currentIndex].classList.add("selected");
         }
-      }); // Aggiungiamo la classe selected all'elemento attivo
+      } // Aggiorniamo il counter
 
-      dotsArray[currentIndex].classList.add('selected'); // Aggiorniamo il counter
 
       this.counter = currentIndex;
     }
@@ -367,46 +372,12 @@ prevArrow.addEventListener("click", function () {
     slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
   });
 });
-/* RADIOBUTTON (copertine) */
-
-var currentIndex = 0; // Selezioniamo dal Dom i dots
-
-var dots = document.getElementsByClassName('carousel_bullet');
-var dotsArray = Array.from(dots);
-
-var _loop = function _loop(i) {
-  // Event listener al click su ogni button
-  dots[i].addEventListener("click", function () {
-    // Togliamo a tutti i dots la classe selected
-    dotsArray.forEach(function (dot) {
-      dot.classList.remove('selected');
-    }); // Aggiungiamo la classe selected all'elemento cliccato
-
-    if (dots[i] === document.activeElement) {
-      currentIndex = i;
-      dots[currentIndex].classList.add('selected'); // Muoviamo le slide
-
-      slides[currentIndex].style.transform = "translateX(".concat(bezierValue[i], "%)"); // Togliamo a tutte le slide la classe selected
-
-      slides.forEach(function (slide) {
-        slide.classList.remove('selected');
-      }); // Aggiungiamo la classe selected solo a quella con indice corrente
-
-      slides[currentIndex].classList.add("selected");
-    }
-  });
-};
-
-for (var i = 0; i < dots.length; i++) {
-  _loop(i);
-}
 /*---------- End Subsection Carousel  ----------*/
 
 /*----------  Subsection Card outline colors  ----------*/
 
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
-
 
 var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array  
 
@@ -415,28 +386,28 @@ var buttonsArray = Array.from(buttons); // Selezioniamo gli elementi da cambiare
 var iconsFas = document.querySelectorAll('.card .fas');
 var cards = document.querySelectorAll('.card'); // Creiamo i cicli con i Listener e le funzioni per cambiare i colori
 
+var _loop = function _loop(i) {
+  buttonsArray[i].addEventListener('mouseover', function () {
+    iconsFas[i].style.color = 'rgb(244, 124, 32)';
+    cards[i].style.outlineColor = 'rgb(244, 124, 32)';
+  });
+};
+
+for (var i = 0; i < buttonsArray.length; i++) {
+  _loop(i);
+}
+
+;
+
 var _loop2 = function _loop2(_i) {
-  buttonsArray[_i].addEventListener('mouseover', function () {
-    iconsFas[_i].style.color = 'rgb(244, 124, 32)';
-    cards[_i].style.outlineColor = 'rgb(244, 124, 32)';
+  buttonsArray[_i].addEventListener('mouseleave', function () {
+    iconsFas[_i].style.color = 'rgb(250, 153, 28)';
+    cards[_i].style.outlineColor = 'rgb(250, 153, 28)';
   });
 };
 
 for (var _i = 0; _i < buttonsArray.length; _i++) {
   _loop2(_i);
-}
-
-;
-
-var _loop3 = function _loop3(_i2) {
-  buttonsArray[_i2].addEventListener('mouseleave', function () {
-    iconsFas[_i2].style.color = 'rgb(250, 153, 28)';
-    cards[_i2].style.outlineColor = 'rgb(250, 153, 28)';
-  });
-};
-
-for (var _i2 = 0; _i2 < buttonsArray.length; _i2++) {
-  _loop3(_i2);
 }
 
 ;

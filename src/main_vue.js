@@ -149,18 +149,26 @@ let app = new Vue ({
             
             // Rimuoviamo la classe selected da tutti gli elementi
             for (let i = 0; i < dots.length; i++) {
-                dotsArray[i].classList.remove('selected');
-            }
+                
+                // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+                // Aggiungiamo la classe selected all'elemento cliccato
+                if (dots[i] === document.activeElement) {
+                    currentIndex = i;
+                    dots[currentIndex].classList.add('selected');
+                
+                    // Muoviamo le slide
+                    slides[currentIndex].style.transform = `translateX(${bezierValue[i]}%)`;
+                
+                    // Togliamo a tutte le slide la classe selected
+                    slides.forEach(function (slide)  {
+                        slide.classList.remove('selected');
+                    });
 
-            // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
-            dotsArray.forEach(function (element, index) {
-                if (element === document.activeElement) {
-                    currentIndex = index;
+                    // Aggiungiamo la classe selected solo a quella con indice corrente
+                    slides[currentIndex].classList.add("selected");
                 }
-            });
-
-            // Aggiungiamo la classe selected all'elemento attivo
-            dotsArray[currentIndex].classList.add('selected');
+            
+            }   
 
             // Aggiorniamo il counter
             this.counter = currentIndex;
@@ -461,46 +469,6 @@ prevArrow.addEventListener("click", function () {
 
 });
 
-
-/* RADIOBUTTON (copertine) */
-
-let currentIndex = 0;
-
-// Selezioniamo dal Dom i dots
-let dots = document.getElementsByClassName('carousel_bullet');
-let dotsArray = Array.from(dots);
-
-for (let i = 0; i < dots.length; i++) {
-
-    // Event listener al click su ogni button
-    dots[i].addEventListener("click", function () {
-
-        // Togliamo a tutti i dots la classe selected
-        dotsArray.forEach(function (dot)  {
-            dot.classList.remove('selected');
-        });
-
-        // Aggiungiamo la classe selected all'elemento cliccato
-        if (dots[i] === document.activeElement) {
-            currentIndex = i;
-            dots[currentIndex].classList.add('selected');
-            
-            // Muoviamo le slide
-            slides[currentIndex].style.transform = `translateX(${bezierValue[i]}%)`;
-            
-            // Togliamo a tutte le slide la classe selected
-            slides.forEach(function (slide)  {
-                slide.classList.remove('selected');
-            });
-
-            // Aggiungiamo la classe selected solo a quella con indice corrente
-            slides[currentIndex].classList.add("selected");
-
-        }   
-
-           
-    });
-}
 
 /*---------- End Subsection Carousel  ----------*/
 
