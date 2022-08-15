@@ -140,10 +140,37 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
+        slideBullet() {
+            // Selezioniamo dal Dom i dots
+            let dots = document.querySelectorAll('.carousel_bullet');
+            let dotsArray = Array.from(dots);
+
+            let currentIndex = 0;
+            
+            // Rimuoviamo la classe selected da tutti gli elementi
+            for (let i = 0; i < dots.length; i++) {
+                dotsArray[i].classList.remove('selected');
+            }
+
+            // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+            dotsArray.forEach(function (element, index) {
+                if (element === document.activeElement) {
+                    currentIndex = index;
+                }
+            });
+
+            // Aggiungiamo la classe selected all'elemento attivo
+            dotsArray[currentIndex].classList.add('selected');
+
+            // Aggiorniamo il counter
+            this.counter = currentIndex;
+
+
+        },
+        
     },
 
     watch: {
-
         // Quando il valore di windowWidth cambia, fai partire questa funzione
         windowWidth: function () {
 
@@ -435,7 +462,7 @@ prevArrow.addEventListener("click", function () {
 });
 
 
-/* RADIOBUTTON */
+/* RADIOBUTTON (copertine) */
 
 let currentIndex = 0;
 

@@ -117,6 +117,27 @@ var app = new Vue({
     (passaggio 2) */
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
+    },
+    slideBullet: function slideBullet() {
+      // Selezioniamo dal Dom i dots
+      var dots = document.querySelectorAll('.carousel_bullet');
+      var dotsArray = Array.from(dots);
+      var currentIndex = 0; // Rimuoviamo la classe selected da tutti gli elementi
+
+      for (var i = 0; i < dots.length; i++) {
+        dotsArray[i].classList.remove('selected');
+      } // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
+
+
+      dotsArray.forEach(function (element, index) {
+        if (element === document.activeElement) {
+          currentIndex = index;
+        }
+      }); // Aggiungiamo la classe selected all'elemento attivo
+
+      dotsArray[currentIndex].classList.add('selected'); // Aggiorniamo il counter
+
+      this.counter = currentIndex;
     }
   },
   watch: {
@@ -346,7 +367,7 @@ prevArrow.addEventListener("click", function () {
     slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
   });
 });
-/* RADIOBUTTON */
+/* RADIOBUTTON (copertine) */
 
 var currentIndex = 0; // Selezioniamo dal Dom i dots
 
