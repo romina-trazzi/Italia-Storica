@@ -118,11 +118,17 @@ var app = new Vue({
     handleResize: function handleResize() {
       this.windowWidth = window.screen.width;
     },
+
+    /* Controlla tutta la gestione dei radiobutton del carosello */
     slideBullet: function slideBullet() {
       // Selezioniamo dal Dom i dots
       var dots = document.querySelectorAll('.carousel_bullet');
       var dotsArray = Array.from(dots);
       var currentIndex = 0; // Rimuoviamo la classe selected da tutti gli elementi
+
+      slides.forEach(function (slide) {
+        slide.classList.remove('selected');
+      });
 
       for (var i = 0; i < dots.length; i++) {
         // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
@@ -131,11 +137,7 @@ var app = new Vue({
           currentIndex = i;
           dots[currentIndex].classList.add('selected'); // Muoviamo le slide
 
-          slides[currentIndex].style.transform = "translateX(".concat(bezierValue[i], "%)"); // Togliamo a tutte le slide la classe selected
-
-          slides.forEach(function (slide) {
-            slide.classList.remove('selected');
-          }); // Aggiungiamo la classe selected solo a quella con indice corrente
+          slides[currentIndex].style.transform = "translateX(".concat(bezierValue[i], "%)"); // Aggiungiamo la classe selected solo a quella con indice corrente
 
           slides[currentIndex].classList.add("selected");
         }
@@ -305,7 +307,7 @@ var maxSlide = slides.length - 1;
 var bezierValue = [0, -100, -200, -300, -400]; // loop through slides and set each slides translateX initial value property to index * 100% 
 
 slides.forEach(function (slide, index) {
-  slide.style.transform = "translateX(".concat(index * 100, "%)");
+  slide.style.transform = "translateX(".concat(index * -100, "%)");
 }); // ARROWS E MOVIMENTO DEL CAROSELLO
 
 /* FRECCIA DESTRA */
@@ -338,7 +340,7 @@ nextArrow.addEventListener("click", function () {
     slide.style.transform = "translateX(".concat(bezierValue[index], "%)");
 
     if ("translateX(".concat(bezierValue[index], "%)") == 0) {
-      slide.style.transform = 100 + "%";
+      slide.style.transform = "translateX(100%)";
     }
   });
 });

@@ -140,7 +140,9 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
+        /* Controlla tutta la gestione dei radiobutton del carosello */
         slideBullet() {
+
             // Selezioniamo dal Dom i dots
             let dots = document.querySelectorAll('.carousel_bullet');
             let dotsArray = Array.from(dots);
@@ -148,6 +150,10 @@ let app = new Vue ({
             let currentIndex = 0;
             
             // Rimuoviamo la classe selected da tutti gli elementi
+            slides.forEach(function (slide)  {
+                slide.classList.remove('selected');
+            });
+
             for (let i = 0; i < dots.length; i++) {
                 
                 // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
@@ -159,11 +165,6 @@ let app = new Vue ({
                     // Muoviamo le slide
                     slides[currentIndex].style.transform = `translateX(${bezierValue[i]}%)`;
                 
-                    // Togliamo a tutte le slide la classe selected
-                    slides.forEach(function (slide)  {
-                        slide.classList.remove('selected');
-                    });
-
                     // Aggiungiamo la classe selected solo a quella con indice corrente
                     slides[currentIndex].classList.add("selected");
                 }
@@ -388,7 +389,7 @@ let bezierValue = [0, -100, -200, -300, -400];
 
 // loop through slides and set each slides translateX initial value property to index * 100% 
 slides.forEach((slide, index) => {
-    slide.style.transform = `translateX(${index * 100}%)`;
+    slide.style.transform = `translateX(${index * (-100)}%)`;
 });
 
 
@@ -427,7 +428,7 @@ nextArrow.addEventListener("click", function () {
         slide.style.transform = `translateX(${bezierValue[index]}%)`;
 
         if (`translateX(${bezierValue[index]}%)` == 0) {
-            slide.style.transform = 100 + "%";
+            slide.style.transform = `translateX(100%)`;
         }
     });
   
