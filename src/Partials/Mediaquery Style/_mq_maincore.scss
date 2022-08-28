@@ -90,12 +90,20 @@
       .slider {
         height: 317px;
         margin: 0 calc((100% - (var(--widthA)))/2);
-          --widthA: 221px;
+        --widthA: 221px;
+
+        img {
+          min-height: 317px !important;
+          max-width: 221px;
+        }
       } 
     
-      .slider-track-container {
-        width: 100%;    
-      } 
+      // .slider-track-container {
+      //   width: 100%;    
+      // }
+      
+  
+ 
     
     }
 

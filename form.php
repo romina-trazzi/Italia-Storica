@@ -13,7 +13,7 @@
         $button = $_POST['submit_button'];
         
         // Aggiungiamo l'indirizzo mail del web master ricevente 
-        $to = "andrea.lombardi@hotmail.com"; 
+        $to = "italiastorica@hotmail.com"; 
        
         
         // Creiamo altre variabili php per impostare la funzione mail

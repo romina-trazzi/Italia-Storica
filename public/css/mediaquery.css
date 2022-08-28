@@ -252,8 +252,9 @@
     margin: 0 calc((100% - (var(--widthA))) / 2);
     --widthA: 221px;
   }
-  main .core .slider-track-container {
-    width: 100%;
+  main .core .slider img {
+    min-height: 317px !important;
+    max-width: 221px;
   }
   main .book_details {
     padding-left: 0px !important;
@@ -380,6 +381,11 @@
 /*================================================
 =            MAIN ROW PERSONAL MEDIAQUERY        =
 =================================================*/
+@media (min-width: 0px) {
+  #final {
+    padding: 0 50px 0 50px !important;
+  }
+}
 @media (max-width: 999px) {
   main .personal #bio img {
     display: none;
