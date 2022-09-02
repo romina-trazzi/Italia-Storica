@@ -15,7 +15,7 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg"],
+    images: ["public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg"],
     libri: [{
       "titolo": "Valhalla Express",
       "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
@@ -119,7 +119,7 @@ var app = new Vue({
       this.windowWidth = window.screen.width;
     },
 
-    /* Controlla tutta la gestione dei radiobutton del carosello */
+    /* Controlla la gestione dei radiobutton del carosello */
     slideBullet: function slideBullet() {
       // Selezioniamo dal Dom i dots
       var dots = document.querySelectorAll('.carousel_bullet');

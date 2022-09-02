@@ -756,6 +756,9 @@ body main .personal #operas p {
   height: -moz-max-content;
   height: max-content;
 }
+body main .personal #final {
+  padding: 50px 50px 0 50px;
+}
 body main .personal .sponsor-title {
   padding: 0;
   margin-top: 130px;
@@ -770,6 +773,9 @@ body main .personal .supporters .secloghi {
   padding-top: 50px;
 }
 body main .personal .supporters .terloghi {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   padding-top: 50px;
   padding-bottom: 130px;
 }

@@ -272,6 +272,10 @@ body {
                 }
             }
 
+            #final {
+                padding: 50px 50px 0 50px;
+            }
+
             .sponsor-title {
                 padding: 0;
                 margin-top: 130px;
@@ -291,6 +295,9 @@ body {
                 }
                         
                 .terloghi {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    justify-items: center;
                     padding-top: 50px;
                     padding-bottom: 130px;
                    

@@ -9,10 +9,10 @@ let app = new Vue ({
         counter: 0,
         images: [
             "public/img/carousel0.jpg",
-            "public/img/carousel1.jpg",
-            "public/img/carousel2.jpg",
-            "public/img/carousel3.jpg",
-            "public/img/carousel4.jpg"
+            "public/img/carousel0.jpg",
+            "public/img/carousel0.jpg",
+            "public/img/carousel0.jpg",
+            "public/img/carousel0.jpg"
         ],
 
         libri: [
@@ -140,7 +140,7 @@ let app = new Vue ({
             this.windowWidth = window.screen.width;
         },
 
-        /* Controlla tutta la gestione dei radiobutton del carosello */
+        /* Controlla la gestione dei radiobutton del carosello */
         slideBullet() {
 
             // Selezioniamo dal Dom i dots
