@@ -21,60 +21,23 @@
 
 
 // Copertina libri
-@media (min-width: 1200px) and (max-width: 1699px) {
+@media (min-width: 600px) {
   main {
     .core {
       .slider {
-        margin: 0 calc((100% - (var(--widthA)))/2);
-        --widthA: 390px;
-      }
-    }
-  }
-}
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 100%;
+        grid-gap: 5%;
+        justify-content: center;
 
-@media (min-width: 1200px) {
-  main {
-    .core {
-      .slider {
-        min-height: 560px;
-        .slider-track {
-          img {
-            min-height: 560px;
-            max-width: 390px;
-          }
-        }
-      }
-    }
-
-    .book_details {
-      padding-left: 0px !important;
-    }
-  }
-}
-
-@media (min-width: 600px) and (max-width: 1199px) {
-  main {
-    .core {
-      .slider {
         img {
-          min-height: 560px !important;
-          max-width: 390px;
+          max-height: 560px !important;
         }
       }
 
       .book_details {
         padding-left: 0px !important;
-      }
-    }
-  }
-}
-
-@media (min-width: 600px) and (max-width: 799px) {
-  main {
-    .core {
-      .slider {
-        margin: 0 calc((100% - (var(--widthA)))/2);
-        --widthA: 390px;
       }
     }
   }
@@ -89,22 +52,13 @@
 
       .slider {
         height: 317px;
-        margin: 0 calc((100% - (var(--widthA)))/2);
-        --widthA: 221px;
+        display: grid;
+        justify-content: center;
 
         img {
-          min-height: 317px !important;
-          max-width: 221px;
+          max-height: 317px !important;
         }
       } 
-    
-      // .slider-track-container {
-      //   width: 100%;    
-      // }
-      
-  
- 
-    
     }
 
     .book_details {
@@ -156,56 +110,56 @@
 
 
 // Carosello 
-@media (min-width: 800px) and (max-width: 1199px) {
-  main {
-    .core {
+// @media (min-width: 800px) and (max-width: 1199px) {
+//   main {
+//     .core {
 
-      .sliderContainer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr) ;
-        grid-template-rows: 560px;
-      }
+//       .sliderContainer {
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr) ;
+//         grid-template-rows: 560px;
+//       }
 
-      .slider {
-        display: grid;
-        grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
-        grid-template-rows: 560px;
-      }
+//       .slider {
+//         display: grid;
+//         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
+//         grid-template-rows: 560px;
+//       }
 
-      .slider-track-container {
-        align-self: center;
-        justify-self: center;
-      }
+//       .slider-track-container {
+//         align-self: center;
+//         justify-self: center;
+//       }
 
-    }
-  }
-}
+//     }
+//   }
+// }
 
-@media (min-width: 1700px) {
-  main {
-    .core {
-      .sliderContainer {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr) ;
-        grid-template-rows: 560px;
+// @media (min-width: 1700px) {
+//   main {
+//     .core {
+//       .sliderContainer {
+//         display: grid;
+//         grid-template-columns: repeat(3, 1fr) ;
+//         grid-template-rows: 560px;
 
-      }
+//       }
 
-      .slider {
-        display: grid;
-        grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
-        grid-template-rows: 560px;
+//       .slider {
+//         display: grid;
+//         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
+//         grid-template-rows: 560px;
 
-      }
+//       }
       
-      .slider-track-container {
-        align-self: center;
-        justify-self: center;
+//       .slider-track-container {
+//         align-self: center;
+//         justify-self: center;
 
-      }
-    }
-  }
-}
+//       }
+//     }
+//   }
+// }
 
 
 // Arrows

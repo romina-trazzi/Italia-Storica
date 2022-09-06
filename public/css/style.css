@@ -333,6 +333,9 @@ a:hover {
 .sliderContainer .slide {
   padding: 0;
   filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 390px;
 }
 .sliderContainer .slide img {
   opacity: 20%;
@@ -344,14 +347,6 @@ a:hover {
   opacity: 1 !important;
   filter: none !important;
   visibility: visible;
-}
-.sliderContainer .nested {
-  display: grid;
-  grid-template-columns: repeat(3, 35px);
-}
-.sliderContainer .nested p {
-  justify-self: center;
-  align-self: center;
 }
 .sliderContainer .btnC {
   width: 40px;
@@ -367,14 +362,12 @@ a:hover {
   transform: scale(1.1);
 }
 .sliderContainer #btn-prev-position {
-  justify-self: center;
+  justify-self: end;
   align-self: center;
-  width: 100%;
 }
 .sliderContainer #btn-next-position {
-  justify-self: center;
+  justify-self: start;
   align-self: center;
-  width: 100%;
 }
 .sliderContainer .carousel_button {
   color: floralwhite;

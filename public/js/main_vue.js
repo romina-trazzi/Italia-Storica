@@ -15,7 +15,7 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    images: ["public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg", "public/img/carousel0.jpg"],
+    images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg"],
     libri: [{
       "titolo": "Valhalla Express",
       "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
@@ -83,15 +83,7 @@ var app = new Vue({
   (passaggio 3) */
   mounted: function mounted() {
     window.addEventListener('resize', this.handleResize);
-    this.handleResize(); // Salva in una variabile l'elemento HTML che ha l'id legato agli arrow button 
-
-    var nestPrev = document.getElementById("btn-prev-position");
-    var nestNext = document.getElementById("btn-next-position");
-
-    if (this.windowWidth < 799 || this.windowWidth >= 1200 && this.windowWidth <= 1699) {
-      nestPrev.classList.remove("nested");
-      nestNext.classList.remove("nested");
-    }
+    this.handleResize();
   },
   destroyed: function destroyed() {
     window.removeEventListener('resize', this.handleResize);
@@ -180,25 +172,6 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
-      } // Salva in una variabile l'elemento HTML che ha l'id legato agli arrow button 
-
-
-      var nestPrev = document.getElementById("btn-prev-position");
-      var nestNext = document.getElementById("btn-next-position");
-      /* Se la larghezza dello schermo è inferiore a 799px togli la classe nested */
-
-      if (this.windowWidth < 799) {
-        nestPrev.classList.remove("nested");
-        nestNext.classList.remove("nested");
-      } else if (this.windowWidth >= 800 && this.windowWidth <= 1199) {
-        nestPrev.classList.add("nested");
-        nestNext.classList.add("nested");
-      } else if (this.windowWidth >= 1200 && this.windowWidth <= 1699) {
-        nestPrev.classList.remove("nested");
-        nestNext.classList.remove("nested");
-      } else if (this.windowWidth >= 1700) {
-        nestPrev.classList.add("nested");
-        nestNext.classList.add("nested");
       } // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */

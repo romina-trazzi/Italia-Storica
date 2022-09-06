@@ -122,6 +122,7 @@
 
               <!-- Descrizione -->
               <div class="col-xl-6 col-lg-12 d-flex" id="book_change">
+
                 <div class="d-flex flex-column justify-content-center align-items-center book_description">
 
                   <div class="d-flex flex-column align-items-start book_details">
@@ -144,6 +145,7 @@
                   </div>
 
                 </div>
+
               </div>
               <!-- / Descrizione -->
 
@@ -153,17 +155,15 @@
                 <!-- Slider + Arrows -->
                 <div class="sliderContainer">
 
-                  <p></p>
-
                   <div class="slider">
                     
                     <!-- Left Arrow -->
-                    <div id="btn-prev-position" class ="nested">
-                      <p></p>
+                    <div id="btn-prev-position">
+
                       <button class="btnC btn-prev carousel_button" @click="prevImg()">
                         <i class="fas fa-angle-left"></i>
                       </button>
-                      <p></p>
+
                     </div>
                     
                     <!-- Slider -->
@@ -199,17 +199,15 @@
                     </div>
 
                     <!-- Right Arrow -->
-                    <div id="btn-next-position" class ="nested">
-                      <p></p>
+                    <div id="btn-next-position">
+
                       <button class="btnC btn-next carousel_button" @click="nextImg()">
                         <i class="fas fa-angle-right"></i>
                       </button>
-                      <p></p>
+
                     </div>
 
                   </div>
-
-                  <p></p>
                 
                 </div>
 
@@ -232,7 +230,7 @@
             <!-- / Book main -->
 
             <!-- Buy button-->
-            <div class="row d-flex book-second_row">
+            <div class="book-second_row row d-flex ">
               <div class="col-xl-6 col-lg-12 d_flex_center">
 
                 <transition-group name="fade" mode="out-in" appear>

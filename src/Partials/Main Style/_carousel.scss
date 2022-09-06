@@ -5,9 +5,8 @@
     .slider {
         height: 560px;
         width: 100%;
-    
     }
-
+    
     .slider-track-container {
         width: 390px;    
         
@@ -21,6 +20,11 @@
     .slide {
         padding: 0;
         filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+
+        // Per centrare la copertina
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 390px;
     }
 
     .slide img {
@@ -37,19 +41,8 @@
         visibility: visible;
     }
 
-     // Spazio fra le colonne
-    .nested {
-        display: grid;
-        grid-template-columns: repeat(3, 35px);
-    
-        p {
-            justify-self: center;
-            align-self: center;
-        }
-    }
 
     // Arrows
-
     .btnC {
         width: 40px;
         height: 40px;
@@ -66,15 +59,13 @@
     }
 
     #btn-prev-position {
-        justify-self: center;
+        justify-self: end;
         align-self: center;
-        width: 100%;
     }
 
     #btn-next-position {
-        justify-self: center;
+        justify-self: start;
         align-self: center;
-        width: 100%;
     }  
 
     .carousel_button {
@@ -104,7 +95,6 @@
 
 
 // Radiobutton
-
 .radiobuttonContainer {
     position: relative;
     left: 50%;
@@ -145,7 +135,5 @@
         background-color: floralwhite;
     }
 }
-
-
 
 
