@@ -78,7 +78,7 @@
         padding-top: 75px !important;
       }
     
-      .book-second_row {
+      .buy_button {
         .button {
           font-size: 1rem !important;
           margin-top: 50px;
@@ -89,77 +89,27 @@
 }
 
 @media (min-width: 1200px) {
-
   main {
     .core {
+      margin-bottom: 4rem !important;
+
+      #book_details {
+        max-height: 625.5px !important;
+      }
 
       .book_details {
         padding-top: 0px !important;
         padding-left: 50px !important;
       }
-      
-      .book-second_row {
-        .button {
-          margin-top: 50px;
-        }
+
+      #buy {
+        margin: 50px 0 0 0 !important;
       }
+      
     }
   }
 
 }
-
-
-// Carosello 
-// @media (min-width: 800px) and (max-width: 1199px) {
-//   main {
-//     .core {
-
-//       .sliderContainer {
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr) ;
-//         grid-template-rows: 560px;
-//       }
-
-//       .slider {
-//         display: grid;
-//         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
-//         grid-template-rows: 560px;
-//       }
-
-//       .slider-track-container {
-//         align-self: center;
-//         justify-self: center;
-//       }
-
-//     }
-//   }
-// }
-
-// @media (min-width: 1700px) {
-//   main {
-//     .core {
-//       .sliderContainer {
-//         display: grid;
-//         grid-template-columns: repeat(3, 1fr) ;
-//         grid-template-rows: 560px;
-
-//       }
-
-//       .slider {
-//         display: grid;
-//         grid-template-columns: minmax(auto, 110px) minmax(auto, 390px) minmax(auto, 110px);
-//         grid-template-rows: 560px;
-
-//       }
-      
-//       .slider-track-container {
-//         align-self: center;
-//         justify-self: center;
-
-//       }
-//     }
-//   }
-// }
 
 
 // Arrows

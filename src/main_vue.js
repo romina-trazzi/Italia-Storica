@@ -89,8 +89,6 @@ let app = new Vue ({
         monoWidth: false,
 
         bookWidth: 0,
-        distanceCover: 38,
-
     },
 
     /* Controlla la larghezza dello schermo in modo dinamico da quando viene caricata o distrutta

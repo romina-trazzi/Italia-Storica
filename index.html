@@ -137,11 +137,17 @@
                         <p id="about"> {{ libri[counter].descrizione }} </p>
                         <span>Pagine:</span> {{ libri[counter].pagine }} <br>
                         <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
+                        
+                        <!-- Buy button-->
+                        <div id="buy" class="d_flex_center">
+                          <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
+                        </div>
+                        <!-- / Buy button-->
 
                       </div>
                     </transition>
                     <!-- / Transition dei dettagli dei libri -->
-                
+
                   </div>
 
                 </div>
@@ -228,25 +234,7 @@
 
             </div>
             <!-- / Book main -->
-
-            <!-- Buy button-->
-            <div class="book-second_row row d-flex ">
-              <div class="col-xl-6 col-lg-12 d_flex_center">
-
-                <transition-group name="fade" mode="out-in" appear>
-                  <div v-bind:key="libri[counter]">
-
-                    <p id="buy" class="d_flex_center">
-                      <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
-                    </p>
-
-                  </div>
-                  </transition>
-
-              </div>
-            </div>
-            <!-- / Buy button-->
-
+         
           </div>
           <!-- / Row core -->
 

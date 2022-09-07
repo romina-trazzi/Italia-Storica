@@ -246,18 +246,24 @@
     padding-left: 0px !important;
     padding-top: 75px !important;
   }
-  main .core .book-second_row .button {
+  main .core .buy_button .button {
     font-size: 1rem !important;
     margin-top: 50px;
   }
 }
 @media (min-width: 1200px) {
+  main .core {
+    margin-bottom: 4rem !important;
+  }
+  main .core #book_details {
+    max-height: 625.5px !important;
+  }
   main .core .book_details {
     padding-top: 0px !important;
     padding-left: 50px !important;
   }
-  main .core .book-second_row .button {
-    margin-top: 50px;
+  main .core #buy {
+    margin: 50px 0 0 0 !important;
   }
 }
 @media (max-width: 799px) {
