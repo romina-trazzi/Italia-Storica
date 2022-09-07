@@ -78,11 +78,10 @@
         padding-top: 75px !important;
       }
     
-      .buy_button {
-        .button {
-          font-size: 1rem !important;
-          margin-top: 50px;
-        }
+      #buy  {
+        font-size: 1rem !important;
+        margin-top: 50px;
+        
       }
     }
   }
@@ -91,7 +90,7 @@
 @media (min-width: 1200px) {
   main {
     .core {
-      margin-bottom: 4rem !important;
+      margin-bottom: 12rem !important;
 
       #book_details {
         max-height: 625.5px !important;
@@ -101,7 +100,7 @@
         padding-top: 0px !important;
         padding-left: 50px !important;
       }
-
+      
       #buy {
         margin: 50px 0 0 0 !important;
       }
@@ -110,6 +109,32 @@
   }
 
 }
+
+// Distacco fra row core e row order
+@media (min-width: 1200px) and (max-width: 1285px) {  // 75px min 200px max che diventano 90px min e 225px max alla fine
+  main {
+    .core {
+      margin-bottom: 12rem !important;
+    }
+  }
+}  
+
+@media (min-width: 1286px) and (max-width: 1335px) {
+  main {
+    .core {
+      margin-bottom: 9rem !important;
+    }
+  }
+}  
+
+
+@media (min-width: 1336px) {
+  main {
+    .core {
+      margin-bottom: 6rem !important;
+    }
+  }
+}  
 
 
 // Arrows
