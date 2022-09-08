@@ -120,6 +120,7 @@ $color-map: (
         line-height: 1.6;
         text-transform: none;
         margin: 20px 0 20px 0;
+        word-spacing: 0.03em;
     }
 
 }
@@ -224,7 +225,7 @@ $color-map: (
 =============================================*/
 
 // Descrizioni
-@media (max-width: 1550px) {
+@media (max-width: 1400px) {
     
     .book_details  div {      
         font-size: 1.08rem !important;
@@ -300,7 +301,6 @@ $color-map: (
 
 
 // Card (mediaquery testo)
-
 @media (max-width: 1571px) {
 
     .card-body {
@@ -319,7 +319,6 @@ $color-map: (
 }
 
 // Titoli principali (class .my_title)
-
 @media (max-width: 400px) {
     .my_title {
         font-size: 3.5rem !important;

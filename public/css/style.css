@@ -62,7 +62,7 @@
 /*=============================================
         =            MEDIAQUERY       =
 =============================================*/
-@media (max-width: 1550px) {
+@media (max-width: 1400px) {
   .book_details div {
     font-size: 1.08rem !important;
   }
@@ -607,22 +607,13 @@ body main .core #book-main .book_details div #about {
   line-height: 1.6;
   text-transform: none;
   margin: 20px 0 20px 0;
+  word-spacing: 0.03em;
 }
 body main .core #book-main .book_description #book_details {
   margin: 0px;
 }
 body main .core #book-main .book_description .order-css {
   padding-top: 115px !important;
-}
-body main .core .book-second_row {
-  width: 100%;
-  height: 100%;
-  margin: 15px 0 0 0;
-}
-body main .core .book-second_row #buy {
-  font-family: "Oswald", sans-serif;
-  color: rgb(255, 250, 240);
-  margin: 0;
 }
 body main .order {
   margin: 0;

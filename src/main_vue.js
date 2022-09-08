@@ -17,6 +17,17 @@ let app = new Vue ({
 
         libri: [
             {
+                "titolo": "1945 Germania anno zero",  
+                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
+                "autore": "Massimo Lucioli - Wehrmacht Research Group",
+                "pagine": "542 p., ill., Brossura",
+                "anno di pubblicazione": "2021",
+                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
+                "prezzo": "36,00 euro",
+                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
+            },
+            
+            {
                 "titolo": "Valhalla Express",
                 "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
                 "autore": "Woland",
@@ -36,17 +47,6 @@ let app = new Vue ({
                 "descrizione": "La rassegna 'Profeti inascoltati del Novecento' collega pensatori liberi ed eretici, conservatori di valori e non di costumi, e di integrità morale che costituisce l'unica forma possibile di pensiero, a un disegnatore che ne ha eseguito il volto, le ansie e le riflessioni, e ad altri scrittori che ne hanno interpretato lo spirito. Da Jünger a Conrad, da Pound a Borges, da Flaiano alla Campo, da Bernanos a Camus. Un Olimpo siffatto aveva illustrato, impavido, Tullio Pericoli. Oggi tocca a Dionisio di Francescantonio con il disegno e ad altri, come Stenio Solinas, con le parole. L'arte pretende quella libertà di espressione che personaggi scomodi come Louis-Ferdinand Céline, Hannah Arendt, Filippo Tommaso Marinetti, hanno coraggiosamente e diversamente testimoniato, anche divisi dalle violentissime vicende storiche del Novecento. Non posso che guardare con favore, quindi, i ritratti - accompagnati dagli approfondimenti di apprezzati pensatori e amici come Pietrangelo Buttafuoco, Gianfranco de Turris, Luigi Iannone e altri - di Dionisio di Francescantonio, così vivi ed espressivi, lucenti nel buio di un'epoca senza maestri. (dalla prefazione di Vittorio Sgarbi)",
                 "prezzo": "29,00 euro",
                 "link_IBS": "https://www.ibs.it/profeti-inascoltati-del-novecento-sessantasei-libro-vari/e/9788831430227?queryId=d6e83c11b35a93c4d416f6d7b7b5968a"
-            },
-
-            {
-                "titolo": "1945 Germania anno zero",  
-                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
-                "autore": "Massimo Lucioli - Wehrmacht Research Group",
-                "pagine": "542 p., ill., Brossura",
-                "anno di pubblicazione": "2021",
-                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
-                "prezzo": "36,00 euro",
-                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
             },
 
             {
