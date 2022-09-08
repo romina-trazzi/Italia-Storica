@@ -692,6 +692,7 @@ body main .personal p {
   color: rgb(255, 250, 240);
   text-align: left;
   line-height: 1.5;
+  word-spacing: 0.1em;
   margin: 0;
   padding: 0;
 }
