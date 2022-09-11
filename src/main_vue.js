@@ -287,7 +287,7 @@ let app = new Vue ({
             // Gestiamo le spaziature dei LI dei libri quando schermo <= 999px
             if (this.windowWidth <= 999) {
 
-                // Selezioniamo i LI delle due liste di libri
+                // Selezioniamo i li delle due liste di libri
                 let booklist1 = document.getElementById("list1");
                 let booklist2 = document.getElementById("list2");
 
@@ -297,7 +297,7 @@ let app = new Vue ({
                 let blelArray1 = Array.from(booklistElement1);
                 let blelArray2 = Array.from(booklistElement2);
                 
-                // Mappiamo gli array per aggiornare con <br> la parte HTML delle LI
+                // Mappiamo gli array per aggiornare con <br> la parte HTML delle li
                 let finalBooklist1 = blelArray1.map(listItem => {
                    return listItem.innerHTML + "<br>";
                 }); 
@@ -306,23 +306,30 @@ let app = new Vue ({
                     return listItem.innerHTML + "<br>";
                 }); 
 
-                console.log (finalBooklist1);
-                console.log (finalBooklist2);
-
-
-                // Sostituiamo l'HTML esistente con quello mappato
-                blelArray1.forEach((listItem, index) => {
-                    
-                    booklist1.replaceChild(finalBooklist1);
-
+                // Rimuoviamo l'HTML esistente
+                blelArray1.forEach((item) => {
+                   item.style.display = "none";
+                  
                 });
 
-                blelArray2.forEach((listItem, index) => {
-                    booklist2.replaceChildren(finalBooklist2);
-
+                blelArray2.forEach((item) => {
+                   item.style.display = "none";
                 });
 
+                // Visualizziamo il nuovo HTML mappato
+                // booklist1.insertAdjacentHTML("afterbegin", finalBooklist1.join(" "));            
+                // booklist2.insertAdjacentHTML("afterbegin", finalBooklist2.join(" "));
                 
+            } else {
+
+                blelArray1.forEach((item) => {
+                    item.style.display = "block";
+                   
+                });
+ 
+                blelArray2.forEach((item) => {
+                    item.style.display = "block";
+                });
             }
             
             // Cambio template dei loghi
