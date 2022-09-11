@@ -2,9 +2,6 @@
 =            HEADER MEDIA QUERY         =
 =============================================*/
 @media (max-width: 599px) {
-  header .navbar {
-    font-size: 0.7rem !important;
-  }
   header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
     display: none;
   }
@@ -13,9 +10,6 @@
   }
 }
 @media (min-width: 600px) and (max-width: 1200px) {
-  header .navbar {
-    font-size: 1rem !important;
-  }
   header .navbar .icons > span:nth-child(2), header .navbar .icons i.icon.fas.fa-map-marker-alt {
     display: none;
   }
@@ -38,7 +32,7 @@
     display: none;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 599px) {
   header .navbar .icons > span:nth-child(5) > a:nth-child(1) {
     display: none;
   }
