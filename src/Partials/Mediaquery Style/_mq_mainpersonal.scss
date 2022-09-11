@@ -4,6 +4,20 @@
 
 
 // Immagini della bigrafia e delle opere
+@media (max-width: 799px) {
+    main {
+        .personal {
+    
+            #opera {
+                ul {
+                    padding-inline-start: 0px;
+                }
+            }
+        }
+    }
+}
+
+
 @media (max-width: 999px) {
     main {
         .personal {
@@ -15,6 +29,10 @@
 
             #opera {
                 padding: 0 50px 0 50px !important;
+
+                p {
+                    margin-block-start: 50px;
+                }
             }
         }
     }
@@ -32,7 +50,6 @@
         }
     }
 }
-
 
 @media (min-width: 1200px) and (max-width: 2079px) {
     main {

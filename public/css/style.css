@@ -728,8 +728,9 @@ body main .personal #bio p {
 body main .personal #opera {
   padding: 50px 50px 0 50px;
 }
-body main .personal #opera ul > li {
-  display: visible;
+body main .personal #opera ul {
+  -webkit-margin-after: 50px;
+          margin-block-end: 50px;
 }
 body main .personal .sponsor-title {
   padding: 0;

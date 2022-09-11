@@ -248,6 +248,8 @@ var app = new Vue({
         booklist1.insertAdjacentHTML("afterbegin", mapBooklist1.join(""));
         booklist2.insertAdjacentHTML("afterbegin", mapBooklist2.join(""));
       } else if (this.windowWidth > 999) {
+        350;
+
         var _booklist = document.getElementById("list1");
 
         var _booklist2 = document.getElementById("list2");

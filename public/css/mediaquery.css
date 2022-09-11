@@ -348,12 +348,22 @@
 /*================================================
 =            MAIN ROW PERSONAL MEDIAQUERY        =
 =================================================*/
+@media (max-width: 799px) {
+  main .personal #opera ul {
+    -webkit-padding-start: 0px;
+            padding-inline-start: 0px;
+  }
+}
 @media (max-width: 999px) {
   main .personal #bio img {
     display: none;
   }
   main .personal #opera {
     padding: 0 50px 0 50px !important;
+  }
+  main .personal #opera p {
+    -webkit-margin-before: 50px;
+            margin-block-start: 50px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1199px) {

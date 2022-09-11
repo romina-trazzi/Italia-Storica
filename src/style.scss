@@ -255,8 +255,9 @@ body {
             #opera {
                 padding: 50px 50px 0 50px;
 
-                ul > li {
-                    display: visible;
+                ul {
+                    margin-block-end: 50px;
+                    
                 }
             }
 
