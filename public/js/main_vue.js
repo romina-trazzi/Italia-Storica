@@ -215,7 +215,34 @@ var app = new Vue({
 
         cardContainer[0].innerHTML += ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' + ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>' + ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> ';
       } // Sezione PERSONAL
-      // Cambio template dei loghi
+      // Gestiamo le spaziature dei LI dei libri quando schermo <= 999px
+
+
+      if (this.windowWidth <= 999) {
+        // Selezioniamo i LI delle due liste di libri
+        var booklist1 = document.getElementById("list1");
+        var booklist2 = document.getElementById("list2");
+        var booklistElement1 = booklist1.children;
+        var booklistElement2 = booklist2.children;
+        var blelArray1 = Array.from(booklistElement1);
+        var blelArray2 = Array.from(booklistElement2); // Mappiamo gli array per aggiornare con <br> la parte HTML delle LI
+
+        var finalBooklist1 = blelArray1.map(function (listItem) {
+          return listItem.innerHTML + "<br>";
+        });
+        var finalBooklist2 = blelArray2.map(function (listItem) {
+          return listItem.innerHTML + "<br>";
+        });
+        console.log(finalBooklist1);
+        console.log(finalBooklist2); // Sostituiamo l'HTML esistente con quello mappato
+
+        blelArray1.forEach(function (listItem, index) {
+          booklist1.replaceChild(finalBooklist1);
+        });
+        blelArray2.forEach(function (listItem, index) {
+          booklist2.replaceChildren(finalBooklist2);
+        });
+      } // Cambio template dei loghi
 
 
       if (this.windowWidth >= 992 && this.windowWidth <= 1550) {
@@ -276,7 +303,7 @@ var slides = document.querySelectorAll(".slide"); // current slide counter
 var curSlide = 0; // Maximum number of slides
 
 var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400]; // loop through slides and set each slides translateX initial value property to index * 100% 
+var bezierValue = [0, -100, -200, -300, -400]; // Loop through slides and set each slides translateX initial value property to index * 100% 
 
 slides.forEach(function (slide, index) {
   slide.style.transform = "translateX(".concat(index * -100, "%)");

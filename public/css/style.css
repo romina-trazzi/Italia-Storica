@@ -728,22 +728,6 @@ body main .personal #bio p {
 body main .personal #middle {
   padding: 50px 50px 0 50px;
 }
-body main .personal #operas {
-  padding: 50px 50px 0 50px;
-}
-body main .personal #operas img {
-  width: 19vw;
-  margin-right: 40px;
-  filter: grayscale(80%) drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
-}
-body main .personal #operas p {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-body main .personal #final {
-  padding: 50px 50px 0 50px;
-}
 body main .personal .sponsor-title {
   padding: 0;
   margin-top: 130px;

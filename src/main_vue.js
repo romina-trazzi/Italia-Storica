@@ -283,7 +283,48 @@ let app = new Vue ({
             }
 
             // Sezione PERSONAL
+            
+            // Gestiamo le spaziature dei LI dei libri quando schermo <= 999px
+            if (this.windowWidth <= 999) {
 
+                // Selezioniamo i LI delle due liste di libri
+                let booklist1 = document.getElementById("list1");
+                let booklist2 = document.getElementById("list2");
+
+                let booklistElement1 = booklist1.children;
+                let booklistElement2 = booklist2.children;
+
+                let blelArray1 = Array.from(booklistElement1);
+                let blelArray2 = Array.from(booklistElement2);
+                
+                // Mappiamo gli array per aggiornare con <br> la parte HTML delle LI
+                let finalBooklist1 = blelArray1.map(listItem => {
+                   return listItem.innerHTML + "<br>";
+                }); 
+
+                let finalBooklist2 = blelArray2.map(listItem => {
+                    return listItem.innerHTML + "<br>";
+                }); 
+
+                console.log (finalBooklist1);
+                console.log (finalBooklist2);
+
+
+                // Sostituiamo l'HTML esistente con quello mappato
+                blelArray1.forEach((listItem, index) => {
+                    
+                    booklist1.replaceChild(finalBooklist1);
+
+                });
+
+                blelArray2.forEach((listItem, index) => {
+                    booklist2.replaceChildren(finalBooklist2);
+
+                });
+
+                
+            }
+            
             // Cambio template dei loghi
             if (this.windowWidth >= 992 && this.windowWidth <= 1550) {
                 this.specialWidth = true;
@@ -355,7 +396,7 @@ let maxSlide = slides.length - 1;
 
 let bezierValue = [0, -100, -200, -300, -400];
 
-// loop through slides and set each slides translateX initial value property to index * 100% 
+// Loop through slides and set each slides translateX initial value property to index * 100% 
 slides.forEach((slide, index) => {
     slide.style.transform = `translateX(${index * (-100)}%)`;
 });
