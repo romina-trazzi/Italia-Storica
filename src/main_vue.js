@@ -17,7 +17,7 @@ let app = new Vue ({
 
         libri: [
             {
-                "titolo": "1945 Germania anno zero",  
+                "titolo": "1945 Germania anno zero",
                 "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
                 "autore": "Massimo Lucioli - Wehrmacht Research Group",
                 "pagine": "542 p., ill., Brossura",
@@ -26,7 +26,7 @@ let app = new Vue ({
                 "prezzo": "36,00 euro",
                 "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
             },
-            
+
             {
                 "titolo": "Valhalla Express",
                 "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
@@ -137,35 +137,35 @@ let app = new Vue ({
             let dotsArray = Array.from(dots);
 
             let currentIndex = 0;
-            
+
             // Rimuoviamo la classe selected da tutti gli elementi
             slides.forEach(function (slide)  {
                 slide.classList.remove('selected');
             });
 
             for (let i = 0; i < dots.length; i++) {
-                
+
                 // Salviamo l'indice dell'elemento attivo --> variabile currentIndex
                 // Aggiungiamo la classe selected all'elemento cliccato
                 if (dots[i] === document.activeElement) {
                     currentIndex = i;
                     dots[currentIndex].classList.add('selected');
-                
+
                     // Muoviamo le slide
                     slides[currentIndex].style.transform = `translateX(${bezierValue[i]}%)`;
-                
+
                     // Aggiungiamo la classe selected solo a quella con indice corrente
                     slides[currentIndex].classList.add("selected");
                 }
-            
-            }   
+
+            }
 
             // Aggiorniamo il counter
             this.counter = currentIndex;
 
 
         },
-        
+
     },
 
     watch: {
@@ -214,7 +214,7 @@ let app = new Vue ({
                 column.classList.toggle("order-last", false);
                 column.classList.toggle("order-css", false);
             }
-            
+
             // Sezione ORDER
 
             /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
@@ -283,7 +283,7 @@ let app = new Vue ({
             }
 
             // Sezione PERSONAL
-            
+
             // Gestiamo le spaziature dei LI dei libri quando schermo <= 999px
             if (this.windowWidth <= 999) {
 
@@ -296,42 +296,79 @@ let app = new Vue ({
 
                 let blelArray1 = Array.from(booklistElement1);
                 let blelArray2 = Array.from(booklistElement2);
-                
-                // Mappiamo gli array per aggiornare con <br> la parte HTML delle li
-                let finalBooklist1 = blelArray1.map(listItem => {
-                   return listItem.innerHTML + "<br>";
-                }); 
 
-                let finalBooklist2 = blelArray2.map(listItem => {
-                    return listItem.innerHTML + "<br>";
-                }); 
+
+                // Mappiamo gli array per aggiornare con <br> la parte HTML dei li
+                let mapBooklist1 = blelArray1.map(listItem => {
+                    let maphtml1 = "<li>" + listItem.textContent + "<br><br></li>";
+
+                    return maphtml1
+
+                });
+
+                let mapBooklist2 = blelArray2.map(listItem => {
+                    let maphtml2 = "<li>" + listItem.textContent + "<br><br></li>";
+
+                    return maphtml2
+                });
 
                 // Rimuoviamo l'HTML esistente
                 blelArray1.forEach((item) => {
-                   item.style.display = "none";
-                  
+                    // item.style.display = "none";
+                    item.remove();
+
                 });
 
                 blelArray2.forEach((item) => {
-                   item.style.display = "none";
+                   // item.style.display = "none";
+                   item.remove();
                 });
 
                 // Visualizziamo il nuovo HTML mappato
-                // booklist1.insertAdjacentHTML("afterbegin", finalBooklist1.join(" "));            
-                // booklist2.insertAdjacentHTML("afterbegin", finalBooklist2.join(" "));
-                
-            } else {
+                booklist1.insertAdjacentHTML("afterbegin", mapBooklist1.join(""));
+                booklist2.insertAdjacentHTML("afterbegin", mapBooklist2.join(""));
 
-                blelArray1.forEach((item) => {
-                    item.style.display = "block";
-                   
+            } else if (this.windowWidth > 999) {
+
+                let booklist1 = document.getElementById("list1");
+                let booklist2 = document.getElementById("list2");
+
+                let booklistElement1 = booklist1.children;
+                let booklistElement2 = booklist2.children;
+
+                let blelArray1 = Array.from(booklistElement1);
+                let blelArray2 = Array.from(booklistElement2);
+
+
+                // Mappiamo gli array per aggiornare con <br> la parte HTML dei li
+                let mapBooklist1 = blelArray1.map(listItem => {
+                    let maphtml1 = "<li>" + listItem.textContent + "<br></li>";
+
+                    return maphtml1
+
                 });
- 
+
+                let mapBooklist2 = blelArray2.map(listItem => {
+                    let maphtml2 = "<li>" + listItem.textContent + "<br></li>";
+
+                    return maphtml2
+                });
+
+                 // Rimuoviamo l'HTML esistente
+                 blelArray1.forEach((item) => {
+                    item.remove();
+
+                });
+
                 blelArray2.forEach((item) => {
-                    item.style.display = "block";
+                   item.remove();
                 });
+
+                // Visualizziamo l'HTML originale
+                booklist1.insertAdjacentHTML("afterbegin", mapBooklist1.join(""));
+                booklist2.insertAdjacentHTML("afterbegin", mapBooklist2.join(""));
             }
-            
+
             // Cambio template dei loghi
             if (this.windowWidth >= 992 && this.windowWidth <= 1550) {
                 this.specialWidth = true;
@@ -403,7 +440,7 @@ let maxSlide = slides.length - 1;
 
 let bezierValue = [0, -100, -200, -300, -400];
 
-// Loop through slides and set each slides translateX initial value property to index * 100% 
+// Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach((slide, index) => {
     slide.style.transform = `translateX(${index * (-100)}%)`;
 });
@@ -417,28 +454,28 @@ slides.forEach((slide, index) => {
 const nextArrow = document.querySelector(".btn-next");
 
 // add event listener and navigation functionality
-nextArrow.addEventListener("click", function () { 
-    
+nextArrow.addEventListener("click", function () {
+
     // check if current slide is the last and reset current slide
     if (curSlide === maxSlide) {
       curSlide = 0;
     } else {
       curSlide++;
-    }   
-    
+    }
+
     // gestione classe selected
     slides[curSlide].classList.add("selected");
 
     if (slides[curSlide -1] !== undefined) {
         slides[curSlide -1].classList.remove("selected");
-    } 
+    }
 
     // se sia l'elemento 0 che l'elemento massimo dell'array hanno la classe selected, toglila all'elemento massimo
     if (curSlide == 0 && slides[maxSlide].classList.contains("selected")) {
         slides[maxSlide].classList.remove("selected");
     }
 
-    
+
     // move slide
     slides.forEach((slide, index) => {
         slide.style.transform = `translateX(${bezierValue[index]}%)`;
@@ -447,7 +484,7 @@ nextArrow.addEventListener("click", function () {
             slide.style.transform = `translateX(100%)`;
         }
     });
-  
+
 });
 
 
@@ -498,7 +535,7 @@ prevArrow.addEventListener("click", function () {
 // Selezioniamo i buttons delle card (nodeList)
 let buttons = document.querySelectorAll('.card .orange');
 
-// Trasformiamo buttons in Array  
+// Trasformiamo buttons in Array
 let buttonsArray = Array.from(buttons);
 
 // Selezioniamo gli elementi da cambiare (nodeList)

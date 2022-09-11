@@ -725,8 +725,11 @@ body main .personal #bio img {
 body main .personal #bio p {
   align-self: center;
 }
-body main .personal #middle {
+body main .personal #opera {
   padding: 50px 50px 0 50px;
+}
+body main .personal #opera ul > li {
+  display: visible;
 }
 body main .personal .sponsor-title {
   padding: 0;

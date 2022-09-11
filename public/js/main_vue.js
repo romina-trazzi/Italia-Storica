@@ -224,38 +224,65 @@ var app = new Vue({
         var booklist2 = document.getElementById("list2");
         var booklistElement1 = booklist1.children;
         var booklistElement2 = booklist2.children;
+        var blelArray1 = Array.from(booklistElement1);
+        var blelArray2 = Array.from(booklistElement2); // Mappiamo gli array per aggiornare con <br> la parte HTML dei li
 
-        var _blelArray = Array.from(booklistElement1);
+        var mapBooklist1 = blelArray1.map(function (listItem) {
+          var maphtml1 = "<li>" + listItem.textContent + "<br><br></li>";
+          return maphtml1;
+        });
+        var mapBooklist2 = blelArray2.map(function (listItem) {
+          var maphtml2 = "<li>" + listItem.textContent + "<br><br></li>";
+          return maphtml2;
+        }); // Rimuoviamo l'HTML esistente
 
-        var _blelArray2 = Array.from(booklistElement2); // Mappiamo gli array per aggiornare con <br> la parte HTML delle li
+        blelArray1.forEach(function (item) {
+          // item.style.display = "none";
+          item.remove();
+        });
+        blelArray2.forEach(function (item) {
+          // item.style.display = "none";
+          item.remove();
+        }); // Visualizziamo il nuovo HTML mappato
+
+        booklist1.insertAdjacentHTML("afterbegin", mapBooklist1.join(""));
+        booklist2.insertAdjacentHTML("afterbegin", mapBooklist2.join(""));
+      } else if (this.windowWidth > 999) {
+        var _booklist = document.getElementById("list1");
+
+        var _booklist2 = document.getElementById("list2");
+
+        var _booklistElement = _booklist.children;
+        var _booklistElement2 = _booklist2.children;
+
+        var _blelArray = Array.from(_booklistElement);
+
+        var _blelArray2 = Array.from(_booklistElement2); // Mappiamo gli array per aggiornare con <br> la parte HTML dei li
 
 
-        var finalBooklist1 = _blelArray.map(function (listItem) {
-          return listItem.innerHTML + "<br>";
+        var _mapBooklist = _blelArray.map(function (listItem) {
+          var maphtml1 = "<li>" + listItem.textContent + "<br></li>";
+          return maphtml1;
         });
 
-        var finalBooklist2 = _blelArray2.map(function (listItem) {
-          return listItem.innerHTML + "<br>";
+        var _mapBooklist2 = _blelArray2.map(function (listItem) {
+          var maphtml2 = "<li>" + listItem.textContent + "<br></li>";
+          return maphtml2;
         }); // Rimuoviamo l'HTML esistente
 
 
         _blelArray.forEach(function (item) {
-          item.style.display = "none";
+          item.remove();
         });
 
         _blelArray2.forEach(function (item) {
-          item.style.display = "none";
-        }); // Visualizziamo il nuovo HTML mappato
-        // booklist1.insertAdjacentHTML("afterbegin", finalBooklist1.join(" "));            
-        // booklist2.insertAdjacentHTML("afterbegin", finalBooklist2.join(" "));
+          item.remove();
+        }); // Visualizziamo l'HTML originale
 
-      } else {
-        blelArray1.forEach(function (item) {
-          item.style.display = "block";
-        });
-        blelArray2.forEach(function (item) {
-          item.style.display = "block";
-        });
+
+        _booklist.insertAdjacentHTML("afterbegin", _mapBooklist.join(""));
+
+        _booklist2.insertAdjacentHTML("afterbegin", _mapBooklist2.join(""));
       } // Cambio template dei loghi
 
 
@@ -317,7 +344,7 @@ var slides = document.querySelectorAll(".slide"); // current slide counter
 var curSlide = 0; // Maximum number of slides
 
 var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400]; // Loop through slides and set each slides translateX initial value property to index * 100% 
+var bezierValue = [0, -100, -200, -300, -400]; // Loop through slides and set each slides translateX initial value property to index * 100%
 
 slides.forEach(function (slide, index) {
   slide.style.transform = "translateX(".concat(index * -100, "%)");
@@ -394,7 +421,7 @@ prevArrow.addEventListener("click", function () {
 /* Quando i buttons delle card sono on hover allora l'outline delle card e le icone fontawesome cambiano colore */
 // Selezioniamo i buttons delle card (nodeList)
 
-var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array  
+var buttons = document.querySelectorAll('.card .orange'); // Trasformiamo buttons in Array
 
 var buttonsArray = Array.from(buttons); // Selezioniamo gli elementi da cambiare (nodeList)
 
