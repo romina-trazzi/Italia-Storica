@@ -714,6 +714,12 @@ body main .personal .publisher-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
+body main .personal .boss {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  grid-template-columns: 100%;
+  justify-items: center;
+}
 body main .personal #bio {
   padding: 0 50px 0 50px;
 }
@@ -726,6 +732,10 @@ body main .personal #bio p {
   align-self: center;
 }
 body main .personal #opera {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 100%;
+  justify-items: center;
   padding: 50px 50px 0 50px;
 }
 body main .personal #opera ul {

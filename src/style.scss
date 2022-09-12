@@ -237,6 +237,13 @@ body {
                 @include shieldknot;
             }
 
+            .boss {
+                display: grid;
+                grid-template-rows: 50% 50%;
+                grid-template-columns: 100%;
+                justify-items: center;
+            }
+
             #bio {
                 padding: 0 50px 0 50px;
 
@@ -252,6 +259,12 @@ body {
             }
 
             #opera {
+                display: grid;
+                grid-template-rows: 1fr;
+                grid-template-columns: 100%;
+                justify-items: center;
+
+
                 padding: 50px 50px 0 50px;
 
                 ul {
