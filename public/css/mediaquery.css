@@ -349,20 +349,15 @@
   }
 }
 @media (max-width: 999px) {
-  main .personal #bio img {
-    display: none;
+  main .personal #pic img {
+    display: none !important;
   }
-  main .personal #opera {
+  main .personal #bio {
     padding: 0 50px 0 50px !important;
   }
-  main .personal #opera p {
+  main .personal #bio p {
     -webkit-margin-before: 50px;
             margin-block-start: 50px;
-  }
-}
-@media (min-width: 1000px) {
-  main .personal #opera p:nth-child(1) > b:nth-child(1), main .personal #opera p:nth-child(3) > b:nth-child(1), main .personal #opera p:nth-child(5) {
-    padding: 0 18px 0 18px;
   }
 }
 @media (min-width: 1000px) and (max-width: 1199px) {

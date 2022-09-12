@@ -20,13 +20,13 @@
 @media (max-width: 999px) {
     main {
         .personal {
-            #bio {
+            #pic {
                 img {
-                    display: none;
+                    display: none !important;
                 }
             }
 
-            #opera {
+            #bio {
                 padding: 0 50px 0 50px !important;
 
                 p {
@@ -37,18 +37,7 @@
     }
 }
 
-@media (min-width: 1000px) {
-    main {
-        .personal {
-            #opera {
-                        
-                p:nth-child(1) > b:nth-child(1), p:nth-child(3) > b:nth-child(1), p:nth-child(5) {
-                    padding: 0 18px 0 18px;
-                }
-            }
-        }
-    }
-}
+
 
 @media (min-width: 1000px) and (max-width: 1199px) {
     main {

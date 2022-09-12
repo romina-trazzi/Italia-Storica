@@ -720,27 +720,28 @@ body main .personal .boss {
   grid-template-columns: 100%;
   justify-items: center;
 }
-body main .personal #bio {
+body main .personal #pic {
   padding: 0 50px 0 50px;
 }
-body main .personal #bio img {
-  width: 18vw;
-  margin-right: 40px;
+body main .personal #pic img {
+  width: 17vh;
   filter: grayscale(0%);
 }
-body main .personal #bio p {
-  align-self: center;
-}
-body main .personal #opera {
+body main .personal #bio {
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: 100%;
   justify-items: center;
   padding: 50px 50px 0 50px;
 }
-body main .personal #opera ul {
+body main .personal #bio ul {
+  -webkit-padding-start: 20px;
+          padding-inline-start: 20px;
   -webkit-margin-after: 50px;
           margin-block-end: 50px;
+}
+body main .personal #bio .grid-block > p:nth-child(1) {
+  margin-bottom: 50px !important;
 }
 body main .personal .sponsor-title {
   padding: 0;

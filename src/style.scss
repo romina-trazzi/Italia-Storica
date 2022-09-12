@@ -244,32 +244,36 @@ body {
                 justify-items: center;
             }
 
-            #bio {
+            #pic {
                 padding: 0 50px 0 50px;
 
                 img {
-                    width: 18vw;
-                    margin-right: 40px;
+                    width: 17vh;
+                    // margin-right: 40px;
                     filter: grayscale(0%);
                 }
 
-                p {
-                    align-self: center;
-                }
+                // p {
+                //     align-self: center;
+                // }
             }
 
-            #opera {
+            #bio {
                 display: grid;
                 grid-template-rows: 1fr;
                 grid-template-columns: 100%;
                 justify-items: center;
 
-
                 padding: 50px 50px 0 50px;
 
                 ul {
+                    padding-inline-start: 20px;
                     margin-block-end: 50px;
                     
+                }
+
+                .grid-block > p:nth-child(1) {
+                    margin-bottom: 50px !important;
                 }
             }
 
