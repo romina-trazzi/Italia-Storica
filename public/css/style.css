@@ -912,3 +912,6 @@ body footer .copyright p {
   font-size: 0.9rem;
   font-weight: 400;
 }
+body footer .copyright p span {
+  padding-right: 30px;
+}
