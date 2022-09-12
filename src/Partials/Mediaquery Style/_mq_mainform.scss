@@ -33,7 +33,12 @@
             .contatti_container {
 
                 #form-container {
-                
+                    
+                    .form-tracker {
+                        display: flex;
+                        justify-content: center;
+                    }
+
                     form {
                         margin-left: 0 !important;
                         margin-bottom: 100px;
@@ -92,8 +97,7 @@
 
 
 // Flexbox
-@media (max-width: 1650px) {
-    
+@media (max-width: 1650px) {  
     main {
         .form {
 

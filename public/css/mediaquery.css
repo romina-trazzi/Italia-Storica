@@ -476,6 +476,10 @@
   main .form .help {
     padding-bottom: 60px !important;
   }
+  main .form .contatti_container #form-container .form-tracker {
+    display: flex;
+    justify-content: center;
+  }
   main .form .contatti_container #form-container form {
     margin-left: 0 !important;
     margin-bottom: 100px;
