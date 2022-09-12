@@ -360,6 +360,11 @@
             margin-block-start: 50px;
   }
 }
+@media (min-width: 1000px) {
+  main .personal #opera p:nth-child(1) > b:nth-child(1), main .personal #opera p:nth-child(3) > b:nth-child(1), main .personal #opera p:nth-child(5) {
+    padding: 0 18px 0 18px;
+  }
+}
 @media (min-width: 1000px) and (max-width: 1199px) {
   main .personal #bio img {
     display: block;
@@ -459,32 +464,17 @@
 /*=============================================
 =            MAIN ROW FORM MEDIAQUERY        =
 =============================================*/
-@media (min-width: 750px) and (max-width: 1650px) {
-  main .form .help {
-    padding-bottom: 60px !important;
+@media (max-width: 649px) {
+  main .form #map-container .icons-container {
+    margin-top: 0px !important;
   }
-  main .form .contatti_container {
-    flex-direction: column;
-    justify-content: center;
-  }
-  main .form .contatti_container #form-container form {
-    margin-left: 0 !important;
-    margin-bottom: 100px;
-  }
-  main .form .contatti_container #form-container i {
-    margin: 0 !important;
-  }
-  main .form .contatti_container #map-container {
-    margin: 0 !important;
+  main .form #map-container iframe {
+    display: none !important;
   }
 }
 @media (max-width: 749px) {
   main .form .help {
     padding-bottom: 60px !important;
-  }
-  main .form .contatti_container {
-    flex-direction: column;
-    justify-content: center;
   }
   main .form .contatti_container #form-container form {
     margin-left: 0 !important;
@@ -498,11 +488,64 @@
     margin: 0 !important;
   }
 }
-@media (max-width: 649px) {
-  main .form #map-container .icons-container {
-    margin-top: 0px !important;
+@media (min-width: 750px) and (max-width: 1650px) {
+  main .form .help {
+    padding-bottom: 60px !important;
   }
-  main .form #map-container iframe {
-    display: none !important;
+  main .form .contatti_container #form-container form {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+  main .form .contatti_container #form-container i {
+    margin: 0 !important;
+  }
+  main .form .contatti_container #map-container {
+    margin: 0 !important;
+  }
+}
+@media (max-width: 1650px) {
+  main .form .contatti_container {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: start !important;
+  }
+  main .form .contatti_container #form-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  main .form .contatti_container #map-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+@media (min-width: 1651px) {
+  .form .contatti_container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+  }
+  .form .contatti_container #form-container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+  }
+  .form .contatti_container #form-container div {
+    text-align: center;
+  }
+  .form .contatti_container #form-container form {
+    margin-left: 0 !important;
+    margin-bottom: 100px;
+  }
+  .form .contatti_container #form-container i {
+    margin: 0 !important;
+  }
+  .form .contatti_container #map-container {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-items: center;
+    margin: 0 !important;
   }
 }

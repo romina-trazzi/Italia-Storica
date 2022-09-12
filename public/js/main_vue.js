@@ -317,18 +317,19 @@ var app = new Vue({
       se c'è, rimuovi la classe col-lg-8 da form e classe col-lg-4 da map */
 
       if (this.windowWidth <= 1650) {
-        form.classList.add("col-lg-12");
-        form.classList.toggle("col-lg-8", false);
-        map.classList.add("col-lg-12");
-        map.classList.toggle("col-lg-4", false);
-        /* Altrimenti, se larghezza dello schermo è maggiore di 1650px aggiungi le classi col-lg-8 a form e col-lg-4 a map
-        se c'è, rimuovi la classe col-lg-12 a entrambi */
-      } else {
-        form.classList.add("col-lg-8");
-        form.classList.toggle("col-lg-12", false);
-        map.classList.add("col-lg-4");
-        map.classList.toggle("col-lg-12", false);
+        form.classList.add("col-lg-12"); // form.classList.toggle("col-lg-8", false);
+
+        map.classList.add("col-lg-12"); // map.classList.toggle("col-lg-4", false);
       }
+      /* Altrimenti, se larghezza dello schermo è maggiore di 1650px aggiungi le classi col-lg-8 a form e col-lg-4 a map
+      se c'è, rimuovi la classe col-lg-12 a entrambi */
+      // } else {
+      //     form.classList.add("col-lg-8");
+      //     form.classList.toggle("col-lg-12", false);
+      //     map.classList.add("col-lg-4");
+      //     map.classList.toggle("col-lg-12", false);
+      // }
+
     }
   }
 });

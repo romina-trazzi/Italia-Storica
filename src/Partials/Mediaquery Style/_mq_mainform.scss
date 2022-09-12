@@ -3,6 +3,58 @@
 =============================================*/
 
 // Form e mappa
+@media (max-width: 649px) {
+    main {
+        .form {
+            #map-container {
+
+                .icons-container {
+                    margin-top: 0px !important;
+                }
+
+                iframe {
+                    display: none !important;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 749px) {
+    main {
+        .form {
+
+            .help {
+                padding-bottom: 60px !important;
+            }
+
+            .contatti_container {
+
+                #form-container {
+                
+                    form {
+                        margin-left: 0 !important;
+                        margin-bottom: 100px;
+                        width: 75% !important;
+                    }
+                    
+                    i {
+                        margin: 0 !important;
+                    }
+                    
+                }
+                
+                #map-container {
+                    
+                    margin: 0 !important;                  
+
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 750px) and (max-width: 1650px) {
     main {
@@ -13,15 +65,13 @@
             }
 
             .contatti_container {
-                flex-direction: column;
-                justify-content: center;
 
                 #form-container {
-                   
+                 
                     form {
                         margin-left: 0 !important;
                         margin-bottom: 100px;
-                       
+                        
                     }
                     
                     i {
@@ -40,58 +90,73 @@
 
 }
 
-@media (max-width: 749px) {
+
+// Flexbox
+@media (max-width: 1650px) {
+    
     main {
         .form {
 
-            .help {
-                padding-bottom: 60px !important;
-            }
-
             .contatti_container {
-                flex-direction: column;
-                justify-content: center;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: start !important;
 
                 #form-container {
-                   
-                    form {
-                        margin-left: 0 !important;
-                        margin-bottom: 100px;
-                        width: 75% !important;
-                    }
-                    
-                    i {
-                        margin: 0 !important;
-                    }
-                    
+                    display: flex  !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
                 }
                 
                 #map-container {
-                    margin: 0 !important;                  
-
+                    display: flex  !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
                 }
             }
         }
     }
-
 }
 
-@media (max-width: 649px) {
-    main {
-        .form {
+// Grid
+@media (min-width: 1651px) {
+    .form {
+        .contatti_container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-items: center;
+
+            #form-container {
+                display: grid;
+                grid-template-columns: 100%;
+                justify-items: center;
+
+                div {
+                    text-align: center;
+                }
+
+                form {
+                    margin-left: 0 !important;
+                    margin-bottom: 100px;
+                }
+                
+                i {
+                    margin: 0 !important;
+
+                }
+                
+            }
+
             #map-container {
-
-                .icons-container {
-                    margin-top: 0px !important;
-                }
-
-                iframe {
-                    display: none !important;
-                }
+                display: grid;
+                grid-template-columns: 100%;
+                justify-items: center;
+                margin: 0 !important;
 
             }
-
         }
     }
-
 }
+
+
