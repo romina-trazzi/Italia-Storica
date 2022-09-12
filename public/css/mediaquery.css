@@ -343,15 +343,12 @@
 =            MAIN ROW PERSONAL MEDIAQUERY        =
 =================================================*/
 @media (max-width: 799px) {
-  main .personal #opera ul {
-    -webkit-padding-start: 0px;
-            padding-inline-start: 0px;
+  main .personal #bio ul {
+    -webkit-padding-start: 0px !important;
+            padding-inline-start: 0px !important;
   }
 }
 @media (max-width: 999px) {
-  main .personal #pic img {
-    display: none !important;
-  }
   main .personal #bio {
     padding: 0 50px 0 50px !important;
   }
@@ -360,46 +357,28 @@
             margin-block-start: 50px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1199px) {
-  main .personal #bio img {
-    display: block;
-    width: 20vw !important;
+@media (max-width: 999px) {
+  main .personal #pic img {
+    display: none !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 2079px) {
-  main .personal #bio img {
-    display: block;
-    width: 20vw !important;
+@media (min-width: 1350px) and (max-width: 2750px) {
+  main .personal #pic img {
+    width: 15vh !important;
   }
 }
-@media (min-width: 2080px) and (max-width: 2219px) {
-  main .personal #bio img {
-    display: block;
-    width: 18vw !important;
+@media (min-width: 2751px) {
+  main .personal #pic {
+    flex-direction: column !important;
+    align-items: center !important;
   }
-}
-@media (min-width: 2220px) and (max-width: 2299px) {
-  main .personal #bio img {
-    display: block;
-    width: 16vw !important;
+  main .personal #pic img {
+    width: 20vh !important;
+    margin-right: 0 !important;
   }
-}
-@media (min-width: 2300px) and (max-width: 2599px) {
-  main .personal #bio img {
-    display: block;
-    max-width: 14vw !important;
-  }
-}
-@media (min-width: 2600px) and (max-width: 2949px) {
-  main .personal #bio img {
-    display: block;
-    max-width: 12vw !important;
-  }
-}
-@media (min-width: 2950px) {
-  main .personal #bio img {
-    display: block;
-    max-width: 10vw !important;
+  main .personal #pic p {
+    padding-top: 80px !important;
+    align-self: start !important;
   }
 }
 @media (min-width: 1551px) {

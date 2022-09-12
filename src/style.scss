@@ -239,23 +239,24 @@ body {
 
             .boss {
                 display: grid;
-                grid-template-rows: 50% 50%;
                 grid-template-columns: 100%;
-                justify-items: center;
+                grid-template-rows: auto auto;
+                padding: 0 80px;
             }
 
             #pic {
                 padding: 0 50px 0 50px;
 
                 img {
-                    width: 17vh;
-                    // margin-right: 40px;
+                    width: 26vw;
+                    padding-bottom: 0;
+                    margin-right: 40px;
                     filter: grayscale(0%);
                 }
 
-                // p {
-                //     align-self: center;
-                // }
+                p {
+                    align-self: center;
+                }
             }
 
             #bio {
@@ -263,18 +264,15 @@ body {
                 grid-template-rows: 1fr;
                 grid-template-columns: 100%;
                 justify-items: center;
+                justify-self: center;
 
                 padding: 50px 50px 0 50px;
 
                 ul {
                     padding-inline-start: 20px;
                     margin-block-end: 50px;
-                    
                 }
 
-                .grid-block > p:nth-child(1) {
-                    margin-bottom: 50px !important;
-                }
             }
 
 
