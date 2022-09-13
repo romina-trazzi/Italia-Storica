@@ -284,7 +284,28 @@ let app = new Vue ({
 
             // Sezione PERSONAL
 
-            // Gestiamo le spaziature dei LI dei libri quando schermo <= 999px
+            // Gestiamo la posizione del primo paragrafo sotto la pic
+            let pic = document.getElementById("pic");
+            
+            // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
+            let clonePicP = pic.children[1].cloneNode(true);
+            
+            if (this.windowWidth >= 2751) {
+                
+               // Il nodo corrispondente al paragrafo grazie al CCS sparisce (ma non viene rimosso dal DOM)
+                
+                // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
+                let gridBlock = document.getElementsByClassName("grid-block");
+                
+                document.body.children[0].children[1].children[0].children[2].children[1].children[1].children[0].prepend(clonePicP);
+            
+            }  else  {
+
+                document.querySelector("#pic > p").style.display = "block";
+
+            }
+
+            // Gestiamo le spaziature dei li dei libri 
             if (this.windowWidth <= 999) {
 
                 // Selezioniamo i li delle due liste di libri
@@ -396,14 +417,12 @@ let app = new Vue ({
             let map = document.getElementById("map-container");
             let form = document.getElementById("form-container");
 
-            /* Se la larghezza dello schermo è uguale o inferiore di 1650px aggiungi la classe col-lg-12 a form e map
-            se c'è, rimuovi la classe col-lg-8 da form e classe col-lg-4 da map */
+            /* Se la larghezza dello schermo è uguale o inferiore di 1650px aggiungi la classe col-lg-12 a form e map */
             if (this.windowWidth <= 1650) {
                 form.classList.add("col-lg-12");                
                 map.classList.add("col-lg-12");
 
-            /* Altrimenti, se larghezza dello schermo è maggiore di 1650px aggiungi le classi col-lg-8 a form e col-lg-4 a map
-            se c'è, rimuovi la classe col-lg-12 a entrambi */
+            /* Altrimenti, se larghezza dello schermo è maggiore di 1650px se c'è, rimuovi la classe col-lg-12 a entrambi */
 
             } else {
                 form.classList.toggle("col-lg-12", false);

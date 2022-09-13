@@ -372,13 +372,15 @@
     flex-direction: column !important;
     align-items: center !important;
   }
+  main .personal #pic p {
+    display: none !important;
+  }
   main .personal #pic img {
     width: 20vh !important;
     margin-right: 0 !important;
   }
-  main .personal #pic p {
-    padding-top: 80px !important;
-    align-self: start !important;
+  main .personal #bio p {
+    padding-bottom: 50px !important;
   }
 }
 @media (min-width: 1551px) {

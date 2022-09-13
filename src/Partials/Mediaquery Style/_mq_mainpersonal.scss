@@ -69,19 +69,24 @@
             #pic {
                 flex-direction: column !important;
                 align-items: center !important;
- 
+                
+                p {
+                    display: none !important;
+                }
 
                 img {
                     width: 20vh !important;
                     margin-right: 0 !important;
                 }
-                
-                p {
-                    padding-top: 80px !important;
-                    align-self: start !important;
-                }
-
             }
+
+            #bio {
+                p {
+                    padding-bottom: 50px !important; 
+                }
+            }
+
+            
 
         }
     }
