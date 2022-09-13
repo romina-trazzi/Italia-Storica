@@ -215,20 +215,28 @@ var app = new Vue({
 
         cardContainer[0].innerHTML += ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' + ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>' + ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> ';
       } // Sezione PERSONAL
-      // Gestiamo la posizione del primo paragrafo sotto la pic
 
-
-      var pic = document.getElementById("pic"); // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
-
-      var clonePicP = pic.children[1].cloneNode(true);
 
       if (this.windowWidth >= 2751) {
         // Il nodo corrispondente al paragrafo grazie al CCS sparisce (ma non viene rimosso dal DOM)
-        // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
-        var gridBlock = document.getElementsByClassName("grid-block");
-        document.body.children[0].children[1].children[0].children[2].children[1].children[1].children[0].prepend(clonePicP);
+        // Gestiamo la posizione del primo paragrafo sotto la pic
+        var pic = document.getElementById("pic"); // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
+
+        var clonePicP = pic.children[1].cloneNode(true); // Selezioniamo la posizione in cui inserire il paragrafo clonato
+
+        var _gridBlock = document.getElementsByClassName("grid-block");
+
+        console.log(_gridBlock[0]); // Se il numero di nodi-figli di gridBlock è < 6
+
+        if (_gridBlock[0].childElementCount < 6) {
+          // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
+          _gridBlock[0].prepend(clonePicP);
+        }
       } else {
-        document.querySelector("#pic > p").style.display = "block";
+        // Ripristiniamo il paragrafo originale
+        document.querySelector("#pic > p").style.display = "block"; // Cancelliamo il paragrafo clonato
+
+        gridBlock[0].children[0].remove();
       } // Gestiamo le spaziature dei li dei libri 
 
 

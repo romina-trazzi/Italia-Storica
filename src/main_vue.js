@@ -284,25 +284,36 @@ let app = new Vue ({
 
             // Sezione PERSONAL
 
-            // Gestiamo la posizione del primo paragrafo sotto la pic
-            let pic = document.getElementById("pic");
             
-            // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
-            let clonePicP = pic.children[1].cloneNode(true);
             
             if (this.windowWidth >= 2751) {
                 
                // Il nodo corrispondente al paragrafo grazie al CCS sparisce (ma non viene rimosso dal DOM)
-                
-                // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
-                let gridBlock = document.getElementsByClassName("grid-block");
-                
-                document.body.children[0].children[1].children[0].children[2].children[1].children[1].children[0].prepend(clonePicP);
-            
+
+               // Gestiamo la posizione del primo paragrafo sotto la pic
+               let pic = document.getElementById("pic");
+               
+               // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
+               let clonePicP = pic.children[1].cloneNode(true);
+               
+               // Selezioniamo la posizione in cui inserire il paragrafo clonato
+               let gridBlock = document.getElementsByClassName("grid-block");
+               
+               console.log(gridBlock[0]);
+
+               // Se il numero di nodi-figli di gridBlock è < 6
+               if (gridBlock[0].childElementCount < 6) { 
+                    // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
+                    gridBlock[0].prepend(clonePicP);
+                }
+
             }  else  {
 
+                // Ripristiniamo il paragrafo originale
                 document.querySelector("#pic > p").style.display = "block";
 
+                // Cancelliamo il paragrafo clonato
+                gridBlock[0].children[0].remove();
             }
 
             // Gestiamo le spaziature dei li dei libri 
