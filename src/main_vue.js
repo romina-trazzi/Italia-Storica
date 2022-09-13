@@ -283,9 +283,6 @@ let app = new Vue ({
             }
 
             // Sezione PERSONAL
-
-            
-            
             if (this.windowWidth >= 2751) {
                 
                // Il nodo corrispondente al paragrafo grazie al CCS sparisce (ma non viene rimosso dal DOM)
@@ -302,7 +299,8 @@ let app = new Vue ({
                console.log(gridBlock[0]);
 
                // Se il numero di nodi-figli di gridBlock è < 6
-               if (gridBlock[0].childElementCount < 6) { 
+               if (gridBlock[0].childElementCount < 6) {
+
                     // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
                     gridBlock[0].prepend(clonePicP);
                 }
@@ -312,8 +310,14 @@ let app = new Vue ({
                 // Ripristiniamo il paragrafo originale
                 document.querySelector("#pic > p").style.display = "block";
 
-                // Cancelliamo il paragrafo clonato
-                gridBlock[0].children[0].remove();
+                // Selezioniamo la posizione in cui inserire il paragrafo clonato
+                let gridBlock = document.getElementsByClassName("grid-block");
+
+                // Se il numero di nodi-figli di gridBlock è = 6
+                if (gridBlock[0].childElementCount >= 6) {
+                    // Cancelliamo il paragrafo clonato
+                    gridBlock[0].children[0].remove();
+                }
             }
 
             // Gestiamo le spaziature dei li dei libri 

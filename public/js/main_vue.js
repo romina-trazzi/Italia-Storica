@@ -224,19 +224,24 @@ var app = new Vue({
 
         var clonePicP = pic.children[1].cloneNode(true); // Selezioniamo la posizione in cui inserire il paragrafo clonato
 
-        var _gridBlock = document.getElementsByClassName("grid-block");
+        var gridBlock = document.getElementsByClassName("grid-block");
+        console.log(gridBlock[0]); // Se il numero di nodi-figli di gridBlock è < 6
 
-        console.log(_gridBlock[0]); // Se il numero di nodi-figli di gridBlock è < 6
-
-        if (_gridBlock[0].childElementCount < 6) {
+        if (gridBlock[0].childElementCount < 6) {
           // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
-          _gridBlock[0].prepend(clonePicP);
+          gridBlock[0].prepend(clonePicP);
         }
       } else {
         // Ripristiniamo il paragrafo originale
-        document.querySelector("#pic > p").style.display = "block"; // Cancelliamo il paragrafo clonato
+        document.querySelector("#pic > p").style.display = "block"; // Selezioniamo la posizione in cui inserire il paragrafo clonato
 
-        gridBlock[0].children[0].remove();
+        var _gridBlock = document.getElementsByClassName("grid-block"); // Se il numero di nodi-figli di gridBlock è = 6
+
+
+        if (_gridBlock[0].childElementCount >= 6) {
+          // Cancelliamo il paragrafo clonato
+          _gridBlock[0].children[0].remove();
+        }
       } // Gestiamo le spaziature dei li dei libri 
 
 

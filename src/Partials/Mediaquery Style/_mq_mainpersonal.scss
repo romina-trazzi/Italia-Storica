@@ -80,10 +80,11 @@
                 }
             }
 
-            #bio {
-                p {
-                    padding-bottom: 50px !important; 
-                }
+            #bio p:nth-child(1) {
+                
+                padding-top: 50px !important;
+                padding-bottom: 50px !important; 
+                
             }
 
             

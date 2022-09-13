@@ -379,7 +379,8 @@
     width: 20vh !important;
     margin-right: 0 !important;
   }
-  main .personal #bio p {
+  main .personal #bio p:nth-child(1) {
+    padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
 }
