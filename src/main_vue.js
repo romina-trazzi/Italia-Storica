@@ -283,11 +283,13 @@ let app = new Vue ({
             }
 
             // Sezione PERSONAL
+            
+            
+            // Gestiamo la posizione del primo paragrafo sotto la pic
             if (this.windowWidth >= 2751) {
                 
                // Il nodo corrispondente al paragrafo grazie al CCS sparisce (ma non viene rimosso dal DOM)
-
-               // Gestiamo la posizione del primo paragrafo sotto la pic
+                
                let pic = document.getElementById("pic");
                
                // Cloniamo il nodo paragrafo che ci interessa e lo salviamo in una variabile
