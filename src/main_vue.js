@@ -218,24 +218,32 @@ let app = new Vue ({
             // Gestiamo i div da 1200 a 2750px 
 
            // Aggiungiamo i div
-            if (this.windowWidth > 2751) {
+            if (this.windowWidth >= 2751) {
 
                 let divNode = document.querySelectorAll("#book_main > div");
                 
-                // Se il numero di nodi-figli di divNode è < 2
+                // Se il numero di nodi-figli di divNode è pari a 2
                 if (divNode.length == 2) {
 
-                    // Aggiungiamo un div all'inizio e un div alla fine di book_main
+                    // Aggiungiamo un div all'inizio di book_main
                     const createDiv = document.createElement("div");
-
                     let bookMain = document.getElementById("book_main");
-                    bookMain.append(createDiv);
-                    
-                    
-                }  
-            } else {
+                    bookMain.prepend(createDiv);
 
-                console.log("finiremo mai?");
+                }  
+            } else if (this.windowWidth < 2751) {
+
+                let divNode = document.querySelectorAll("#book_main > div");
+
+                // Se il numero di nodi-figli di divNode > 2
+                if (divNode.length > 2) {
+
+                    // Rimuoviamo il primo div (quello vuoto)
+                    let bookMainLong = document.querySelector("#book_main > div:nth-child(1)");
+                    
+                    divNode[0].remove(bookMainLong);
+
+                }  
             }
 
 
