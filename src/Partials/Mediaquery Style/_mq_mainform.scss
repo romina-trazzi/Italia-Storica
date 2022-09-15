@@ -163,4 +163,12 @@
     }
 }
 
+// Footer
+@media (max-width: 450px) {
+    footer {
+        p {
+            font-size: 0.6rem !important;
+        }
+    }
+}
 

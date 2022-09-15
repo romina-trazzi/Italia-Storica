@@ -157,7 +157,7 @@
 
 
 // Distacco fra row core e row order
-@media (min-width: 1200px) and (max-width: 1335px) {
+@media (min-width: 1200px) {
   main {
     .core {
       margin-bottom: 12rem !important;
@@ -165,10 +165,10 @@
   }
 }
 
-@media (min-width: 1336px) {
+@media (min-width: 1450px) {
   main {
     .core {
-      margin-bottom: 6rem !important;
+      margin-bottom: 8rem !important;
     }
   }
 }
