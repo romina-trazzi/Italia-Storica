@@ -24,6 +24,7 @@
 @media (max-width: 599px) {
   main {
     .core {
+      
       .sliderContainer {
         height: 317px;
       }
@@ -33,19 +34,18 @@
         display: grid;
         justify-content: center;
 
-        #carousel {
-          width: 100%;
-        }
+       
 
         img {
           max-height: 317px !important;
         }
       }
+  
+      .book_details {
+        padding-left: 0px !important;
+      }
     }
 
-    .book_details {
-      padding-left: 0px !important;
-    }
   }
 }
 
@@ -58,10 +58,6 @@
         grid-template-rows: 100%;
         grid-gap: 5%;
         justify-content: center;
-
-        #carousel {
-          width: 100%;
-        }
 
         img {
           max-height: 560px !important;
@@ -84,6 +80,7 @@
       .book_details {
         padding-left: 0px !important;
         padding-top: 75px !important;
+        margin: 0 20px;
       }
     }
   }

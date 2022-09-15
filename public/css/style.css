@@ -605,6 +605,9 @@ body main .core #book_main .book_details div #about {
   margin: 20px 0 20px 0;
   word-spacing: 0.03em;
 }
+body main .core #book_main #carousel {
+  width: 100%;
+}
 body main .core #book_main .book_description #book_details {
   margin: 0px;
 }
