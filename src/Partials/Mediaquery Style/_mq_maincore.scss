@@ -77,12 +77,6 @@
         padding-left: 0px !important;
         padding-top: 75px !important;
       }
-
-      #buy  {
-        font-size: 1rem !important;
-        margin-top: 50px;
-        
-      }
     }
   }
 }
@@ -117,12 +111,23 @@
         display: grid;
         grid-template-columns: 1fr 3fr 1fr;
         grid-template-rows: 625.5px !important;
+        align-items: center;
+
+        #about {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 10%;
+        }
+
+        #about:hover {
+          overflow: visible !important;
+        }
       }
     }
   }
 
 }
-
 
 @media (min-width: 2751px) {
   main {
@@ -135,10 +140,6 @@
         grid-template-columns: 10% 40% 40% 10%;
         align-items: center;
         justify-items: center;
-        
-        div:nth-child(1), div:nth-child(4) {
-          visibility: block;
-        }
 
         .order-first {
           order: 0 !important;
@@ -149,17 +150,6 @@
     
   }
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Distacco fra row core e row order

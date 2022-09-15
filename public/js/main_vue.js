@@ -172,20 +172,28 @@ var app = new Vue({
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
       } // Gestiamo i div da 1200 a 2750px 
-      // Rimuoviamo i div dal documento
+      // Aggiungiamo i div
 
 
-      if (this.windowWidth >= 1200 && this.windowWidth < 2751) {
-        var divNode = document.querySelectorAll("#book_main > div");
-        divNode.classeList.remove("order-first");
-        console.log(divNode); // divNode[0].remove();
-        // divNode[3].remove();
-      } else if (this.windowWidth >= 2751) {
-        var createDiv = document.createElement("div"); // Se il numero di nodi-figli di divNode è < 4
-        //    if (divNode[0].childElementCount < 4) {
-        //         // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
-        //         divNode[0].prepend(createDiv);
-        //     }
+      if (this.windowWidth >= 2751) {
+        var divNode = document.querySelectorAll("#book_main > div"); // Se il numero di nodi-figli di divNode è pari a 2
+
+        if (divNode.length == 2) {
+          // Aggiungiamo un div all'inizio di book_main
+          var createDiv = document.createElement("div");
+          var bookMain = document.getElementById("book_main");
+          bookMain.prepend(createDiv);
+        }
+      } else if (this.windowWidth < 2751) {
+        var _divNode = document.querySelectorAll("#book_main > div"); // Se il numero di nodi-figli di divNode > 2
+
+
+        if (_divNode.length > 2) {
+          // Rimuoviamo il primo div (quello vuoto)
+          var bookMainLong = document.querySelector("#book_main > div:nth-child(1)");
+
+          _divNode[0].remove(bookMainLong);
+        }
       } // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
