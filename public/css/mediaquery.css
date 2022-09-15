@@ -438,6 +438,9 @@
   }
 }
 @media (min-width: 750px) and (max-width: 991px) {
+  main .personal .supporters .loghi {
+    margin-top: 0 !important;
+  }
   main .personal .supporters img {
     width: 150px !important;
   }
@@ -447,6 +450,9 @@
   }
 }
 @media (min-width: 650px) and (max-width: 749px) {
+  main .personal .supporters .loghi {
+    margin-top: 0 !important;
+  }
   main .personal .supporters img {
     width: 135px !important;
   }
@@ -456,6 +462,9 @@
   }
 }
 @media (max-width: 649px) {
+  main .personal .supporters .loghi {
+    margin-top: 0 !important;
+  }
   main .personal .supporters img {
     width: 150px !important;
   }
