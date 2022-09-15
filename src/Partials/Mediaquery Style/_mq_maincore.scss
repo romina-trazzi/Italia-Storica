@@ -33,6 +33,10 @@
         display: grid;
         justify-content: center;
 
+        #carousel {
+          width: 100%;
+        }
+
         img {
           max-height: 317px !important;
         }
@@ -54,6 +58,10 @@
         grid-template-rows: 100%;
         grid-gap: 5%;
         justify-content: center;
+
+        #carousel {
+          width: 100%;
+        }
 
         img {
           max-height: 560px !important;
@@ -108,9 +116,9 @@
     .core {
 
       .book_details {
-          display: -webkit-box;
-          -webkit-line-clamp: 16;
-          -webkit-box-orient: vertical; 
+        display: -webkit-box;
+        -webkit-line-clamp: 16;
+        -webkit-box-orient: vertical; 
       }
 
       .book_description {
