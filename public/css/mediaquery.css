@@ -366,6 +366,9 @@
   }
 }
 @media (max-width: 999px) {
+  main .personal #pic {
+    justify-content: center !important;
+  }
   main .personal #pic img {
     display: none !important;
   }
