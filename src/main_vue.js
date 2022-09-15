@@ -215,6 +215,30 @@ let app = new Vue ({
                 column.classList.toggle("order-css", false);
             }
 
+            // Gestiamo i div da 1200 a 2750px 
+
+           // Aggiungiamo i div
+            if (this.windowWidth > 2751) {
+
+                let divNode = document.querySelectorAll("#book_main > div");
+                
+                // Se il numero di nodi-figli di divNode è < 2
+                if (divNode.length == 2) {
+
+                    // Aggiungiamo un div all'inizio e un div alla fine di book_main
+                    const createDiv = document.createElement("div");
+
+                    let bookMain = document.getElementById("book_main");
+                    bookMain.append(createDiv);
+                    
+                    
+                }  
+            } else {
+
+                console.log("finiremo mai?");
+            }
+
+
             // Sezione ORDER
 
             /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
@@ -284,7 +308,6 @@ let app = new Vue ({
 
             // Sezione PERSONAL
             
-            
             // Gestiamo la posizione del primo paragrafo sotto la pic
             if (this.windowWidth >= 2751) {
                 
@@ -297,8 +320,6 @@ let app = new Vue ({
                
                // Selezioniamo la posizione in cui inserire il paragrafo clonato
                let gridBlock = document.getElementsByClassName("grid-block");
-               
-               console.log(gridBlock[0]);
 
                // Se il numero di nodi-figli di gridBlock è < 6
                if (gridBlock[0].childElementCount < 6) {
@@ -352,13 +373,11 @@ let app = new Vue ({
 
                 // Rimuoviamo l'HTML esistente
                 blelArray1.forEach((item) => {
-                    // item.style.display = "none";
                     item.remove();
 
                 });
 
                 blelArray2.forEach((item) => {
-                   // item.style.display = "none";
                    item.remove();
                 });
 

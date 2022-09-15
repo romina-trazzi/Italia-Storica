@@ -87,46 +87,67 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1699px) {
+@media (min-width: 1200px) {
 
+  #book_main, #book_change, #carousel {
+    padding: 0 !important;
+  }
+
+  #book_main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+
+  #book_details {
+    max-height: 625.5px !important;
+  }
+
+  .book_details {
+    padding-top: 0px !important;
+  }
+
+}
+
+@media (min-width: 1200px) and (max-width: 2750px) {
+  main {
+    .core {
+
+      .book_description {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 625.5px !important;
+      }
+    }
+  }
 
 }
 
 
-
-@media (min-width: 1700px) {
+@media (min-width: 2751px) {
   main {
+    
     .core {
       
-      #book_main, #book_change, #carousel {
-        padding: 0 !important;
-      }
-
       #book_main {
+
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 10% 40% 40% 10%;
         align-items: center;
-      }
+        justify-items: center;
+        
+        div:nth-child(1), div:nth-child(4) {
+          visibility: block;
+        }
 
-      .book_description {
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-      }
+        .order-first {
+          order: 0 !important;
+        }
 
-      #book_details {
-        max-height: 625.5px !important;
       }
-
-      .book_details {
-        padding-top: 0px !important;
-      }
-
-      
-    
-      
     }
+    
   }
-
 }
 
 

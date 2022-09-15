@@ -117,44 +117,39 @@
             </div>
             <!-- / Titolo -->
         
+
             <!-- Book main -->
             <div class="row" id="book_main"> 
 
               <!-- Descrizione -->
-              <div class="" id="book_change"> 
-
-                <div class=" book_description"> <!--d-flex flex-column justify-content-center align-items-center-->
-
+              <div id="book_change"> 
+                
+                <div class=" book_description"> 
+                  
                   <div class=""></div>
-
+                  
                   <div class="d-flex flex-column align-items-start book_details">
-
+                    
                     <!-- Transition dei dettagli dei libri -->
                     <transition-group name="fade" mode="out-in" appear>
                       <div v-bind:key="libri[counter]" id="book_details">
-
+                        
                         <span>Titolo:</span> {{ libri[counter].titolo }} <br>
                         <span>Sottotitolo:</span> {{ libri[counter].sottotitolo }} <br>
                         <span>Autore:</span> {{ libri[counter].autore }} <br>
                         <p id="about"> {{ libri[counter].descrizione }} </p>
                         <span>Pagine:</span> {{ libri[counter].pagine }} <br>
                         <span>Prezzo:</span> {{ libri[counter].prezzo }} <br>
-                        
-                        <!-- Buy button-->
-                        <!-- <div id="buy" class="d_flex_center">
-                          <a v-bind:href="libri[counter].link_IBS" class="btn button orange btn-lg"> Acquista su IBS.it</a>
-                        </div> -->
-                        <!-- / Buy button-->
 
                       </div>
                     </transition>
                     <!-- / Transition dei dettagli dei libri -->
-
+                    
                   </div>
-
+                  
                   <div class=""></div>
                 </div>
-
+                
               </div>
               <!-- / Descrizione -->
 
@@ -168,7 +163,7 @@
                     
                     <!-- Left Arrow -->
                     <div id="btn-prev-position">
-
+                      
                       <button class="btnC btn-prev carousel_button" @click="prevImg()">
                         <i class="fas fa-angle-left"></i>
                       </button>

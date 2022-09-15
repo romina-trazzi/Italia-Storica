@@ -171,6 +171,21 @@ var app = new Vue({
         column.classList.add("order-first");
         column.classList.toggle("order-last", false);
         column.classList.toggle("order-css", false);
+      } // Gestiamo i div da 1200 a 2750px 
+      // Rimuoviamo i div dal documento
+
+
+      if (this.windowWidth >= 1200 && this.windowWidth < 2751) {
+        var divNode = document.querySelectorAll("#book_main > div");
+        divNode.classeList.remove("order-first");
+        console.log(divNode); // divNode[0].remove();
+        // divNode[3].remove();
+      } else if (this.windowWidth >= 2751) {
+        var createDiv = document.createElement("div"); // Se il numero di nodi-figli di divNode è < 4
+        //    if (divNode[0].childElementCount < 4) {
+        //         // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
+        //         divNode[0].prepend(createDiv);
+        //     }
       } // Sezione ORDER
 
       /* Quando lo schermo è >= 2000px allora vengono eliminati div che contengono le card e le card assumono le classi card xl-4 lg-4 */
@@ -224,8 +239,7 @@ var app = new Vue({
 
         var clonePicP = pic.children[1].cloneNode(true); // Selezioniamo la posizione in cui inserire il paragrafo clonato
 
-        var gridBlock = document.getElementsByClassName("grid-block");
-        console.log(gridBlock[0]); // Se il numero di nodi-figli di gridBlock è < 6
+        var gridBlock = document.getElementsByClassName("grid-block"); // Se il numero di nodi-figli di gridBlock è < 6
 
         if (gridBlock[0].childElementCount < 6) {
           // Aggiungiamo il paragrafo clonato come primo figlio del div con classe gridBlock
@@ -264,11 +278,9 @@ var app = new Vue({
         }); // Rimuoviamo l'HTML esistente
 
         blelArray1.forEach(function (item) {
-          // item.style.display = "none";
           item.remove();
         });
         blelArray2.forEach(function (item) {
-          // item.style.display = "none";
           item.remove();
         }); // Visualizziamo il nuovo HTML mappato
 
