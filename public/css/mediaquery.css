@@ -245,16 +245,24 @@
     margin-top: 50px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1700px) {
+  main .core #book_main, main .core #book_change, main .core #carousel {
+    padding: 0 !important;
+  }
+  main .core #book_main {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+  }
+  main .core .book_description {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+  }
   main .core #book_details {
     max-height: 625.5px !important;
   }
   main .core .book_details {
     padding-top: 0px !important;
-    padding-left: 50px !important;
-  }
-  main .core #buy {
-    margin: 50px 0 0 0 !important;
   }
 }
 @media (min-width: 1200px) and (max-width: 1285px) {

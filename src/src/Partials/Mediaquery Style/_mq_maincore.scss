@@ -69,6 +69,34 @@
 
 
 // Descrizione libri 
+// @media (min-width: 600px) and (max-width: 999px) {
+//   main {
+//     .core {
+      
+//       #book_details {
+//         max-height: 640px !important;
+//       }
+//     }
+    
+//     .order {
+//       padding-top: 150px !important;
+//     }
+//   }
+
+// }
+
+// @media (min-width: 1000px) and (max-width: 1199px) {
+//   main {
+//     .core {
+      
+//       #book_details {
+//         max-height: 370px !important;
+//       }
+//     } 
+//   }
+
+// }
+
 @media (max-width: 1199px) {
   main {
     .core {
@@ -87,31 +115,9 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1699px) {
-
-
-}
-
-
-
-@media (min-width: 1700px) {
+@media (min-width: 1200px) {
   main {
     .core {
-      
-      #book_main, #book_change, #carousel {
-        padding: 0 !important;
-      }
-
-      #book_main {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        align-items: center;
-      }
-
-      .book_description {
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-      }
 
       #book_details {
         max-height: 625.5px !important;
@@ -119,27 +125,17 @@
 
       .book_details {
         padding-top: 0px !important;
+        padding-left: 50px !important;
       }
-
       
-    
+      #buy {
+        margin: 50px 0 0 0 !important;
+      }
       
     }
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Distacco fra row core e row order
 @media (min-width: 1200px) and (max-width: 1285px) { 

@@ -1,0 +1,139 @@
+.sliderContainer {
+    height: 560px;
+    width: 100%;
+
+    .slider {
+        height: 560px;
+        width: 100%;
+    }
+    
+    .slider-track-container {
+        width: 390px;    
+        
+    }
+    
+    .slider-track {
+        padding: 0;
+        height: 100%;
+    }
+
+    .slide {
+        padding: 0;
+        filter: drop-shadow(25px 10px 8px rgba(0, 0, 0, 0.2));
+
+        // Per centrare la copertina
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 390px;
+    }
+
+    .slide img {
+        opacity: 20%; 
+        filter: blur(3px);
+        transition: 0.5s linear;
+        visibility: hidden;
+        
+    }
+
+    .slide.selected img {
+        opacity: 1 !important;
+        filter: none !important;
+        visibility: visible;
+    }
+
+
+    // Arrows
+    .btnC {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 50%;
+        z-index: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        font-size: 18px;
+    }
+
+    .btnC:active {
+        transform: scale(1.1);
+    }
+
+    #btn-prev-position {
+        justify-self: end;
+        align-self: center;
+    }
+
+    #btn-next-position {
+        justify-self: start;
+        align-self: center;
+    }  
+
+    .carousel_button {
+        color: floralwhite;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: 2px solid rgba(255, 255, 240, 0.5);
+        border-radius: 4px;
+        box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+        text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+        opacity: 1;
+        cursor: pointer;
+        transition: opacity 150ms ease, border 300ms ease-in-out;
+        line-height: 1;
+
+    }
+  
+    .carousel_button:hover {
+        outline: none;
+        border-color: white; 
+    }
+
+    .carousel_button:focus {
+        color: floralwhite;
+    }
+}
+
+
+// Radiobutton
+.radiobuttonContainer {
+    position: relative;
+    left: 50%;
+    cursor: pointer;
+    transform: translateX(-50%);
+    margin-top: 2.5em;
+}
+
+#radiobuttonController {
+    text-align: center;
+}
+
+.carousel_bullet {
+    background-color: rgba(255, 250, 240, 0.5);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    line-height: 0;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    margin-right: 0.75em;
+    
+    &:focus {
+        outline: none;
+        background-color: floralwhite;
+    }
+
+    &:hover {
+        outline: none;
+        border: 2px solid floralwhite;
+        background-color: rgba(255, 255, 240, 0.5);
+        
+    }
+
+    &:active {
+        background-color: floralwhite;
+    }
+}
+
+

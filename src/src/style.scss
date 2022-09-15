@@ -145,25 +145,30 @@ body {
             // End classi di animazione carosello
             
 
-            #book_main {
+            #book-main {
                 @include descrizioni;
                 margin: 0;
                 width: 100%;
                 height: auto;
+                padding: 0 !important;
+
+                #book_change {
+                    padding: 0 !important;
+                }
 
                 .book_description {
                     #book_details {
                         margin: 0px;
                     }
-
-                    // Classe che si attiva se la dimensione schermo è < 1200px
-                    .order-css {
-                        padding-top: 115px !important;
-                    }
                 }
-            
-                 
+
+                // Classe che si attiva se la dimensione schermo è < 1200px
+                .order-css {
+                    padding-top: 115px !important;
+                }
             }
+
+            
         }
         
         .order {
@@ -228,15 +233,13 @@ body {
                 display: grid;
                 grid-template-columns: 100%;
                 grid-template-rows: auto auto;
-                padding: 0 80px;
             }
 
             #pic {
                 padding: 0 50px 0 50px;
 
                 img {
-                    width: 26vw;
-                    padding-bottom: 0;
+                    width: 17vh;
                     margin-right: 40px;
                     filter: grayscale(0%);
                 }

@@ -91,10 +91,15 @@ $color-map: (
 
 // Descrizioni
 @mixin descrizioni {
+    .book_details {
+        padding-left: 50px;
+        
+    }
 
     .book_details  div {
         font-family: "Open Sans", sans-serif;
         font-size: 1.1rem;
+        margin-bottom: 0.5rem;
     }
     
     .book_details  div > span {

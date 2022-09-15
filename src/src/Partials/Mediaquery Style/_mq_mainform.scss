@@ -1,0 +1,166 @@
+/*=============================================
+=            MAIN ROW FORM MEDIAQUERY        =
+=============================================*/
+
+// Form e mappa
+@media (max-width: 649px) {
+    main {
+        .form {
+            #map-container {
+
+                .icons-container {
+                    margin-top: 0px !important;
+                }
+
+                iframe {
+                    display: none !important;
+                }
+
+            }
+
+        }
+    }
+}
+
+@media (max-width: 749px) {
+    main {
+        .form {
+
+            .help {
+                padding-bottom: 60px !important;
+            }
+
+            .contatti_container {
+
+                #form-container {
+                    
+                    .form-tracker {
+                        display: flex;
+                        justify-content: center;
+                    }
+
+                    form {
+                        margin-left: 0 !important;
+                        margin-bottom: 100px;
+                        width: 75% !important;
+                    }
+                    
+                    i {
+                        margin: 0 !important;
+                    }
+                    
+                }
+                
+                #map-container {
+                    
+                    margin: 0 !important;                  
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1650px) {
+    main {
+        .form {
+
+            .help {
+                padding-bottom: 60px !important;
+            }
+
+            .contatti_container {
+
+                #form-container {
+                 
+                    form {
+                        margin-left: 0 !important;
+                        margin-bottom: 100px;
+                        
+                    }
+                    
+                    i {
+                        margin: 0 !important;
+                    }
+                    
+                }
+
+                #map-container {
+                    margin: 0 !important;
+
+                }
+            }
+        }
+    }
+
+}
+
+
+// Flexbox
+@media (max-width: 1650px) {  
+    main {
+        .form {
+
+            .contatti_container {
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: start !important;
+
+                #form-container {
+                    display: flex  !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                }
+                
+                #map-container {
+                    display: flex  !important;
+                    flex-direction: column !important;
+                    align-items: center !important;
+                }
+            }
+        }
+    }
+}
+
+// Grid
+@media (min-width: 1651px) {
+    .form {
+        .contatti_container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-items: center;
+
+            #form-container {
+                display: grid;
+                grid-template-columns: 100%;
+                justify-items: center;
+
+                div {
+                    text-align: center;
+                }
+
+                form {
+                    margin-left: 0 !important;
+                    margin-bottom: 100px;
+                }
+                
+                i {
+                    margin: 0 !important;
+
+                }
+                
+            }
+
+            #map-container {
+                display: grid;
+                grid-template-columns: 100%;
+                justify-items: center;
+                margin: 0 !important;
+
+            }
+        }
+    }
+}
+
+
