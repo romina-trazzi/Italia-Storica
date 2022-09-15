@@ -20,7 +20,7 @@
 }
 
 
-// Copertina libri 
+// Copertina libri
 @media (max-width: 599px) {
   main {
     .core {
@@ -36,7 +36,7 @@
         img {
           max-height: 317px !important;
         }
-      } 
+      }
     }
 
     .book_details {
@@ -68,7 +68,7 @@
 }
 
 
-// Descrizione libri 
+// Descrizione libri
 @media (max-width: 1199px) {
   main {
     .core {
@@ -107,21 +107,20 @@
   main {
     .core {
 
+      .book_details {
+          display: -webkit-box;
+          -webkit-line-clamp: 16;
+          -webkit-box-orient: vertical; 
+      }
+
       .book_description {
         display: grid;
-        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-columns: 10% 80% 10%;
         grid-template-rows: 625.5px !important;
         align-items: center;
 
-        #about {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          width: 10%;
-        }
-
-        #about:hover {
-          overflow: visible !important;
+        span {
+          width: 100%;
         }
       }
     }
@@ -131,9 +130,9 @@
 
 @media (min-width: 2751px) {
   main {
-    
+
     .core {
-      
+
       #book_main {
 
         display: grid;
@@ -147,19 +146,19 @@
 
       }
     }
-    
+
   }
 }
 
 
 // Distacco fra row core e row order
-@media (min-width: 1200px) and (max-width: 1285px) { 
+@media (min-width: 1200px) and (max-width: 1285px) {
   main {
     .core {
       margin-bottom: 12rem !important;
     }
   }
-}  
+}
 
 @media (min-width: 1286px) and (max-width: 1335px) {
   main {
@@ -167,7 +166,7 @@
       margin-bottom: 9rem !important;
     }
   }
-}  
+}
 
 @media (min-width: 1336px) {
   main {
@@ -175,7 +174,7 @@
       margin-bottom: 6rem !important;
     }
   }
-}  
+}
 
 
 // Arrows
@@ -185,7 +184,7 @@
       .carousel_button {
         display: none !important;
       }
-      
+
     }
   }
 }
@@ -196,7 +195,7 @@
       .carousel_button {
         display: none !important;
       }
-      
+
     }
   }
 }

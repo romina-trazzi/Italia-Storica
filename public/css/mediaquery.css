@@ -258,20 +258,19 @@
   }
 }
 @media (min-width: 1200px) and (max-width: 2750px) {
+  main .core .book_details {
+    display: -webkit-box;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;
+  }
   main .core .book_description {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 10% 80% 10%;
     grid-template-rows: 625.5px !important;
     align-items: center;
   }
-  main .core .book_description #about {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    width: 10%;
-  }
-  main .core .book_description #about:hover {
-    overflow: visible !important;
+  main .core .book_description span {
+    width: 100%;
   }
 }
 @media (min-width: 2751px) {
