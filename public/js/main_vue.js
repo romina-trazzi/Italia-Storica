@@ -175,7 +175,7 @@ var app = new Vue({
       // Aggiungiamo i div
 
 
-      if (this.windowWidth >= 2751) {
+      if (this.windowWidth >= 2001) {
         var divNode = document.querySelectorAll("#book_main > div"); // Se il numero di nodi-figli di divNode è pari a 2
 
         if (divNode.length == 2) {
@@ -184,7 +184,7 @@ var app = new Vue({
           var bookMain = document.getElementById("book_main");
           bookMain.prepend(createDiv);
         }
-      } else if (this.windowWidth < 2751) {
+      } else if (this.windowWidth < 2001) {
         var _divNode = document.querySelectorAll("#book_main > div"); // Se il numero di nodi-figli di divNode > 2
 
 

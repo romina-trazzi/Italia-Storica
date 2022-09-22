@@ -926,5 +926,6 @@ body footer .copyright p {
   font-weight: 400;
 }
 body footer .copyright p span {
+  padding-left: 30px;
   padding-right: 30px;
 }

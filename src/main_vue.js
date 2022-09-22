@@ -218,7 +218,7 @@ let app = new Vue ({
             // Gestiamo i div da 1200 a 2750px 
 
            // Aggiungiamo i div
-            if (this.windowWidth >= 2751) {
+            if (this.windowWidth >= 2001) {
 
                 let divNode = document.querySelectorAll("#book_main > div");
                 
@@ -231,7 +231,7 @@ let app = new Vue ({
                     bookMain.prepend(createDiv);
 
                 }  
-            } else if (this.windowWidth < 2751) {
+            } else if (this.windowWidth < 2001) {
 
                 let divNode = document.querySelectorAll("#book_main > div");
 

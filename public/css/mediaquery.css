@@ -258,7 +258,7 @@
     padding-top: 0px !important;
   }
 }
-@media (min-width: 1200px) and (max-width: 2750px) {
+@media (min-width: 1200px) and (max-width: 2000px) {
   main .core .book_details {
     display: -webkit-box;
     -webkit-line-clamp: 16;
@@ -266,7 +266,7 @@
   }
   main .core .book_description {
     display: grid;
-    grid-template-columns: 10% 80% 10%;
+    grid-template-columns: 15% 70% 15%;
     grid-template-rows: 625.5px !important;
     align-items: center;
   }
@@ -274,7 +274,7 @@
     width: 100%;
   }
 }
-@media (min-width: 2751px) {
+@media (min-width: 2001px) {
   main .core #book_main {
     display: grid;
     grid-template-columns: 10% 40% 40% 10%;
