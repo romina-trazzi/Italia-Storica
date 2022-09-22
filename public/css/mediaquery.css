@@ -565,8 +565,11 @@
     margin: 0 !important;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 649px) {
   footer p {
-    font-size: 0.6rem !important;
+    font-size: 0.3rem !important;
+  }
+  footer a.iubenda-noiframe:nth-child(2), footer a.iubenda-noiframe:nth-child(4) {
+    font-size: 7px !important;
   }
 }
