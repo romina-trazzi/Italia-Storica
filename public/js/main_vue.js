@@ -70,7 +70,7 @@ var app = new Vue({
         width: 0,
         height: 0
       } */
-    normalWidth: true,
+    normalWidth: false,
     specialWidth: false,
     duoWidth: false,
     monoWidth: false,
@@ -107,7 +107,7 @@ var app = new Vue({
     Il valore di width in data viene aggiornato da 0 a valore corrente.
     (passaggio 2) */
     handleResize: function handleResize() {
-      this.windowWidth = window.screen.width;
+      this.windowWidth = window.innerWidth;
     },
 
     /* Controlla la gestione dei radiobutton del carosello */

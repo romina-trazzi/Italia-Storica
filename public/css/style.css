@@ -83,7 +83,7 @@
 }
 @media (min-width: 821px) and (max-width: 980px) {
   .shield-wrap::before, .shield-wrap::after {
-    width: 18rem !important;
+    width: 17rem !important;
   }
 }
 @media (min-width: 660px) and (max-width: 820px) {
