@@ -49,13 +49,14 @@
     }
 }
 
-@media (min-width: 1350px) and (max-width: 2750px) {
+@media (min-width: 1000px) and (max-width: 2750px) {
     main {
         .personal {
             #pic {
 
                 img {
-                    width: 15vh !important;
+                    max-height: 351px !important;
+                    max-width: 350px !important;
                 }
 
               

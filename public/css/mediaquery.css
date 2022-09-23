@@ -236,6 +236,10 @@
   }
 }
 @media (max-width: 1199px) {
+  main .core #book_change {
+    width: 80%;
+    margin-left: 10%;
+  }
   main .core .book_details {
     padding-left: 0px !important;
     padding-top: 75px !important;
@@ -388,9 +392,10 @@
     display: none !important;
   }
 }
-@media (min-width: 1350px) and (max-width: 2750px) {
+@media (min-width: 1000px) and (max-width: 2750px) {
   main .personal #pic img {
-    width: 15vh !important;
+    max-height: 351px !important;
+    max-width: 350px !important;
   }
 }
 @media (min-width: 2751px) {

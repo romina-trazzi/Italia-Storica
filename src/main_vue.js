@@ -125,7 +125,7 @@ let app = new Vue ({
         /* Controlla la larghezza dello schermo e passa il valore alla funzione resize a mounted e destroyed.
         Il valore di width in data viene aggiornato da 0 a valore corrente.
         (passaggio 2) */
-        handleResize () {
+        handleResize() {
             this.windowWidth = window.screen.width;
         },
 
@@ -166,6 +166,8 @@ let app = new Vue ({
 
         },
 
+       
+
     },
 
     watch: {
@@ -203,17 +205,19 @@ let app = new Vue ({
             /* Se la larghezza dello schermo è uguale o inferiore di 1200px aggiungi le classi order-last e order-css
             se c'è, rimuovi la classe order-first */
             if (this.windowWidth < 1200) {
-                column.classList.add("order-last");
+                // column.classList.toggle("order-first", false);
+                // column.classList.add("order-last");
                 column.classList.add("order-css");
-                column.classList.toggle("order-first", false);
 
             /* Altrimenti, se larghezza dello schermo è maggiore di 1200px aggiungi la classe order-first
             se c'è, rimuovi le classi order-last e order-css */
-            } else {
-                column.classList.add("order-first");
-                column.classList.toggle("order-last", false);
-                column.classList.toggle("order-css", false);
-            }
+            } 
+            
+            // else {
+                // column.classList.add("order-first");
+                // column.classList.toggle("order-last", false);
+                // column.classList.toggle("order-css", false);
+            // }
 
             // Gestiamo i div da 1200 a 2750px 
 

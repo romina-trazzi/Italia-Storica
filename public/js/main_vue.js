@@ -162,16 +162,17 @@ var app = new Vue({
       se c'è, rimuovi la classe order-first */
 
       if (this.windowWidth < 1200) {
-        column.classList.add("order-last");
+        // column.classList.toggle("order-first", false);
+        // column.classList.add("order-last");
         column.classList.add("order-css");
-        column.classList.toggle("order-first", false);
         /* Altrimenti, se larghezza dello schermo è maggiore di 1200px aggiungi la classe order-first
         se c'è, rimuovi le classi order-last e order-css */
-      } else {
-        column.classList.add("order-first");
-        column.classList.toggle("order-last", false);
-        column.classList.toggle("order-css", false);
-      } // Gestiamo i div da 1200 a 2750px 
+      } // else {
+      // column.classList.add("order-first");
+      // column.classList.toggle("order-last", false);
+      // column.classList.toggle("order-css", false);
+      // }
+      // Gestiamo i div da 1200 a 2750px 
       // Aggiungiamo i div
 
 
