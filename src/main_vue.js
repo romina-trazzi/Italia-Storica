@@ -303,7 +303,7 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egTHUDRwYrytfCIgJ" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+                + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egUPE0hwyufHVS0kN?e=Ac7ZMn" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
@@ -313,7 +313,7 @@ let app = new Vue ({
                 +
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="https://www.libroco.it/servizi-per-librai-acquisto-libri-on-line.php" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> '
+                + '<br> </p> <a href="https://www.libroco.it/editore/ITALIA+Storica/240970" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> '
 
             }
 
