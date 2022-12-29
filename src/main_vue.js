@@ -12,7 +12,9 @@ let app = new Vue ({
             "public/img/carousel1.jpg",
             "public/img/carousel2.jpg",
             "public/img/carousel3.jpg",
-            "public/img/carousel4.jpg"
+            "public/img/carousel4.jpg",
+            "public/img/carousel5.jpg",
+            "public/img/carousel6.jpg"
         ],
 
         libri: [
@@ -69,7 +71,31 @@ let app = new Vue ({
                 "descrizione": "Hanna Reitsch, già detentrice negli anni 1920-1930 di un gran numero di primati di volo a vela, pilotò quale pilota collaudatrice quasi tutti gli aerei militari tedeschi durante la seconda guerra mondiale, dal famoso caccia Focke-Wulf Fw 190 al gigantesco aliante da trasporto Me 321 'Gigant' al pericoloso aereo a razzo Me 163 'Komet'. Svolse inoltre un ruolo importante nello sviluppo delle V1 pilotate suicide, e di altri aerei e equipaggiamenti sperimentali della Luftwaffe, Fu poi lei quella che riuscì ad atterrare nella Berlino assediata dai sovietici nell'aprile del 1945 con il Feldmaresciallo Ritter von Greim, nominato da Adolf Hitler ultimo comandante in capo della Luftwaffe. In Germania è stata una figura leggendaria, e da ogni punto di vista è uno dei più grandi piloti che il mondo abbia mai conosciuto. Questa è la sua storia personale. È uno dei libri di guerra più illuminanti che siano usciti dalla Germania, fornendo una panoramica dei piani della Luftwaffe in molte fasi del conflitto. In appendice, un approfondimento sulle donne pilota tedesche nella seconda guerra mondiale, e più di 160 fotografie in bianco e nero e colori. Prefazione di Cristina Di Giorgi.",
                 "prezzo": "26,00 euro",
                 "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
-            }
+            },
+
+            {
+                "titolo": "La Divisione “Monterosa” nelle voci dei suoi Alpini",
+                "sottotitolo": "Münsingen - Liguria - Garfagnana - Alpi occidentali - Coltano",
+                "autore": "a cura di Davide Del Giudice",
+                "pagine": "508 pagg., ill. con foto bn e mappe, Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "Questo libro contiene le memorie di guerra della Divisione Alpina “Monterosa” dell’ENR, edite nell’omonimo bollettino dei veterani della Divisione dal 1988 al 2012, anno in cui fu dato alle stampe l’ultimo numero. Il volume raccoglie queste testimonianze in presa diretta riunendole in capitoli sull’addestramento in Germania e sulle azioni nei vari fronti operativi, dalla Liguria alla Garfagnana e alle Alpi Occidentali, e raggruppandole per reparti. L’opera si conclude con i resoconti sui drammatici avvenimenti a cavallo del 25 aprile e sulla prigionia a Coltano e il ricordo degli scomparsi, ed è corredata di numerose fotografie, in parte inedite.",
+                "prezzo": "35,00 euro",
+                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
+            },
+
+            {
+                "titolo": "L’ultima Blitzkrieg",
+                "sottotitolo": "Le Campagne della Wehrmacht nei Balcani: Jugoslavia, Grecia e Creta, aprile-maggio 1941",
+                "autore": "Dr. Greiner, Generale Müller-Hillebrand, Generale von Greiffenberg",
+                "pagine": "236 p., ill. con foto bn e colori e mappe, Brossura", 
+                "anno di pubblicazione": "2022",
+                "descrizione": "Questo studio descrive le Campagne tedesche nei Balcani e la conquista di Creta entro il quadro generale della strategia politica e militare di Hitler, e si basa principalmente su documenti tedeschi originali e scritti militari postbellici del Dr. Helmut Greiner, il responsabile della compilazione del Diario di guerra della Wehrmacht, e dei Generali Burkhart Müller-Hillebrand e Hans von Greiffenberg, oltre che da materiale proveniente da fonti statunitensi e inglesi. Il testo descrive non solo le operazioni militari, ma anche le complesse manovre politiche dell’Asse, delle nazioni balcaniche e degli Alleati nel 1940-1941, e analizza la discussa questione del rapporto esistente tra le Campagne nei Balcani e l’invasione della Russia, e sulle conseguenze che ebbero sulla pianificazione e sull'esecuzione dell’Operazione Barbarossa.L’appendice iconografica presenta mappe in bianco nero e a colori, le fotografie incluse nel documento originale e una nuova sezione con numerose immagini d’archivio e dei Kriegsberichter tedeschi.",
+                "prezzo": "24,00 euro",
+                "link_IBS": "https://www.ibs.it/ultima-blitzkrieg-campagne-della-wehrmacht-libro-vari/e/9788831430234?queryId=42a060aa838ed9c0eef966786f4745a2"
+            },
+
+
 
         ],
 
@@ -303,7 +329,7 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="https://1drv.ms/b/s!Aso8wGv5JN2egUPE0hwyufHVS0kN?e=Ac7ZMn" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+                + '<br> </p> <a href="https://fm.aruba.it/ae09f8d9aa/php/connector.minimal.php?cmd=file&target=f1_cHVibGljL0lUQUxJQSBTdG9yaWNhIENBVEFMT0dPIElWLTIwMjIucGRm&_t=1672255800" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
@@ -500,7 +526,7 @@ let curSlide = 0;
 // Maximum number of slides
 let maxSlide = slides.length - 1;
 
-let bezierValue = [0, -100, -200, -300, -400];
+let bezierValue = [0, -100, -200, -300, -400, -500, -600];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach((slide, index) => {
