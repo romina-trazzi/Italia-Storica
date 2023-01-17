@@ -329,7 +329,7 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="https://fm.aruba.it/ae09f8d9aa/php/connector.minimal.php?cmd=file&target=f1_cHVibGljL0lUQUxJQSBTdG9yaWNhIENBVEFMT0dPIElWLTIwMjIucGRm&_t=1672255800" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+                + '<br> </p> <a href="public/ItaliaStoricaCatalogoIV.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
