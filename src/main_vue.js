@@ -8,80 +8,26 @@ let app = new Vue ({
     data: {
         counter: 0,
         images: [
-            "public/img/carousel0.jpg",
-            "public/img/carousel1.jpg",
+            "public/img/carousel7.jpg",
+            "public/img/carousel6.jpg",
+            "public/img/carousel5.jpg",
             "public/img/carousel2.jpg",
             "public/img/carousel3.jpg",
+            "public/img/carousel1.jpg",
+            "public/img/carousel0.jpg",
             "public/img/carousel4.jpg",
-            "public/img/carousel5.jpg",
-            "public/img/carousel6.jpg"
         ],
 
         libri: [
             {
-                "titolo": "1945 Germania anno zero",
-                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
-                "autore": "Massimo Lucioli - Wehrmacht Research Group",
-                "pagine": "542 p., ill., Brossura",
-                "anno di pubblicazione": "2021",
-                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
-                "prezzo": "36,00 euro",
-                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
-            },
-
-            {
-                "titolo": "Valhalla Express",
-                "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
-                "autore": "Woland",
-                "pagine": "224 p., ill., Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "La prima testimonianza in assoluto edita in italiano di un membro del Battaglione (poi Reggimento) 'Azov', dalla giovinezza nell'Ucraina post 1991, tra tensioni sociali e etniche, alla militanza nelle organizzazioni nazionaliste e nei gruppi Ultras e paramilitari, sino agli scontri di Maidan a Kiev, all'entrata nel Battaglione 'Azov' e i combattimenti a Mariupol e nel Donbass del 2014. Un documento essenziale per comprendere la realtà della società ucraina e delle tensioni con la Russia dopo la caduta dell'URSS, sino al conflitto attuale. In appendice una documentazione fotografica, le linee guida del movimento 'Azov' e la cronologia delle operazioni militari del Battaglione nel 2014-2015 in un documento ufficiale del reparto, e un approfondimento sul nazionalismo radicale nell'Ucraina post-sovietica a cura di Andrea Forti. Con una introduzione di contesto di Matteo Sacchi ('Il Giornale') e una postfazione di Domenico Di Tullio.",
-                "prezzo": "25,00 euro",
-                "link_IBS": "https://www.ibs.it/valhalla-express-storia-di-nazionalista-libro-woland/e/9788831430210?queryId=8053636d6343d3cd98f2705733c09834"
-            },
-
-            {
-                "titolo": "Profeti inascoltati del Novecento",
-                "sottotitolo": "Sessantasei personalità fuori dagli schemi illustrate dai disegni di Dionisio di Francescantonio e da approfondimenti di intellettuali, scrittori e critici d'arte",
-                "autore": "AA. VV.",
-                "pagine": "230 p., ill., Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "La rassegna 'Profeti inascoltati del Novecento' collega pensatori liberi ed eretici, conservatori di valori e non di costumi, e di integrità morale che costituisce l'unica forma possibile di pensiero, a un disegnatore che ne ha eseguito il volto, le ansie e le riflessioni, e ad altri scrittori che ne hanno interpretato lo spirito. Da Jünger a Conrad, da Pound a Borges, da Flaiano alla Campo, da Bernanos a Camus. Un Olimpo siffatto aveva illustrato, impavido, Tullio Pericoli. Oggi tocca a Dionisio di Francescantonio con il disegno e ad altri, come Stenio Solinas, con le parole. L'arte pretende quella libertà di espressione che personaggi scomodi come Louis-Ferdinand Céline, Hannah Arendt, Filippo Tommaso Marinetti, hanno coraggiosamente e diversamente testimoniato, anche divisi dalle violentissime vicende storiche del Novecento. Non posso che guardare con favore, quindi, i ritratti - accompagnati dagli approfondimenti di apprezzati pensatori e amici come Pietrangelo Buttafuoco, Gianfranco de Turris, Luigi Iannone e altri - di Dionisio di Francescantonio, così vivi ed espressivi, lucenti nel buio di un'epoca senza maestri. (dalla prefazione di Vittorio Sgarbi)",
-                "prezzo": "29,00 euro",
-                "link_IBS": "https://www.ibs.it/profeti-inascoltati-del-novecento-sessantasei-libro-vari/e/9788831430227?queryId=d6e83c11b35a93c4d416f6d7b7b5968a"
-            },
-
-            {
-                "titolo": "Il sognatore con l'elmetto",
-                "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
-                "autore": "Christian de La Mazière",
-                "pagine": "402 p., ill., Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
-                "prezzo": "25,00 euro",
-                "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
-            },
-
-            {
-                "titolo": "VOLARE, LA MIA VITA",
-                "sottotitolo": "Le memorie della famosa pilota collaudatrice della Luftwaffe",
-                "autore": "Hanna Reitsch",
-                "pagine": "278 p., ill., Brossura",
-                "anno di pubblicazione": "2021",
-                "descrizione": "Hanna Reitsch, già detentrice negli anni 1920-1930 di un gran numero di primati di volo a vela, pilotò quale pilota collaudatrice quasi tutti gli aerei militari tedeschi durante la seconda guerra mondiale, dal famoso caccia Focke-Wulf Fw 190 al gigantesco aliante da trasporto Me 321 'Gigant' al pericoloso aereo a razzo Me 163 'Komet'. Svolse inoltre un ruolo importante nello sviluppo delle V1 pilotate suicide, e di altri aerei e equipaggiamenti sperimentali della Luftwaffe, Fu poi lei quella che riuscì ad atterrare nella Berlino assediata dai sovietici nell'aprile del 1945 con il Feldmaresciallo Ritter von Greim, nominato da Adolf Hitler ultimo comandante in capo della Luftwaffe. In Germania è stata una figura leggendaria, e da ogni punto di vista è uno dei più grandi piloti che il mondo abbia mai conosciuto. Questa è la sua storia personale. È uno dei libri di guerra più illuminanti che siano usciti dalla Germania, fornendo una panoramica dei piani della Luftwaffe in molte fasi del conflitto. In appendice, un approfondimento sulle donne pilota tedesche nella seconda guerra mondiale, e più di 160 fotografie in bianco e nero e colori. Prefazione di Cristina Di Giorgi.",
-                "prezzo": "26,00 euro",
-                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
-            },
-
-            {
-                "titolo": "La Divisione “Monterosa” nelle voci dei suoi Alpini",
-                "sottotitolo": "Münsingen - Liguria - Garfagnana - Alpi occidentali - Coltano",
-                "autore": "a cura di Davide Del Giudice",
-                "pagine": "508 pagg., ill. con foto bn e mappe, Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "Questo libro contiene le memorie di guerra della Divisione Alpina “Monterosa” dell’ENR, edite nell’omonimo bollettino dei veterani della Divisione dal 1988 al 2012, anno in cui fu dato alle stampe l’ultimo numero. Il volume raccoglie queste testimonianze in presa diretta riunendole in capitoli sull’addestramento in Germania e sulle azioni nei vari fronti operativi, dalla Liguria alla Garfagnana e alle Alpi Occidentali, e raggruppandole per reparti. L’opera si conclude con i resoconti sui drammatici avvenimenti a cavallo del 25 aprile e sulla prigionia a Coltano e il ricordo degli scomparsi, ed è corredata di numerose fotografie, in parte inedite.",
-                "prezzo": "35,00 euro",
-                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
+                "titolo": "Il mulo",
+                "sottotitolo": "L'ibrido alpino",
+                "autore": "Fabio Palladini",
+                "pagine": "190 p., ill., Brossura",
+                "anno di pubblicazione": "2023",
+                "descrizione": "«Quando ho letto il titolo del libro del Generale Fabio Palladini, ho immediatamente apprezzato l’accostamento del concetto di ibrido con la figura del mulo, per secoli supporto indispensabile per i trasporti in ambiente montano. Nello stesso tempo mi sono imbattuto in nozioni che si apprendevano principalmente in scuderia, ma anche nel cortile delle caserme delle Truppe Alpine, così come nelle marce di addestramento, durante le escursioni invernali ed estive e le scuole tiro. Condivido lo spirito con cui questo libro è stato scritto, ovvero far ritornare alla mente ricordi di vita militare, di “naja alpina”, come la definisce l’Autore, ma, soprattutto, ho colto il messaggio di fornire, a chi non ne fosse a conoscenza, un motivo di riflessione sul ruolo del mulo nei Reparti Alpini. La scuderia era scuola di vita e chi si è approcciato ai muli ha sicuramente imparato anche a conoscere meglio gli uomini. Pertanto, aldilà di un doveroso inquadramento storico sull’impiego del mulo nel Regio Esercito (il cui inizio coincide con la nascita degli Alpini nel 1872), il libro riporta le conoscenze e le tecniche che erano alla base del suo impiego nelle Batterie di Artiglieria da Montagna e nelle compagnie mortai dei Battaglioni Alpini e tratteggia con dovizia di particolari, noti solo a chi ha vissuto quella bellissima realtà, i problemi che comportava il movimento di unità someggiate in terreni vari e nelle più diverse condizioni ambientali». Dalla prefazione del Presidente Associazione Nazionale Alpini Sebastiano Favero.",
+                "prezzo": "24,00 euro",
+                "link_IBS": "https://www.ibs.it/mulo-ibrido-alpino-libro-fabio-palladini/e/9788831430265"
             },
 
             {
@@ -95,7 +41,71 @@ let app = new Vue ({
                 "link_IBS": "https://www.ibs.it/ultima-blitzkrieg-campagne-della-wehrmacht-libro-vari/e/9788831430234?queryId=42a060aa838ed9c0eef966786f4745a2"
             },
 
+            {
+                "titolo": "La Divisione “Monterosa” nelle voci dei suoi Alpini",
+                "sottotitolo": "Münsingen - Liguria - Garfagnana - Alpi occidentali - Coltano",
+                "autore": "a cura di Davide Del Giudice",
+                "pagine": "508 pagg., ill. con foto bn e mappe, Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "Questo libro contiene le memorie di guerra della Divisione Alpina “Monterosa” dell’ENR, edite nell’omonimo bollettino dei veterani della Divisione dal 1988 al 2012, anno in cui fu dato alle stampe l’ultimo numero. Il volume raccoglie queste testimonianze in presa diretta riunendole in capitoli sull’addestramento in Germania e sulle azioni nei vari fronti operativi, dalla Liguria alla Garfagnana e alle Alpi Occidentali, e raggruppandole per reparti. L’opera si conclude con i resoconti sui drammatici avvenimenti a cavallo del 25 aprile e sulla prigionia a Coltano e il ricordo degli scomparsi, ed è corredata di numerose fotografie, in parte inedite.",
+                "prezzo": "35,00 euro",
+                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
+            },     
+            
+            {
+                "titolo": "Profeti inascoltati del Novecento",
+                "sottotitolo": "Sessantasei personalità fuori dagli schemi illustrate dai disegni di Dionisio di Francescantonio e da approfondimenti di intellettuali, scrittori e critici d'arte",
+                "autore": "AA. VV.",
+                "pagine": "230 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "La rassegna 'Profeti inascoltati del Novecento' collega pensatori liberi ed eretici, conservatori di valori e non di costumi, e di integrità morale che costituisce l'unica forma possibile di pensiero, a un disegnatore che ne ha eseguito il volto, le ansie e le riflessioni, e ad altri scrittori che ne hanno interpretato lo spirito. Da Jünger a Conrad, da Pound a Borges, da Flaiano alla Campo, da Bernanos a Camus. Un Olimpo siffatto aveva illustrato, impavido, Tullio Pericoli. Oggi tocca a Dionisio di Francescantonio con il disegno e ad altri, come Stenio Solinas, con le parole. L'arte pretende quella libertà di espressione che personaggi scomodi come Louis-Ferdinand Céline, Hannah Arendt, Filippo Tommaso Marinetti, hanno coraggiosamente e diversamente testimoniato, anche divisi dalle violentissime vicende storiche del Novecento. Non posso che guardare con favore, quindi, i ritratti - accompagnati dagli approfondimenti di apprezzati pensatori e amici come Pietrangelo Buttafuoco, Gianfranco de Turris, Luigi Iannone e altri - di Dionisio di Francescantonio, così vivi ed espressivi, lucenti nel buio di un'epoca senza maestri. (dalla prefazione di Vittorio Sgarbi)",
+                "prezzo": "29,00 euro",
+                "link_IBS": "https://www.ibs.it/profeti-inascoltati-del-novecento-sessantasei-libro-vari/e/9788831430227?queryId=d6e83c11b35a93c4d416f6d7b7b5968a"
+            },
+            
+            {
+                "titolo": "Il sognatore con l'elmetto",
+                "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
+                "autore": "Christian de La Mazière",
+                "pagine": "402 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
+                "prezzo": "25,00 euro",
+                "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
+            },
+            
+            {  
+                "titolo": "Valhalla Express",
+                "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
+                "autore": "Woland",
+                "pagine": "224 p., ill., Brossura",
+                "anno di pubblicazione": "2022",
+                "descrizione": "La prima testimonianza in assoluto edita in italiano di un membro del Battaglione (poi Reggimento) 'Azov', dalla giovinezza nell'Ucraina post 1991, tra tensioni sociali e etniche, alla militanza nelle organizzazioni nazionaliste e nei gruppi Ultras e paramilitari, sino agli scontri di Maidan a Kiev, all'entrata nel Battaglione 'Azov' e i combattimenti a Mariupol e nel Donbass del 2014. Un documento essenziale per comprendere la realtà della società ucraina e delle tensioni con la Russia dopo la caduta dell'URSS, sino al conflitto attuale. In appendice una documentazione fotografica, le linee guida del movimento 'Azov' e la cronologia delle operazioni militari del Battaglione nel 2014-2015 in un documento ufficiale del reparto, e un approfondimento sul nazionalismo radicale nell'Ucraina post-sovietica a cura di Andrea Forti. Con una introduzione di contesto di Matteo Sacchi ('Il Giornale') e una postfazione di Domenico Di Tullio.",
+                "prezzo": "25,00 euro",
+                "link_IBS": "https://www.ibs.it/valhalla-express-storia-di-nazionalista-libro-woland/e/9788831430210?queryId=8053636d6343d3cd98f2705733c09834"
+            },
 
+            {
+                "titolo": "1945 Germania anno zero",
+                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
+                "autore": "Massimo Lucioli - Wehrmacht Research Group",
+                "pagine": "542 p., ill., Brossura",
+                "anno di pubblicazione": "2021",
+                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
+                "prezzo": "36,00 euro",
+                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
+            },
+
+            {
+                "titolo": "Volare, la mia vita",
+                "sottotitolo": "Le memorie della famosa pilota collaudatrice della Luftwaffe",
+                "autore": "Hanna Reitsch",
+                "pagine": "278 p., ill., Brossura",
+                "anno di pubblicazione": "2021",
+                "descrizione": "Hanna Reitsch, già detentrice negli anni 1920-1930 di un gran numero di primati di volo a vela, pilotò quale pilota collaudatrice quasi tutti gli aerei militari tedeschi durante la seconda guerra mondiale, dal famoso caccia Focke-Wulf Fw 190 al gigantesco aliante da trasporto Me 321 'Gigant' al pericoloso aereo a razzo Me 163 'Komet'. Svolse inoltre un ruolo importante nello sviluppo delle V1 pilotate suicide, e di altri aerei e equipaggiamenti sperimentali della Luftwaffe, Fu poi lei quella che riuscì ad atterrare nella Berlino assediata dai sovietici nell'aprile del 1945 con il Feldmaresciallo Ritter von Greim, nominato da Adolf Hitler ultimo comandante in capo della Luftwaffe. In Germania è stata una figura leggendaria, e da ogni punto di vista è uno dei più grandi piloti che il mondo abbia mai conosciuto. Questa è la sua storia personale. È uno dei libri di guerra più illuminanti che siano usciti dalla Germania, fornendo una panoramica dei piani della Luftwaffe in molte fasi del conflitto. In appendice, un approfondimento sulle donne pilota tedesche nella seconda guerra mondiale, e più di 160 fotografie in bianco e nero e colori. Prefazione di Cristina Di Giorgi.",
+                "prezzo": "26,00 euro",
+                "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
+            }
 
         ],
 
@@ -246,7 +256,7 @@ let app = new Vue ({
 
             // Gestiamo i div da 1200 a 2750px 
 
-           // Aggiungiamo i div
+            // Aggiungiamo i div
             if (this.windowWidth >= 2001) {
 
                 let divNode = document.querySelectorAll("#book_main > div");
@@ -329,7 +339,7 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="public/ItaliaStoricaCatalogoIV.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+                + '<br> </p> <a href="public/ItaliaStoricaCatalogoIV-2022.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
@@ -526,7 +536,7 @@ let curSlide = 0;
 // Maximum number of slides
 let maxSlide = slides.length - 1;
 
-let bezierValue = [0, -100, -200, -300, -400, -500, -600];
+let bezierValue = [0, -100, -200, -300, -400, -500, -600, -700];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach((slide, index) => {
