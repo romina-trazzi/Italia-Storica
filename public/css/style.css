@@ -719,7 +719,6 @@ body main .personal .boss {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto auto;
-  padding: 0 80px;
 }
 body main .personal #pic {
   padding: 0 50px 0 50px;

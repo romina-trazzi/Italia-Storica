@@ -8,17 +8,27 @@ let app = new Vue ({
     data: {
         counter: 0,
         images: [
-            "public/img/carousel7.jpg",
-            "public/img/carousel6.jpg",
-            "public/img/carousel5.jpg",
+            "public/img/carousel0.jpg",
+            "public/img/carousel1.jpg",
             "public/img/carousel2.jpg",
             "public/img/carousel3.jpg",
-            "public/img/carousel1.jpg",
-            "public/img/carousel0.jpg",
             "public/img/carousel4.jpg",
+            "public/img/carousel5.jpg",
+            "public/img/carousel6.jpg",
         ],
 
         libri: [
+            {
+                "titolo": "ACHTUNG - PANZER!",
+                "sottotitolo": "Sviluppo, tattiche e potenziale operativo delle forze corazzate",
+                "autore": "Heinz Guderian",
+                "pagine": "286 pagg., ill. bn e col",
+                "anno di pubblicazione": "2023",
+                "descrizione": "Achtung – Panzer! è uno dei più significativi libri a carattere teorico-militare del XX secolo. Heinz Guderian raffinò le idee in esso contenute in quindici anni di studi sulla evoluzione delle tattiche di combattimento delle forze meccanizzate, a partire dalle loro origini nella prima guerra mondiale fino al 1937, anno della pubblicazione. Con questo libro, egli cercò di dimostrare che solo l’uso intelligente di formazioni corazzate avrebbe in futuro permesso alla Germania di conseguire vittorie rapide e decisive, evitando rovinose guerre d’attrito come quella combattuta nel 1914-1918. Malgrado nelle alte sfere della Wehrmacht un certo numero di Ufficiali di idee conservatrici mantenesse un atteggiamento scettico riguardo alle teorie di Guderian, allo scoppio della seconda guerra mondiale egli aveva ormai ottenuto un largo consenso. Fu così che negli anni vittoriosi tra il 1939 e il 1942 le Panzer-Division furono la punta di diamante dell’Esercito tedesco. Questa nuova edizione italiana presenta un’ampliata appendice iconografica con fotografie in bianco e nero e a colori, oltre a mappe e illustrazioni dell’edizione originale tedesca.",
+                "prezzo": "32,00 euro",
+                "link_IBS": "https://www.ibs.it/achtung-panzer-sviluppo-tattiche-potenziale-libro-heinz-guderian/e/9788831430272"
+            },
+
             {
                 "titolo": "Il mulo",
                 "sottotitolo": "L'ibrido alpino",
@@ -53,17 +63,6 @@ let app = new Vue ({
             },     
             
             {
-                "titolo": "Profeti inascoltati del Novecento",
-                "sottotitolo": "Sessantasei personalità fuori dagli schemi illustrate dai disegni di Dionisio di Francescantonio e da approfondimenti di intellettuali, scrittori e critici d'arte",
-                "autore": "AA. VV.",
-                "pagine": "230 p., ill., Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "La rassegna 'Profeti inascoltati del Novecento' collega pensatori liberi ed eretici, conservatori di valori e non di costumi, e di integrità morale che costituisce l'unica forma possibile di pensiero, a un disegnatore che ne ha eseguito il volto, le ansie e le riflessioni, e ad altri scrittori che ne hanno interpretato lo spirito. Da Jünger a Conrad, da Pound a Borges, da Flaiano alla Campo, da Bernanos a Camus. Un Olimpo siffatto aveva illustrato, impavido, Tullio Pericoli. Oggi tocca a Dionisio di Francescantonio con il disegno e ad altri, come Stenio Solinas, con le parole. L'arte pretende quella libertà di espressione che personaggi scomodi come Louis-Ferdinand Céline, Hannah Arendt, Filippo Tommaso Marinetti, hanno coraggiosamente e diversamente testimoniato, anche divisi dalle violentissime vicende storiche del Novecento. Non posso che guardare con favore, quindi, i ritratti - accompagnati dagli approfondimenti di apprezzati pensatori e amici come Pietrangelo Buttafuoco, Gianfranco de Turris, Luigi Iannone e altri - di Dionisio di Francescantonio, così vivi ed espressivi, lucenti nel buio di un'epoca senza maestri. (dalla prefazione di Vittorio Sgarbi)",
-                "prezzo": "29,00 euro",
-                "link_IBS": "https://www.ibs.it/profeti-inascoltati-del-novecento-sessantasei-libro-vari/e/9788831430227?queryId=d6e83c11b35a93c4d416f6d7b7b5968a"
-            },
-            
-            {
                 "titolo": "Il sognatore con l'elmetto",
                 "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
                 "autore": "Christian de La Mazière",
@@ -74,17 +73,6 @@ let app = new Vue ({
                 "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
             },
             
-            {  
-                "titolo": "Valhalla Express",
-                "sottotitolo": "La storia di un nazionalista, rivoluzionario e volontario ucraino nel Battaglione «Azov»",
-                "autore": "Woland",
-                "pagine": "224 p., ill., Brossura",
-                "anno di pubblicazione": "2022",
-                "descrizione": "La prima testimonianza in assoluto edita in italiano di un membro del Battaglione (poi Reggimento) 'Azov', dalla giovinezza nell'Ucraina post 1991, tra tensioni sociali e etniche, alla militanza nelle organizzazioni nazionaliste e nei gruppi Ultras e paramilitari, sino agli scontri di Maidan a Kiev, all'entrata nel Battaglione 'Azov' e i combattimenti a Mariupol e nel Donbass del 2014. Un documento essenziale per comprendere la realtà della società ucraina e delle tensioni con la Russia dopo la caduta dell'URSS, sino al conflitto attuale. In appendice una documentazione fotografica, le linee guida del movimento 'Azov' e la cronologia delle operazioni militari del Battaglione nel 2014-2015 in un documento ufficiale del reparto, e un approfondimento sul nazionalismo radicale nell'Ucraina post-sovietica a cura di Andrea Forti. Con una introduzione di contesto di Matteo Sacchi ('Il Giornale') e una postfazione di Domenico Di Tullio.",
-                "prezzo": "25,00 euro",
-                "link_IBS": "https://www.ibs.it/valhalla-express-storia-di-nazionalista-libro-woland/e/9788831430210?queryId=8053636d6343d3cd98f2705733c09834"
-            },
-
             {
                 "titolo": "1945 Germania anno zero",
                 "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
@@ -536,7 +524,7 @@ let curSlide = 0;
 // Maximum number of slides
 let maxSlide = slides.length - 1;
 
-let bezierValue = [0, -100, -200, -300, -400, -500, -600, -700];
+let bezierValue = [0, -100, -200, -300, -400, -500, -600];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach((slide, index) => {
