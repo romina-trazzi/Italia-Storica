@@ -18,11 +18,23 @@ let app = new Vue ({
         ],
 
         libri: [
+
+            {
+                "titolo": "Kommando! ",
+                "sottotitolo": "Le Forze Speciali tedesche nella Seconda guerra mondiale",
+                "autore": "James Lucas",
+                "pagine": "586 pagg, ill. bn e coloei, Euro 39,00",
+                "anno di pubblicazione": "2023",
+                "descrizione": "In questa prima edizione italiana, annotata e ampliata, del best seller dello storico militare inglese James Lucas sono ricostruite grazie a documenti d’archivio e testimonianze di veterani le operazioni delle Forze Speciali tedesche nella seconda guerra mondiale: dalle azioni commando in uniforme nemica della “Brandenburg” in Belgio, in Russia e in Nord Africa e le operazioni dei Fallschirmjäger a Eben Emael, in Tunisia e nelle Ardenne, all’attacco dei Fallschirmjäger SS al Quartier Generale del Maresciallo Tito a Drvar e le missioni dei Kommando di Otto Skorzeny. Quindi sono prese in esame le operazioni dei nuotatori d’assalto, barchini esplosivi, siluri pilotati e sommergibili tascabili delle Kleinkampfverbände della Kriegsmarine, per poi passare ai reparti aerei speciali della Luftwaffe, con le missioni segrete su ogni fronte e gli attacchi con i velivoli compositi Mistel dei piloti del Kampfgeschwader KG 200, la difesa dei cieli della Germania dei Messerschmitt Me 262 della Jagdverband JV 44 e dei caccia Rammjäger e del Sonderkommando Elbe, per terminare con le ultime, disperate azioni di guerriglia dei Werwolf e Freikorps. La coinvolgente narrazione del testo è accompagnata in questa edizione da centinaia di rare e inedite fotografie in azione dei reparti trattati, da immagini a colori di Soldbuch e Wehrpass di appartenenti alla “Brandenburg”, ai Fallschirmjäger SS e al KG 200 e altri rari documenti personali provenienti da collezioni private e da mappe, ordini di battaglia e cronologie delle operazioni.",
+                "prezzo": "39,00 euro",
+                "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
+            },
+
             {
                 "titolo": "ACHTUNG - PANZER!",
                 "sottotitolo": "Sviluppo, tattiche e potenziale operativo delle forze corazzate",
                 "autore": "Heinz Guderian",
-                "pagine": "286 pagg., ill. bn e col",
+                "pagine": "286 pagg., ill. bn e colori.",
                 "anno di pubblicazione": "2023",
                 "descrizione": "Achtung – Panzer! è uno dei più significativi libri a carattere teorico-militare del XX secolo. Heinz Guderian raffinò le idee in esso contenute in quindici anni di studi sulla evoluzione delle tattiche di combattimento delle forze meccanizzate, a partire dalle loro origini nella prima guerra mondiale fino al 1937, anno della pubblicazione. Con questo libro, egli cercò di dimostrare che solo l’uso intelligente di formazioni corazzate avrebbe in futuro permesso alla Germania di conseguire vittorie rapide e decisive, evitando rovinose guerre d’attrito come quella combattuta nel 1914-1918. Malgrado nelle alte sfere della Wehrmacht un certo numero di Ufficiali di idee conservatrici mantenesse un atteggiamento scettico riguardo alle teorie di Guderian, allo scoppio della seconda guerra mondiale egli aveva ormai ottenuto un largo consenso. Fu così che negli anni vittoriosi tra il 1939 e il 1942 le Panzer-Division furono la punta di diamante dell’Esercito tedesco. Questa nuova edizione italiana presenta un’ampliata appendice iconografica con fotografie in bianco e nero e a colori, oltre a mappe e illustrazioni dell’edizione originale tedesca.",
                 "prezzo": "32,00 euro",
@@ -71,17 +83,6 @@ let app = new Vue ({
                 "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
                 "prezzo": "25,00 euro",
                 "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
-            },
-            
-            {
-                "titolo": "1945 Germania anno zero",
-                "sottotitolo": "Atrocità e crimini di guerra Alleati nel «memorandum di Darmstadt»",
-                "autore": "Massimo Lucioli - Wehrmacht Research Group",
-                "pagine": "542 p., ill., Brossura",
-                "anno di pubblicazione": "2021",
-                "descrizione": "Nel campo di internamento americano 91 a Darmstadt, nel 1946, in segreto, su richiesta del collegio di difesa di Norimberga, fu formato un comitato di lavoro di avvocati internati, davanti al quale circa 6.000 testimoni diretti fecero dichiarazioni giurate da aprile a luglio 1946 sulle violazioni delle leggi e delle regole di guerra da parte degli Alleati: dagli eccidi dei tedeschi etnici in Polonia nel 1939 alle uccisioni dei prigionieri di guerra da parte sovietica prima - spesso con casi di torture e mutilazioni - e Alleata poi, dalle violenze sessuali e brutalità contro i civili dei soldati Alleati agli stupri di gruppo e massacri di massa sovietici nelle province orientali della Germania nel 1944-1945, sino all'applicazione delle draconiane misure punitive del piano Morgenthau e della direttiva JCS-1067 statunitense contro le 'forze nemiche disarmate' tedesche nei campi di prigionia in Germania e Francia e contro la popolazione tedesca stremata dalla guerra. Per la prima volta tale raccolta viene pubblicata in italiano, assieme a una sconvolgente raccolta di immagini, molte delle quali inedite, illustrante questi crimini di guerra e contro l'umanità spesso taciuti.",
-                "prezzo": "36,00 euro",
-                "link_IBS": "https://www.ibs.it/1945-germania-anno-zero-atrocita-libro-massimo-lucioli-wehrmacht-research-group/e/9788831430159?queryId=f13c9fb4cbe7733518753947a94e81db"
             },
 
             {
