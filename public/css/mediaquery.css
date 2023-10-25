@@ -1,4 +1,5 @@
-/* MediaQuery CSS Italia Storica */ /*=============================================
+/* MediaQuery CSS Italia Storica */
+/*=============================================
 =            HEADER MEDIA QUERY         =
 =============================================*/
 @media (max-width: 599px) {
@@ -56,28 +57,10 @@
     overflow: hidden;
   }
   header .my_jumbotron .main_title .fadeIn {
-    -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-    -webkit-animation-duration: 5s;
     animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0.3;
-    }
   }
   @keyframes fadeIn {
     0% {
@@ -112,7 +95,6 @@
     padding: 0;
   }
   header .my_jumbotron .steel_bar p {
-    position: -webkit-sticky;
     position: sticky;
     top: 29% !important;
   }
@@ -128,28 +110,10 @@
     overflow: hidden;
   }
   header .my_jumbotron .main_title .fadeIn {
-    -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
-    -webkit-animation-duration: 5s;
     animation-duration: 5s;
-    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
-    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
-  }
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0.3;
-    }
   }
   @keyframes fadeIn {
     0% {
@@ -169,7 +133,6 @@
     top: 65% !important;
   }
   header .my_jumbotron .steel_bar p {
-    position: -webkit-sticky;
     position: sticky;
     top: 29% !important;
   }
@@ -371,8 +334,7 @@
 =================================================*/
 @media (max-width: 799px) {
   main .personal #bio ul {
-    -webkit-padding-start: 0px !important;
-            padding-inline-start: 0px !important;
+    padding-inline-start: 0px !important;
   }
 }
 @media (max-width: 999px) {
@@ -380,8 +342,7 @@
     padding: 0 50px 0 50px !important;
   }
   main .personal #bio p {
-    -webkit-margin-before: 50px;
-            margin-block-start: 50px;
+    margin-block-start: 50px;
   }
 }
 @media (max-width: 999px) {

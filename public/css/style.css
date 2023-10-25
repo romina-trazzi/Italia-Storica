@@ -487,28 +487,10 @@ body header .my_jumbotron .main_title img {
   overflow: hidden;
 }
 body header .my_jumbotron .main_title .fadeIn {
-  -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  -webkit-animation-duration: 5s;
   animation-duration: 5s;
-  -webkit-animation-timing-function: ease-in;
   animation-timing-function: ease-in;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-}
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.3;
-  }
 }
 @keyframes fadeIn {
   0% {
@@ -741,10 +723,8 @@ body main .personal #bio {
   padding: 50px 50px 0 50px;
 }
 body main .personal #bio ul {
-  -webkit-padding-start: 20px;
-          padding-inline-start: 20px;
-  -webkit-margin-after: 50px;
-          margin-block-end: 50px;
+  padding-inline-start: 20px;
+  margin-block-end: 50px;
 }
 body main .personal .sponsor-title {
   padding: 0;
@@ -884,7 +864,6 @@ body main .form .contatti_container #form-container .error {
   display: none !important;
 }
 body main .form .contatti_container #map-container {
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
