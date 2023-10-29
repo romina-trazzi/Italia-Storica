@@ -6,7 +6,7 @@ let mix = require('laravel-mix');
 
 mix
 // .js('src/app.js', 'js') // Prende il file dalla cartella search, lo compila e mette il nuovo in dist\js
-.js('src/main_vue.js', 'js')
+.js('src/main_vue.js', 'js').vue({ version: 2 })
 .sass ('src/style.scss', 'css')
 .sass ('src/mediaquery.scss', 'css')
 .setPublicPath('public')
