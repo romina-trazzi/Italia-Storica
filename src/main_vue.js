@@ -328,7 +328,7 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="public/ItaliaStoricaCatalogoIV-2022.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
+                + '<br> </p> <a href="public/ItaliaStoricaCatalogoII-2023.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
 
                 +
 
