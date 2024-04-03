@@ -451,9 +451,6 @@
   }
 }
 @media (max-width: 749px) {
-  main .form .help {
-    padding-bottom: 60px !important;
-  }
   main .form .contatti_container #form-container .form-tracker {
     display: flex;
     justify-content: center;
@@ -471,9 +468,6 @@
   }
 }
 @media (min-width: 750px) and (max-width: 1650px) {
-  main .form .help {
-    padding-bottom: 60px !important;
-  }
   main .form .contatti_container #form-container form {
     margin-left: 0 !important;
     margin-bottom: 100px;

@@ -822,16 +822,14 @@ body main .form .form-title img {
   margin-left: 10px;
   margin-right: 10px;
 }
-body main .form .help {
-  padding-bottom: 150px;
-}
-body main .form .help p {
+body main .form div p {
   width: 68%;
   font-family: "Open Sans", sans-serif;
   font-size: 1.04rem;
-  text-align: left;
+  text-align: center;
   line-height: 1.5;
   color: rgb(255, 250, 240);
+  margin-bottom: 5rem;
 }
 body main .form .contatti_container {
   padding: 0;

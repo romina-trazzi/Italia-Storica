@@ -356,21 +356,22 @@ body {
             .form-title {
                 @include shieldknot;
             }
-
-            .help {
-                padding-bottom: 150px;
-
+            
+            div {
+    
                 p {
                     width: 68%;
                     font-family: "Open Sans", sans-serif;
                     font-size: 1.04rem;
-                    text-align: left;
+                    text-align: center;
                     line-height: 1.5;
                     color: map-get($color-map, text_color);
+                    margin-bottom: 5rem;
                 } 
-
             }
-
+           
+            
+        
             .contatti_container {
                 padding: 0; 
                 height: 100%;
