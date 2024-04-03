@@ -211,14 +211,14 @@ let app = new Vue ({
                 // Sostituiamo con l'HTML che divide il titolo in due
                 jumboTitleParent[0].innerHTML =
 
-                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica </h1>';
+                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
 
             } else {
 
                 // Ripristiniamo l'HTML originale
                 jumboTitleParent[0].innerHTML =
 
-                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica </h1>'
+                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica Edizioni </h1>'
             }
 
             // Sezione CORE
@@ -333,7 +333,7 @@ let app = new Vue ({
                 +
 
                 ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
+                + '<br> </p> <a href=""https://www.ibs.it/libri/editori/italia-storica-edizioni?sortPublication_date=desc"" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
 
                 +
 
