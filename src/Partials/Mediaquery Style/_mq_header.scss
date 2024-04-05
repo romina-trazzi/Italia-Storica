@@ -15,12 +15,9 @@
             .social span {
                 display: none;
             }
-        
-           
         }
     }
 }
-
 
 @media (min-width: 600px) and (max-width: 1200px) { 
     
@@ -103,143 +100,118 @@
 
 
 // Jumbotron title
-@media (max-width: 999px)  {
+
+@media (max-width: 499px) {
+    header {
+        .main_title {
+
+            h1.special_title { 
+                font-size: 6rem !important;
+                top: 20% !important;
+            }
+
+            h1.special_title_second { 
+                font-size: 4rem !important;
+                top: 56% !important;
+            }
+        }   
+    }
+}
+
+@media(min-width: 500px) and (max-width: 680px) {
+
+    header {
+        .main_title {
+            h1.special_title { 
+                font-size: 7rem;
+            }
+
+            h1.special_title_second { 
+                font-size: 5rem !important;
+            }
+        } 
+    }   
+}
+
+@media (min-width: 681px) and (max-width: 999px)  {
    
     header {
+        .main_title {
+            h1.special_title { 
+                font-size: 7rem;
+            }
+    
+            h1.special_title_second { 
+                font-size: 6rem !important;
+            }
+        } 
+    }
+}
 
+
+// Jumbotron Title position
+@media (min-width: 500px) {
+    h1.special_title {
+        top: 27% !important;  
+    }
+
+    h1.special_title_second {
+        top: 65%;
+    }
+}
+
+// Jumbotron common
+@media (max-width: 1000px) {
+    header {
         .my_jumbotron {
 
             div:nth-child(1) {
                 height: inherit;
                 width: 100%;   
             }
+        }
 
-            .main_title {
+        .main_title {
+            img {
+                height: 350px !important;
+                width: 100% !important;
+                overflow: hidden;
+            }
 
-                img {
-                    height: 350px !important;
-                    width: 100% !important;
-                    overflow: hidden;
-                }
-                
-                // Animation jumbotron //
-                .fadeIn {
-                    -webkit-animation-name: fadeIn;
-                    animation-name: fadeIn;
-                    -webkit-animation-duration: 5s;
-                    animation-duration: 5s;
-                    -webkit-animation-timing-function: ease-in;
-                    animation-timing-function: ease-in;
-                    -webkit-animation-fill-mode: both;
-                    animation-fill-mode: both;
-                    
-                    @-webkit-keyframes fadeIn {
-                        0% {opacity: 0;}
-                        50% {opacity: 1;}
-                        75% {opacity: 0.8;}
-                        100% {opacity: 0.3;}
-                    }
-                    @keyframes fadeIn {
-                        0% {opacity: 0;}
-                        50% {opacity: 1;}
-                        75% {opacity: 0.8;}
-                        100% {opacity: 0.3;}
-                    }
-                }
+            h1.special_title, h1.special_title_second { // classe con intervento di Javascript
+                text-align: center;
+                line-height: 1.2;
+                position: absolute;
+                margin: 0;
+                padding: 0;
+            }
 
-                h1.special_title { // classe con intervento di Javascript
-                    font-size: 7rem;
-                    text-align: center;
-                    line-height: 1.2;
-                    position: absolute;
-                    top: 27% !important;   
-                    margin: 0;
-                    padding: 0;
-                }
-
-                h1.special_title_second { // classe con intervento di Javascript
-                    font-size: 7rem;
-                    text-align: center;
-                    line-height: 1.2;
-                    position: absolute;
-                    top: 65% !important;   
-                    margin: 0;
-                    padding: 0;
-                }
-            } 
-            
             .steel_bar {
                 & p {
                     position: sticky;
                     top: 29% !important;
                 }
             }
-        }   
+        }
     }
 }
 
-@media (min-width: 1000px) {
-   
-    header {
 
-        .my_jumbotron {
-            
-            div:nth-child(1) {
-                height: inherit;
-                width: 100%;   
-            }
-            
-            .main_title {
-
-                img {
-                    height: 350px !important;
-                    width: 100% !important;
-                    overflow: hidden;
-                }
-                
-                // Animation jumbotron //
-                .fadeIn {
-                    -webkit-animation-name: fadeIn;
-                    animation-name: fadeIn;
-                    -webkit-animation-duration: 5s;
-                    animation-duration: 5s;
-                    -webkit-animation-timing-function: ease-in;
-                    animation-timing-function: ease-in;
-                    -webkit-animation-fill-mode: both;
-                    animation-fill-mode: both;
-                    
-                    @-webkit-keyframes fadeIn {
-                        0% {opacity: 0;}
-                        50% {opacity: 1;}
-                        75% {opacity: 0.8;}
-                        100% {opacity: 0.3;}
-                    }
-                    @keyframes fadeIn {
-                        0% {opacity: 0;}
-                        50% {opacity: 1;}
-                        75% {opacity: 0.8;}
-                        100% {opacity: 0.3;}
-                    }
-                }
-
-                h1 {
-                    top: 65% !important;
-                }
-            }
-            
-            .steel_bar {
-                & p {
-                    position: sticky;
-                    top: 29% !important;
-                }
-            }
-        }   
-    }
-}
 
 
 
 // Steel bar
+@media (min-width: 1001px) { 
+    header {
+    
+        .steel_bar {
+            & p {
+                position: sticky;
+                top: 29% !important;
+            }
+        }
+    } 
+}  
 
 @media (max-width: 1699px) { 
 

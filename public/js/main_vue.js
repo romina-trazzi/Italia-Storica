@@ -158,9 +158,9 @@ var app = new Vue({
     windowWidth: function windowWidth() {
       // Sezione JUMBOTRON
 
-      // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
+      // Se lo schermo ha una larghezza compresa tra 300px e 999px vanno cambiati l'HTML e il top% del titolo
       var jumboTitleParent = document.getElementsByClassName('main_title');
-      if (this.windowWidth >= 300 && this.windowWidth < 1000) {
+      if (this.windowWidth < 1000) {
         // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
         jumboTitleParent[0].children[1].remove();
 
@@ -168,7 +168,7 @@ var app = new Vue({
         jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
       } else {
         // Ripristiniamo l'HTML originale
-        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica Edizioni </h1>';
+        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
       }
 
       // Sezione CORE
@@ -263,7 +263,7 @@ var app = new Vue({
         cardContainer[0].children[0].remove();
 
         // Ripristiniamo i "vecchi" parent nodes con le card copiando pari l'HTML originale (nota l'operatore +=)
-        cardContainer[0].innerHTML += ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="public/ItaliaStoricaCatalogoII-2023.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' + ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href=""https://www.ibs.it/libri/editori/italia-storica-edizioni?sortPublication_date=desc"" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>' + ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.libroco.it/editore/ITALIA+Storica/240970" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> ';
+        cardContainer[0].innerHTML += ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="public/ItaliaStoricaCatalogoII-2023.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' + ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica-edizioni?sortPublication_date=desc" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>' + ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-swatchbook"></i> <hr> <h5 class="card-title">ORDINA DA DISTRIBUTORE</h5> <hr> <p class="card-text"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>' + '<br> </p> <a href="https://www.libroco.it/editore/ITALIA+Storica/240970" class="btn button orange btn-lg"> Vai su LibroCo.it</a> </div> </div> </div> ';
       }
 
       // Sezione PERSONAL

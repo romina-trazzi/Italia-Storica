@@ -189,9 +189,6 @@ let app = new Vue ({
 
 
         },
-
-       
-
     },
 
     watch: {
@@ -200,10 +197,10 @@ let app = new Vue ({
 
             // Sezione JUMBOTRON
 
-            // Se lo schermo ha una larghezza compresa tra 625px e 999px vanno cambiati l'HTML e il top% del titolo
+            // Se lo schermo ha una larghezza compresa tra 300px e 999px vanno cambiati l'HTML e il top% del titolo
             let jumboTitleParent = document.getElementsByClassName('main_title');
 
-            if (this.windowWidth >= 300 && this.windowWidth < 1000) {
+             if (this.windowWidth < 1000) {
 
                 // Eliminiamo il nodo che contiene il titolo formattato male selezionando il genitore
                 jumboTitleParent[0].children[1].remove();
@@ -218,7 +215,7 @@ let app = new Vue ({
                 // Ripristiniamo l'HTML originale
                 jumboTitleParent[0].innerHTML =
 
-                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1> ITALIA Storica Edizioni </h1>'
+                '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>'
             }
 
             // Sezione CORE
@@ -333,7 +330,7 @@ let app = new Vue ({
                 +
 
                 ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href=""https://www.ibs.it/libri/editori/italia-storica-edizioni?sortPublication_date=desc"" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
+                + '<br> </p> <a href="https://www.ibs.it/libri/editori/italia-storica-edizioni?sortPublication_date=desc" class="btn button orange btn-lg"> Vai su IBS.it</a> </div> </div> </div> </hr>'
 
                 +
 

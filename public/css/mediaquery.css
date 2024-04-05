@@ -46,93 +46,64 @@
     display: none;
   }
 }
-@media (max-width: 999px) {
+@media (max-width: 499px) {
+  header .main_title h1.special_title {
+    font-size: 6rem !important;
+    top: 20% !important;
+  }
+  header .main_title h1.special_title_second {
+    font-size: 4rem !important;
+    top: 56% !important;
+  }
+}
+@media (min-width: 500px) and (max-width: 680px) {
+  header .main_title h1.special_title {
+    font-size: 7rem;
+  }
+  header .main_title h1.special_title_second {
+    font-size: 5rem !important;
+  }
+}
+@media (min-width: 681px) and (max-width: 999px) {
+  header .main_title h1.special_title {
+    font-size: 7rem;
+  }
+  header .main_title h1.special_title_second {
+    font-size: 6rem !important;
+  }
+}
+@media (min-width: 500px) {
+  h1.special_title {
+    top: 27% !important;
+  }
+  h1.special_title_second {
+    top: 65%;
+  }
+}
+@media (max-width: 1000px) {
   header .my_jumbotron div:nth-child(1) {
     height: inherit;
     width: 100%;
   }
-  header .my_jumbotron .main_title img {
+  header .main_title img {
     height: 350px !important;
     width: 100% !important;
     overflow: hidden;
   }
-  header .my_jumbotron .main_title .fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0.3;
-    }
-  }
-  header .my_jumbotron .main_title h1.special_title {
-    font-size: 7rem;
+  header .main_title h1.special_title, header .main_title h1.special_title_second {
     text-align: center;
     line-height: 1.2;
     position: absolute;
-    top: 27% !important;
     margin: 0;
     padding: 0;
   }
-  header .my_jumbotron .main_title h1.special_title_second {
-    font-size: 7rem;
-    text-align: center;
-    line-height: 1.2;
-    position: absolute;
-    top: 65% !important;
-    margin: 0;
-    padding: 0;
-  }
-  header .my_jumbotron .steel_bar p {
+  header .main_title .steel_bar p {
     position: sticky;
     top: 29% !important;
   }
 }
-@media (min-width: 1000px) {
-  header .my_jumbotron div:nth-child(1) {
-    height: inherit;
-    width: 100%;
-  }
-  header .my_jumbotron .main_title img {
-    height: 350px !important;
-    width: 100% !important;
-    overflow: hidden;
-  }
-  header .my_jumbotron .main_title .fadeIn {
-    animation-name: fadeIn;
-    animation-duration: 5s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: both;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    75% {
-      opacity: 0.8;
-    }
-    100% {
-      opacity: 0.3;
-    }
-  }
-  header .my_jumbotron .main_title h1 {
-    top: 65% !important;
-  }
-  header .my_jumbotron .steel_bar p {
+@media (min-width: 1001px) {
+  header .steel_bar p {
     position: sticky;
     top: 29% !important;
   }
