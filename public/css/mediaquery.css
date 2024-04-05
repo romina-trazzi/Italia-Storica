@@ -223,16 +223,6 @@
     order: 0 !important;
   }
 }
-@media (min-width: 1200px) {
-  main .core {
-    margin-bottom: 12rem !important;
-  }
-}
-@media (min-width: 1450px) {
-  main .core {
-    margin-bottom: 8rem !important;
-  }
-}
 @media (max-width: 799px) {
   main .core .carousel_button {
     display: none !important;

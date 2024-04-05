@@ -152,6 +152,12 @@ body {
                 height: auto;
                 display: grid;
                 justify-content: center;
+                
+                #book_change {
+                    overflow: scroll;
+	                white-space: wrap;
+	                text-overflow: ellipsis;
+                }
 
                 #carousel {
                     width: 100%;
