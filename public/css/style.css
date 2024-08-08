@@ -486,26 +486,6 @@ body header .my_jumbotron .main_title img {
   width: 100% !important;
   overflow: hidden;
 }
-body header .my_jumbotron .main_title .fadeIn {
-  animation-name: fadeIn;
-  animation-duration: 5s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: both;
-}
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 0.3;
-  }
-}
 body header .my_jumbotron .main_title h1 {
   font-size: 7rem;
   text-align: center;
@@ -587,12 +567,10 @@ body main .core #book_main .book_details div #about {
   line-height: 1.6;
   text-transform: none;
   margin: 20px 0 20px 0;
-  word-spacing: 0.03em;
+  word-spacing: 0.05em;
 }
 body main .core #book_main #book_change {
-  overflow: scroll;
-  white-space: wrap;
-  text-overflow: ellipsis;
+  overflow: auto;
 }
 body main .core #book_main #carousel {
   width: 100%;

@@ -15,8 +15,44 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg", "public/img/carousel5.jpg", "public/img/carousel6.jpg"],
+    images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg", "public/img/carousel5.jpg", "public/img/carousel6.jpg", "public/img/carousel7.jpg"],
     libri: [{
+      "titolo": "I Tiger delle Waffen SS in azione",
+      "sottotitolo": "Dai diari di guerra dei carristi delle Waffen-SS Ernst Streng e Heinz Trautmann. Russia 1943-1944 - Normandia 1944 -Germania 1945",
+      "autore": "Wilhelm Fey",
+      "pagine": "302 pagg, ill. bn e colori.",
+      "anno di pubblicazione": "2024",
+      "descrizione": "Queste pagine sono la testimonianza diretta di un giovanissimo equipaggio di un Tiger in tutti i punti più cruciali dei vari teatri di guerra da est a ovest nel 1943-1945, terminante nella zona dei drammatici scontri della disfatta finale intorno a Berlino. Troviamo questi stessi carristi negli attacchi fulminei contro Charkov e Bielgorod nel 1943 e nei combattimenti difensivi tra Kiev e Zhitomir dell'inverno 1943-1944; viviamo con loro l’assalto massiccio delle truppe Alleate sbarcate in Normandia e i contrattacchi dei Panzer e Grenadiere sotto la martellante supremazia numerica, aerea e d’artiglieria nemica; li ritroviamo infine nelle disperate azioni per aprire un varco alla 9ª Armata attraverso le masse dell’Esercito russo tra l'Oder e l'Elba nel 1945. Edizione riveduta di un classico storico-militare ampliata con decine di rare fotografie, profili a colori e mappe e in appendice una cronistoria delle unità protagoniste, ossia la schwere Kompanie della SS-Panzergrenadier-Division “Das Reich” e dello schwere SS-Panzer-Abteilung 102/502, ordini di battaglia e due testimonianze inedite.",
+      "prezzo": "29,00 euro",
+      "link_IBS": "https://www.ibs.it/tiger-delle-waffen-ss-in-libro-wilhelm-fey/e/9788831430388?inventoryId=725611650&queryId=890b5169be2dafa0e5dcb05c15b4e703"
+    }, {
+      "titolo": "Aprile 1945: Garfagnana addio!",
+      "sottotitolo": "Gli ultimi combattimenti sulla Linea Gotica del Battaglione “Intra” della Divisione “Monterosa”",
+      "autore": "Pierfelice Cantori",
+      "pagine": "164 pagg, ill. bn e colori.",
+      "anno di pubblicazione": "2024",
+      "descrizione": "Dopo molti anni vedono finalmente la luce le memorie di Garfagnana del Capitano Pierfelice Cantori, Comandante della 12a Compagnia del Battaglione “Intra” della Divisione Alpina “Monterosa”, dattiloscritte nelle pause delle ultime vicende del fronte della Linea Gotica sulle Apuane nel 1945. Sono pagine immediate, incisive, a volte taglienti, altre velate di emozione, frenata dal suo essere Ufficiale fin nell'intimo. La narrazione si focalizza nell'ultima difesa, nel cedimento elastico del fronte, nella difficile ritirata, culminata nei dintorni di Fornovo con la resa con l'onore delle armi da parte dei soldati brasiliani della Força Expedicionária Brasileira, vecchi nemici incontrati in Garfagnana. In appendice, una cronistoria della 12a Compagnia del Battaglione “Intra”, rare immagini del Reparto e fotografie attuali dei luoghi dei combattimenti. ",
+      "prezzo": "22,00 euro",
+      "link_IBS": "https://www.ibs.it/aprile-1945-garfagnana-addio-ultimi-libro-pierfelice-cantori/e/9788831430357?inventoryId=736175611&queryId=d35dcd2029563a2d375d50e33c4e1c77"
+    }, {
+      "titolo": "Al fianco di Hitler",
+      "sottotitolo": "Le Memorie dell’Aiutante della Luftwaffe di Hitler 1937-1945",
+      "autore": "Nicolaus von Below",
+      "pagine": "328 pagg, ill. bn.",
+      "anno di pubblicazione": "2024",
+      "descrizione": "Per quasi otto anni, dal 16 giugno 1937 al 29 aprile 1945, Nicolaus von Below prestò servizio come Aiutante della Luftwaffe presso il Führer, sperimentando in stretta vicinanza ad Hitler l’ascesa e la caduta della Germania nazionalsocialista. Le sue memorie, qui pubblicate per la prima volta in edizione italiana, sono un documento importante e già largamente utilizzato dagli studiosi del nazionalsocialismo, e meritano attenzione sotto diversi profili. In primo luogo esse, al pari per esempio di quelle di Albert Speer, sono significative per capire la fascinazione che Hitler riuscì ad esercitare su personaggi appartenenti non all’ambiente nazionalsocialista vero e proprio, ma piuttosto a quello conservatore. Com’era, appunto, il caso di von Below. Queste memorie offrono, inoltre, uno sguardo della vita quotidiana all’interno della cerchia di collaboratori e intimi del Führer, ma fanno capire anche l’esistenza di profonde rivalità, contrasti, giochi di potere sviluppatisi all’ombra del dittatore. Con una prefazione del Professor Francesco Perfetti. ",
+      "prezzo": "26,00 euro",
+      "link_IBS": "https://www.ibs.it/al-fianco-di-hitler-memorie-libro-nicolaus-von-below/e/9788831430296?inventoryId=661932557&queryId=d35dcd2029563a2d375d50e33c4e1c77"
+    }, {
+      "titolo": "Kommando! ",
+      "sottotitolo": "Le Forze Speciali tedesche nella Seconda guerra mondiale",
+      "autore": "James Lucas",
+      "pagine": "586 pagg, ill. bn e colori.",
+      "anno di pubblicazione": "2023",
+      "descrizione": "In questa prima edizione italiana, annotata e ampliata, del best seller dello storico militare inglese James Lucas sono ricostruite grazie a documenti d’archivio e testimonianze di veterani le operazioni delle Forze Speciali tedesche nella seconda guerra mondiale: dalle azioni commando in uniforme nemica della “Brandenburg” in Belgio, in Russia e in Nord Africa e le operazioni dei Fallschirmjäger a Eben Emael, in Tunisia e nelle Ardenne, all’attacco dei Fallschirmjäger SS al Quartier Generale del Maresciallo Tito a Drvar e le missioni dei Kommando di Otto Skorzeny. Quindi sono prese in esame le operazioni dei nuotatori d’assalto, barchini esplosivi, siluri pilotati e sommergibili tascabili delle Kleinkampfverbände della Kriegsmarine, per poi passare ai reparti aerei speciali della Luftwaffe, con le missioni segrete su ogni fronte e gli attacchi con i velivoli compositi Mistel dei piloti del Kampfgeschwader KG 200, la difesa dei cieli della Germania dei Messerschmitt Me 262 della Jagdverband JV 44 e dei caccia Rammjäger e del Sonderkommando Elbe, per terminare con le ultime, disperate azioni di guerriglia dei Werwolf e Freikorps. La coinvolgente narrazione del testo è accompagnata in questa edizione da centinaia di rare e inedite fotografie in azione dei reparti trattati, da immagini a colori di Soldbuch e Wehrpass di appartenenti alla “Brandenburg”, ai Fallschirmjäger SS e al KG 200 e altri rari documenti personali provenienti da collezioni private e da mappe, ordini di battaglia e cronologie delle operazioni.",
+      "prezzo": "39,00 euro",
+      "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
+    }, {
       "titolo": "Kommando! ",
       "sottotitolo": "Le Forze Speciali tedesche nella Seconda guerra mondiale",
       "autore": "James Lucas",
@@ -44,41 +80,14 @@ var app = new Vue({
       "prezzo": "24,00 euro",
       "link_IBS": "https://www.ibs.it/mulo-ibrido-alpino-libro-fabio-palladini/e/9788831430265"
     }, {
-      "titolo": "L’ultima Blitzkrieg",
-      "sottotitolo": "Le Campagne della Wehrmacht nei Balcani: Jugoslavia, Grecia e Creta, aprile-maggio 1941",
-      "autore": "Dr. Greiner, Generale Müller-Hillebrand, Generale von Greiffenberg",
-      "pagine": "236 p., ill. con foto bn e colori e mappe, Brossura",
-      "anno di pubblicazione": "2022",
-      "descrizione": "Questo studio descrive le Campagne tedesche nei Balcani e la conquista di Creta entro il quadro generale della strategia politica e militare di Hitler, e si basa principalmente su documenti tedeschi originali e scritti militari postbellici del Dr. Helmut Greiner, il responsabile della compilazione del Diario di guerra della Wehrmacht, e dei Generali Burkhart Müller-Hillebrand e Hans von Greiffenberg, oltre che da materiale proveniente da fonti statunitensi e inglesi. Il testo descrive non solo le operazioni militari, ma anche le complesse manovre politiche dell’Asse, delle nazioni balcaniche e degli Alleati nel 1940-1941, e analizza la discussa questione del rapporto esistente tra le Campagne nei Balcani e l’invasione della Russia, e sulle conseguenze che ebbero sulla pianificazione e sull'esecuzione dell’Operazione Barbarossa.L’appendice iconografica presenta mappe in bianco nero e a colori, le fotografie incluse nel documento originale e una nuova sezione con numerose immagini d’archivio e dei Kriegsberichter tedeschi.",
-      "prezzo": "24,00 euro",
-      "link_IBS": "https://www.ibs.it/ultima-blitzkrieg-campagne-della-wehrmacht-libro-vari/e/9788831430234?queryId=42a060aa838ed9c0eef966786f4745a2"
-    }, {
-      "titolo": "La Divisione “Monterosa” nelle voci dei suoi Alpini",
-      "sottotitolo": "Münsingen - Liguria - Garfagnana - Alpi occidentali - Coltano",
-      "autore": "a cura di Davide Del Giudice",
-      "pagine": "508 pagg., ill. con foto bn e mappe, Brossura",
-      "anno di pubblicazione": "2022",
-      "descrizione": "Questo libro contiene le memorie di guerra della Divisione Alpina “Monterosa” dell’ENR, edite nell’omonimo bollettino dei veterani della Divisione dal 1988 al 2012, anno in cui fu dato alle stampe l’ultimo numero. Il volume raccoglie queste testimonianze in presa diretta riunendole in capitoli sull’addestramento in Germania e sulle azioni nei vari fronti operativi, dalla Liguria alla Garfagnana e alle Alpi Occidentali, e raggruppandole per reparti. L’opera si conclude con i resoconti sui drammatici avvenimenti a cavallo del 25 aprile e sulla prigionia a Coltano e il ricordo degli scomparsi, ed è corredata di numerose fotografie, in parte inedite.",
-      "prezzo": "35,00 euro",
-      "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
-    }, {
       "titolo": "Il sognatore con l'elmetto",
       "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
       "autore": "Christian de La Mazière",
       "pagine": "402 p., ill., Brossura",
       "anno di pubblicazione": "2022",
       "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
-      "prezzo": "25,00 euro",
+      "prezzo": "27,00 euro",
       "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
-    }, {
-      "titolo": "Volare, la mia vita",
-      "sottotitolo": "Le memorie della famosa pilota collaudatrice della Luftwaffe",
-      "autore": "Hanna Reitsch",
-      "pagine": "278 p., ill., Brossura",
-      "anno di pubblicazione": "2021",
-      "descrizione": "Hanna Reitsch, già detentrice negli anni 1920-1930 di un gran numero di primati di volo a vela, pilotò quale pilota collaudatrice quasi tutti gli aerei militari tedeschi durante la seconda guerra mondiale, dal famoso caccia Focke-Wulf Fw 190 al gigantesco aliante da trasporto Me 321 'Gigant' al pericoloso aereo a razzo Me 163 'Komet'. Svolse inoltre un ruolo importante nello sviluppo delle V1 pilotate suicide, e di altri aerei e equipaggiamenti sperimentali della Luftwaffe, Fu poi lei quella che riuscì ad atterrare nella Berlino assediata dai sovietici nell'aprile del 1945 con il Feldmaresciallo Ritter von Greim, nominato da Adolf Hitler ultimo comandante in capo della Luftwaffe. In Germania è stata una figura leggendaria, e da ogni punto di vista è uno dei più grandi piloti che il mondo abbia mai conosciuto. Questa è la sua storia personale. È uno dei libri di guerra più illuminanti che siano usciti dalla Germania, fornendo una panoramica dei piani della Luftwaffe in molte fasi del conflitto. In appendice, un approfondimento sulle donne pilota tedesche nella seconda guerra mondiale, e più di 160 fotografie in bianco e nero e colori. Prefazione di Cristina Di Giorgi.",
-      "prezzo": "26,00 euro",
-      "link_IBS": "https://www.ibs.it/volare-mia-vita-memorie-della-libro-hanna-reitsch/e/9788831430340?queryId=1410537f87d7881c423956e81950fd60"
     }],
     // Proprietà windowWidth per salvare la dimensione dello schermo (passaggio 1)
     windowWidth: 0,
@@ -419,7 +428,7 @@ var curSlide = 0;
 
 // Maximum number of slides
 var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400, -500, -600];
+var bezierValue = [0, -100, -200, -300, -400, -500, -600, -700];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach(function (slide, index) {
@@ -548,9 +557,6 @@ function controlloForm() {
   var regx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]{2,10})$/;
   var regEmail = regx.test(email);
 
-  // Verifica l'espressione regolare.
-  console.log(regEmail);
-
   // Se tutto è ok, convalida i dati e inviali alla pagina
   if (regEmail) {
     // Costruiamo l'oggetto che conterrà i dati da inviare
@@ -570,7 +576,7 @@ function controlloForm() {
     xhr.open("POST", "form.php", true);
     xhr.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        console.log("Grazie ".concat(name, " per averci scritto. Ti risponderemo al pi\xF9 presto."));
+        alert("Grazie ".concat(name, " per averci scritto. Ti risponderemo al pi\xF9 presto."));
       }
     };
     xhr.setRequestHeader("Content-type", "multipart/form-data;", "charset=UTF-8");
