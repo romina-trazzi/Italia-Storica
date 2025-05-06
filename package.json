@@ -17,6 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/semver": "^7.5.4",
+    "browser-sync": "^2.29.3",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "eslint-webpack-plugin": "^4.0.1",
     "laravel-mix": "^6.0.3",
     "postcss": "^8.4.31",
@@ -27,6 +29,6 @@
   },
   "dependencies": {
     "node-sass": "^8.0.0",
-    "vue": "^2.7.15"
+    "vue": "^3.5.13"
   }
 }

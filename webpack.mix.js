@@ -1,6 +1,7 @@
 // webpack.mix.js
 
 let mix = require('laravel-mix');	
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 /* Prende Laravel Mix e lo salva all’interno della variabile mix */
 
@@ -14,9 +15,24 @@ mix
 
 /* Questo oggetto mix ha una serie di proprietà particolari tra cui sass */
 
+.webpackConfig({
+    plugins: [
+      new BrowserSyncPlugin({
+        server: {
+          baseDir:'./'
+        },
+        port: 3000,
+        files: [
+          'public/**/*.*',
+          'src/**/*.js',
+          'src/**/*.vue',
+          'src/**/*.scss'
+        ]
+      })
+    ]
+  })
 
 /* Importante: disabilita la compilazione automatica degli url immagine */
-
 .options({
     processCssUrls: false
 })

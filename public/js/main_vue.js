@@ -15,8 +15,25 @@ var app = new Vue({
   el: "#app",
   data: {
     counter: 0,
-    images: ["public/img/carousel0.jpg", "public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg", "public/img/carousel5.jpg", "public/img/carousel6.jpg", "public/img/carousel7.jpg"],
+    images: ["public/img/carousel1.jpg", "public/img/carousel2.jpg", "public/img/carousel3.jpg", "public/img/carousel4.jpg", "public/img/carousel5.jpg", "public/img/carousel6.jpg", "public/img/carousel7.jpg", "public/img/carousel8.jpg", "public/img/carousel9.jpg"],
     libri: [{
+      "titolo": "Louis-Ferdinand Céline",
+      "autore": "Maurice Bardèche",
+      "pagine": "322 pagg, ill. bn e colori.",
+      "anno di pubblicazione": "2025",
+      "descrizione": "Louis-Ferdinand Céline è un libro scritto da Bardèche su Céline. E Céline è il soggetto di una biografia di Bardèche. Tutto qui, di primo acchito. Generalizzando e semplificando molto la massa di pubblicazioni, dirette o indirette, da diversi anni accavallatesi sull’autore di Viaggio a termine della notte, questo “tutto qui” si potrebbe risolvere nell’aggiungere un altro Céline ai dieci, venti già esistenti. In questo caso vi è però una cosiddetta marcia in più, ovvero una componente di tutt’altra fattura basata in innumerevoli punti su un rapporto di vera e propria “complicità” e di intercondizionalità forzata riguardo le rispettive concezioni del mondo, o da queste derivanti. È fuori qualsiasi dubbio che scrivere di Céline, e comunque se ne scriva, è quantomai insidioso ed improbo; soprattutto immaginando il suo provocatorio ghigno discorde (in quanto mai è stato, mai sarebbe d’accordo su ogni parola vergata su di lui) alle nostre spalle. D’altronde... è un céliniano prezzo da pagare. Inoltre indipendentemente dal generale o dallo specifico particolare trattato dell’autore di Viaggio al termine della notte, egli si è trovato a dover subire le più difformi, sorprendenti, ridicole, dotte e strampalate interpretazioni. Al di là dell’argomento trattato, Bardèche sa bene di cosa stia anche scrivendo. La biografia non è immune affatto dalla storia, così come la storia è la grande forgiatrice di biografie singole e collettive. Ed i “due” furono peraltro in qualche modo compartecipi delle cose viste, delle cose vissute. Céline, ripetiamo, fu, ed è, uno dei maggiori scrittori in assoluto, mentre Bardèche (oltre e ben oltre la sua attività narrativa), uno dei più ferrati, fecondi critici letterari, nonché saggisti ed animatori politici, della sua epoca. (Dalla prefazione di Moreno Marchi)",
+      "prezzo": "29,00 euro",
+      "link_IBS": "https://www.ibs.it/louis-ferdinand-celine-libro-maurice-bardeche/e/9788831430371?inventoryId=830508007&queryId=7dbc90fb1fe4f6aa70580c2ff5166302"
+    }, {
+      "titolo": "Ernst Jünger nelle tempeste d’acciaio della grande guerra",
+      "sottotitolo": "Un compendio documentale e fotografico sull'esperienza di guerra del tenente Ernst Jünger nel primo conflitto mondiale",
+      "autore": "Nils Fabiansson",
+      "pagine": "188 pagg, ill. bn e colori.",
+      "anno di pubblicazione": "2024",
+      "descrizione": "Questo libro dello studioso Nils Fabiansson è un vero e proprio compendio per il lettore al capolavoro di Ernst Jünger Nelle tempeste d’acciaio, esplorante le corrispondenze tra i diari di guerra e le opere letterarie di Jünger e la sua esperienza di guerra sul Fronte occidentale quale Tenente e comandante di Truppe d’assalto nel Füsilier-Regiment Nr. 73 “Gibraltar” mediante una documentata analisi storica e topografica delle battaglie del suo reparto e della loro trasposizione nei suoi libri e una analisi critico-letteraria delle loro varie edizioni, completata con decine di fotografie da archivi pubblici e privati, immagini inedite dai suoi diari e dei luoghi dei combattimenti allora e oggi e mappe.",
+      "prezzo": "25,00 euro",
+      "link_IBS": "https://www.ibs.it/ernst-junger-nelle-tempeste-d-libro-nils-fabiansson/e/9788831430364?inventoryId=803337345&queryId=b39d28744f6499b7b9d156ba94d1b38e"
+    }, {
       "titolo": "I Tiger delle Waffen SS in azione",
       "sottotitolo": "Dai diari di guerra dei carristi delle Waffen-SS Ernst Streng e Heinz Trautmann. Russia 1943-1944 - Normandia 1944 -Germania 1945",
       "autore": "Wilhelm Fey",
@@ -51,15 +68,6 @@ var app = new Vue({
       "anno di pubblicazione": "2024",
       "descrizione": "«Questo libro è basato sulle mie esperienze durante la Seconda guerra mondiale. In qualità di Ufficiale di Stato Maggiore ho partecipato ad alcune delle più importanti Campagne in Africa, in Russia e sul fronte occidentale, venendo a contatto diretto con molti dei più valenti soldati tedeschi, come il Feldmaresciallo Erwin Rommel e il Generale Hermann Balck. All'esordio del conflitto ho fatto parte, in qualità di Capitano, dello Stato Maggiore del III Corpo d'Armata che invase la Polonia, e alla fine della guerra ero Maggior Generale e Capo di Stato Maggiore della 5a Panzerarmee nella sacca della Ruhr. Sono stato in servizio durante tutta la guerra e impegnato in combattimento in Polonia, Francia, Balcani, Nordafrica, Russia (nelle battaglie di Stalingrado, Kursk, Kharkov, Zhitomir, Kiev e sul Dnieper), poi di nuovo in Polonia, in Francia, e infine nelle Ardenne e in Renania. Ho partecipato a molte battaglie decisive, incontrando soldati brillanti e valorosi; ho visto carri armati in azione nei più vari contesti di guerra, dalle foreste innevate della Russia alle piane assolate e desertiche dell'Africa settentrionale» (dalla prefazione dell'autore) ",
       "prezzo": "38,00 euro",
-      "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
-    }, {
-      "titolo": "Kommando! ",
-      "sottotitolo": "Le Forze Speciali tedesche nella Seconda guerra mondiale",
-      "autore": "James Lucas",
-      "pagine": "586 pagg, ill. bn e colori.",
-      "anno di pubblicazione": "2023",
-      "descrizione": "In questa prima edizione italiana, annotata e ampliata, del best seller dello storico militare inglese James Lucas sono ricostruite grazie a documenti d’archivio e testimonianze di veterani le operazioni delle Forze Speciali tedesche nella seconda guerra mondiale: dalle azioni commando in uniforme nemica della “Brandenburg” in Belgio, in Russia e in Nord Africa e le operazioni dei Fallschirmjäger a Eben Emael, in Tunisia e nelle Ardenne, all’attacco dei Fallschirmjäger SS al Quartier Generale del Maresciallo Tito a Drvar e le missioni dei Kommando di Otto Skorzeny. Quindi sono prese in esame le operazioni dei nuotatori d’assalto, barchini esplosivi, siluri pilotati e sommergibili tascabili delle Kleinkampfverbände della Kriegsmarine, per poi passare ai reparti aerei speciali della Luftwaffe, con le missioni segrete su ogni fronte e gli attacchi con i velivoli compositi Mistel dei piloti del Kampfgeschwader KG 200, la difesa dei cieli della Germania dei Messerschmitt Me 262 della Jagdverband JV 44 e dei caccia Rammjäger e del Sonderkommando Elbe, per terminare con le ultime, disperate azioni di guerriglia dei Werwolf e Freikorps. La coinvolgente narrazione del testo è accompagnata in questa edizione da centinaia di rare e inedite fotografie in azione dei reparti trattati, da immagini a colori di Soldbuch e Wehrpass di appartenenti alla “Brandenburg”, ai Fallschirmjäger SS e al KG 200 e altri rari documenti personali provenienti da collezioni private e da mappe, ordini di battaglia e cronologie delle operazioni.",
-      "prezzo": "39,00 euro",
       "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
     }, {
       "titolo": "ACHTUNG - PANZER!",
@@ -174,10 +182,10 @@ var app = new Vue({
         jumboTitleParent[0].children[1].remove();
 
         // Sostituiamo con l'HTML che divide il titolo in due
-        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
+        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
       } else {
         // Ripristiniamo l'HTML originale
-        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg" class="fadeIn at-item"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
+        jumboTitleParent[0].innerHTML = '<img src="public/img/Background.jpg"> <h1 class="special_title"> ITALIA </h1> <br> <h1 class="special_title_second"> Storica Edizioni </h1>';
       }
 
       // Sezione CORE
@@ -428,7 +436,7 @@ var curSlide = 0;
 
 // Maximum number of slides
 var maxSlide = slides.length - 1;
-var bezierValue = [0, -100, -200, -300, -400, -500, -600, -700];
+var bezierValue = [0, -100, -200, -300, -400, -500, -600, -700, -800];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach(function (slide, index) {
@@ -608,10 +616,10 @@ function controlloForm() {
 
 /***/ }),
 
-/***/ "./src/style.scss":
-/*!************************!*\
-  !*** ./src/style.scss ***!
-  \************************/
+/***/ "./src/mediaquery.scss":
+/*!*****************************!*\
+  !*** ./src/mediaquery.scss ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -621,10 +629,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/mediaquery.scss":
-/*!*****************************!*\
-  !*** ./src/mediaquery.scss ***!
-  \*****************************/
+/***/ "./src/style.scss":
+/*!************************!*\
+  !*** ./src/style.scss ***!
+  \************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
