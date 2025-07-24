@@ -1,6 +1,4 @@
 Data inizio progetto: 21 marzo 2021.
-Data presentazione progetto: 14 agosto 2022.
-Data fine progetto 28 settembre 2022.
 
 Italia Storica Edizioni è una casa editrice che si occupa principalmente della pubblicazione di testi inerenti la IIa guerra mondiale.
 Richiesta: pagina singola di contatto full-responsive e cross-browser.
