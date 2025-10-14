@@ -17,9 +17,46 @@ let app = new Vue ({
             "public/img/carousel7.jpg",
             "public/img/carousel8.jpg",
             "public/img/carousel9.jpg",
+            "public/img/carousel010.jpg",
+            "public/img/carousel011.jpg",
+            "public/img/carousel012.jpg",
         ],
 
         libri: [
+
+            {
+                "titolo": "Tenente dei Panzer",
+                "sottotitolo": "I combattimenti in Russia e sul Fronte occidentale di un Leutnant della Ricognizione corazzata, 1941-1945",
+                "autore": "August von Kageneck",
+                "pagine": "232 pagg., numerose ill. e mappe.",
+                "anno di pubblicazione": "2025",
+                "descrizione": "Rampollo di una delle più antiche famiglie nobiliari tedesche, August von Kageneck e i suoi quattro fratelli si arruolarono tutti combattendo nella Seconda guerra mondiale: Erbo von Kageneck fu asso della caccia sui Messerschmitt Bf 109 e Clemens-Heinrich pluridecorato comandante di Panzer VI Tiger. Figlio di uno degli Aiutanti di Campo del Kaiser Guglielmo II e nipote di Franz von Papen, la lucida e spassionata testimonianza di August von Kageneck ripercorre la storia della sua famiglia dalle origini alle due guerre mondiali, le sue vicende belliche quale Leutnant e comandante di un Plotone esplorante nel Battaglione da ricognizione corazzata della 9a Panzer-Division durante la Campagna di Russia e poi nella Panzer-Lehr in difesa della Germania e quelle dei suoi fratelli, dall'ebbrezza della vittoria all'umiliazione della disfatta finale.",
+                "prezzo": "21,00 euro",
+                "link_IBS": "https://www.ibs.it/tenente-dei-panzer-combattimenti-in-libro-august-von-kageneck/e/9788831430418?queryId=138bcf6ede6596fb536a62a8ed5a4ad9"
+            },
+
+            {
+                "titolo": "Un raccolto di sangue",
+                "sottotitolo": "I crimini alleati e sovietici contro il popolo tedesco, 1945-1947. Nuova ediz.",
+                "autore": "August von Kageneck",
+                "pagine": "224 pagg., ill., Brossura.",
+                "anno di pubblicazione": "2025",
+                "descrizione": "Questa è la traduzione italiana di uno dei primi, più lucidi atti d’accusa verso i crimini di guerra e contro l’umanità commessi dagli USA, dagli Alleati e dall’URSS nei confronti della popolazione civile della Germania sconfitta, tanto più notevole poiché scritto nel 1947 da un intellettuale statunitense, Ralph F. Keeling, tra i fondatori del centro studi Institute of American Economics: dalle devastazioni dei bombardamenti indiscriminati, agli “stupri di guerra”, al deliberato sterminio di decine di migliaia di uomini, donne e bambini tedeschi per fame e malattie e la distruzione del sistema industriale, bancario e agricolo tedesco tramite la parziale applicazione dal 1945 al 1947 del Piano Morgenthau con la direttiva Joint Chief Staff 1067 del 10 maggio 1945, approvata dai presidenti americani Roosevelt e Truman. In appendice di questa seconda edizione del libro, una sezione iconografica ampliata con fotografie e documenti d’archivio.",
+                "prezzo": "24,00 euro",
+                "link_IBS": "https://www.ibs.it/raccolto-di-sangue-crimini-alleati-libro-ralph-franklin-keeling/e/9788831430401?queryId=51fb1bd6ba340e30f03c50d838d416e4"
+            },
+
+            {
+                "titolo": "Tenere le posizioni!",
+                "sottotitolo": "La dottrina difensiva tedesca sul fronte russo durante la seconda guerra mondiale, 1941-1943",
+                "autore": "Maggiore Timothy A. Wray",
+                "pagine": "274 pagg. con foto, mappe e ill. ",
+                "anno di pubblicazione": "2025",
+                "descrizione": "Questa ricerca tenta di evitare i comuni miti sulle battaglie difensive tedesche in Russia, utilizzando in maniera estensiva le fonti primarie – rapporti tedeschi, diari di guerra delle unità, manuali dottrinali, i fascicoli d’addestramento e altri tipi di memorandum militari – per ricostruire le basi reali della dottrina difensiva tedesca. Questo materiale d’archivio, che come vedremo va oltre quello che era disponibile in precedenza, fornisce importante materiale aggiuntivo sui metodi tedeschi, e, in alcuni casi, corregge o conferma i ricordi postbellici dei memorialisti militari tedeschi. Questa ricerca, nel seguire l’evoluzione della dottrina difensiva tedesca, inizia dallo studio degli sviluppi prebellici, in modo da potere stabilire il quadro iniziale entro cui si svilupparono le battaglie successive contro l’Armata Rossa dell’Unione Sovietica, per arrivare alla primavera del 1943, quando i tremendi cambiamenti avvenuti sul piano strategico nell’inverno precedente alterarono la natura stessa della guerra sul Fronte Orientale.",
+                "prezzo": "27,00 euro",
+                "link_IBS": "https://www.ibs.it/tenere-posizioni-dottrina-difensiva-tedesca-libro-timothy-a-wray/e/9788831430395?queryId=138bcf6ede6596fb536a62a8ed5a4ad9"
+            },
+
             {
                 "titolo": "Louis-Ferdinand Céline",
                 "autore": "Maurice Bardèche",
@@ -39,17 +76,6 @@ let app = new Vue ({
                 "descrizione": "Questo libro dello studioso Nils Fabiansson è un vero e proprio compendio per il lettore al capolavoro di Ernst Jünger Nelle tempeste d’acciaio, esplorante le corrispondenze tra i diari di guerra e le opere letterarie di Jünger e la sua esperienza di guerra sul Fronte occidentale quale Tenente e comandante di Truppe d’assalto nel Füsilier-Regiment Nr. 73 “Gibraltar” mediante una documentata analisi storica e topografica delle battaglie del suo reparto e della loro trasposizione nei suoi libri e una analisi critico-letteraria delle loro varie edizioni, completata con decine di fotografie da archivi pubblici e privati, immagini inedite dai suoi diari e dei luoghi dei combattimenti allora e oggi e mappe.",  
                 "prezzo": "25,00 euro",
                 "link_IBS": "https://www.ibs.it/ernst-junger-nelle-tempeste-d-libro-nils-fabiansson/e/9788831430364?inventoryId=803337345&queryId=b39d28744f6499b7b9d156ba94d1b38e"
-            },
-
-            {
-                "titolo": "I Tiger delle Waffen SS in azione",
-                "sottotitolo": "Dai diari di guerra dei carristi delle Waffen-SS Ernst Streng e Heinz Trautmann. Russia 1943-1944 - Normandia 1944 -Germania 1945",
-                "autore": "Wilhelm Fey",
-                "pagine": "302 pagg, ill. bn e colori.",
-                "anno di pubblicazione": "2024",
-                "descrizione": "Queste pagine sono la testimonianza diretta di un giovanissimo equipaggio di un Tiger in tutti i punti più cruciali dei vari teatri di guerra da est a ovest nel 1943-1945, terminante nella zona dei drammatici scontri della disfatta finale intorno a Berlino. Troviamo questi stessi carristi negli attacchi fulminei contro Charkov e Bielgorod nel 1943 e nei combattimenti difensivi tra Kiev e Zhitomir dell'inverno 1943-1944; viviamo con loro l’assalto massiccio delle truppe Alleate sbarcate in Normandia e i contrattacchi dei Panzer e Grenadiere sotto la martellante supremazia numerica, aerea e d’artiglieria nemica; li ritroviamo infine nelle disperate azioni per aprire un varco alla 9ª Armata attraverso le masse dell’Esercito russo tra l'Oder e l'Elba nel 1945. Edizione riveduta di un classico storico-militare ampliata con decine di rare fotografie, profili a colori e mappe e in appendice una cronistoria delle unità protagoniste, ossia la schwere Kompanie della SS-Panzergrenadier-Division “Das Reich” e dello schwere SS-Panzer-Abteilung 102/502, ordini di battaglia e due testimonianze inedite.",  
-                "prezzo": "29,00 euro",
-                "link_IBS": "https://www.ibs.it/tiger-delle-waffen-ss-in-libro-wilhelm-fey/e/9788831430388?inventoryId=725611650&queryId=890b5169be2dafa0e5dcb05c15b4e703"
             },
 
             {
@@ -75,17 +101,6 @@ let app = new Vue ({
             },
 
             {
-                "titolo": "Battaglie di Panzer",
-                "sottotitolo": "I combattimenti di corazzati in Polonia, Francia, Balcani, Nordafrica, Russia e sul fronte occidentale nelle memorie di un Ufficiale di unità Panzer",
-                "autore": "Friedrich Wilhelm von Mellenthin",
-                "pagine": "428 pagg, ill. bn e colori.",
-                "anno di pubblicazione": "2024",
-                "descrizione": "«Questo libro è basato sulle mie esperienze durante la Seconda guerra mondiale. In qualità di Ufficiale di Stato Maggiore ho partecipato ad alcune delle più importanti Campagne in Africa, in Russia e sul fronte occidentale, venendo a contatto diretto con molti dei più valenti soldati tedeschi, come il Feldmaresciallo Erwin Rommel e il Generale Hermann Balck. All'esordio del conflitto ho fatto parte, in qualità di Capitano, dello Stato Maggiore del III Corpo d'Armata che invase la Polonia, e alla fine della guerra ero Maggior Generale e Capo di Stato Maggiore della 5a Panzerarmee nella sacca della Ruhr. Sono stato in servizio durante tutta la guerra e impegnato in combattimento in Polonia, Francia, Balcani, Nordafrica, Russia (nelle battaglie di Stalingrado, Kursk, Kharkov, Zhitomir, Kiev e sul Dnieper), poi di nuovo in Polonia, in Francia, e infine nelle Ardenne e in Renania. Ho partecipato a molte battaglie decisive, incontrando soldati brillanti e valorosi; ho visto carri armati in azione nei più vari contesti di guerra, dalle foreste innevate della Russia alle piane assolate e desertiche dell'Africa settentrionale» (dalla prefazione dell'autore) ",
-                "prezzo": "38,00 euro",
-                "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
-            },
-
-            {
                 "titolo": "ACHTUNG - PANZER!",
                 "sottotitolo": "Sviluppo, tattiche e potenziale operativo delle forze corazzate",
                 "autore": "Heinz Guderian",
@@ -97,16 +112,16 @@ let app = new Vue ({
             },
 
             {
-                "titolo": "Il mulo",
-                "sottotitolo": "L'ibrido alpino",
-                "autore": "Fabio Palladini",
-                "pagine": "190 p., ill., Brossura",
-                "anno di pubblicazione": "2023",
-                "descrizione": "«Quando ho letto il titolo del libro del Generale Fabio Palladini, ho immediatamente apprezzato l’accostamento del concetto di ibrido con la figura del mulo, per secoli supporto indispensabile per i trasporti in ambiente montano. Nello stesso tempo mi sono imbattuto in nozioni che si apprendevano principalmente in scuderia, ma anche nel cortile delle caserme delle Truppe Alpine, così come nelle marce di addestramento, durante le escursioni invernali ed estive e le scuole tiro. Condivido lo spirito con cui questo libro è stato scritto, ovvero far ritornare alla mente ricordi di vita militare, di “naja alpina”, come la definisce l’Autore, ma, soprattutto, ho colto il messaggio di fornire, a chi non ne fosse a conoscenza, un motivo di riflessione sul ruolo del mulo nei Reparti Alpini. La scuderia era scuola di vita e chi si è approcciato ai muli ha sicuramente imparato anche a conoscere meglio gli uomini. Pertanto, aldilà di un doveroso inquadramento storico sull’impiego del mulo nel Regio Esercito (il cui inizio coincide con la nascita degli Alpini nel 1872), il libro riporta le conoscenze e le tecniche che erano alla base del suo impiego nelle Batterie di Artiglieria da Montagna e nelle compagnie mortai dei Battaglioni Alpini e tratteggia con dovizia di particolari, noti solo a chi ha vissuto quella bellissima realtà, i problemi che comportava il movimento di unità someggiate in terreni vari e nelle più diverse condizioni ambientali». Dalla prefazione del Presidente Associazione Nazionale Alpini Sebastiano Favero.",
-                "prezzo": "24,00 euro",
-                "link_IBS": "https://www.ibs.it/mulo-ibrido-alpino-libro-fabio-palladini/e/9788831430265"
+                "titolo": "Battaglie di Panzer",
+                "sottotitolo": "I combattimenti di corazzati in Polonia, Francia, Balcani, Nordafrica, Russia e sul fronte occidentale nelle memorie di un Ufficiale di unità Panzer",
+                "autore": "Friedrich Wilhelm von Mellenthin",
+                "pagine": "428 pagg, ill. bn e colori.",
+                "anno di pubblicazione": "2024",
+                "descrizione": "«Questo libro è basato sulle mie esperienze durante la Seconda guerra mondiale. In qualità di Ufficiale di Stato Maggiore ho partecipato ad alcune delle più importanti Campagne in Africa, in Russia e sul fronte occidentale, venendo a contatto diretto con molti dei più valenti soldati tedeschi, come il Feldmaresciallo Erwin Rommel e il Generale Hermann Balck. All'esordio del conflitto ho fatto parte, in qualità di Capitano, dello Stato Maggiore del III Corpo d'Armata che invase la Polonia, e alla fine della guerra ero Maggior Generale e Capo di Stato Maggiore della 5a Panzerarmee nella sacca della Ruhr. Sono stato in servizio durante tutta la guerra e impegnato in combattimento in Polonia, Francia, Balcani, Nordafrica, Russia (nelle battaglie di Stalingrado, Kursk, Kharkov, Zhitomir, Kiev e sul Dnieper), poi di nuovo in Polonia, in Francia, e infine nelle Ardenne e in Renania. Ho partecipato a molte battaglie decisive, incontrando soldati brillanti e valorosi; ho visto carri armati in azione nei più vari contesti di guerra, dalle foreste innevate della Russia alle piane assolate e desertiche dell'Africa settentrionale» (dalla prefazione dell'autore) ",
+                "prezzo": "38,00 euro",
+                "link_IBS": "https://www.ibs.it/kommando-forze-speciali-tedesche-nella-libro-james-lucas/e/9788831430302?queryId=cdcc5d0d15e21a1abb8c53a67317202f"
             },
-            
+
             {
                 "titolo": "Il sognatore con l'elmetto",
                 "sottotitolo": "Le memorie di un giovane volontario della Divisione SS «Charlemagne» nel libro-verità che scosse la Francia",
@@ -116,6 +131,28 @@ let app = new Vue ({
                 "descrizione": "Christian de La Mazière fu giornalista per 'Le Pays libre', un quotidiano minore della Collaborazione, volontario nella Divisione SS 'Charlemagne' negli ultimi combattimenti sul fronte orientale, e nel dopoguerra esperto di pubbliche relazioni del cinema internazionale e amante di Juliette Gréco e Dalida: nelle sue memorie, inedite in italiano e che alla loro uscita in Francia nel 1972 furono un vero e proprio caso letterario, il 'romanzo di formazione' di un giovane idealista dalla Parigi dell'estate 1944 al viaggio attraverso una Germania straziata dalle bombe Alleate sino al campo d'addestramento di Wildflecken, e all'invio in Pomerania contro i T-34 e Stalin sovietici dilaganti verso ovest, tra colonne di profughi e combattimenti disperati. Quindi, l'odissea nelle foreste baltiche dei superstiti stremati del suo reparto, la resa, la prigionia sovietica e il rientro in Francia, il processo per collaborazionismo e il suo trasferimento da un carcere all'altro, da Fresnes alla cupa ex abbazia di Clairvaux, un folle universo carcerario popolato da criminali comuni d'ogni sorta e detenuti politici, sino al suo rilascio nel 1948, tra i resti delle sue illusioni perdute.",
                 "prezzo": "27,00 euro",
                 "link_IBS": "https://www.ibs.it/sognatore-con-elmetto-memorie-di-libro-christian-de-la-maziere/e/9788831430197?queryId=4ee58d6f57910da25b14c27026fe5cd7"
+            },
+
+            {
+                "titolo": "I Tiger delle Waffen SS in azione",
+                "sottotitolo": "Dai diari di guerra dei carristi delle Waffen-SS Ernst Streng e Heinz Trautmann. Russia 1943-1944 - Normandia 1944 -Germania 1945",
+                "autore": "Wilhelm Fey",
+                "pagine": "302 pagg, ill. bn e colori.",
+                "anno di pubblicazione": "2024",
+                "descrizione": "Queste pagine sono la testimonianza diretta di un giovanissimo equipaggio di un Tiger in tutti i punti più cruciali dei vari teatri di guerra da est a ovest nel 1943-1945, terminante nella zona dei drammatici scontri della disfatta finale intorno a Berlino. Troviamo questi stessi carristi negli attacchi fulminei contro Charkov e Bielgorod nel 1943 e nei combattimenti difensivi tra Kiev e Zhitomir dell'inverno 1943-1944; viviamo con loro l’assalto massiccio delle truppe Alleate sbarcate in Normandia e i contrattacchi dei Panzer e Grenadiere sotto la martellante supremazia numerica, aerea e d’artiglieria nemica; li ritroviamo infine nelle disperate azioni per aprire un varco alla 9ª Armata attraverso le masse dell’Esercito russo tra l'Oder e l'Elba nel 1945. Edizione riveduta di un classico storico-militare ampliata con decine di rare fotografie, profili a colori e mappe e in appendice una cronistoria delle unità protagoniste, ossia la schwere Kompanie della SS-Panzergrenadier-Division “Das Reich” e dello schwere SS-Panzer-Abteilung 102/502, ordini di battaglia e due testimonianze inedite.",  
+                "prezzo": "29,00 euro",
+                "link_IBS": "https://www.ibs.it/tiger-delle-waffen-ss-in-libro-wilhelm-fey/e/9788831430388?inventoryId=725611650&queryId=890b5169be2dafa0e5dcb05c15b4e703"
+            },
+            
+            {
+                "titolo": "Il mulo",
+                "sottotitolo": "L'ibrido alpino",
+                "autore": "Fabio Palladini",
+                "pagine": "190 p., ill., Brossura",
+                "anno di pubblicazione": "2023",
+                "descrizione": "«Quando ho letto il titolo del libro del Generale Fabio Palladini, ho immediatamente apprezzato l’accostamento del concetto di ibrido con la figura del mulo, per secoli supporto indispensabile per i trasporti in ambiente montano. Nello stesso tempo mi sono imbattuto in nozioni che si apprendevano principalmente in scuderia, ma anche nel cortile delle caserme delle Truppe Alpine, così come nelle marce di addestramento, durante le escursioni invernali ed estive e le scuole tiro. Condivido lo spirito con cui questo libro è stato scritto, ovvero far ritornare alla mente ricordi di vita militare, di “naja alpina”, come la definisce l’Autore, ma, soprattutto, ho colto il messaggio di fornire, a chi non ne fosse a conoscenza, un motivo di riflessione sul ruolo del mulo nei Reparti Alpini. La scuderia era scuola di vita e chi si è approcciato ai muli ha sicuramente imparato anche a conoscere meglio gli uomini. Pertanto, aldilà di un doveroso inquadramento storico sull’impiego del mulo nel Regio Esercito (il cui inizio coincide con la nascita degli Alpini nel 1872), il libro riporta le conoscenze e le tecniche che erano alla base del suo impiego nelle Batterie di Artiglieria da Montagna e nelle compagnie mortai dei Battaglioni Alpini e tratteggia con dovizia di particolari, noti solo a chi ha vissuto quella bellissima realtà, i problemi che comportava il movimento di unità someggiate in terreni vari e nelle più diverse condizioni ambientali». Dalla prefazione del Presidente Associazione Nazionale Alpini Sebastiano Favero.",
+                "prezzo": "24,00 euro",
+                "link_IBS": "https://www.ibs.it/mulo-ibrido-alpino-libro-fabio-palladini/e/9788831430265"
             },
 
            
@@ -545,7 +582,7 @@ let curSlide = 0;
 // Maximum number of slides
 let maxSlide = slides.length - 1;
 
-let bezierValue = [0, -100, -200, -300, -400, -500, -600, -700, -800];
+let bezierValue = [0, -100, -200, -300, -400, -500, -600, -700, -800, -900, -1000, -1100];
 
 // Loop through slides and set each slides translateX initial value property to index * 100%
 slides.forEach((slide, index) => {
