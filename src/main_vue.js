@@ -20,9 +20,20 @@ let app = new Vue ({
             "public/img/carousel010.jpg",
             "public/img/carousel011.jpg",
             "public/img/carousel012.jpg",
+            "public/img/carousel013.jpg",
         ],
 
         libri: [
+            {
+                "titolo": "Frontsoldaten ",
+                "sottotitolo": "Il soldato tedesco di prima linea nella Seconda guerra mondiale",
+                "autore": "Stephen G. Fritz",
+                "pagine": "342 pagg., ill. bn.",
+                "anno di pubblicazione": "2025",
+                "descrizione": "Alois Dwenger, scrivendo dal fronte nel maggio del 1942, lamentava che la gente dimenticasse “le azioni dei semplici soldati. Credo che il vero eroismo stia nel sopportare questa terribile vita quotidiana”. Esplorando la realtà del “Landser”, il soldato tedesco medio nella seconda guerra mondiale, attraverso lettere, diari, memorie e testimonianze orali, il ricercatore storico Stephen G. Fritz fornisce il resoconto definitivo dell’esperienza di guerra del soldato tedesco al fronte. I resoconti personali di questi soldati, la maggior parte dei quali provenienti dal fronte russo, dove prestò servizio la maggioranza dei fanti tedeschi, dipingono un ritratto ricco di sfumature del “Landser” che illustra la complessità della sua vita quotidiana. Con capitoli dedicati all’addestramento, alla visione diretta dei combattimenti, alle condizioni di vita, allo stress da combattimento, alle sensazioni personali della guerra, ai legami di cameratismo e spirito di corpo, all’ideologia e alla motivazione, Fritz offre un senso di immediatezza e profondità, rivelando la guerra attraverso gli occhi di questi “uomini comuni”.",
+                "prezzo": "29,00 euro",
+                "link_IBS": "https://www.ibs.it/frontsoldaten-soldato-tedesco-di-prima-libro-stephen-g-fritz/e/9788831430432"
+            },
 
             {
                 "titolo": "Tenente dei Panzer",
@@ -629,7 +640,9 @@ nextArrow.addEventListener("click", function () {
         }
     });
 
-});
+}); 
+
+  
 
 
 /* FRECCIA SINISTRA */
@@ -666,6 +679,8 @@ prevArrow.addEventListener("click", function () {
 
 
 });
+
+   
 
 
 /*---------- End Subsection Carousel  ----------*/
