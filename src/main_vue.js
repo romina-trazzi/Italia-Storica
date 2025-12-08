@@ -14,7 +14,6 @@ let app = new Vue ({
             "public/img/carousel4.jpg",
             "public/img/carousel5.jpg",
             "public/img/carousel6.jpg",
-            "public/img/carousel7.jpg",
             "public/img/carousel8.jpg",
             "public/img/carousel9.jpg",
             "public/img/carousel010.jpg",
@@ -49,7 +48,7 @@ let app = new Vue ({
             {
                 "titolo": "Un raccolto di sangue",
                 "sottotitolo": "I crimini alleati e sovietici contro il popolo tedesco, 1945-1947. Nuova ediz.",
-                "autore": "August von Kageneck",
+                "autore": "Ralph Franklin Keeling",
                 "pagine": "224 pagg., ill., Brossura.",
                 "anno di pubblicazione": "2025",
                 "descrizione": "Questa è la traduzione italiana di uno dei primi, più lucidi atti d’accusa verso i crimini di guerra e contro l’umanità commessi dagli USA, dagli Alleati e dall’URSS nei confronti della popolazione civile della Germania sconfitta, tanto più notevole poiché scritto nel 1947 da un intellettuale statunitense, Ralph F. Keeling, tra i fondatori del centro studi Institute of American Economics: dalle devastazioni dei bombardamenti indiscriminati, agli “stupri di guerra”, al deliberato sterminio di decine di migliaia di uomini, donne e bambini tedeschi per fame e malattie e la distruzione del sistema industriale, bancario e agricolo tedesco tramite la parziale applicazione dal 1945 al 1947 del Piano Morgenthau con la direttiva Joint Chief Staff 1067 del 10 maggio 1945, approvata dai presidenti americani Roosevelt e Truman. In appendice di questa seconda edizione del libro, una sezione iconografica ampliata con fotografie e documenti d’archivio.",
@@ -87,17 +86,6 @@ let app = new Vue ({
                 "descrizione": "Questo libro dello studioso Nils Fabiansson è un vero e proprio compendio per il lettore al capolavoro di Ernst Jünger Nelle tempeste d’acciaio, esplorante le corrispondenze tra i diari di guerra e le opere letterarie di Jünger e la sua esperienza di guerra sul Fronte occidentale quale Tenente e comandante di Truppe d’assalto nel Füsilier-Regiment Nr. 73 “Gibraltar” mediante una documentata analisi storica e topografica delle battaglie del suo reparto e della loro trasposizione nei suoi libri e una analisi critico-letteraria delle loro varie edizioni, completata con decine di fotografie da archivi pubblici e privati, immagini inedite dai suoi diari e dei luoghi dei combattimenti allora e oggi e mappe.",  
                 "prezzo": "25,00 euro",
                 "link_IBS": "https://www.ibs.it/ernst-junger-nelle-tempeste-d-libro-nils-fabiansson/e/9788831430364?inventoryId=803337345&queryId=b39d28744f6499b7b9d156ba94d1b38e"
-            },
-
-            {
-                "titolo": "Aprile 1945: Garfagnana addio!",
-                "sottotitolo": "Gli ultimi combattimenti sulla Linea Gotica del Battaglione “Intra” della Divisione “Monterosa”",
-                "autore": "Pierfelice Cantori",
-                "pagine": "164 pagg, ill. bn e colori.",
-                "anno di pubblicazione": "2024",
-                "descrizione": "Dopo molti anni vedono finalmente la luce le memorie di Garfagnana del Capitano Pierfelice Cantori, Comandante della 12a Compagnia del Battaglione “Intra” della Divisione Alpina “Monterosa”, dattiloscritte nelle pause delle ultime vicende del fronte della Linea Gotica sulle Apuane nel 1945. Sono pagine immediate, incisive, a volte taglienti, altre velate di emozione, frenata dal suo essere Ufficiale fin nell'intimo. La narrazione si focalizza nell'ultima difesa, nel cedimento elastico del fronte, nella difficile ritirata, culminata nei dintorni di Fornovo con la resa con l'onore delle armi da parte dei soldati brasiliani della Força Expedicionária Brasileira, vecchi nemici incontrati in Garfagnana. In appendice, una cronistoria della 12a Compagnia del Battaglione “Intra”, rare immagini del Reparto e fotografie attuali dei luoghi dei combattimenti. ",
-                "prezzo": "22,00 euro",
-                "link_IBS": "https://www.ibs.it/aprile-1945-garfagnana-addio-ultimi-libro-pierfelice-cantori/e/9788831430357?inventoryId=736175611&queryId=d35dcd2029563a2d375d50e33c4e1c77"
             },
 
             {
@@ -397,8 +385,9 @@ let app = new Vue ({
                 cardContainer[0].innerHTML +=
 
                 ' <div class="col-xl-4 col-lg-4"> <div class="card"> <div class="card-body text-center"> <i class="fas fa-book-open"></i> <hr> <h5 class="card-title"> SCARICA IL CATALOGO </h5> <hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'
-                + '<br> </p> <a href="public/ItaliaStoricaCatalogoIII-2024.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> '
-
+                /* + '<br> </p> <a href="public/Italia_Storica_catalogo_III_2025.pdf" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' */
+                + '<br> </p> <a href="https://1drv.ms/b/c/9edd24f96bc03cca/IQB4zRXPhwOiQbwmoFFE0AAcAXcDF6lNg8oX8W2by7hmq0E?e=FwYwb7" class="btn button orange btn-lg">Scarica il catalogo in PDF</a> </div> </div> </div> ' 
+                
                 +
 
                 ' <div class="col-xl-4 col-lg-4"><div class="card"> <div class="card-body text-center"> <i class="fas fa-bookmark"> </i> <hr> <h5 class="card-title">ORDINA SU IBS</h5><hr> <p class="card-text text-center"> I NOSTRI LIBRI <br> STORICO-MILITARI <br>'

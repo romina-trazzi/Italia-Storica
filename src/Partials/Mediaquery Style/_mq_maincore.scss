@@ -19,6 +19,20 @@
   }
 }
 
+// Bullet carousel centrati
+@media (max-width: 599px) {
+  main {
+    .core {
+      #book_main {
+        
+        #book_change {
+          margin-top: 2em;
+
+        }
+      }
+    }
+  }
+}
 
 // Copertina libri
 @media (max-width: 599px) {
@@ -33,8 +47,6 @@
         height: 317px;
         display: grid;
         justify-content: center;
-
-       
 
         img {
           max-height: 317px !important;

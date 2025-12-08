@@ -427,6 +427,13 @@ a:hover {
   background-color: floralwhite;
 }
 
+@media (max-width: 599px) {
+  .radiobuttonContainer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 body {
   background: rgb(41, 41, 41);
   color: floralwhite;
